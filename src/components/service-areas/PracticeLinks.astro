@@ -1,0 +1,34 @@
+---
+const practices = [
+  { name: "DUI / OWI", href: "/practice-area/dui-defense/" },
+  { name: "Drug Crimes", href: "/practice-area/drug-crimes/" },
+  { name: "Assault & Battery", href: "/practice-area/assault-defense/" },
+  { name: "Domestic Violence", href: "/practice-area/domestic-violence-defense/" },
+  { name: "Criminal Sexual Conduct", href: "/practice-area/sex-crime-defense/" },
+  { name: "Home Invasion", href: "/practice-area/home-invasion-defense/" },
+  { name: "Computer Crimes", href: "/practice-area/computer-crimes/" },
+  { name: "College & Campus", href: "/practice-area/college-crimes-defense/" },
+  { name: "Expungements", href: "/practice-area/expungements/" }
+];
+---
+<section class="bg-white py-[100px]">
+  <div class="max-w-[1280px] mx-auto px-6">
+    <div class="mb-4">
+      <span class="inline-flex items-center text-[12px] font-bold uppercase tracking-[1.8px] text-[#732521]">
+        <span class="w-[28px] h-[2px] bg-[#C9A840] inline-block mr-3"></span>
+        What We Handle
+      </span>
+    </div>
+    <h2 class="text-[44px] font-black leading-[1.14] tracking-[-0.53px] text-[#061633] mb-10 max-w-[820px]">
+      Criminal defense, anywhere in the county.
+    </h2>
+    <div class="flex flex-wrap gap-3">
+      {practices.map((practice) => (
+        <a href={practice.href} class="border border-[#E6E2D9] bg-white px-5 py-2.5 rounded-[2px] text-[15.5px] font-semibold text-[#061633] hover:border-[#732521]/40 hover:text-[#732521] transition">
+          {practice.name}
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+

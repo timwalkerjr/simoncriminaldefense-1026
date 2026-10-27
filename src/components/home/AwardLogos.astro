@@ -1,0 +1,52 @@
+---
+import { getCollection } from 'astro:content';
+const awards = (await getCollection('awards')).filter(({ data }) => !data.isDraft && !data.isArchived && data.localImage);
+---
+<section id="awards" class="awards" aria-labelledby="awards-heading">
+  <div class="awards-heading">
+    <h2 id="awards-heading">Recognized by third-party rating organizations</h2>
+    <button type="button" class="awards-pause" aria-pressed="false" aria-label="Pause awards scrolling">Pause scrolling</button>
+  </div>
+  <div class="awards-window">
+    <div class="awards-track">
+      {[false, true].map(duplicate => <ul class="awards-list" aria-hidden={duplicate ? 'true' : undefined} inert={duplicate}>
+        {awards.map(({ id, data }) => {
+          const Tag = data.fieldData.link ? 'a' : 'div';
+          return <li data-award-id={duplicate ? undefined : id}>
+            <Tag class="award-badge" href={data.fieldData.link || undefined} target={data.fieldData.link ? '_blank' : undefined} rel={data.fieldData.link ? 'noopener noreferrer' : undefined}>
+              <img src={data.localImage!} alt={duplicate ? '' : data.fieldData.image?.alt || data.fieldData.name} width="200" height="140" loading="lazy" />
+            </Tag>
+          </li>;
+        })}
+      </ul>)}
+    </div>
+  </div>
+</section>
+<style>
+  .awards{background:#f7f5f1;border-block:1px solid #e6e2d9;padding-block:28px 34px;scroll-margin-top:90px}
+  .awards-heading{max-width:1280px;margin:0 auto 22px;padding-inline:24px;display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap}
+  h2{font-size:11.52px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:#596371;text-align:center}
+  .awards-pause{font-size:12px;color:#732521;border-bottom:1px solid currentColor;padding:10px 4px;cursor:pointer}
+  .awards-window{overflow-x:auto;scrollbar-width:none}
+  .awards-window::-webkit-scrollbar{display:none}
+  .awards-track{display:flex;width:max-content;animation:awards-scroll 65s linear infinite}
+  .awards-list{display:flex;align-items:center;gap:32px;padding:0 32px 0 0;margin:0;list-style:none;flex-shrink:0}
+  .awards-list li{width:134px;flex:0 0 134px}
+  .award-badge{display:flex;align-items:center;justify-content:center;width:134px;height:94px;border-radius:4px}
+  img{display:block;width:100%;height:100%;object-fit:contain}
+  a:hover{background:#fff}a:focus-visible,.awards-pause:focus-visible{outline:2px solid #732521;outline-offset:4px}
+  .awards:hover .awards-track,.awards:focus-within .awards-track,.awards[data-paused] .awards-track{animation-play-state:paused}
+  @keyframes awards-scroll{to{transform:translateX(-50%)}}
+  @media(max-width:640px){.awards-list{gap:24px;padding-right:24px}.awards-list li,.award-badge{width:114px;flex-basis:114px}.award-badge{height:84px}.awards-heading{gap:4px}.awards{padding-block:22px}}
+  @media(prefers-reduced-motion:reduce){.awards-track{animation:none}.awards-list[aria-hidden]{display:none}.awards-pause{display:none}}
+</style>
+<script>
+  const section = document.querySelector<HTMLElement>('#awards');
+  const button = section?.querySelector<HTMLButtonElement>('.awards-pause');
+  button?.addEventListener('click', () => {
+    const paused = section!.toggleAttribute('data-paused');
+    button.setAttribute('aria-pressed', String(paused));
+    button.setAttribute('aria-label', paused ? 'Resume awards scrolling' : 'Pause awards scrolling');
+    button.textContent = paused ? 'Resume scrolling' : 'Pause scrolling';
+  });
+</script>

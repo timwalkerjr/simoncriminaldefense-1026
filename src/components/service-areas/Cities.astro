@@ -1,0 +1,9 @@
+---
+import {serviceAreaHubs} from '@/data/serviceAreaHubs';
+---
+<section class="bg-white py-20"><div class="max-w-[1280px] mx-auto px-6">
+ <div class="text-[#732521] text-[12px] font-bold uppercase tracking-widest mb-4">Cities & Communities</div>
+ <h2 class="text-[36px] sm:text-[44px] font-black text-[#061633] mb-5">Where we defend clients.</h2>
+ <p class="text-[18px] text-[#454F5E] leading-[1.8] mb-10">Explore local legal services across Washtenaw County from our Ann Arbor office.</p>
+ <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">{serviceAreaHubs.map(area=><a data-hub-link href={`/service-areas/${area.slug}/`} class="border border-[#E6E2D9] rounded-[4px] p-7 text-[#061633] font-bold text-[21px] hover:border-[#732521]">{area.name} <span class="text-[#732521]">→</span></a>)}</div>
+</div></section>

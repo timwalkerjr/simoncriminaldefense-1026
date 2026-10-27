@@ -18,6 +18,7 @@ export interface Props {
 
 const { title, description, image, type, jsonLd, noIndex, canonicalUrl, lang } = Astro.props;
 const htmlLang = lang ?? Astro.currentLocale ?? SITE.lang;
+const deploymentNoIndex = import.meta.env.SITE_NOINDEX === 'true';
 ---
 
 <!DOCTYPE html>
@@ -25,17 +26,17 @@ const htmlLang = lang ?? Astro.currentLocale ?? SITE.lang;
   <head>
     <link rel="preconnect" href="https://pagesmith-cdn.com" crossorigin />
     <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
-    <link rel="preload" href="/_pagesmith/fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="/_pagesmith/fonts/inter-700.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/_pagesmith/fonts/source-sans-3-400.woff2" as="font" type="font/woff2" crossorigin />
     <SEOHead
       title={title}
       description={description}
       image={image}
       type={type}
       jsonLd={jsonLd}
-      noIndex={noIndex}
+      noIndex={noIndex || deploymentNoIndex}
       canonicalUrl={canonicalUrl}
     />
+    <script is:inline type="text/javascript" src="https://www.bugherd.com/sidebarv2.js?apikey=htqermuuv5ndi0dhz8fexa" async="true"></script>
     <!-- Mark JS as enabled immediately -->
     <script is:inline>document.documentElement.classList.add('js');</script>
   </head>

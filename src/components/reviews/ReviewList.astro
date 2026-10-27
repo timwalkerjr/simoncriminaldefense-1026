@@ -1,0 +1,70 @@
+---
+import { getCollection } from 'astro:content';
+
+const reviews = (await getCollection('reviews', ({ data }) =>
+  !data.isDraft && !data.isArchived && Boolean(data.lastPublished)
+)).map(({ id, data }) => {
+  const fields = data.fieldData;
+  let source = fields['reviewed-on'] || data.sourceLabel || '';
+  if (!source && fields.reviewurl) {
+    try {
+      const hostname = new URL(fields.reviewurl).hostname;
+      source = hostname === 'avvo.com' || hostname.endsWith('.avvo.com') ? 'Avvo' : hostname;
+    } catch { /* Keep missing attribution empty. */ }
+  }
+  return { id, fields, source };
+});
+---
+<section class="bg-[#F7F5F1] py-[100px]">
+  <div class="max-w-[1280px] mx-auto px-6">
+    <div class="text-center mb-12">
+      <div class="mb-4">
+        <span class="inline-flex items-center text-[12px] font-bold uppercase tracking-[1.8px] text-[#732521]">
+          <span class="w-[28px] h-[2px] bg-[#C9A840] inline-block mr-3"></span>
+          In Their Own Words
+        </span>
+      </div>
+      <h2 class="text-[44px] font-black leading-[1.14] tracking-[-0.53px] text-[#061633] mb-4 max-w-[820px] mx-auto">
+        Reviews from clients & families.
+      </h2>
+      <p class="text-[18.08px] leading-[31px] text-[#454F5E] max-w-[680px] mx-auto">
+        What clients and their families have shared, in their own words, about working with Joseph A. Simon.
+      </p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {reviews.map((review) => (
+        <div data-review-id={review.id} id={review.fields.slug} class="bg-white border border-[#E6E2D9] rounded-[10px] p-7 text-left shadow-sm flex flex-col min-w-0">
+          {review.fields['review-rating'] && <div class="text-[#C9A840] text-[16px] mb-3">Rating: {review.fields['review-rating']}</div>}
+          {review.fields['review-content'] && <h3 class="text-[19px] font-bold leading-[27px] text-[#061633] mb-3">{review.fields['review-content']}</h3>}
+          {review.fields['review-short-text'] && <p class="text-[15.5px] leading-[25px] text-[#454F5E] mb-3">{review.fields['review-short-text']}</p>}
+          <div class="review-body text-[15.5px] leading-[25px] text-[#454F5E] mb-4 flex-grow break-words" set:html={review.fields['review-content-full'] || ''} />
+          <div class="border-t border-[#E6E2D9] pt-3 flex flex-wrap gap-2 items-start justify-between">
+            <div>
+              <span class="text-[14px] font-bold text-[#061633]">Verified Client Review</span>
+              {review.fields['relationship-of-reviewer'] && <p class="text-[13px] text-[#727C8B]">{review.fields['relationship-of-reviewer']}</p>}
+            </div>
+            <div class="text-[13px] text-[#727C8B]">
+              {review.fields['date-created'] && <p>{review.fields['date-created']}</p>}
+              {review.fields.reviewurl ? <a href={review.fields.reviewurl} target="_blank" rel="noopener noreferrer" class="underline">{review.source || 'Original review'}</a> : review.source}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+    <div class="mt-12 text-center">
+      <p class="text-[14px] text-[#727C8B] leading-[22px] max-w-[680px] mx-auto">
+        Every case is different, and prior results do not guarantee a similar outcome.
+        <a href="/#contact" class="text-[#732521] font-bold border-b border-[#732521]/28 pb-0.5 hover:border-[#732521] ml-1">
+          Talk to us about yours →
+        </a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .review-body :global(p + p) { margin-top: 1em; }
+  .review-body :global(a) { text-decoration: underline; overflow-wrap: anywhere; }
+  .review-body :global(ul) { list-style: disc; padding-left: 1.25em; }
+  .review-body :global(ol) { list-style: decimal; padding-left: 1.25em; }
+</style>

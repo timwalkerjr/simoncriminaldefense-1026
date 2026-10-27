@@ -1,38 +1,32 @@
 ---
-import { SITE } from '@/config/site';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Hero from '@/components/home/Hero.astro';
-import Awards from '@/components/home/Awards.astro';
+import AwardLogos from '@/components/home/AwardLogos.astro';
 import PracticeAreas from '@/components/home/PracticeAreas.astro';
-import About from '@/components/home/About.astro';
+import AttorneyBio from '@/components/home/AttorneyBio.astro';
 import ServiceAreas from '@/components/home/ServiceAreas.astro';
 import CaseResults from '@/components/home/CaseResults.astro';
 import Testimonials from '@/components/home/Testimonials.astro';
-import FaqSection from '@/components/home/FaqSection.astro';
+import ArrestFaq from '@/components/home/ArrestFaq.astro';
 import StatsBanner from '@/components/home/StatsBanner.astro';
 import ContactForm from '@/components/home/ContactForm.astro';
+import { SITE } from '@/config/site';
+
+
 ---
 
 <BaseLayout
   title={SITE.title}
   description={SITE.description}
-  type="website"
-  jsonLd={{
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: SITE.name,
-    url: new URL(Astro.url.pathname, SITE.url).toString(),
-    sameAs: Object.values(SITE.socials),
-  }}
 >
   <Hero />
-  <Awards />
+  <AwardLogos />
   <PracticeAreas />
-  <About />
+  <AttorneyBio />
   <ServiceAreas />
   <CaseResults />
   <Testimonials />
-  <FaqSection />
+  <ArrestFaq />
   <StatsBanner />
   <ContactForm />
 </BaseLayout>

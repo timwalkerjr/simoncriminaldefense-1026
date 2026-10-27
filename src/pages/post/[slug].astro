@@ -1,21 +1,10 @@
 ---
-import { getCollection, render } from 'astro:content';
-import PostArticleLayout from '@/layouts/PostArticleLayout.astro';
-
+import { getCollection } from 'astro:content';
+import PostPage from '@/components/posts/PostPage.astro';
 export async function getStaticPaths() {
-  const entries = await getCollection('blog', ({ data }) => !data.draft);
-  return entries.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+  const entries = await getCollection('posts');
+  return entries.filter(p => !p.data.isDraft && !p.data.isArchived).map(entry => ({params:{slug:entry.data.fieldData.slug},props:{entry}}));
 }
-
 const { entry } = Astro.props;
-const { Content, headings } = await render(entry);
 ---
-
-<PostArticleLayout
-  frontmatter={entry.data}
-  mdxFilePath={`src/content/blog/${entry.id}.mdx`}
-  headings={headings}
-  currentPath={`/post/${entry.id}/`}
->
-  <Content />
-</PostArticleLayout>
+<PostPage entry={entry} />

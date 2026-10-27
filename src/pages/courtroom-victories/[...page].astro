@@ -1,0 +1,83 @@
+---
+import type { GetStaticPaths, Page } from 'astro';
+import { getCollection, type CollectionEntry } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+export const getStaticPaths = (async ({ paginate }) => {
+  const results = await getCollection('caseResults', ({ data }) =>
+    !data.isDraft && !data.isArchived && Boolean(data.lastPublished)
+  );
+  // CMS creation date is an ordering key, not a claimed date of the case outcome.
+  results.sort((a, b) => b.data.createdOn.localeCompare(a.data.createdOn) || a.id.localeCompare(b.id));
+  return paginate(results, { pageSize: 24 });
+}) satisfies GetStaticPaths;
+
+interface Props { page: Page<CollectionEntry<'caseResults'>> }
+const { page } = Astro.props;
+const dateFormatter = new Intl.DateTimeFormat('en-US', {
+  year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC',
+});
+const pageUrl = (number: number) => number === 1 ? '/courtroom-victories/' : `/courtroom-victories/${number}/`;
+const pageNumbers = Array.from({ length: page.lastPage }, (_, i) => i + 1)
+  .filter(number => number === 1 || number === page.lastPage || Math.abs(number - page.currentPage) <= 1);
+---
+
+<BaseLayout
+  title={`Case Results${page.currentPage > 1 ? ` — Page ${page.currentPage}` : ''} | Law Offices of Joseph A. Simon`}
+  description="Real outcomes from cases handled by the Law Offices of Joseph A. Simon. Every case is different, and past results do not guarantee a similar outcome."
+>
+  <section id="results" class="bg-[#F7F5F1] text-[#061633] pt-[150px] pb-[90px] lg:pb-[100px] border-t border-[#E6E2D9]">
+    <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-12">
+        <div class="flex items-center gap-3 text-[12px] font-bold uppercase tracking-[1.8px] text-[#732521] mb-3">
+          <span class="w-[28px] h-[2px] bg-[#C9A840] inline-block"></span>
+          <span>COURTROOM RESULTS</span>
+        </div>
+        <h1 class="font-heading font-black leading-[1.14] tracking-[-0.53px] mb-4 text-[36px] sm:text-[44px]">Representative case results.</h1>
+        <p class="text-[17px] sm:text-[18.08px] text-[#454F5E] leading-[1.65] max-w-[840px]">
+          Real outcomes from cases handled by the firm. Every case is different, and past results do not guarantee a similar outcome.
+        </p>
+      </div>
+
+      <div class="flex flex-wrap justify-between items-center gap-3 mb-6 text-[14px] text-[#454F5E]">
+        <p>Showing {page.start + 1}–{page.end + 1} of {page.total} case results</p>
+        <p>Page {page.currentPage} of {page.lastPage}</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {page.data.map(({ id, data: { fieldData: result, caseDate } }) => (
+          <article data-case-id={id} id={result.slug} class="bg-white border border-[#E6E2D9] p-7 rounded-[4px] flex flex-col justify-between hover:border-[#C9A840] transition min-w-0 break-words">
+            <div>
+              <div data-field="charges" class="text-[12px] font-bold uppercase text-[#732521] tracking-wider mb-2">{result.charges}</div>
+              <h2 data-field="result" class="font-heading font-bold text-[#061633] leading-snug mb-3 text-[18.88px] whitespace-pre-line">{result.result}</h2>
+              <p data-field="court" class="text-[15px] text-[#454F5E] leading-[1.6] mb-6">{result.court}</p>
+              {caseDate && <p class="text-[14px] text-[#454F5E] mb-6">Case date: <time datetime={caseDate}>{dateFormatter.format(new Date(`${caseDate}T00:00:00Z`))}</time></p>}
+            </div>
+            <div class="border border-[#C9A840]/50 bg-[#F7F5F1] text-[#655018] text-[11.68px] font-bold px-3 py-1 rounded-[2px] tracking-wide self-start">
+              Case <span data-field="name">{result.name}</span>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <nav aria-label="Case results pagination" class="flex flex-wrap items-center justify-center gap-2 mt-10">
+        {page.currentPage > 1 && <a rel="prev" class="page-link" href={pageUrl(page.currentPage - 1)}>← Previous</a>}
+        {pageNumbers.map((number, index) => <>
+          {index > 0 && number - pageNumbers[index - 1] > 1 && <span class="px-1 text-[#454F5E]" aria-hidden="true">…</span>}
+          <a class="page-link" href={pageUrl(number)} aria-label={`Page ${number}`} aria-current={number === page.currentPage ? 'page' : undefined}>{number}</a>
+        </>)}
+        {page.currentPage < page.lastPage && <a rel="next" class="page-link" href={pageUrl(page.currentPage + 1)}>Next →</a>}
+      </nav>
+      <p class="text-center text-[13px] text-[#454F5E] mt-8">Prior results do not guarantee a similar outcome. Each case depends on its own facts and circumstances.</p>
+      <div class="text-center mt-6"><a href="/#contact" class="text-[#732521] font-bold underline underline-offset-4">Request a confidential consultation →</a></div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  /* Keep the shared white navigation legible above this light section. */
+  :global(#navbar) { background-color: #061633; }
+  .page-link { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 44px; padding: 8px 14px; border: 1px solid #e6e2d9; border-radius: 3px; background: white; color: #732521; font-weight: 700; }
+  .page-link:hover { border-color: #732521; }
+  .page-link[aria-current='page'] { background: #732521; color: white; border-color: #732521; }
+  .page-link:focus-visible { outline: 2px solid #732521; outline-offset: 3px; }
+</style>

@@ -1,0 +1,154 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { getMediaArticles } from '@/data/mediaArticles';
+import { SITE } from '@/config/site';
+
+const MEDIA_ARTICLES = await getMediaArticles();
+const featuredArticles = MEDIA_ARTICLES.filter(a => a.featured);
+const regularArticles = MEDIA_ARTICLES.filter(a => !a.featured);
+
+// Unique publishers for filtering display
+const publishers = ['All', ...Array.from(new Set(MEDIA_ARTICLES.map((a) => a.publisher)))];
+
+
+---
+
+<BaseLayout
+  title={`In the News & Press Coverage | ${SITE.name}`}
+  description="Press coverage and news reports on criminal defense matters, case dismissals, and trial proceedings handled by Ann Arbor defense attorney Joseph A. Simon."
+>
+  <!-- Hero Section -->
+  <section class="bg-[#061633] text-white pt-[140px] pb-[70px] relative overflow-hidden" data-ps="src/pages/media/index.astro:hero">
+    <div class="absolute inset-0 bg-gradient-to-br from-[#04101F] via-[#061633] to-[#0B1F42] opacity-95" data-ps="src/pages/media/index.astro:jyedfc"></div>
+    <div class="relative max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8" data-ps="src/pages/media/index.astro:jyedfd">
+      <div class="max-w-[840px]" data-ps="src/pages/media/index.astro:jyedfe">
+        <div class="inline-flex items-center gap-2 border border-[#C9A840]/36 text-[#DDC582] text-[11.36px] font-bold uppercase tracking-[1.5px] px-3 py-1 rounded-[2px] mb-6" data-ps="src/pages/media/index.astro:jyedff">
+          <svg viewBox="0 0 24 24" class="w-3.5 h-3.5 fill-[#C9A840]"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+          Joseph A. Simon in the News
+        </div>
+
+        <h1 class="text-[42px] sm:text-[50.4px] font-black leading-[1.05] tracking-[-0.6px] text-white mb-6 font-heading" data-ps="src/pages/media/index.astro:oqjqum">
+          Press & Media Coverage
+        </h1>
+
+        <p class="text-[18px] sm:text-[19.04px] leading-[31.6px] text-[#C3CCDA] mb-8" data-ps="src/pages/media/index.astro:uxkexk">
+          Selected news reports and media coverage detailing notable case dismissals, trial hearings, and criminal defense proceedings handled by attorney Joseph A. Simon across Southeast Michigan.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Area -->
+  <section class="py-[80px] lg:py-[100px] bg-[#F7F5F1] border-t border-[#E6E2D9]" data-ps="src/pages/media/index.astro:list">
+    <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8" data-ps="src/pages/media/index.astro:jyedfg">
+      
+      <!-- Featured Media Story Card -->
+      {featuredArticles.map(featuredArticle => (
+        <div data-media-list-id={featuredArticle.id} data-media-featured class="mb-14 bg-white border border-[#E6E2D9] rounded-[8px] p-8 sm:p-10 shadow-sm hover:border-[#732521]/40 transition group" data-ps="src/pages/media/index.astro:jyedfh">
+          <div class="flex flex-wrap items-center gap-3 mb-4" data-ps="src/pages/media/index.astro:jyedfi">
+            <span class="bg-[#732521] text-white text-[11px] font-bold uppercase tracking-[1.2px] px-3 py-1 rounded-[2px]" data-ps="src/pages/media/index.astro:9n7uky">
+              Featured Press Story
+            </span>
+            <span class="bg-[#F7F5F1] text-[#061633] text-[12px] font-semibold px-3 py-1 rounded-[2px] border border-[#E6E2D9]" data-ps="src/pages/media/index.astro:9n7ukz">
+              {featuredArticle.publisher}
+            </span>
+            {featuredArticle.sourceDateLabel && (
+              <span class="text-[13px] text-[#727C8B]" data-ps="src/pages/media/index.astro:9n7ul0">
+                {featuredArticle.sourceDateLabel}
+              </span>
+            )}
+          </div>
+
+          {featuredArticle.images[0] && <img src={featuredArticle.images[0].src} alt={featuredArticle.images[0].alt} loading="lazy" class="w-auto max-w-full h-[180px] object-contain object-left mb-6" />}
+          <h2 class="text-[26px] sm:text-[32px] font-black leading-[1.2] text-[#061633] mb-4 group-hover:text-[#732521] transition font-heading" data-ps="src/pages/media/index.astro:a24tmf">
+            <a href={featuredArticle.path} class="no-underline text-inherit" data-ps="src/pages/media/index.astro:wzlqdf">
+              {featuredArticle.title}
+            </a>
+          </h2>
+
+          <p class="text-[16px] sm:text-[17px] text-[#454F5E] leading-[1.7] mb-6 max-w-[900px]" data-ps="src/pages/media/index.astro:uxkexl">
+            <span data-media-excerpt>{featuredArticle.representationNote}</span>
+          </p>
+
+          <div class="flex flex-wrap items-center gap-4" data-ps="src/pages/media/index.astro:m9p8c6">
+            <a href={featuredArticle.path} class="inline-flex items-center gap-2 text-[#732521] font-bold text-[15px] hover:text-[#5a1c19] transition" data-ps="src/pages/media/index.astro:wzlqde">
+              View Press Coverage →
+            </a>
+            <span class="text-[#98A6BB]" data-ps="src/pages/media/index.astro:9n7ul1">·</span>
+            <a href={featuredArticle.externalArticleUrl} target="_blank" rel="noopener" class="text-[14px] text-[#454F5E] hover:text-[#732521] transition inline-flex items-center gap-1" data-ps="src/pages/media/index.astro:wzlqdd">
+              Read original on {featuredArticle.publisher}
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+            </a>
+          </div>
+        </div>
+      ))}
+
+      <!-- Section Subheading -->
+      <div class="flex items-center justify-between flex-wrap gap-4 mb-8" data-ps="src/pages/media/index.astro:m9p8c5">
+        <div class="flex items-center gap-3 text-[12px] font-bold uppercase tracking-[1.8px] text-[#732521]" data-ps="src/pages/media/index.astro:m9p8c4">
+          <span class="w-[28px] h-[2px] bg-[#C9A840] inline-block" data-ps="src/pages/media/index.astro:9n7ul2"></span>
+          <span data-ps="src/pages/media/index.astro:9n7ul3">ALL PRESS COVERAGE ({MEDIA_ARTICLES.length} ARTICLES)</span>
+        </div>
+      </div>
+
+      <!-- Articles Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16" data-ps="src/pages/media/index.astro:m9p8c3">
+        {regularArticles.map((art, __psIdx) => (
+          <article data-media-list-id={art.id} class="bg-white border border-[#E6E2D9] rounded-[6px] p-7 flex flex-col justify-between shadow-xs hover:border-[#732521]/40 hover:shadow-md transition group" data-ps={`src/pages/media/index.astro:c1ggw1-${__psIdx}`}>
+            <div data-ps={`src/pages/media/index.astro:m9p8c2-${__psIdx}`}>
+              <div class="flex items-center justify-between gap-2 text-[12px] text-[#727C8B] mb-3" data-ps={`src/pages/media/index.astro:m9p8c1-${__psIdx}`}>
+                <span class="font-bold text-[#C9A840] uppercase tracking-wider" data-ps={`src/pages/media/index.astro:9n7ul4-${__psIdx}`}>
+                  {art.publisher}
+                </span>
+                <span data-ps={`src/pages/media/index.astro:9n7ulq-${__psIdx}`}>{art.sourceDateLabel}</span>
+              </div>
+
+              {art.images[0] && <img src={art.images[0].src} alt={art.images[0].alt} loading="lazy" class="w-full h-[150px] object-contain object-left mb-5" />}
+              <h3 class="text-[19px] font-black leading-[1.3] text-[#061633] mb-3 group-hover:text-[#732521] transition font-heading line-clamp-3" data-ps={`src/pages/media/index.astro:4ma3l6-${__psIdx}`}>
+                <a href={art.path} class="no-underline text-inherit" data-ps={`src/pages/media/index.astro:wzlqdc-${__psIdx}`}>
+                  {art.title}
+                </a>
+              </h3>
+
+              <p class="text-[14px] text-[#454F5E] leading-[1.6] mb-5 line-clamp-3" data-ps={`src/pages/media/index.astro:uxkexm-${__psIdx}`}>
+                <span data-media-excerpt>{art.representationNote}</span>
+              </p>
+            </div>
+
+            <div class="pt-4 border-t border-[#E6E2D9]/60 flex items-center justify-between" data-ps={`src/pages/media/index.astro:m9p8c0-${__psIdx}`}>
+              <a href={art.path} class="text-[#732521] font-bold text-[13.5px] group-hover:translate-x-0.5 transition-transform inline-flex items-center gap-1" data-ps={`src/pages/media/index.astro:wzlqdb-${__psIdx}`}>
+                View Press Coverage →
+              </a>
+              <a href={art.externalArticleUrl} target="_blank" rel="noopener" class="text-[12px] text-[#727C8B] hover:text-[#061633] transition" title={`Read original on ${art.publisher}`} data-ps={`src/pages/media/index.astro:wzlqcp-${__psIdx}`}>
+                {art.publisher} ↗
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <!-- Consultation CTA Banner -->
+      <div class="bg-[#061633] text-white rounded-[8px] p-8 sm:p-12 border border-white/10 text-center" data-ps="src/pages/media/index.astro:m9p8bz">
+        <div class="flex items-center justify-center gap-3 text-[12px] font-bold uppercase tracking-[1.8px] text-[#C9A840] mb-3" data-ps="src/pages/media/index.astro:m9p8by">
+          <span class="w-[28px] h-[2px] bg-[#C9A840] inline-block" data-ps="src/pages/media/index.astro:9n7ulr"></span>
+          <span data-ps="src/pages/media/index.astro:9n7uls">DISCREET & AUTHORITATIVE REPRESENTATION</span>
+          <span class="w-[28px] h-[2px] bg-[#C9A840] inline-block" data-ps="src/pages/media/index.astro:9n7ult"></span>
+        </div>
+        <h2 class="text-[32px] sm:text-[38px] font-black text-white leading-tight mb-4 font-heading" data-ps="src/pages/media/index.astro:a24tn1">
+          Facing investigation or charges in Michigan?
+        </h2>
+        <p class="text-[16px] sm:text-[17.5px] text-[#C3CCDA] max-w-[680px] mx-auto mb-8" data-ps="src/pages/media/index.astro:uxkexn">
+          With over 40 years of dedicated criminal defense experience, attorney Joseph A. Simon provides the experienced, strategic representation needed when the stakes are highest.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4" data-ps="src/pages/media/index.astro:m9p8bx">
+          <a href="/#contact" class="bg-[#732521] text-white font-semibold text-[15.5px] px-[28px] py-[14px] rounded-[3px] hover:bg-[#5a1c19] transition inline-flex items-center gap-2 no-underline" data-ps="src/pages/media/index.astro:wzlqco">
+            Request Confidential Consultation
+          </a>
+          <a href="tel:+17348876200" class="border border-white/30 text-white font-semibold text-[15.5px] px-[28px] py-[14px] rounded-[3px] hover:border-[#C9A840] hover:text-[#DDC582] transition inline-flex items-center gap-2 no-underline" data-ps="src/pages/media/index.astro:wzlqcn">
+            Call (734) 887-6200
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

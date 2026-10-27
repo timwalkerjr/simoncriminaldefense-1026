@@ -1,0 +1,66 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import {serviceAreaHubs,pagesForHub} from '@/data/serviceAreaHubs';
+import AwardLogos from '@/components/home/AwardLogos.astro';
+import Testimonials from '@/components/home/Testimonials.astro';
+import CaseResults from '@/components/home/CaseResults.astro';
+import ContactForm from '@/components/home/ContactForm.astro';
+import home from '@/content/homepage.json';
+
+import {serviceAreaLocalInfo} from '@/data/serviceAreaLocalInfo';
+export function getStaticPaths(){return serviceAreaHubs.map(area=>({params:{slug:area.slug},props:{area}}));}
+const {area}=Astro.props;
+const pages=pagesForHub(area.slug);
+const primary=pages.find(p=>/Drunk Driving/.test(p.fieldData.name))||pages[0];
+const title=`${area.name} Criminal Defense | Law Offices of Joseph A. Simon`;
+const description=primary?.fieldData['practice-area-summary'] || `Criminal defense services for ${area.name}, Michigan. Law Offices of Joseph A. Simon, located in Ann Arbor.`;
+const mapQuery=`${area.name}, Michigan`;
+
+---
+<BaseLayout title={title} description={description}>
+ <section class="local-hero" data-service-area={area.slug}>
+  <div class="local-container">
+   <nav class="flex flex-wrap gap-3 text-[13px] text-[#C3CCDA] mb-8" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/service-areas/">Service Areas</a><span>/</span><span>{area.name}</span></nav>
+   <div class="text-[#C9A840] uppercase tracking-[1.8px] font-bold text-[12px] mb-5">Serving {area.name}, Michigan</div>
+   <h1 class="text-[36px] sm:text-[52px] lg:text-[62px] font-black leading-[1.1] max-w-[950px]">Criminal Defense in {area.name}</h1>
+   <p class="text-[18px] sm:text-[21px] text-[#C3CCDA] leading-[1.75] mt-7 max-w-[900px]" data-local-intro>{description}</p>
+   <div class="flex flex-wrap gap-4 mt-9"><a href="#contact" class="bg-[#732521] text-white px-7 py-4 rounded-[3px] font-bold">Confidential Consultation</a><a href="tel:+17348876200" class="border border-white/30 text-white px-7 py-4 rounded-[3px] font-bold">(734) 887-6200</a></div>
+   <p class="text-[#C3CCDA] text-[14px] mt-6">Ann Arbor office · Serving {area.name}</p>
+  </div>
+ </section>
+ <AwardLogos />
+ <section class="bg-[#F7F5F1] py-20 border-y border-[#E6E2D9]" id="local-practices">
+  <div class="local-container">
+   <div class="text-[#732521] uppercase tracking-widest font-bold text-[12px] mb-4">Local Legal Services</div>
+   <h2 class="text-[#061633] text-[32px] sm:text-[44px] font-black mb-5">Defense services for {area.name}</h2>
+   <p data-local-info class="text-[#454F5E] text-[18px] leading-[1.8] max-w-[1000px] mb-10">{serviceAreaLocalInfo[area.slug].text}</p>
+   <div class="grid md:grid-cols-2 gap-6">{pages.map(({id,fieldData:f})=><article data-local-page={id} class="bg-white border border-[#E6E2D9] rounded-[5px] p-7 sm:p-9 flex flex-col">
+    <h3 class="text-[#061633] text-[25px] font-bold mb-5">{f.name}</h3>
+    <p class="text-[#454F5E] text-[17px] leading-[1.8] mb-7" data-local-summary>{f['practice-area-summary']}</p>
+    <a href={`/practice-area/${f.slug}/`} class="text-[#732521] font-bold mt-auto">Explore {f.name} →</a>
+   </article>)}</div>
+   <a href="/practice-areas/" class="inline-block mt-8 text-[#732521] font-bold underline">View all practice areas</a>
+  </div>
+ </section>
+ <section class="bg-white py-20">
+  <div class="local-container grid lg:grid-cols-2 gap-12 items-start">
+   <div>
+    <div class="text-[#732521] uppercase tracking-widest font-bold text-[12px] mb-4">Law Offices of Joseph A. Simon</div>
+    <h2 class="text-[#061633] text-[32px] sm:text-[40px] font-black mb-6">Criminal defense is all we do.</h2>
+    <p class="text-[#454F5E] text-[18px] leading-[1.8] mb-7">{home.intro}</p>
+    <a href="/attorneys/joseph-a-simon/" class="text-[#732521] font-bold underline">About Joseph A. Simon →</a>
+    <div class="bg-[#061633] text-white p-7 rounded-[5px] mt-9">
+     <h3 class="text-[24px] font-bold mb-3">Our Ann Arbor Office</h3>
+     <address class="not-italic text-[#C3CCDA] leading-[1.8]">1310 South Main Street, Suite 11<br/>Ann Arbor, MI 48104</address>
+     <a class="inline-block text-white font-bold underline mt-5" href="https://www.google.com/maps/dir/?api=1&destination=1310+South+Main+Street+Suite+11+Ann+Arbor+MI+48104" target="_blank" rel="noopener">Directions to our office →</a>
+    </div>
+   </div>
+   <div><h2 class="text-[#061633] text-[28px] font-bold mb-5">Serving {area.name}</h2><iframe title={`Map of ${area.name}, Michigan service area`} src={`https://maps.google.com/maps?q=${encodeURIComponent(mapQuery)}&output=embed`} width="100%" height="410" loading="lazy" class="rounded-[5px] border border-[#E6E2D9]" referrerpolicy="no-referrer-when-downgrade" /><p class="text-[#596371] text-[14px] mt-3">Service area: {area.name}, Michigan. Our office is in Ann Arbor.</p></div>
+  </div>
+ </section>
+ <CaseResults />
+ <Testimonials />
+ <section class="bg-white py-16 border-t border-[#E6E2D9]"><div class="local-container"><h2 class="text-[#061633] text-[30px] font-bold mb-7">Explore Our Service Areas</h2><div class="flex flex-wrap gap-3">{serviceAreaHubs.filter(h=>h.slug!==area.slug).map(h=><a class="px-5 py-3 border border-[#E6E2D9] rounded-[3px] text-[#732521] font-semibold" href={`/service-areas/${h.slug}/`}>{h.name}</a>)}</div></div></section>
+ <ContactForm />
+</BaseLayout>
+<style>.local-container{max-width:1280px;margin-inline:auto;padding-inline:24px}.local-hero{padding:140px 0 70px;color:white;background:linear-gradient(100deg,rgba(4,16,38,.97),rgba(8,26,60,.86)),url('/hero-court-1.svg') center/cover}</style>
