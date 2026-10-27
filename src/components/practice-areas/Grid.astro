@@ -1,0 +1,52 @@
+---
+import originalPublishedPaths from '@/data/originalPublishedPaths.json';
+import { getCollection } from 'astro:content';
+const practiceAreas = (await getCollection('practiceAreas'))
+  .filter(entry => !entry.data.isArchived && (!entry.data.isDraft || originalPublishedPaths.includes(`/practice-area/${entry.data.fieldData.slug}`) || import.meta.env.SITE_NOINDEX === 'true'))
+  .sort((a, b) => a.data.fieldData.name.localeCompare(b.data.fieldData.name))
+  .map((entry, index) => ({
+    num: String(index + 1).padStart(2, '0'),
+    title: entry.data.fieldData.name,
+    body: entry.data.fieldData['practice-area-summary'],
+    href: '/practice-area/' + entry.data.fieldData.slug + '/',
+  }));
+---
+<section class="bg-white py-[100px]">
+  <div class="max-w-[1280px] mx-auto px-6">
+    <div class="mb-4">
+      <span class="inline-flex items-center text-[12px] font-bold uppercase tracking-[1.8px] text-[#732521]">
+        <span class="w-[28px] h-[2px] bg-[#C9A840] inline-block mr-3"></span>
+        What We Defend
+      </span>
+    </div>
+    <h2 class="text-[44px] font-black leading-[1.14] tracking-[-0.53px] text-[#061633] mb-4 max-w-[820px]">
+      Criminal defense in Southeast Michigan.
+    </h2>
+    <p class="text-[18.08px] leading-[31px] text-[#454F5E] max-w-[820px] mb-12">
+      From misdemeanors to serious felonies, we appear in the district and circuit courts of Southeast Michigan and examine every element of the prosecution's case.
+    </p>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {practiceAreas.map((area) => (
+        <div class="border border-[#E6E2D9] p-7 rounded-[4px] bg-white hover:border-[#732521]/40 hover:shadow-md transition flex flex-col justify-between">
+          <div>
+            <span class="text-[#C9A840] font-black text-[15px] tracking-wider block mb-3">{area.num}</span>
+            <h3 class="text-[19.84px] font-black text-[#061633] mb-3 leading-[1.14] tracking-[-0.24px]">{area.title}</h3>
+            <p class="text-[15.5px] leading-[25px] text-[#454F5E] mb-5">{area.body}</p>
+          </div>
+          <a href={area.href} class="text-[#732521] font-bold text-[12.16px] inline-flex items-center gap-1 hover:gap-2 transition-all">
+            LEARN MORE
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      ))}
+    </div>
+    <div class="mt-12 text-center max-w-[680px] mx-auto">
+      <p class="text-[16.5px] text-[#454F5E] leading-[26px]">
+        Not sure if your charge is listed? We defend the full range of Michigan criminal offenses.
+        <a href="/#contact" class="text-[#732521] font-bold border-b border-[#732521]/28 pb-0.5 hover:border-[#732521] ml-1">
+          Discuss your case →
+        </a>
+      </p>
+    </div>
+  </div>
+</section>

@@ -1,30 +1,59 @@
 ---
-const areas = ['Ann Arbor', 'Ypsilanti', 'Saline', 'Chelsea', 'Milan', 'Dexter', 'Manchester', 'Whitmore Lake', 'Pittsfield Twp.'];
+// Washtenaw County Service Areas and Office Card
 ---
-<section id="service-areas" class="bg-white py-[90px] lg:py-[100px] border-t border-[#E6E2D9]" data-ps="src/components/home/ServiceAreas.astro:fsac4g">
+
+<section id="service-areas" class="bg-white py-[90px] lg:py-[100px] border-t border-[#E6E2D9]" data-ps="src/components/home/ServiceAreas.astro:section">
   <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8" data-ps="src/components/home/ServiceAreas.astro:6p3s09">
     <div class="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-12 items-center" data-ps="src/components/home/ServiceAreas.astro:6p3s0a">
+      <!-- Left: Service Area Copy and Badges -->
       <div data-ps="src/components/home/ServiceAreas.astro:6p3s0b">
         <div class="flex items-center gap-3 text-[12px] font-bold uppercase tracking-[1.8px] text-[#732521] mb-3" data-ps="src/components/home/ServiceAreas.astro:6p3s0c">
-          <span class="w-[28px] h-[2px] bg-[#C9A840] inline-block" data-ps="src/components/home/ServiceAreas.astro:5y10r3"></span>
-          <span data-ps="src/components/home/ServiceAreas.astro:5y10r4">LOCAL REPRESENTATION</span>
+          <span class="w-[28px] h-[2px] bg-[#C9A840] inline-block" data-ps="src/components/home/ServiceAreas.astro:5y10qb"></span>
+          <span data-ps="src/components/home/ServiceAreas.astro:5y10qc">LOCAL REPRESENTATION</span>
         </div>
-        <h2 class="font-heading font-black text-[32px] sm:text-[40px] lg:text-[44px] text-[#061633] leading-[1.14] tracking-[-0.53px] mb-4" data-ps="src/components/home/ServiceAreas.astro:44b68o">Proudly serving Washtenaw County.</h2>
-        <p class="text-[17px] sm:text-[18.08px] text-[#454F5E] leading-[1.7] mb-8" data-ps="src/components/home/ServiceAreas.astro:p34ube">Our office sits on South Main Street in the heart of Ann Arbor. We represent clients in every city and township across Washtenaw County and throughout Southeast Michigan.</p>
+
+        <h2 class="font-heading font-black text-[32px] sm:text-[40px] lg:text-[44px] text-[#061633] leading-[1.14] tracking-[-0.53px] mb-4" data-ps="src/components/home/ServiceAreas.astro:tnjx5c">
+          Proudly serving Washtenaw County.
+        </h2>
+
+        <p class="text-[17px] sm:text-[18.08px] text-[#454F5E] leading-[1.7] mb-8" data-ps="src/components/home/ServiceAreas.astro:p34ubf">
+          Our office sits on South Main Street in the heart of Ann Arbor. We represent clients in every city and township across Washtenaw County and throughout Southeast Michigan.
+        </p>
+
+        <!-- Location Badges -->
         <div class="flex flex-wrap gap-2.5 mb-8" data-ps="src/components/home/ServiceAreas.astro:6p3s0d">
-          {areas.map((area, __psIdx) => (
-            <span class="bg-[#F7F5F1] border border-[#E6E2D9] px-3.5 py-1.5 rounded-[2px] text-[14px] font-semibold text-[#454F5E]" data-ps={`src/components/home/ServiceAreas.astro:5y10r5-${__psIdx}`}>{area}</span>
-          ))}
+          <span class="bg-[#F7F5F1] border border-[#E6E2D9] px-3.5 py-1.5 rounded-[2px] text-[14px] font-semibold text-[#454F5E]" data-ps="src/components/home/ServiceAreas.astro:5y10qd">Ann Arbor</span>
+          <span class="bg-[#F7F5F1] border border-[#E6E2D9] px-3.5 py-1.5 rounded-[2px] text-[14px] font-semibold text-[#454F5E]" data-ps="src/components/home/ServiceAreas.astro:5y10qe">Ypsilanti</span>
+          <span class="bg-[#F7F5F1] border border-[#E6E2D9] px-3.5 py-1.5 rounded-[2px] text-[14px] font-semibold text-[#454F5E]" data-ps="src/components/home/ServiceAreas.astro:5y10qf">Saline</span>
+          <span class="bg-[#F7F5F1] border border-[#E6E2D9] px-3.5 py-1.5 rounded-[2px] text-[14px] font-semibold text-[#454F5E]" data-ps="src/components/home/ServiceAreas.astro:5y10qg">Chelsea</span>
+          <span class="bg-[#F7F5F1] border border-[#E6E2D9] px-3.5 py-1.5 rounded-[2px] text-[14px] font-semibold text-[#454F5E]" data-ps="src/components/home/ServiceAreas.astro:5y10qh">Milan</span>
+          <span class="bg-[#F7F5F1] border border-[#E6E2D9] px-3.5 py-1.5 rounded-[2px] text-[14px] font-semibold text-[#454F5E]" data-ps="src/components/home/ServiceAreas.astro:5y10r3">Dexter</span>
+          <span class="bg-[#F7F5F1] border border-[#E6E2D9] px-3.5 py-1.5 rounded-[2px] text-[14px] font-semibold text-[#454F5E]" data-ps="src/components/home/ServiceAreas.astro:5y10r4">Manchester</span>
+          <span class="bg-[#F7F5F1] border border-[#E6E2D9] px-3.5 py-1.5 rounded-[2px] text-[14px] font-semibold text-[#454F5E]" data-ps="src/components/home/ServiceAreas.astro:5y10r5">Whitmore Lake</span>
+          <span class="bg-[#F7F5F1] border border-[#E6E2D9] px-3.5 py-1.5 rounded-[2px] text-[14px] font-semibold text-[#454F5E]" data-ps="src/components/home/ServiceAreas.astro:5y10r6">Pittsfield Twp.</span>
         </div>
-        <a href="/service-areas" class="text-[#732521] font-bold text-[15.2px] border-b border-[#732521]/30 hover:border-[#732521] inline-flex items-center gap-1.5 transition-colors" data-ps="src/components/home/ServiceAreas.astro:w72r0h"><span data-ps="src/components/home/ServiceAreas.astro:5y10r6">View all service areas</span><span data-ps="src/components/home/ServiceAreas.astro:5y10r7">→</span></a>
+
+        <a href="/service-areas/" class="text-[#732521] font-bold text-[15.2px] border-b border-[#732521]/30 hover:border-[#732521] inline-flex items-center gap-1.5 transition-colors" data-ps="src/components/home/ServiceAreas.astro:w72r0a">
+          <span data-ps="src/components/home/ServiceAreas.astro:5y10r7">View all service areas</span>
+          <span data-ps="src/components/home/ServiceAreas.astro:5y10r8">→</span>
+        </a>
       </div>
+
+      <!-- Right: Dark 24/7 Office Card -->
       <div class="bg-[#061633] text-white p-8 sm:p-10 rounded-[6px] shadow-xl border border-white/10" data-ps="src/components/home/ServiceAreas.astro:6p3s0e">
         <div class="text-[48px] font-black text-white leading-none mb-2" data-ps="src/components/home/ServiceAreas.astro:6p3s0f">24/7</div>
-        <p class="text-[16px] text-[#C3CCDA] leading-relaxed mb-6" data-ps="src/components/home/ServiceAreas.astro:p34ubf">Available for urgent criminal matters and arrests.</p>
+        <p class="text-[16px] text-[#C3CCDA] leading-relaxed mb-6" data-ps="src/components/home/ServiceAreas.astro:p34ubg">
+          Available for urgent criminal matters and arrests.
+        </p>
+
         <div class="h-[1px] bg-white/10 w-full mb-6" data-ps="src/components/home/ServiceAreas.astro:6p3s0g"></div>
+
         <div data-ps="src/components/home/ServiceAreas.astro:6p3s0h">
-          <h3 class="font-bold text-[17px] text-white mb-1" data-ps="src/components/home/ServiceAreas.astro:ak3qyx">Law Offices of Joseph A. Simon</h3>
-          <p class="text-[15px] text-[#C3CCDA] leading-relaxed" data-ps="src/components/home/ServiceAreas.astro:p34ubg">1310 South Main Street, Suite 11<br>Ann Arbor, MI 48104</p>
+          <h3 class="font-bold text-[17px] text-white mb-1" data-ps="src/components/home/ServiceAreas.astro:ak3qyw">Law Offices of Joseph A. Simon</h3>
+          <p class="text-[15px] text-[#C3CCDA] leading-relaxed" data-ps="src/components/home/ServiceAreas.astro:p34ubh">
+            1310 South Main Street, Suite 11<br />
+            Ann Arbor, MI 48104
+          </p>
         </div>
       </div>
     </div>

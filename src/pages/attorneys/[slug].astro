@@ -1,0 +1,46 @@
+---
+import { getCollection } from 'astro:content';
+import { load } from 'cheerio';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Consultation from '@/components/practice-areas/Consultation.astro';
+export async function getStaticPaths(){return (await getCollection('attorneys')).filter(p=>!p.data.isDraft&&!p.data.isArchived).map(entry=>({params:{slug:entry.data.fieldData.slug},props:{entry}}));}
+const {entry}=Astro.props;
+const f=entry.data.fieldData;
+const $=load(f['bio-summary'],null,false);
+$('img').each((_,img)=>{const original=$(img).attr('src')!;if(entry.data.images[original])$(img).attr('src',entry.data.images[original]);$(img).attr('loading','lazy');});
+---
+<BaseLayout title={`${f.name} | Law Offices of Joseph A. Simon`} description={f['bio-summary-2'] || undefined}>
+  <section class="practice-hero"><div class="practice-container"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/#about">Our Team</a></nav><div class="eyebrow">{f['job-title']}</div><h1>{f.name}</h1><div class="hero-actions"><a class="button" href="/#contact">Request a Confidential Consultation</a><a class="phone" href="tel:+17348876200">(734) 887-6200</a></div></div></section>
+  <div class="practice-container" style="padding-block:64px;max-width:1100px"><article class="source-copy bio-copy" data-attorney-id={entry.id} set:html={$.html()} /></div>
+  <Consultation />
+</BaseLayout>
+<style>
+.bio-copy{display:flow-root}.bio-copy :global(figure){float:left;margin:0 32px 24px 0;width:35%}.bio-copy :global(figcaption){font-size:14px}.bio-copy :global(img){width:100%;height:auto}
+@media(max-width:640px){.bio-copy :global(figure){float:none;width:100%;margin:0 auto 32px}}
+</style>
+<style>
+  .practice-container{max-width:1280px;margin-inline:auto;padding-inline:32px}
+  .practice-hero{background:linear-gradient(100deg,rgba(4,16,38,.97),rgba(8,26,60,.85)),url('/hero-court-1.svg') center/cover;padding:140px 0 64px;color:white}
+  .breadcrumbs{display:flex;flex-wrap:wrap;gap:10px;font-size:13px;color:#c3ccda;margin-bottom:32px}
+  .breadcrumbs a:hover{color:white}.breadcrumbs>span:last-child{color:#ddc582}
+  .eyebrow{display:flex;align-items:center;gap:12px;font-size:12px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;color:#c9a840;margin-bottom:18px}
+  .eyebrow:before{content:'';width:28px;height:2px;background:#c9a840;flex-shrink:0}
+  h1{font-size:clamp(32px,4vw,52px);font-weight:900;line-height:1.12;letter-spacing:-.6px;max-width:1000px;text-wrap:balance}
+  .hero-intro{font-size:clamp(19px,2vw,24px);line-height:1.5;color:#ddc582;max-width:940px;margin-top:24px}
+  .hero-description{font-size:17px;line-height:1.7;color:#c3ccda;max-width:840px;margin-top:18px}
+  .hero-actions{display:flex;align-items:center;flex-wrap:wrap;gap:24px;margin-top:32px}.button{background:#732521;padding:17px 26px;border-radius:3px;font-weight:600}.button:hover{background:#5a1c19}.phone{font-weight:600;border-bottom:1px solid #c9a840;padding-block:8px}
+  .practice-body{display:grid;grid-template-columns:minmax(0,800px) minmax(240px,300px);gap:72px;padding-block:72px 96px;align-items:start}
+  .reading-column{min-width:0}.intro-heading{font-size:clamp(26px,3vw,36px);font-weight:900;line-height:1.25;color:#061633;margin-bottom:32px;text-wrap:balance}
+  .main-image{width:100%;max-height:none;object-fit:cover;border-radius:4px;margin-bottom:36px}
+  .source-copy{font-size:18px;line-height:1.8;color:#454f5e;overflow-wrap:anywhere}
+  .source-copy :global(p){margin:0 0 1.25em}.source-copy :global(h1),.source-copy :global(h2){font-size:clamp(25px,2.6vw,34px);line-height:1.25;font-weight:900;letter-spacing:-.4px;color:#061633;margin:52px 0 24px;padding-top:32px;border-top:1px solid #e6e2d9;text-wrap:balance}
+  .source-copy :global(h3){font-size:23px;line-height:1.35;color:#061633;font-weight:800;margin:32px 0 16px}.source-copy :global(h4),.source-copy :global(h5),.source-copy :global(h6){font-size:20px;font-weight:700;color:#061633;margin:24px 0 12px}
+  .source-copy :global([id]){scroll-margin-top:120px}.source-copy :global(ul),.source-copy :global(ol){padding-left:1.4em;margin:20px 0 28px}.source-copy :global(ul){list-style:disc}.source-copy :global(ol){list-style:decimal}.source-copy :global(li){margin-block:10px}.source-copy :global(li::marker){color:#987b29}
+  .source-copy :global(a),.video-link{color:#732521;text-decoration:underline;text-underline-offset:3px}.source-copy :global(a:hover){color:#061633}.source-copy :global(strong){color:#061633}.source-copy :global(img){max-width:100%;height:auto;border-radius:4px}.source-copy :global(blockquote){border-left:3px solid #c9a840;background:#f7f5f1;padding:24px;margin-block:32px}.source-copy :global(table){display:block;overflow-x:auto;max-width:100%;border-collapse:collapse;margin-block:24px}.source-copy :global(th),.source-copy :global(td){padding:12px;border:1px solid #e6e2d9;text-align:left}
+  .expanded-copy{margin-top:48px;padding-top:8px;border-top:3px solid #c9a840}.video{aspect-ratio:3/2;margin-block:40px}.video iframe{width:100%;height:100%;border:0}
+  .practice-sidebar{display:flex;flex-direction:column;gap:24px}.sidebar-card{padding:28px;background:#f7f5f1;border:1px solid #e6e2d9;border-radius:4px}.sidebar-card h2{font-size:13px;letter-spacing:1.2px;text-transform:uppercase;font-weight:800;color:#732521;margin-bottom:18px}.sidebar-card ul{margin:0;padding:0;list-style:none}.contents li+li{border-top:1px solid #e6e2d9}.contents a{display:block;padding-block:11px;color:#061633;font-size:15px;line-height:1.45}.contents a:hover{color:#732521;text-decoration:underline}.charges li{font-size:16px;line-height:1.6;color:#454f5e;padding-left:17px;position:relative;margin-top:12px}.charges li:before{content:'—';color:#987b29;position:absolute;left:0}.sidebar-image{width:100%;height:auto;border-radius:4px}.all-practices{font-size:15px;font-weight:700;color:#732521;padding:12px 0}
+  .faq-section{margin-top:60px;scroll-margin-top:120px}.faq-section>.eyebrow{color:#732521}.faq-section>h2{font-size:32px;font-weight:900;color:#061633;margin-bottom:24px}.faq-section details{border-top:1px solid #e6e2d9;padding-block:22px}.faq-section summary{font-size:20px;font-weight:700;color:#061633;cursor:pointer}.faq-section details>.source-copy{padding-top:20px}
+  @media(max-width:960px){.practice-body{gap:36px;grid-template-columns:minmax(0,1fr) 250px}.practice-container{padding-inline:24px}}
+  @media(max-width:760px){.practice-container{padding-inline:20px}.practice-body{display:flex;flex-direction:column;padding-block:40px 60px;gap:40px}.practice-sidebar{display:contents}.practice-sidebar .sidebar-card{width:100%}.practice-sidebar [aria-label="On this page"]{order:-1}.practice-sidebar .sidebar-image,.practice-sidebar .all-practices{display:none}.contents{max-height:300px;overflow-y:auto}.sidebar-card{padding:22px}.charges ul{columns:2;column-gap:24px}.charges li{break-inside:avoid}.practice-hero{padding:120px 0 44px}.source-copy{font-size:17px}.hero-actions{gap:18px}.button{font-size:15px;padding:16px 20px}.main-image{max-height:none}}
+  @media(prefers-reduced-motion:no-preference){:global(html){scroll-behavior:smooth}}
+</style>

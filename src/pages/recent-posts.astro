@@ -1,152 +1,147 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { load } from 'cheerio';
+const posts = (await getCollection('posts')).filter(p => !p.data.isDraft && !p.data.isArchived)
+  .sort((a,b) => Number(!!b.data.fieldData.featured) - Number(!!a.data.fieldData.featured) || b.data.createdOn.localeCompare(a.data.createdOn))
+  .map(({id,data}) => ({
+    id, title:data.fieldData.name, path:`/post/${data.fieldData.slug}/`,
+    seoDescription:data.fieldData['post-summary'] || '',
+    readingTime:`${Math.max(1,Math.ceil(load(data.fieldData['post-body']).text().split(/\s+/).length / 220))} min read`,
+    thumbnail:data.assets['thumbnail-image'] || data.assets['main-image'],
+    imageAlt:data.fieldData['thumbnail-image']?.alt || data.fieldData['main-image']?.alt || '',
+  }));
+import { SITE } from '@/config/site';
 
-const featured = {
-  title: "Ann Arbor's Best DUI Attorney?",
-  href: '/post/ann-arbors-best-dui-attorney',
-  image: 'https://pagesmith-cdn.com/ee60f2da/images/691359fc65a605aaa219c123-dcea10-1536.webp',
-  readTime: '6 min read',
-  excerpt:
-    'When searching for an attorney for a DUI charge arising in Ann Arbor, you may encounter attorneys who advertise themselves as the "Best Drunk Driving Defense Attorney in Ann Arbor," "Best DUI Attorney in Ann Arbor," "Top DUI/OWI Attorney," or "#1 DUI/OWI Attorney." Are these attorneys making legitimate claims you can rely on when your freedom is at stake?',
-};
+const featuredPost = posts[0];
+const regularPosts = posts.slice(1);
 
-const posts = [
-  {
-    title: 'Best DUI Attorney in Saline, MI?',
-    href: '/post/best-dui-attorney-in-saline-mi',
-    image: 'https://pagesmith-cdn.com/ee60f2da/images/691359fc65a605aaa219c123-dcea10-1536.webp',
-    readTime: '6 min read',
-    excerpt:
-      'When searching for an attorney for a DUI charge arising in Saline, you may encounter attorneys who advertise themselves as the "Best Drunk Driving Defense Attorney in Saline," "Best DUI Attorney in Saline," "Top DUI/OWI Attorney," or "#1 DUI/OWI Attorney." Are these attorneys making legitimate claims you can rely on when your freedom is at stake?',
-  },
-  {
-    title: "Determining Washtenaw County's Best DUI Attorney",
-    href: '/post/determining-washtenaw-countys-best-dui-attorney',
-    image: 'https://pagesmith-cdn.com/ee60f2da/images/68da89b19d30ca4dc5c85c97-2349b9-1536.webp',
-    readTime: '5 min read',
-    excerpt:
-      "When searching for the best DUI attorney in Washtenaw County, it's essential to look beyond the flashy claims and focus on the facts.",
-  },
-  {
-    title: 'Michigan DUI Defense Strategies: Understanding Your Legal Options',
-    href: '/post/michigan-dui-defense-strategies-understanding-your-legal-options',
-    image: 'https://pagesmith-cdn.com/ee60f2da/images/68560d32628aa196bc12199d-6d6a41-1536.webp',
-    readTime: '18 min read',
-    excerpt:
-      'Facing a DUI charge in Michigan is a serious matter that requires careful consideration of your legal options. Understanding your rights and the various aspects of DUI defense is important for making informed decisions about your case.',
-  },
-  {
-    title: 'Defending Your Future: What to Expect When Facing Domestic Violence Charges',
-    href: '/post/defending-your-future-what-to-expect-when-facing-domestic-violence-charges',
-    image: 'https://pagesmith-cdn.com/ee60f2da/images/67f5da79488c49c83a5710af-9217f5-1536.webp',
-    readTime: '4 min read',
-    excerpt:
-      'Facing accusations of domestic violence can be a frightening and isolating experience. At the Law Offices of Joseph A. Simon, PLLC, we understand the seriousness of these charges and are committed to providing you with a vigorous and ethical defense backed by over 38 years of experience in criminal law.',
-  },
-  {
-    title: 'Understanding Michigan Assault and Battery Laws: A Guide',
-    href: '/post/understanding-michigan-assault-and-battery-laws-a-comprehensive-guide',
-    image: 'https://pagesmith-cdn.com/ee60f2da/images/6789b1078405c757ca03867e-54d3d2-640.webp',
-    readTime: '8 min read',
-    excerpt:
-      "Facing assault and battery charges in Michigan? Trust your defense to the 38 years' experience of Joseph A. Simon. Contact us today for a consultation.",
-  },
-  {
-    title: 'Defending Domestic Violence Charges in Southeast Michigan',
-    href: '/post/defending-domestic-violence-charges-in-michigan',
-    image: 'https://pagesmith-cdn.com/ee60f2da/images/675c77847eefd6d441f75181-ee5188-1536.webp',
-    readTime: '6 min read',
-    excerpt:
-      'Michigan law treats domestic violence cases with increasing severity, with penalties escalating for repeat offenders. My firm recognizes the critical importance of experienced legal representation to navigate the complex legal challenges Domestic Violence cases present. This includes litigating cases in trial or navigating first-time offenders who may qualify for deferred sentencing programs that can prevent a conviction and permanent criminal record.',
-  },
-  {
-    title: 'Charged with OWI in Southeast Michigan?',
-    href: '/post/charged-with-owi-in-michigan',
-    image: 'https://pagesmith-cdn.com/ee60f2da/images/675b88a743fafce009cb6b91-890242-640.webp',
-    readTime: '3 min read',
-    excerpt:
-      "If you're facing an OWI charge in Southeast Michigan, I understand the overwhelming stress and uncertainty you're experiencing. Over my 38-year career representing OWI clients in Washtenaw, Wayne, Jackson, Livingston, and Lenawee counties, I've successfully helped thousands of people navigate these exact challenges.",
-  },
-];
+
 ---
 
 <BaseLayout
-  title="Legal Defense Posts & Insights | Law Offices of Joseph A. Simon"
+  title={`Legal Defense Posts & Insights | ${SITE.name}`}
   description="In-depth legal articles and posts on Michigan criminal defense, OWI law, domestic assault defense, and statutory rights."
-  headerVariant="transparent"
 >
-  <main data-ps="src/pages/recent-posts.astro:4z5dp0">
-    <section class="bg-[#061633] text-white pt-[140px] pb-[70px] relative overflow-hidden" data-ps="src/pages/recent-posts.astro:hx1fye">
-      <div class="absolute inset-0 bg-gradient-to-br from-[#04101F] via-[#061633] to-[#0B1F42] opacity-95" data-ps="src/pages/recent-posts.astro:marfds"></div>
-      <div class="relative max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8" data-ps="src/pages/recent-posts.astro:marfdr">
-        <div class="max-w-[840px]" data-ps="src/pages/recent-posts.astro:marfdq">
-          <div class="inline-flex items-center gap-2 border border-[#C9A840]/36 text-[#DDC582] text-[11.36px] font-bold uppercase tracking-[1.5px] px-3 py-1 rounded-[2px] mb-6" data-ps="src/pages/recent-posts.astro:marfdp">
-            <svg viewBox="0 0 24 24" class="w-3.5 h-3.5 fill-[#C9A840]" fill="#C9A840" aria-hidden="true"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"></path></svg>
-            Legal Insights &amp; Commentary
-          </div>
-          <h1 class="text-[42px] sm:text-[50.4px] font-black leading-[1.05] tracking-[-0.6px] text-white mb-6" data-ps="src/pages/recent-posts.astro:wocags">Posts &amp; Defense Insights</h1>
-          <p class="text-[18px] sm:text-[19.04px] leading-[31.6px] text-[#C3CCDA] mb-8" data-ps="src/pages/recent-posts.astro:hxjqm3">Clear, ethical legal insights from more than 40 years defending clients in Ann Arbor, Washtenaw County, and courts across Southeast Michigan.</p>
+  <!-- Hero Section -->
+  <section class="bg-[#061633] text-white pt-[140px] pb-[70px] relative overflow-hidden" data-ps="src/pages/posts/index.astro:hero">
+    <div class="absolute inset-0 bg-gradient-to-br from-[#04101F] via-[#061633] to-[#0B1F42] opacity-95" data-ps="src/pages/posts/index.astro:kfb54n"></div>
+    <div class="relative max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8" data-ps="src/pages/posts/index.astro:kfb54m">
+      <div class="max-w-[840px]" data-ps="src/pages/posts/index.astro:kfb54l">
+        <div class="inline-flex items-center gap-2 border border-[#C9A840]/36 text-[#DDC582] text-[11.36px] font-bold uppercase tracking-[1.5px] px-3 py-1 rounded-[2px] mb-6" data-ps="src/pages/posts/index.astro:kfb54k">
+          <svg viewBox="0 0 24 24" class="w-3.5 h-3.5 fill-[#C9A840]" fill="#C9A840"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+          Legal Insights & Commentary
         </div>
-      </div>
-    </section>
 
-    <section class="py-[80px] lg:py-[100px] bg-[#F7F5F1] border-t border-[#E6E2D9]" data-ps="src/pages/recent-posts.astro:hx1fyf">
-      <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8" data-ps="src/pages/recent-posts.astro:marfdo">
-        <div class="mb-14 bg-white border border-[#E6E2D9] rounded-[8px] p-8 sm:p-10 shadow-sm hover:border-[#732521]/40 transition group" data-ps="src/pages/recent-posts.astro:aqjiec">
-          <div class="flex flex-wrap items-center gap-3 mb-4" data-ps="src/pages/recent-posts.astro:aqjied">
-            <span class="bg-[#732521] text-white text-[11px] font-bold uppercase tracking-[1.2px] px-3 py-1 rounded-[2px]" data-ps="src/pages/recent-posts.astro:wrt5v9">Featured Post</span>
-            <span class="bg-[#F7F5F1] text-[#061633] text-[12px] font-semibold px-3 py-1 rounded-[2px] border border-[#E6E2D9]" data-ps="src/pages/recent-posts.astro:wrt5va">Post</span>
-            <span class="text-[13px] text-[#727C8B]" data-ps="src/pages/recent-posts.astro:wrt5vb">{featured.readTime}</span>
+        <h1 class="text-[42px] sm:text-[50.4px] font-black leading-[1.05] tracking-[-0.6px] text-white mb-6" data-ps="src/pages/posts/index.astro:hqba9t">
+          Posts & Defense Insights
+        </h1>
+
+        <p class="text-[18px] sm:text-[19.04px] leading-[31.6px] text-[#C3CCDA] mb-8" data-ps="src/pages/posts/index.astro:8y8pp3">
+          Clear, ethical legal insights from more than 40 years defending clients in Ann Arbor, Washtenaw County, and courts across Southeast Michigan.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Grid -->
+  <section class="py-[80px] lg:py-[100px] bg-[#F7F5F1] border-t border-[#E6E2D9]" data-ps="src/pages/posts/index.astro:list">
+    <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8" data-ps="src/pages/posts/index.astro:kfb54j">
+      
+      {featuredPost && (
+        <div class="mb-14 bg-white border border-[#E6E2D9] rounded-[8px] p-8 sm:p-10 shadow-sm hover:border-[#732521]/40 transition group" data-ps="src/pages/posts/index.astro:aspucb">
+          <div class="flex flex-wrap items-center gap-3 mb-4" data-ps="src/pages/posts/index.astro:aspucc">
+            <span class="bg-[#732521] text-white text-[11px] font-bold uppercase tracking-[1.2px] px-3 py-1 rounded-[2px]" data-ps="src/pages/posts/index.astro:dfejj1">
+              Featured Post
+            </span>
+            <span class="bg-[#F7F5F1] text-[#061633] text-[12px] font-semibold px-3 py-1 rounded-[2px] border border-[#E6E2D9]" data-ps="src/pages/posts/index.astro:dfejj0">
+              Post
+            </span>
+            <span class="text-[13px] text-[#727C8B]" data-ps="src/pages/posts/index.astro:dfejiz">
+              {featuredPost.readingTime}
+            </span>
           </div>
-          <img src="https://pagesmith-cdn.com/ee60f2da/images/691359fc65a605aaa219c123-dcea10-1536.webp" alt="" class="w-full max-h-[320px] object-cover rounded-[4px] mb-6" loading="lazy" data-ps="src/pages/recent-posts.astro:ot0jpz" />
-          <h2 class="text-[26px] sm:text-[32px] font-black leading-[1.2] text-[#061633] mb-4 group-hover:text-[#732521] transition" data-ps="src/pages/recent-posts.astro:hzxd96">
-            <a href={featured.href} class="no-underline text-inherit" data-ps="src/pages/recent-posts.astro:p1hnaa">{featured.title}</a>
+
+          {featuredPost.thumbnail && <img src={featuredPost.thumbnail} alt={featuredPost.imageAlt} class="w-full max-h-[320px] object-cover rounded-[4px] mb-6" loading="lazy" />}
+          <h2 class="text-[26px] sm:text-[32px] font-black leading-[1.2] text-[#061633] mb-4 group-hover:text-[#732521] transition" data-ps="src/pages/posts/index.astro:weq7hf">
+            <a href={featuredPost.path} class="no-underline text-inherit" data-ps="src/pages/posts/index.astro:1uat0w">
+              {featuredPost.title}
+            </a>
           </h2>
-          <p class="text-[16px] sm:text-[17px] text-[#454F5E] leading-[1.7] mb-6 max-w-[900px]" data-ps="src/pages/recent-posts.astro:hxjqm4">{featured.excerpt}</p>
-          <a href={featured.href} class="inline-flex items-center gap-2 text-[#732521] font-bold text-[15px] hover:text-[#5a1c19] transition" data-ps="src/pages/recent-posts.astro:p1hnab">Read Post →</a>
-        </div>
 
-        <div class="flex items-center gap-3 text-[12px] font-bold uppercase tracking-[1.8px] text-[#732521] mb-6" data-ps="src/pages/recent-posts.astro:aqjiee">
-          <span class="w-[28px] h-[2px] bg-[#C9A840] inline-block" data-ps="src/pages/recent-posts.astro:wrt5vc"></span>
-          <span data-ps="src/pages/recent-posts.astro:wrt5vd">ALL POSTS (8)</span>
-        </div>
+          <p class="text-[16px] sm:text-[17px] text-[#454F5E] leading-[1.7] mb-6 max-w-[900px]" data-ps="src/pages/posts/index.astro:8y8pp2">
+            {featuredPost.seoDescription}
+          </p>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16" data-ps="src/pages/recent-posts.astro:aqjief">
-          {posts.map((post, __psIdx) => (
-            <article class="bg-white border border-[#E6E2D9] rounded-[6px] p-7 flex flex-col justify-between shadow-xs hover:border-[#732521]/40 hover:shadow-md transition group" data-ps={`src/pages/recent-posts.astro:jyyfs7-${__psIdx}`}>
-              <div data-ps={`src/pages/recent-posts.astro:aqjieg-${__psIdx}`}>
-                <div class="flex items-center justify-between gap-2 text-[12px] text-[#727C8B] mb-3" data-ps={`src/pages/recent-posts.astro:aqjieh-${__psIdx}`}>
-                  <span class="font-bold text-[#C9A840] uppercase tracking-wider" data-ps={`src/pages/recent-posts.astro:wrt5ve-${__psIdx}`}>Post</span>
-                  <span data-ps={`src/pages/recent-posts.astro:wrt5vf-${__psIdx}`}>{post.readTime}</span>
-                </div>
-                <img src={post.image} alt="" class="w-full h-[170px] object-cover rounded-[4px] mb-5" loading="lazy" data-ps={`src/pages/recent-posts.astro:ot0jpd-${__psIdx}`} />
-                <h3 class="text-[20px] font-black leading-[1.25] text-[#061633] mb-3 group-hover:text-[#732521] transition" data-ps={`src/pages/recent-posts.astro:3big1l-${__psIdx}`}>
-                  <a href={post.href} class="no-underline text-inherit" data-ps={`src/pages/recent-posts.astro:p1hnac-${__psIdx}`}>{post.title}</a>
-                </h3>
-                <p class="text-[14.5px] text-[#454F5E] leading-[1.6] mb-5" data-ps={`src/pages/recent-posts.astro:hxjqm5-${__psIdx}`}>{post.excerpt}</p>
+          <a href={featuredPost.path} class="inline-flex items-center gap-2 text-[#732521] font-bold text-[15px] hover:text-[#5a1c19] transition" data-ps="src/pages/posts/index.astro:1uat0a">
+            Read Post →
+          </a>
+        </div>
+      )}
+
+      <!-- Section Subheading -->
+      <div class="flex items-center gap-3 text-[12px] font-bold uppercase tracking-[1.8px] text-[#732521] mb-6" data-ps="src/pages/posts/index.astro:aspucd">
+        <span class="w-[28px] h-[2px] bg-[#C9A840] inline-block" data-ps="src/pages/posts/index.astro:dfejiy"></span>
+        <span data-ps="src/pages/posts/index.astro:dfejix">ALL POSTS ({posts.length})</span>
+      </div>
+
+      <!-- Posts Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16" data-ps="src/pages/posts/index.astro:aspuce">
+        {regularPosts.map((post, __psIdx) => (
+          <article class="bg-white border border-[#E6E2D9] rounded-[6px] p-7 flex flex-col justify-between shadow-xs hover:border-[#732521]/40 hover:shadow-md transition group" data-ps={`src/pages/posts/index.astro:fzzeqa-${__psIdx}`}>
+            <div data-ps={`src/pages/posts/index.astro:aspucf-${__psIdx}`}>
+              <div class="flex items-center justify-between gap-2 text-[12px] text-[#727C8B] mb-3" data-ps={`src/pages/posts/index.astro:aspucg-${__psIdx}`}>
+                <span class="font-bold text-[#C9A840] uppercase tracking-wider" data-ps={`src/pages/posts/index.astro:dfejib-${__psIdx}`}>
+                  Post
+                </span>
+                <span data-ps={`src/pages/posts/index.astro:dfejia-${__psIdx}`}>{post.readingTime}</span>
               </div>
-              <div class="pt-4 border-t border-[#E6E2D9]/60 flex items-center justify-between" data-ps={`src/pages/recent-posts.astro:aqjiei-${__psIdx}`}>
-                <span class="text-[12.5px] text-[#727C8B]" data-ps={`src/pages/recent-posts.astro:wrt5vg-${__psIdx}`}></span>
-                <a href={post.href} class="text-[#732521] font-bold text-[13.5px] group-hover:translate-x-0.5 transition-transform inline-flex items-center gap-1" data-ps={`src/pages/recent-posts.astro:p1hnad-${__psIdx}`}>Read Post →</a>
-              </div>
-            </article>
-          ))}
-        </div>
 
-        <div class="bg-[#061633] text-white rounded-[8px] p-8 sm:p-12 border border-white/10 text-center" data-ps="src/pages/recent-posts.astro:aqjiej">
-          <div class="flex items-center justify-center gap-3 text-[12px] font-bold uppercase tracking-[1.8px] text-[#C9A840] mb-3" data-ps="src/pages/recent-posts.astro:aqjiek">
-            <span class="w-[28px] h-[2px] bg-[#C9A840] inline-block" data-ps="src/pages/recent-posts.astro:wrt5vh"></span>
-            <span data-ps="src/pages/recent-posts.astro:wrt5vi">HAVE QUESTIONS ABOUT YOUR MATTER?</span>
-            <span class="w-[28px] h-[2px] bg-[#C9A840] inline-block" data-ps="src/pages/recent-posts.astro:wrt5w4"></span>
-          </div>
-          <h2 class="text-[32px] sm:text-[38px] font-black text-white leading-tight mb-4" data-ps="src/pages/recent-posts.astro:hzxd97">Speak with attorney Joseph A. Simon today.</h2>
-          <p class="text-[16px] sm:text-[17.5px] text-[#C3CCDA] max-w-[680px] mx-auto mb-8" data-ps="src/pages/recent-posts.astro:hxjqm6">Every case is unique. A direct consultation will clarify how Michigan law applies to the specific facts of your situation. Available 24/7.</p>
-          <div class="flex flex-wrap justify-center gap-4" data-ps="src/pages/recent-posts.astro:aqjiel">
-            <a href="/#contact" class="bg-[#732521] text-white font-semibold text-[15.5px] px-[28px] py-[14px] rounded-[3px] hover:bg-[#5a1c19] transition inline-flex items-center gap-2" data-ps="src/pages/recent-posts.astro:p1hnae">Request Confidential Consultation</a>
-            <a href="tel:+17348876200" class="border border-white/30 text-white font-semibold text-[15.5px] px-[28px] py-[14px] rounded-[3px] hover:border-[#C9A840] hover:text-[#DDC582] transition inline-flex items-center gap-2" data-ps="src/pages/recent-posts.astro:p1hnaf">Call (734) 887-6200</a>
-          </div>
+              {post.thumbnail && <img src={post.thumbnail} alt={post.imageAlt} class="w-full h-[170px] object-cover rounded-[4px] mb-5" loading="lazy" />}
+              <h3 class="text-[20px] font-black leading-[1.25] text-[#061633] mb-3 group-hover:text-[#732521] transition" data-ps={`src/pages/posts/index.astro:nxyxa4-${__psIdx}`}>
+                <a href={post.path} class="no-underline text-inherit" data-ps={`src/pages/posts/index.astro:1uat09-${__psIdx}`}>
+                  {post.title}
+                </a>
+              </h3>
+
+              <p class="text-[14.5px] text-[#454F5E] leading-[1.6] mb-5" data-ps={`src/pages/posts/index.astro:8y8pp1-${__psIdx}`}>
+                {post.seoDescription}
+              </p>
+            </div>
+
+            <div class="pt-4 border-t border-[#E6E2D9]/60 flex items-center justify-between" data-ps={`src/pages/posts/index.astro:aspuch-${__psIdx}`}>
+              <span class="text-[12.5px] text-[#727C8B]" data-ps={`src/pages/posts/index.astro:dfeji9-${__psIdx}`}></span>
+              <a href={post.path} class="text-[#732521] font-bold text-[13.5px] group-hover:translate-x-0.5 transition-transform inline-flex items-center gap-1" data-ps={`src/pages/posts/index.astro:1uat08-${__psIdx}`}>
+                Read Post →
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <!-- Consultation CTA Banner -->
+      <div class="bg-[#061633] text-white rounded-[8px] p-8 sm:p-12 border border-white/10 text-center" data-ps="src/pages/posts/index.astro:aspuci">
+        <div class="flex items-center justify-center gap-3 text-[12px] font-bold uppercase tracking-[1.8px] text-[#C9A840] mb-3" data-ps="src/pages/posts/index.astro:aspucj">
+          <span class="w-[28px] h-[2px] bg-[#C9A840] inline-block" data-ps="src/pages/posts/index.astro:dfeji8"></span>
+          <span data-ps="src/pages/posts/index.astro:dfeji7">HAVE QUESTIONS ABOUT YOUR MATTER?</span>
+          <span class="w-[28px] h-[2px] bg-[#C9A840] inline-block" data-ps="src/pages/posts/index.astro:dfeji6"></span>
+        </div>
+        <h2 class="text-[32px] sm:text-[38px] font-black text-white leading-tight mb-4" data-ps="src/pages/posts/index.astro:weq7he">
+          Speak with attorney Joseph A. Simon today.
+        </h2>
+        <p class="text-[16px] sm:text-[17.5px] text-[#C3CCDA] max-w-[680px] mx-auto mb-8" data-ps="src/pages/posts/index.astro:8y8pp0">
+          Every case is unique. A direct consultation will clarify how Michigan law applies to the specific facts of your situation. Available 24/7.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4" data-ps="src/pages/posts/index.astro:aspuck">
+          <a href="/#contact" class="bg-[#732521] text-white font-semibold text-[15.5px] px-[28px] py-[14px] rounded-[3px] hover:bg-[#5a1c19] transition inline-flex items-center gap-2" data-ps="src/pages/posts/index.astro:1uat07">
+            Request Confidential Consultation
+          </a>
+          <a href="tel:+17348876200" class="border border-white/30 text-white font-semibold text-[15.5px] px-[28px] py-[14px] rounded-[3px] hover:border-[#C9A840] hover:text-[#DDC582] transition inline-flex items-center gap-2" data-ps="src/pages/posts/index.astro:1uat06">
+            Call (734) 887-6200
+          </a>
         </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 </BaseLayout>
+

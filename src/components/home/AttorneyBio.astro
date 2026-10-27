@@ -1,0 +1,19 @@
+---
+import home from '@/content/homepage.json';
+import {load} from 'cheerio';
+const copy=load(home.bodyHtml,null,false);
+const homeImages: Record<string, string> = home.images;
+copy('img').each((_,img)=>{const url=copy(img).attr('src')!;if(homeImages[url])copy(img).attr('src',homeImages[url]);copy(img).attr('loading','lazy');});
+
+---
+<section id="about" class="bg-[#F7F5F1] py-[90px] border-t border-[#E6E2D9]">
+ <div class="max-w-[1280px] mx-auto px-6">
+  <div class="text-[12px] font-bold uppercase tracking-[1.8px] text-[#732521] mb-4">About the Firm</div>
+  <h2 class="text-[34px] sm:text-[44px] font-black text-[#061633] mb-8">{home.heading}</h2>
+  <div class="original-home" data-home-source="body" set:html={copy.html()} />
+ </div>
+</section>
+<style>
+.original-home{display:flow-root;font-size:18px;line-height:1.8;color:#141c28}.original-home :global(p){margin-bottom:24px}.original-home :global(figure){float:left;width:35%;margin:0 36px 20px 0}.original-home :global(img){width:100%;height:auto;border-radius:4px}.original-home :global(figcaption){font-size:14px;color:#596371}.original-home :global(a){color:#732521;text-decoration:underline;text-underline-offset:3px}
+@media(max-width:640px){.original-home :global(figure){float:none;width:100%;max-width:100%!important;margin:0 0 24px}}
+</style>

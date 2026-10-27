@@ -13,6 +13,7 @@ import { fileURLToPath } from 'node:url';
 import remarkGfm from 'remark-gfm';
 
 import remarkToc from './src/plugins/remark-toc.mjs';
+import {normalizeBuiltUrls} from './src/lib/normalize-built-urls.mjs';
 
 const siteUrl = process.env.SITE_URL || 'https://example.com';
 const projectRoot = dirname(fileURLToPath(import.meta.url));
@@ -41,7 +42,7 @@ const noIndexPaths = collectNoIndexPaths();
 // https://astro.build/config
 export default defineConfig({
   output: 'static',
-  trailingSlash: 'always',
+  trailingSlash: 'never',
   adapter: cloudflare({
     imageService: 'passthrough',
     prerenderEnvironment: 'node',
@@ -61,7 +62,9 @@ export default defineConfig({
   security: {
     checkOrigin: true,
   },
+  redirects: { '/posts': '/recent-posts', '/case-results': '/courtroom-victories', ...Object.fromEntries(Array.from({length:14},(_,i)=>[`/case-results/${i+2}`,`/courtroom-victories/${i+2}`])) },
   integrations: [
+    {name:'original-url-compatibility',hooks:{'astro:build:done':()=>normalizeBuiltUrls()}},
     // MDX support for blog posts, docs, and content
     mdx(),
     // Generate sitemap.xml, excluding pages flagged noIndex={true}
@@ -69,7 +72,7 @@ export default defineConfig({
       filter: (page) => {
         const { pathname } = new URL(page);
         const normalized = pathname.endsWith('/') ? pathname : pathname + '/';
-        return !noIndexPaths.has(normalized);
+        return !noIndexPaths.has(normalized) && !/^\/(articles|posts|case-results)(\/|$)/.test(pathname);
       },
     }),
   ],
@@ -83,6 +86,7 @@ export default defineConfig({
     processor: unified({ remarkPlugins: [remarkGfm, remarkToc] }),
   },
   build: {
+    format: 'file',
     inlineStylesheets: 'always',
   },
   vite: {

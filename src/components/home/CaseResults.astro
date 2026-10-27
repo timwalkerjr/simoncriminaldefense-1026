@@ -1,31 +1,11 @@
 ---
-const cases = [
-  { category: 'Assault & Reckless Driving', title: 'Cases Dismissed at Trial', court: '14-B District Court', number: 'Case 19-FB-1405-FY' },
-  { category: 'Assault & Battery', title: 'Charges Dismissed', court: '14-B District Court', number: 'Case 19S-00414-SM' },
-  { category: 'Child Abuse', title: 'Not Guilty Verdict at Trial', court: '14-B District Court', number: 'Case 19S-0042SM' },
-  { category: 'Assault with a Dangerous Weapon (Felonious Assault), Aggravated Domestic Violence', title: 'Charges Dismissed', court: '22nd Circuit Court and 15th District Court', number: 'Case 20F5-5103-FY' },
-  { category: 'Criminal Sexual Conduct, Third Degree, Assault with Intent to Do Great Bodily Harm Less Than Murder or By Strangulation, Domestic Violence', title: 'All Charges Dismissed at Preliminary Examination', court: '22nd Circuit Court', number: 'Case 21F5-5123-FY' },
-];
+import {getCollection} from 'astro:content';
+const results=(await getCollection('caseResults')).filter(p=>!p.data.isDraft&&!p.data.isArchived&&p.data.fieldData['feature-this-case']);
 ---
-<section id="results" class="bg-[#061633] text-white py-[90px] border-t border-white/10" data-ps="src/components/home/CaseResults.astro:m1i0wi">
-  <div class="max-w-[1280px] mx-auto px-6" data-ps="src/components/home/CaseResults.astro:3e1zr9">
-    <div class="text-[#C9A840] text-[12px] font-bold tracking-widest uppercase mb-4" data-ps="src/components/home/CaseResults.astro:3e1zr8">Courtroom Results</div>
-    <h2 class="text-[36px] sm:text-[44px] font-black mb-10" data-ps="src/components/home/CaseResults.astro:tdacv4">Representative case results.</h2>
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" data-ps="src/components/home/CaseResults.astro:3e1zr7">
-      {cases.map((c, __psIdx) => (
-        <article class="border border-white/10 p-7 rounded-[4px] flex flex-col justify-between hover:border-[#C9A840]/40 transition" data-ps={`src/components/home/CaseResults.astro:7ogadt-${__psIdx}`}>
-          <div data-ps={`src/components/home/CaseResults.astro:3e1zr6-${__psIdx}`}>
-            <div class="text-[12px] font-bold uppercase text-[#C9A840] tracking-wider mb-3" data-ps={`src/components/home/CaseResults.astro:3e1zr5-${__psIdx}`}>{c.category}</div>
-            <h3 class="text-[20px] font-bold mb-4" data-ps={`src/components/home/CaseResults.astro:tuc001-${__psIdx}`}>{c.title}</h3>
-            <p class="text-[#C3CCDA] leading-[1.65] mb-6" data-ps={`src/components/home/CaseResults.astro:rdybam-${__psIdx}`}>{c.court}</p>
-          </div>
-          <span class="border border-[#C9A840]/40 text-[#DDC582] text-[12px] px-3 py-1 rounded-[2px] self-start" data-ps={`src/components/home/CaseResults.astro:cgovbb-${__psIdx}`}>{c.number}</span>
-        </article>
-      ))}
-    </div>
-    <div class="text-center mt-10" data-ps="src/components/home/CaseResults.astro:3e1zr4">
-      <a href="/courtroom-victories" class="border border-[#C9A840]/42 text-[#DDC582] px-6 py-3 rounded-[3px] inline-block" data-ps="src/components/home/CaseResults.astro:yhw80e">View all case results →</a>
-      <p class="text-[13px] text-[#C3CCDA] mt-4" data-ps="src/components/home/CaseResults.astro:rdyban">Prior results do not guarantee a similar outcome. Each case depends on its own facts and circumstances.</p>
-    </div>
-  </div>
+<section id="results" class="bg-[#061633] text-white py-[90px] border-t border-white/10">
+ <div class="max-w-[1280px] mx-auto px-6"><div class="text-[#C9A840] text-[12px] font-bold tracking-widest uppercase mb-4">Courtroom Results</div><h2 class="text-[36px] sm:text-[44px] font-black mb-10">Representative case results.</h2>
+ <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">{results.map(({id,data})=><article data-featured-case={id} class="border border-white/10 p-7 rounded-[4px] flex flex-col justify-between hover:border-[#C9A840]/40 transition">
+ <div><div class="text-[12px] font-bold uppercase text-[#C9A840] tracking-wider mb-3">{data.fieldData.charges}</div><h3 class="text-[20px] font-bold mb-4">{data.fieldData.result}</h3><p class="text-[#C3CCDA] leading-[1.65] mb-6">{data.fieldData.court}</p>{data.caseDate&&<time datetime={data.caseDate}>{data.caseDate}</time>}</div><span class="border border-[#C9A840]/40 text-[#DDC582] text-[12px] px-3 py-1 rounded-[2px] self-start">Case {data.fieldData.name}</span>
+ </article>)}</div>
+ <div class="text-center mt-10"><a href="/case-results/" class="border border-[#C9A840]/42 text-[#DDC582] px-6 py-3 rounded-[3px] inline-block">View all case results →</a><p class="text-[13px] text-[#C3CCDA] mt-4">Prior results do not guarantee a similar outcome. Each case depends on its own facts and circumstances.</p></div></div>
 </section>

@@ -1,0 +1,10 @@
+---
+import {getCollection} from 'astro:content';
+import PracticePage from '@/components/practice-area/PracticePage.astro';
+import {hubForPage} from '@/data/serviceAreaHubs';
+export async function getStaticPaths(){
+  return (await getCollection('cityPages')).filter(entry=>!entry.data.isDraft&&!entry.data.isArchived).map(entry=>({params:{slug:entry.data.fieldData.slug},props:{entry}}));
+}
+const {entry}=Astro.props;
+---
+<PracticePage entry={entry} hub={hubForPage(entry.data.fieldData.name)} />

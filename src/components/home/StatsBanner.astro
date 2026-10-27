@@ -1,20 +1,50 @@
 ---
-const stats = [
-  { value: '40+', label: 'Years defending clients in Southeast Michigan' },
-  { value: '24/7', label: 'Available for urgent criminal matters' },
-  { value: '2001', label: 'Listed in Best Lawyers in America® since' },
-  { value: '5.0', label: 'Google rating across 200 client reviews' },
-];
+import {getCollection} from 'astro:content';
+const stats=(await getCollection('reviewStats'))[0].data.fieldData;
 ---
-<section class="bg-[#0B1F42] text-white py-[40px] border-y border-white/10" data-ps="src/components/home/StatsBanner.astro:jq6x3j">
-  <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8" data-ps="src/components/home/StatsBanner.astro:2gamyg">
-    <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-0" data-ps="src/components/home/StatsBanner.astro:2gamyh">
-      {stats.map((s, i) => (
-        <div class={`text-center px-4 ${i > 0 ? 'lg:border-l lg:border-white/10' : ''}`} data-ps={`src/components/home/StatsBanner.astro:2gamyi-${i}`}>
-          <div class="font-heading font-black text-[38px] sm:text-[44px] text-white leading-none mb-1" data-ps={`src/components/home/StatsBanner.astro:2gamyj-${i}`}>{s.value}</div>
-          <p class="text-[13.5px] sm:text-[14px] text-[#C3CCDA] font-medium leading-snug" data-ps={`src/components/home/StatsBanner.astro:uza8xk-${i}`}>{s.label}</p>
+
+<section class="bg-[#0B1F42] text-white py-[40px] border-y border-white/10" data-ps="src/components/home/StatsBanner.astro:section">
+  <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8" data-ps="src/components/home/StatsBanner.astro:2gamya">
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-0" data-ps="src/components/home/StatsBanner.astro:2gamyb">
+      <!-- Stat 1 -->
+      <div class="text-center px-4" data-ps="src/components/home/StatsBanner.astro:2gamyc">
+        <div class="font-heading font-black text-[38px] sm:text-[44px] text-white leading-none mb-1" data-ps="src/components/home/StatsBanner.astro:2gamyd">
+          40+
         </div>
-      ))}
+        <p class="text-[13.5px] sm:text-[14px] text-[#C3CCDA] font-medium leading-snug" data-ps="src/components/home/StatsBanner.astro:y1r2pb">
+          Years defending clients in Southeast Michigan
+        </p>
+      </div>
+
+      <!-- Stat 2 -->
+      <div class="text-center px-4 lg:border-l lg:border-white/10" data-ps="src/components/home/StatsBanner.astro:2gamye">
+        <div class="font-heading font-black text-[38px] sm:text-[44px] text-white leading-none mb-1" data-ps="src/components/home/StatsBanner.astro:2gamyf">
+          24/7
+        </div>
+        <p class="text-[13.5px] sm:text-[14px] text-[#C3CCDA] font-medium leading-snug" data-ps="src/components/home/StatsBanner.astro:y1r2pa">
+          Available for urgent criminal matters
+        </p>
+      </div>
+
+      <!-- Stat 3 -->
+      <div class="text-center px-4 lg:border-l lg:border-white/10" data-ps="src/components/home/StatsBanner.astro:2gamyg">
+        <div class="font-heading font-black text-[38px] sm:text-[44px] text-white leading-none mb-1" data-ps="src/components/home/StatsBanner.astro:2gamyh">
+          2001
+        </div>
+        <p class="text-[13.5px] sm:text-[14px] text-[#C3CCDA] font-medium leading-snug" data-ps="src/components/home/StatsBanner.astro:y1r2p9">
+          Listed in Best Lawyers in America® since
+        </p>
+      </div>
+
+      <!-- Stat 4 -->
+      <div class="text-center px-4 lg:border-l lg:border-white/10" data-ps="src/components/home/StatsBanner.astro:2gamyi">
+        <div class="font-heading font-black text-[38px] sm:text-[44px] text-white leading-none mb-1" data-ps="src/components/home/StatsBanner.astro:2gamyj">
+          {stats['cumaltive-review-rating']}
+        </div>
+        <p class="text-[13.5px] sm:text-[14px] text-[#C3CCDA] font-medium leading-snug" data-ps="src/components/home/StatsBanner.astro:y1r2p8">
+          Google rating across {stats['total-reviews']} client reviews
+        </p>
+      </div>
     </div>
   </div>
 </section>
