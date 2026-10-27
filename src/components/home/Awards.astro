@@ -1,0 +1,83 @@
+---
+// Awards strip: a continuous marquee of rating badges (source CSS animation, 65s linear loop).
+const awards = [
+  { href: 'http://www.leadinglawyers.com/atty_profile.cfm?TOCUID=30027701', src: 'https://pagesmith-cdn.com/ee60f2da/images/2023-leading-lawyers-peer-selected-10b63b-288.webp', alt: '2023 Leading Lawyers Peer Selected' },
+  { href: 'https://www.top100criminaldefenseattorneys.com/', src: 'https://pagesmith-cdn.com/ee60f2da/images/americas-top-100-criminal-defense-attorneys-b3a7c1-1536.webp', alt: "America's Top 100 Criminal Defense Attorneys" },
+  { href: 'https://www.martindale.com/attorney/joseph-a-simon-701141/#profile-peer-reviews', src: 'https://pagesmith-cdn.com/ee60f2da/images/av-preeminent-5fd67f-150.webp', alt: 'Av Preeminent' },
+  { href: 'https://www.avvo.com/attorneys/48104-mi-joseph-simon-760453.html', src: 'https://pagesmith-cdn.com/ee60f2da/images/avvo-clients-choice-award-06efac-620.webp', alt: "Avvo Clients' Choice Award 2026 - Joseph A. Simon" },
+  { href: '', src: 'https://pagesmith-cdn.com/ee60f2da/images/avvo-reviews-71f5a0.svg', alt: 'AVVO Reviews' },
+  { href: 'https://www.avvo.com/attorneys/48104-mi-joseph-simon-760453.html', src: 'https://pagesmith-cdn.com/ee60f2da/images/avvo-top-attorney-847684-150.webp', alt: 'AVVO Top Attorney' },
+  { href: 'https://bestlawyers.com/lawyers/joseph-a-simon/32940', src: 'https://pagesmith-cdn.com/ee60f2da/images/best-lawyers-d9b11b-152.webp', alt: 'Best Lawyers' },
+  { href: 'https://www.leadinglawyers.com/', src: 'https://pagesmith-cdn.com/ee60f2da/images/leading-lawyers-top-10-2020-831118-288.webp', alt: 'Leading Lawyers Top 10 2020' },
+  { href: 'https://profiles.superlawyers.com/michigan/ann-arbor/lawyer/joseph-joe-simon/1f4a883a-12c6-42b5-bb39-ee3cdb87ae30.html', src: 'https://pagesmith-cdn.com/ee60f2da/images/super-lawyers-10-years-7de9e4-189.webp', alt: 'Super Lawyers 15 Years' },
+  { href: '', src: 'https://pagesmith-cdn.com/ee60f2da/images/2024-10-best-attorneys-020401-455.webp', alt: '2024 10 Best Attorneys' },
+];
+---
+<section id="awards" class="awards" aria-labelledby="awards-heading" data-ps="src/components/home/Awards.astro:mqdegx">
+  <div class="awards-heading" data-ps="src/components/home/Awards.astro:qa96p4">
+    <h2 id="awards-heading" data-ps="src/components/home/Awards.astro:bacskj">Recognized by third-party rating organizations</h2>
+    <button type="button" class="awards-pause" aria-pressed="false" aria-label="Pause awards scrolling" data-ps="src/components/home/Awards.astro:ktb8di">Pause scrolling</button>
+  </div>
+  <div class="awards-window" data-ps="src/components/home/Awards.astro:qa96p5">
+    <div class="awards-track" data-ps="src/components/home/Awards.astro:qa96p6">
+      <ul class="awards-list">
+        {awards.map((a, __psIdx) => (
+          <li data-ps={`src/components/home/Awards.astro:ajdw20-${__psIdx}`}>
+            {a.href ? (
+              <a class="award-badge" href={a.href} target="_blank" rel="noopener noreferrer" data-ps={`src/components/home/Awards.astro:5yio2l-${__psIdx}`}><img src={a.src} alt={a.alt} width="200" height="140" loading="lazy" data-ps={`src/components/home/Awards.astro:3kzry9-${__psIdx}`} /></a>
+            ) : (
+              <div class="award-badge" data-ps={`src/components/home/Awards.astro:qa96p7-${__psIdx}`}><img src={a.src} alt={a.alt} width="200" height="140" loading="lazy" data-ps={`src/components/home/Awards.astro:3kzry8-${__psIdx}`} /></div>
+            )}
+          </li>
+        ))}
+      </ul>
+      <ul class="awards-list" aria-hidden="true" inert>
+        {awards.map((a, __psIdx) => (
+          <li data-ps={`src/components/home/Awards.astro:ajdw1z-${__psIdx}`}>
+            {a.href ? (
+              <a class="award-badge" href={a.href} target="_blank" rel="noopener noreferrer" data-ps={`src/components/home/Awards.astro:5yio2k-${__psIdx}`}><img src={a.src} alt="" width="200" height="140" loading="lazy" data-ps={`src/components/home/Awards.astro:3kzry7-${__psIdx}`} /></a>
+            ) : (
+              <div class="award-badge" data-ps={`src/components/home/Awards.astro:qa96p8-${__psIdx}`}><img src={a.src} alt="" width="200" height="140" loading="lazy" data-ps={`src/components/home/Awards.astro:3kzry6-${__psIdx}`} /></div>
+            )}
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<style is:global>
+  .awards { background: #F7F5F1; border-block: 1px solid #E6E2D9; padding-block: 28px 34px; scroll-margin-top: 90px; }
+  .awards-heading { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 24px; max-width: 1280px; margin: 0 auto 22px; padding-inline: 24px; }
+  .awards-heading h2 { text-transform: uppercase; letter-spacing: 2px; color: rgb(89, 99, 113); text-align: center; font-size: 11.52px; font-weight: 700; margin: 0; }
+  .awards-pause { color: #732521; cursor: pointer; border-bottom: 1px solid; padding: 10px 4px; font-size: 12px; background: none; }
+  .awards-window { scrollbar-width: none; overflow-x: auto; }
+  .awards-window::-webkit-scrollbar { display: none; }
+  .awards-track { width: max-content; animation: 65s linear 0s infinite normal none running awards-scroll; display: flex; }
+  .awards-list { flex-shrink: 0; align-items: center; gap: 32px; margin: 0; padding: 0 32px 0 0; list-style: none; display: flex; }
+  .awards-list li { flex: 0 0 134px; width: 134px; }
+  .award-badge { border-radius: 4px; justify-content: center; align-items: center; width: 134px; height: 94px; display: flex; }
+  .awards-list img { object-fit: contain; width: 100%; height: 100%; display: block; }
+  a.award-badge:hover { background: #fff; }
+  a.award-badge:focus-visible, .awards-pause:focus-visible { outline-offset: 4px; outline: 2px solid #732521; }
+  .awards:hover .awards-track, .awards:focus-within .awards-track, .awards[data-paused] .awards-track { animation-play-state: paused; }
+  @keyframes awards-scroll { 100% { transform: translate(-50%); } }
+  @media (prefers-reduced-motion: reduce) { .awards-track { animation: none; } }
+  @media (width <= 640px) {
+    .awards-list { gap: 24px; padding-right: 24px; }
+    .awards-list li, .award-badge { flex-basis: 114px; width: 114px; }
+    .award-badge { height: 84px; }
+  }
+</style>
+
+<script>
+  const awardsSection = document.getElementById('awards');
+  const awardsPause = awardsSection?.querySelector<HTMLButtonElement>('.awards-pause');
+  awardsPause?.addEventListener('click', () => {
+    if (!awardsSection) return;
+    const paused = awardsSection.toggleAttribute('data-paused');
+    awardsPause.setAttribute('aria-pressed', String(paused));
+    awardsPause.setAttribute('aria-label', paused ? 'Resume awards scrolling' : 'Pause awards scrolling');
+    awardsPause.textContent = paused ? 'Resume scrolling' : 'Pause scrolling';
+  });
+</script>

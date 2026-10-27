@@ -1,0 +1,15 @@
+{
+  "sharedInstructions": "Shared article preparation for source https://jas-law-astro-review.netlify.app/ (preserve mode). Requested paths: /practice-area/ann-arbor-dui-defense/ and /practice-area/ann-arbor-domestic-violence/. Config: src/content.config.ts defines the blog, media and docs collections (the media collection is for press articles mirroring /media-articles/<slug>/; blog is for posts; docs is for documentation). Layouts: src/layouts/BlogLayout.astro (default data-mdx-type blog), src/layouts/MediaArticleLayout.astro, src/layouts/PostArticleLayout.astro, src/layouts/DocsLayout.astro. Routes for articles: src/pages/post/[slug].astro and src/pages/media-articles/[...slug].astro. Source evidence for both paths: each is a Service-type practice-area page (schema.org LegalService/Service with a breadcrumb under Home / Service Area), with og:type website, a hero with H1, an H2 section, a FAQ, and call-to-action buttons. Neither has a declared WordPress post type, post-specific sitemap membership, or article metadata, so neither is an individual article. No MDX entries were created and no shared layout or route was changed in this preparation step. Both destinations already exist as Astro pages at src/pages/practice-area/ann-arbor-dui-defense.astro and src/pages/practice-area/ann-arbor-domestic-violence.astro. The page worker owns them; they are listed as approved replacements, so the page worker may replace the existing full-page content, but must keep the route paths unchanged and must not touch the article collections or layouts. Unresolved: the source pages carry noindex robots metadata; the page worker should decide whether to carry it over and report it. The source header links to /recent-posts and /service-areas, which are outside this request and should be left unchanged.",
+  "entries": [
+    {
+      "path": "/practice-area/ann-arbor-dui-defense/",
+      "type": "page",
+      "reason": "Practice-area service page for Ann Arbor DUI/OWI defense. Source metadata shows og:type website, LegalService/Service structured data and a breadcrumb under Home / Ann Arbor, with an H1 and FAQ sections. It is an ordinary service page, not an editorial article. Existing destination: src/pages/practice-area/ann-arbor-dui-defense.astro, an approved replacement."
+    },
+    {
+      "path": "/practice-area/ann-arbor-domestic-violence/",
+      "type": "page",
+      "reason": "Practice-area service page for Ann Arbor domestic violence defense. Source metadata shows og:type website, Service structured data and a breadcrumb under Home / Ann Arbor, with an H1, FAQ and call-to-action sections. It is an ordinary service page, not an editorial article. Existing destination: src/pages/practice-area/ann-arbor-domestic-violence.astro, an approved replacement."
+    }
+  ]
+}

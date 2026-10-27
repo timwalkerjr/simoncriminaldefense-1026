@@ -1,0 +1,20 @@
+{
+  "sharedInstructions": "Article preparation for source https://jas-law-astro-review.netlify.app/ (preserve mode). Shared config: src/content.config.ts defines the blog and docs collections (Astro content layer, glob loaders over src/content/blog and src/content/docs, schemas with title, description, pubDate, draft, jsonLd, imageAlt, schemaType, schemaData, featured, toc). No files exist yet under src/content/. Layouts: src/layouts/BlogLayout.astro (default article type blog) and src/layouts/DocsLayout.astro, plus BaseLayout.astro. Routes for the requested source paths already exist as import placeholders in src/pages/practice-areas.astro, src/pages/service-areas.astro and src/pages/recent-posts.astro; these are listed in data/import-placeholders.json and are owned by the page import worker, not by article workers. No article entries were requested for this run (the requested paths are listing or ordinary pages only), so no shared article collection, schema or layout change was made in this preparation. Source evidence: /recent-posts/ lists eight posts under /post/<slug> (for example /post/ann-arbors-best-dui-attorney, /post/charged-with-owi-in-michigan). Those post URLs were discovered only as links on the listing and were NOT part of the requested paths, so they were not classified as entries here. If a later run requests them, classify them from their own WordPress or sitemap evidence, and add an MDX entry under src/content/blog/ with the original path mapped through an appropriate route, reusing BlogLayout with data-mdx-type set to blog. Unresolved: no article route mapping for /post/<slug> exists yet and no representative rendered article exists to judge the article presentation.",
+  "entries": [
+    {
+      "path": "/practice-areas/",
+      "type": "page",
+      "reason": "Source evidence shows a listing/index page titled 'Criminal Defense Practice Areas', with a CollectionPage JSON-LD and an ItemList of 14 practice-area links. It is an ordinary listing page, not an individual article. The current project route src/pages/practice-areas.astro is an import placeholder for the page worker to replace."
+    },
+    {
+      "path": "/service-areas/",
+      "type": "page",
+      "reason": "Source evidence shows a listing page titled 'Service Areas — Washtenaw County Criminal Defense', with a CollectionPage JSON-LD and an ItemList of nine city or county pages. It is an ordinary listing page, not an individual article. The current project route src/pages/service-areas.astro is an import placeholder for the page worker to replace."
+    },
+    {
+      "path": "/recent-posts/",
+      "type": "page",
+      "reason": "Source evidence shows a blog archive titled 'Legal Defense Posts & Insights' with a CollectionPage JSON-LD and an ItemList of eight posts. It is a listing/archive page, not an individual article, so it is classified as page and not as a post. The current project route src/pages/recent-posts.astro is an import placeholder for the page worker to replace. Its individual post links (under /post/) are outside this request and are not handled here."
+    }
+  ]
+}

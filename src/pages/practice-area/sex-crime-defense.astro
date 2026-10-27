@@ -1,0 +1,529 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+const pageTitle = 'Criminal Sexual Conduct Laws Michigan: What You Need to Know';
+const pageDescription = `Named a Top Ten Criminal Defense Attorney in Michigan by Leading Lawyers Magazine, Attorney Joe Simon Has Successfully Defended CSC Charges for Over 35 Years.`;
+
+const tocItems = [
+  { id: 'main-1', label: 'Criminal Sexual Conduct Laws in Michigan: What You Need to Know About CSC Charges' },
+  { id: 'main-2', label: 'Overview of Criminal Sexual Conduct Laws in Michigan' },
+  { id: 'main-3', label: 'First Degree Criminal Sexual Conduct' },
+  { id: 'main-4', label: 'Second Degree Criminal Sexual Conduct' },
+  { id: 'main-5', label: 'Third Degree Criminal Sexual Conduct' },
+  { id: 'main-6', label: 'Fourth Degree Criminal Sexual Conduct' },
+  { id: 'main-7', label: `Michigan's "Romeo and Juliet" Law` },
+  { id: 'main-8', label: 'Consent and Capacity in Criminal Sexual Conduct Cases' },
+  { id: 'main-9', label: 'Victim Rights and Protections' },
+  { id: 'main-10', label: 'Defenses for Accused Individuals' },
+  { id: 'main-11', label: 'Important Considerations' },
+  { id: 'main-12', label: `Who Do You Want To Answer The Call You Never Thought You'd Have To Make?` },
+  { id: 'main-13', label: '25 Frequently Asked Questions About Criminal Sexual Conduct Laws in Michigan' },
+  { id: 'practice-faqs', label: 'Frequently Asked Questions' },
+];
+
+const defendItems = [
+  'First Degree Criminal Sexual Conduct',
+  'Second Degree Criminal Sexual Conduct',
+  'Third Degree Criminal Sexual Conduct',
+  'Fourth Degree Criminal Sexual Conduct',
+  'Assault With Intent to Commit Criminal Sexual Conduct',
+  'Statutory Rape Allegations',
+  'Date Rape Allegations',
+  'Campus Sexual Assault Charges',
+  'Prostitution Charges',
+  'Internet Sex Crimes',
+  'Possession of Child Pornography',
+  'Indecent Exposure Charges',
+  'Juvenile Criminal Sexual Conduct Charges',
+  'Sex Offender Registry Charges',
+];
+
+const faqItems = [
+  {
+    q: 'Is criminal sexual conduct 4th degree a felony?',
+    a: `Fourth Degree CSC (MCL 750.520e) is a “high court” misdemeanor, meaning it carries all the procedures and sentencing structures of a felony but is technically a misdemeanor. It generally involves sexual contact accomplished by force or coercion not resulting in personal injury or under specific circumstances. Penalties include incarceration in prison up to 2 years. Important Legal Notice: This information is provided for educational purposes only and does not constitute legal advice. Every Criminal Sexual Conduct case is unique with different potential outcomes. Past results do not guarantee future results, and no attorney-client relationship is created by reading this content. The effectiveness of any defense strategy depends entirely on the individual facts and circumstances of each case. If you or a loved one faces CSC charges or is under investigation in Washtenaw, Wayne, Jackson, Livingston, or Lenawee County, contact the Law Offices of Joseph A. Simon at 734-887-6200 for a free consultation. With over 38 years of experience defending CSC charges, Joseph A. Simon has earned his reputation as one of Michigan's top criminal defense attorneys through his unwavering commitment to protecting clients' freedom, reputation, and future goals.`,
+  },
+  {
+    q: 'What is the sex offender registry?',
+    a: `A public database where those convicted of qualifying offenses must register for a set period, sometimes for life. Registration can be public or non-public, depending on the degree of conviction and case circumstances. Registration can impact employment, housing, travel, and personal relationships.`,
+  },
+  {
+    q: 'What role does DNA evidence play in CSC cases?',
+    a: `DNA evidence can be powerful but is not conclusive proof of criminal conduct. The presence of DNA proves contact occurred but not necessarily that a crime was committed - consent cases particularly illustrate this distinction. Defense strategies regarding DNA include challenging collection procedures and chain of custody, questioning laboratory protocols and potential contamination, disputing the interpretation of mixed DNA samples, and explaining innocent presence of DNA. The absence of DNA where it would be expected can also be significant for the defense. Understanding the science and limitations of DNA evidence is crucial for effective representation.`,
+  },
+  {
+    q: 'Can I be charged with multiple counts of CSC for one incident?',
+    a: `Yes, Michigan prosecutors often file multiple charges arising from a single incident. This might include charging different degrees of CSC for the same conduct, separate counts for each type of sexual contact or penetration, additional charges for related crimes (assault, unlawful imprisonment), or multiple counts if the conduct allegedly occurred over time. Multiple charges increase potential penalties and sentencing exposure and complicate plea negotiations.`,
+  },
+  {
+    q: 'Are CSC cases involving minors handled differently?',
+    a: `CSC cases involving minors include additional complexities such as mandatory reporting requirements for certain professionals, special interview procedures (forensic interviews), likely involvement of Children's Protective Services, potential for closed-circuit testimony to avoid courtroom confrontation, and enhanced penalties and registration requirements. The age of the alleged victim affects available defenses - for instance, consent is not a defense if the alleged victim is under 16. These cases often involve delayed disclosure, absence of physical evidence, and reliance on child testimony, creating both challenges and opportunities for the defense.`,
+  },
+  {
+    q: 'Are there alternatives to trial for CSC cases?',
+    a: `While CSC charges are serious, not every case goes to trial. Alternatives may include dismissal of charges due to insufficient evidence, plea negotiations to lesser charges that may not require sex offender registration, participation in diversion programs (extremely rare for CSC but possible in specific circumstances), or resolution through Holmes youthful trainee status for eligible young defendants. Each case is unique, and an experienced attorney can evaluate whether alternatives to trial might be available while always preparing for the possibility of trial. The decision to resolve a case through any negotiation must be made carefully, considering all consequences including registration requirements.`,
+  },
+  {
+    q: "What happens if the alleged victim doesn't want to pursue charges?",
+    a: `In Michigan, the prosecutor, not the alleged victim, decides whether to pursue criminal charges. Once a CSC allegation is reported to police and is thereafter charged by the prosecutor, the case proceeds based on the prosecutor's assessment of the evidence, not solely the alleged victim's wishes. Prosecutors may proceed even over the alleged victim's objection, using subpoenas to compel testimony if necessary. However, a reluctant or uncooperative alleged victim can affect the prosecutor's ability to prove the case beyond a reasonable doubt.`,
+  },
+  {
+    q: 'How does Michigan address CSC cases involving intoxicated persons?',
+    a: `In Michigan a person who is "mentally incapacitated" or rendered “physically helpless” cannot legally consent to sexual activity. This includes situations where someone is intoxicated by alcohol or drugs to the point where they cannot understand the nature of the sexual act. However, mere intoxication doesn't automatically negate consent - the recognition of the level of intoxication is also considered. These cases often involve factual disputes about the level of intoxication, if the intoxicants were voluntarily consumed, and whether the accused knew or should have known about the incapacitation.`,
+  },
+  {
+    q: 'Can my spouse be forced to testify against me in a CSC case?',
+    a: `Michigan does recognize spousal privilege, but it has limitations. Generally, spouses cannot be compelled to testify against each other regarding private marital communications. However, if the alleged victim is your spouse, they can choose to testify against you. Additionally, if the alleged victim is your child or a child residing in your household, the spousal privilege may not apply. The privilege also doesn't cover observations of criminal acts or communications made in the presence of third parties.`,
+  },
+  {
+    q: 'What are the immigration consequences of a CSC conviction for non-citizens?',
+    a: `CSC convictions carry severe immigration consequences for non-citizens, including lawful permanent residents. These offenses are typically considered "aggravated felonies" and "crimes involving moral turpitude" under immigration law, leading to mandatory removal, ineligibility for most forms of relief from removal, permanent bars to re-entry, and denial of naturalization applications. Even some misdemeanor CSC convictions trigger these consequences. It's crucial that a criminal defense attorney recognize these collateral consequences and refer their clients to immigration counsel to understand and potentially minimize immigration consequences while simultaneously defending criminal charges.`,
+  },
+  {
+    q: 'How will CSC charges affect my professional license?',
+    a: `CSC charges and convictions can have devastating effects on professional licenses. Teachers, healthcare providers, attorneys, and other licensed professionals face potential suspension or revocation of their licenses, even before conviction. Many licensing boards initiate their own investigations upon learning of charges. Some professions have mandatory reporting requirements. The impact varies by profession and the specific circumstances of the charges. Early intervention by an attorney familiar with professional licensing issues is crucial to protect both your criminal case and your professional career.`,
+  },
+  {
+    q: 'Will I go to jail immediately if charged with CSC? What about bail?',
+    a: `Whether you're held in custody depends on several factors including the degree of CSC charged, your criminal history, ties to the community, and whether you're considered a flight risk or danger to the alleged victim or community. First and Second Degree CSC charges often result in high bail or detention pending trial. At arraignment, the court will set bail conditions which may include no contact with the alleged victim, travel restrictions, and possibly electronic monitoring. An experienced attorney can argue for reasonable bail and conditions that allow you to maintain employment and prepare your defense while the case is pending.`,
+  },
+  {
+    q: 'How long does the prosecutor have to file CSC charges against me in Michigan?',
+    a: `The statute of limitations varies by degree of CSC and the age of the alleged victim. For First Degree CSC, there is no statute of limitations - charges can be filed at any time. For Second, Third, and Fourth Degree CSC, the statute of limitations is either 10 years after the offense or by the alleged victim's 21st birthday, whichever is later. In cases involving DNA evidence that identifies a suspect, charges may be filed within 10 years of identification, regardless of when the alleged offense occurred. These extended time periods mean that allegations from many years ago can still result in current criminal charges.`,
+  },
+  {
+    q: 'What constitutes "consent" under Michigan CSC laws?',
+    a: `Some persons cannot offer legal consent, regardless of apparent agreement. Individuals cannot legally consent if they are: under age 16, mentally incapable, mentally incapacitated, physically helpless, or in certain power-imbalanced relationships (such as student-teacher or patient-therapist). Force, coercion, or threats also negate consent. Importantly, Michigan law does not require proof that the alleged victim resisted (MCL 750.520i). Also consent, once offered, can be withdrawn at any time, and past consensual activity does not imply ongoing consent. Understanding these nuances is critical for mounting an effective defense.`,
+  },
+  {
+    q: "If I'm being investigated but haven't yet been charged, do I need an attorney?",
+    a: `Yes, absolutely. The pre-charge investigation phase can be critical, and having an attorney during this stage can sometimes prevent charges from being filed or result in reduced charges. An experienced defense attorney can communicate with law enforcement on your behalf, ensure your rights are protected during any questioning, prevent you from making incriminating statements, and begin gathering and potentially offering exculpatory evidence while it's still fresh. Waiting until charges are filed means possibly missing crucial opportunities to influence the investigation's outcome. Many people mistakenly believe that cooperating without an attorney will infer innocence, but this can result in statements being taken out of context and being used against them.`,
+  },
+  {
+    q: 'Can text messages, social media, and electronic communications be used as evidence?',
+    a: `Yes, electronic communications are frequently used as evidence in CSC cases. Text messages, emails, social media posts, dating app conversations, photos, and videos can all be introduced as evidence by either the prosecution or defense. These communications can be particularly important in cases involving consent disputes or determining witness credibility. However, evidence must be properly authenticated and obtained legally. Your attorney should review all electronic communications to identify potentially helpful evidence.`,
+  },
+  {
+    q: `What is Michigan's "Romeo and Juliet" law?`,
+    a: `Michigan's "Romeo and Juliet" law (MCL 28.722) doesn't prevent prosecution for consensual sexual activity between teenagers, but it may allow certain individuals to petition to avoid sex offender registration. To qualify, the person must be convicted of CSC involving consensual sexual conduct, the victim must have been at least 13 but under 16, and the convicted person must not have been more than 4 years older than the victim. The court considers various factors including maturity levels and the nature of the relationship. It's important to understand that this law does not provide a defense to the charge itself - it only potentially affects registration requirements after conviction. A person between the ages of 18-25 may also qualify, in very limited circumstances, for treatment of a CSC charge under the Holmes Youthful Trainee Act, MCL 762.11 and avoid both a conviction and sex offender registration requirements.`,
+  },
+  {
+    q: "Should I take a polygraph (lie detector) test if I'm accused of CSC?",
+    a: `Polygraph tests are not scientifically reliable enough to be admissible as evidence in Michigan courts, and even innocent people frequently fail them due to stress and anxiety. That said, they can be an important and influential tool for how a prosecutor views your case. In fact, in Michigan, a defendant accused of CSC has a statutory right to a police polygraph. However, a person should never agree to take a police administered polygraph without consulting an attorney first. Even if you pass, you can still be charged and convicted. If you fail, while the results cannot be used in court, it may influence the prosecutor's charging decision. In some cases, a defense attorney may suggest and arrange for a private polygraph to determine a person’s fitness for any police examination. This decision should only be made with experienced legal counsel.`,
+  },
+  {
+    q: 'Will I have to register as a sex offender if convicted of CSC in Michigan?',
+    a: `Yes, conviction for any degree of Criminal Sexual Conduct in Michigan requires registration on the Michigan Sex Offender Registry (SORA). The tier level and duration depend on the specific offense and circumstances. Fourth-degree CSC typically results in Tier 1 registration (15 years), while more serious offenses can result in Tier 2 (25 years) or Tier 3 (lifetime) registration. Registration involves regular in-person reporting, restrictions on where you can live and work, and public disclosure of your information. In certain circumstances, registration can be non-public. Unlike some criminal convictions, CSC convictions are generally not eligible for expungement, making these consequences particularly long-lasting.`,
+  },
+  {
+    q: 'What if my accuser has made false accusations against others before? Can this be used in my defense?',
+    a: `Michigan law does allow introduction of evidence showing that an accuser has made prior false allegations of sexual assault, but only in certain circumstances. This is separate from Michigan's "Rape Shield" law, which generally prohibits introducing evidence of an alleged victim's past sexual conduct. Sometimes upon motion, a court will hold an in-camera (private) hearing to determine if this evidence is admissible. An experienced CSC defense attorney familiar with these procedures is essential for properly presenting this type of evidence.`,
+  },
+  {
+    q: "What should I do if I'm accused of Criminal Sexual Conduct?",
+    a: `If you're accused of CSC, your immediate actions can significantly impact your case outcome. First and most importantly, it’s important to understand that any statements you make can be constitute admissions to be used against you. Admissions are different than confessions to wrongdoing. At the same time, admissions such as, “yes, we engaged in sexual conduct, but it was consensual,” can be offered to prove that sexual conduct did occur where proofs may otherwise be lacking. Contact a criminal defense attorney well-established in the community where the allegation took place right away. It is not recommended that you try to contact the accuser to try to suggest a course of action or "settlement." Do not post anything on social media about the situation. Again, you should contact an experienced criminal defense attorney immediately, even before charges are filed. Early legal intervention during the investigation phase can sometimes prevent charges from being filed or result in reduced charges. Remember, anything you say can and will be used against you, even statements you believe are helpful to your case.`,
+  },
+  {
+    q: 'What are the degrees of Criminal Sexual Conduct in Michigan, and what are the penalties?',
+    a: `First Degree CSC (MCL 750.520b): The most serious charge, involving sexual penetration accomplished through force or coercion resulting in personal injury or penetration involving aggravating circumstances such as victim under 13 or commission during another felony. Penalties include incarceration up to life in prison and, in some instances, mandatory minimum of 25 years. Second Degree CSC (MCL 750.520c): Involves sexual contact, the touching of an intimate body part or the clothing immediately covering, accomplished through force or coercion resulting in personal injury or contact accomplished through other aggravating circumstances. Penalties include up to 15 years in prison and possible lifetime electronic monitoring. Third Degree CSC (MCL 750.520d): Involves sexual penetration accomplished through force or coercion without the aggravating factors listed in first degree. CSC Third Degree also encompasses “statutory rape” for acts of sexual penetration, even consensual acts, with persons between the ages of 13 an 16. Penalties include incarceration up to 15 years in prison. Fourth Degree CSC (MCL 750.520e): A “high court” misdemeanor, involves sexual contact accomplished by force or coercion not resulting in personal injury or under specific circumstances. Despite being labeled a misdemeanor, penalties include incarceration in prison up to 2 years. Convictions for all degrees require sex offender registration.`,
+  },
+  {
+    q: "Can I be convicted of CSC in Michigan based solely on someone's accusation without physical evidence?",
+    a: `MCL 750.520h provides that the testimony of an alleged victim does not need to be corroborated by other evidence for a conviction. This means that yes, you can be both charged and convicted based solely on an accuser's testimony without DNA evidence, witness testimony, or other physical evidence. However, the prosecution must still prove the case beyond a reasonable doubt, and that victim’s accusation must be believed on that standard. An experienced defense attorney can challenge the credibility of testimony, present contradictory evidence, and raise reasonable doubt through effective cross-examination. Effective cross-examination is not a skill that every defense attorney possesses.`,
+  },
+  {
+    q: 'What is Criminal Sexual Conduct (CSC) in Michigan?',
+    a: `Michigan law does not use terms like "rape" or "sexual assault" in its criminal statutes. Instead, all sex-related offenses fall under the umbrella term "Criminal Sexual Conduct" (CSC). The charges are divided into four degrees, with first-degree being the most severe and fourth-degree being the least severe. Each degree encompasses various forms of unwanted sexual contact or sexual penetration, as well as sexual conduct with individuals who cannot legally consent due to age, mental capacity, or other factors defined by Michigan law. Understanding these distinctions is crucial, as the degree of the charge significantly impacts potential penalties and defense strategies.`,
+  },
+];
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} headerVariant="transparent">
+  <main class="bg-background" data-ps="src/pages/practice-area/sex-crime-defense.astro:2e4jh1">
+    <section class="practice-hero text-white" data-ps="src/pages/practice-area/sex-crime-defense.astro:yd3vwo">
+      <div class="mx-auto max-w-[1200px] px-6 pb-20 pt-32 lg:pt-40" data-ps="src/pages/practice-area/sex-crime-defense.astro:a15g6z">
+        <nav aria-label="Breadcrumb" class="flex flex-wrap items-center gap-2 text-[13px] text-[#c3ccda]" data-ps="src/pages/practice-area/sex-crime-defense.astro:86rnwe">
+          <a href="/" class="hover:underline" data-ps="src/pages/practice-area/sex-crime-defense.astro:hkx2qk">Home</a>
+          <span data-ps="src/pages/practice-area/sex-crime-defense.astro:cfxd0z">/</span>
+          <a href="/practice-areas" class="hover:underline" data-ps="src/pages/practice-area/sex-crime-defense.astro:hkx2qj">Practice Areas</a>
+          <span data-ps="src/pages/practice-area/sex-crime-defense.astro:cfxd1l">/</span>
+          <span class="text-[#ddc582]" data-ps="src/pages/practice-area/sex-crime-defense.astro:cfxd1m">Criminal Sexual Conduct</span>
+        </nav>
+        <p class="mt-10 flex items-center gap-3 text-[12px] font-bold uppercase tracking-[1.8px] text-accent" data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2z8">
+          <span class="h-0.5 w-7 bg-accent" aria-hidden="true" data-ps="src/pages/practice-area/sex-crime-defense.astro:cfxd1n"></span>
+          Criminal Sexual Conduct
+        </p>
+        <h1 class="mt-5 max-w-[760px] font-serif text-[2.25rem] font-black leading-[1.08] tracking-[-0.6px] text-white md:text-[3rem] lg:text-[3.25rem]" data-ps="src/pages/practice-area/sex-crime-defense.astro:f9yf9">Criminal Sexual Conduct Laws Michigan: What You Need to Know</h1>
+        <p class="mt-6 max-w-[720px] text-xl leading-[1.6] text-[#ddc582] md:text-2xl" data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2gj">Criminal Sexual Conduct Charges Should Only Be Handled By The Most Experienced And Capable Defense Attorneys.</p>
+        <p class="mt-5 max-w-[660px] text-[17px] leading-[1.7] text-[#c3ccda]" data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2gi">Named a Top Ten Criminal Defense Attorney in Michigan by Leading Lawyers Magazine, Attorney Joe Simon Has Successfully Defended CSC Charges for Over 35 Years.</p>
+        <div class="mt-9 flex flex-wrap items-center gap-6" data-ps="src/pages/practice-area/sex-crime-defense.astro:ky1cpp">
+          <a href="/#contact" class="inline-flex items-center rounded-[3px] bg-primary px-7 py-4 text-base font-semibold text-primary-foreground transition-colors hover:bg-primary-hover" data-ps="src/pages/practice-area/sex-crime-defense.astro:hkx2qi">Request a Confidential Consultation</a>
+          <a href="tel:+17348876200" class="border-b border-accent pb-1 text-base font-semibold text-white" data-ps="src/pages/practice-area/sex-crime-defense.astro:hkx2qh">(734) 887-6200</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="practice-body mx-auto grid max-w-[1200px] gap-12 px-6 py-20 lg:grid-cols-[minmax(0,800px)_300px] lg:justify-between" data-ps="src/pages/practice-area/sex-crime-defense.astro:ky1cpo">
+      <div class="reading-column min-w-0" data-ps="src/pages/practice-area/sex-crime-defense.astro:ky1cpn">
+        <h2 class="font-serif text-[2.25rem] font-black leading-[1.15] text-foreground md:text-[2.5rem]" data-ps="src/pages/practice-area/sex-crime-defense.astro:f3ovog">We Defend These Charges:</h2>
+        <img
+          class="mt-8 block h-[260px] w-full rounded-[4px] object-cover md:h-[380px]"
+          src="https://pagesmith-cdn.com/ee60f2da/images/66aa4f5d078bef17fc3fa285_criminal10-21e31f-1536.webp"
+          width="800"
+          height="380"
+          alt=""
+          loading="lazy"
+          decoding="async" data-ps="src/pages/practice-area/sex-crime-defense.astro:cjekk8" />
+
+        <article class="source-copy mt-12" data-ps="src/pages/practice-area/sex-crime-defense.astro:ym368n">
+          <section id="main-1" class="source-section" data-ps="src/pages/practice-area/sex-crime-defense.astro:yd3vwp">
+            <h2 data-ps="src/pages/practice-area/sex-crime-defense.astro:f3ovof">Criminal Sexual Conduct Laws in Michigan: What You Need to Know About CSC Charges</h2>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2gh">Criminal Sexual Conduct (CSC) represents one of the most serious categories of criminal charges in Michigan, carrying potential penalties ranging from two years to life imprisonment. Understanding these laws and the available defense strategies may be crucial for anyone facing such allegations or seeking to comprehend Michigan's legal landscape regarding sexual offenses.</p>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2gg">For over 38 years, <a href="https://www.simoncriminaldefense.com/attorneys/joseph-a-simon" data-ps="src/pages/practice-area/sex-crime-defense.astro:hkx2qg">Joseph A. Simon</a> has been helping persons charged with, or being investigated for, Criminal Sexual Conduct allegations protect their freedom, reputation, and future goals. Named a Top Ten Criminal Defense Attorney in Michigan by Leading Lawyers Magazine, and five times named as Ann Arbor’s Criminal Defense Lawyer of the Year, Joe Simon has earned his reputation as one of the top defense attorneys in the State of Michigan by providing excellence in defending these charges with an unwavering commitment to excellence in criminal defense.</p>
+          </section>
+
+          <section id="main-2" class="source-section" data-ps="src/pages/practice-area/sex-crime-defense.astro:yd3vwq">
+            <h2 data-ps="src/pages/practice-area/sex-crime-defense.astro:f3ovnt">Overview of Criminal Sexual Conduct Laws in Michigan</h2>
+            <h3 data-ps="src/pages/practice-area/sex-crime-defense.astro:76x1v">Criminal Sexual Conduct Defined</h3>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2gf">Michigan’s defines the common law crime of rape under the umbrella of Criminal Sexual Conduct. The state categorizes CSC offenses into four distinct degrees, each with specific criteria and associated penalties. These charges encompass various forms of unwanted/unconsented sexual contact or penetration, as well as sexual conduct with individuals who cannot legally consent due to age, mental capacity, or other factors defined by law. Understanding the nuances of <a href="/practice-area/sex-crime-defense" data-ps="src/pages/practice-area/sex-crime-defense.astro:hkx2qf">these sex crimes and their defenses</a> is crucial for anyone facing these serious allegations.</p>
+            <h3 data-ps="src/pages/practice-area/sex-crime-defense.astro:76x1w">Types of Criminal Sexual Conduct in Michigan</h3>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2ge">Michigan divides Criminal Sexual Conduct into four degrees, with first-degree being the most severe and fourth-degree being the least severe, though all carry serious consequences. The primary distinctions between degrees involve whether the offense included claims of sexual penetration versus sexual contact, the age of the alleged victim, use of force or coercion, and/or the existence of any special relationships between the parties.</p>
+            <h3 data-ps="src/pages/practice-area/sex-crime-defense.astro:76x2i">Penalties for Criminal Sexual Conduct</h3>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2gd">The penalties for CSC convictions vary significantly based on the degree of the offense and specific circumstances. Beyond incarceration, convicted individuals face mandatory registration on Michigan's Sex Offender Registry, which can impact housing, employment, and other aspects of life for decades. Some convictions also require lifetime electronic monitoring. Unlike some other criminal offenses, CSC convictions are generally not eligible for <a href="/practice-area/expungements" data-ps="src/pages/practice-area/sex-crime-defense.astro:hkx2qe">expungement</a>, making the consequences particularly long-lasting.</p>
+            <h3 data-ps="src/pages/practice-area/sex-crime-defense.astro:76x2j">Statute of Limitations</h3>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2gc">Some CSC offenses in Michigan have no statute of limitations, meaning a prosecutor can file such criminal charges no matter how long ago the allegations were. Charges can potentially be filed years or even decades after the alleged incident, making these cases particularly complex to defend. Often, individuals first learn they are under investigation when contacted during <a href="/practice-area/police-investigations" data-ps="src/pages/practice-area/sex-crime-defense.astro:hkx2qd">police investigations</a>, highlighting the importance of immediate legal representation. Other CSC charges must be filed within 10 or sometimes 15 years. The applicable statute of limitations is determined by the degree of charge alleged and other factors.</p>
+            <h3 data-ps="src/pages/practice-area/sex-crime-defense.astro:76x2k">Factors Considered in Sentencing</h3>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2gb">Sentences for CSC offenses can be very substantial with CSC first and third degree convictions requiring incarceration with no possibility of probation. In addition to established sentencing guidelines, courts consider numerous factors, including the age of the victim, the relationship between the parties, whether force or coercion was involved, the defendant's criminal history, and whether the offense occurred during the commission of another felony. Aggravating factors can significantly increase penalties.</p>
+          </section>
+
+          <section id="main-3" class="source-section" data-ps="src/pages/practice-area/sex-crime-defense.astro:yd3vwr">
+            <h2 data-ps="src/pages/practice-area/sex-crime-defense.astro:f3ovns">First Degree Criminal Sexual Conduct</h2>
+            <h3 data-ps="src/pages/practice-area/sex-crime-defense.astro:76x2l">Definition and Elements</h3>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2ga"><a href="https://legislature.mi.gov/Laws/MCL?objectName=MCL-750-520B" data-ps="src/pages/practice-area/sex-crime-defense.astro:hkx2qc">First degree CSC under MCL 750.520b</a>, Michigan's most serious sexual offense, requires proof that the defendant engaged in an act of sexual penetration, –entry into the victim's body i.e., genital or anal opening or mouth by the defendant's penis, finger, or other object. Any penetration, however slight, satisfies this element.</p>
+            <h3 data-ps="src/pages/practice-area/sex-crime-defense.astro:76x2m">Examples of First Degree CSC</h3>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2fo">First degree charges can arise from allegations involving sexual penetration with a child under 13 years of age, sexual penetration accomplished through force or coercion causing personal injury, sexual penetration during the commission of another felony, or situations where the perpetrator is aided by others in accomplishing the penetration. The use of a weapon or threats of violence can also elevate charges to first degree, requiring the most experienced representation.</p>
+            <h3 data-ps="src/pages/practice-area/sex-crime-defense.astro:76x2n">Penalties for First Degree CSC</h3>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2fn">Criminal sexual conduct in the first degree is a felony punishable by imprisonment for life or for any term of years. For a violation that is committed by an individual 17 years of age or older against an individual less than 13 years of age by imprisonment for life or any term of years, <strong><em>but not less than 25 years</em></strong>. In certain cases involving repeat offenders and victims under 13, penalties can include mandatory life without parole.</p>
+            <h3 data-ps="src/pages/practice-area/sex-crime-defense.astro:76x2o">Defense Strategies</h3>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2fm">Defense strategies for first degree CSC charges begin with obtaining and scrutinizing the prosecution's evidence, obtaining independent evidence such as text messages, social media posts, security camera footage, etc. In the courtroom, defense strategies include questioning witness credibility, establishing an alibi, or demonstrating that the alleged conduct never occurred. Due to the severity of potential penalties, these cases require comprehensive investigation and careful strategic planning.</p>
+            <h3 data-ps="src/pages/practice-area/sex-crime-defense.astro:76x2p">High-Profile Cases</h3>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2fl">First degree CSC cases often receive significant media attention due to their serious nature and volatile consequences. These cases can include physicians, teachers, and public figures as defendants and they highlight the importance of experienced legal counsel who have handled such cases and who know how to navigate both the legal process and deal with public scrutiny while protecting their client's rights.</p>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2fk">If you or a loved one are being investigated for or charged with Criminal Sexual Conduct in <a href="/practice-area/best-criminal-defense-attorney-washtenaw-county" data-ps="src/pages/practice-area/sex-crime-defense.astro:hkx2qb">Washtenaw</a> county, contact the Law Offices of Joseph A. Simon at 734-887-6200 for a free consultation. With over 38 years of experience defending CSC charges, Mr. Simon understands the nuances and complexities these cases present.</p>
+          </section>
+
+          <section id="main-4" class="source-section" data-ps="src/pages/practice-area/sex-crime-defense.astro:yd3vws">
+            <h2 data-ps="src/pages/practice-area/sex-crime-defense.astro:f3ovnr">Second Degree Criminal Sexual Conduct</h2>
+            <h3 data-ps="src/pages/practice-area/sex-crime-defense.astro:76x2q">Definition and Elements</h3>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2fj"><a href="https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-520c" data-ps="src/pages/practice-area/sex-crime-defense.astro:hkx2pp">Second degree CSC under MCL 750.520c</a> involves claimed acts of sexual contact rather than sexual penetration. Second-degree criminal sexual conduct requires the touching of an intimate body part or the clothing immediately covering that part for reasons that could reasonably be construed for the defendant’s sexual arousal or gratification and without the other person's consent.</p>
+            <h3 data-ps="src/pages/practice-area/sex-crime-defense.astro:76x2r">Examples of Second Degree CSC</h3>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2fi">Common scenarios include touching of intimate body parts of a child under 13, sexual contact through force or coercion, or sexual contact with someone who is mentally incapacitated or physically helpless. The offense also applies when the perpetrator holds a position of authority over the victim. These charges often accompany other allegations such as <a href="/practice-area/assault-defense" data-ps="src/pages/practice-area/sex-crime-defense.astro:hkx2po">assault charges</a>, requiring a comprehensive defense strategy.</p>
+            <h3 data-ps="src/pages/practice-area/sex-crime-defense.astro:ts3szo">Penalties for Second Degree CSC</h3>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2fh">Second degree criminal sexual conduct is punishable by up to 15 years in prison. If you are over 17 years old and the victim is less than 13, the court may sentence you to lifelong electronic monitoring. Additionally, conviction requires registration on Michigan's Sex Offender Registry.</p>
+            <h3 data-ps="src/pages/practice-area/sex-crime-defense.astro:ts3szn">Defense Strategies</h3>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2fg">Defense approaches for second degree charges may focus on demonstrating that no sexual contact occurred, that any contact was consensual (where legally applicable), or that the contact was accidental rather than for sexual purposes. The defense might also challenge whether the alleged contact meets the legal definition of sexual contact.</p>
+            <h3 data-ps="src/pages/practice-area/sex-crime-defense.astro:ts3szm">Impact of Past Convictions</h3>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2ff">Prior CSC convictions significantly impact sentencing for second degree charges. In the event that an individual is convicted of a second or subsequent offense under sections 520b, 520c, or 520d, the resulting sentence for these offenses shall include a mandatory minimum of no less than 5 years.</p>
+          </section>
+
+          <section id="main-5" class="source-section" data-ps="src/pages/practice-area/sex-crime-defense.astro:yd3vwt">
+            <h2 data-ps="src/pages/practice-area/sex-crime-defense.astro:f3ovnq">Third Degree Criminal Sexual Conduct</h2>
+            <h3 data-ps="src/pages/practice-area/sex-crime-defense.astro:ts3szl">Definition and Elements</h3>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2et"><a href="https://www.womenslaw.org/laws/mi/statutes/750520d-criminal-sexual-conduct-third-degree" data-ps="src/pages/practice-area/sex-crime-defense.astro:hkx2pn">Third degree CSC under MCL 750.520d</a> A person is guilty of criminal sexual conduct in the third degree if the person engages in sexual penetration with another person and if any of the following circumstances exist: (a) That other person is at least 13 years of age and under 16 years of age; or (b) that force or coercion is used to accomplish sexual penetration.</p>
+            <h3 data-ps="src/pages/practice-area/sex-crime-defense.astro:ts3szk">Examples of Third Degree CSC</h3>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2es">This charge commonly applies to cases involving sexual penetration with teenagers aged 13-15, often referred to as "statutory rape" in other contexts. It also includes penetration accomplished through force or coercion without causing personal injury, or penetration with someone who is mentally incapable or physically helpless.</p>
+            <h3 data-ps="src/pages/practice-area/sex-crime-defense.astro:ts3szj">Penalties for Third Degree CSC</h3>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2er">Criminal sexual conduct in the third degree is a felony punishable by imprisonment for not more than 15 years and an offender cannot receive a sentence that includes probation, meaning incarceration is required upon conviction. Like other CSC convictions, sex offender registration is required with the tier and duration depending on the victim's age and other factors.</p>
+            <h3 data-ps="src/pages/practice-area/sex-crime-defense.astro:ts3szi">Consent as a Defense</h3>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2eq">Consent can be a defense to all CSC allegations but it can be a complex issue. Some actors, such as persons less than 16, do not have legal capacity to consent to sexual activity. However, in cases alleging force or coercion consent may be a viable defense strategy. Consent can be express or implied by conduct. All of the circumstances before, during, and after, can be relevant inferences of consent.</p>
+          </section>
+
+          <section id="main-6" class="source-section" data-ps="src/pages/practice-area/sex-crime-defense.astro:yd3vwu">
+            <h2 data-ps="src/pages/practice-area/sex-crime-defense.astro:f3ovnp">Fourth Degree Criminal Sexual Conduct</h2>
+            <h3 data-ps="src/pages/practice-area/sex-crime-defense.astro:ts3szh">Definition and Elements</h3>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2ep"><a href="https://legislature.mi.gov/Laws/MCL?objectName=mcl-750-520e" data-ps="src/pages/practice-area/sex-crime-defense.astro:hkx2pm">Fourth degree CSC, MCL 750.520e</a> is the least severe CSC charge and deemed a “high-court misdemeanor,” meaning it has all legal procedures associated with a felony but is still labeled a misdemeanor. The statute generally applies to "sexual contact" accomplished by force or coercion that does not result in personal injury. It can also apply to acts of sexual contact for actors who are in certain positions of authority.</p>
+            <h3 data-ps="src/pages/practice-area/sex-crime-defense.astro:ts3szg">Penalties for Fourth Degree CSC</h3>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2eo">Criminal sexual conduct in the fourth degree is a misdemeanor punishable by imprisonment for not more than 2 years or a fine of not more than $500.00, or both. Despite being classified as a misdemeanor, it still requires sex offender registration.</p>
+            <h3 data-ps="src/pages/practice-area/sex-crime-defense.astro:ts3szf">Defense Strategies</h3>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2en">Defense strategies may focus on demonstrating that any touching was accidental rather than intentional, that the contact was not for sexual purposes, or that the alleged touching never occurred. In appropriate cases, consent may be a defense, though this depends on the specific circumstances and the alleged victim's capacity to consent or relationship to the actor.</p>
+            <h3 data-ps="src/pages/practice-area/sex-crime-defense.astro:ts3syt">Impact of Age and Relationship</h3>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2em">There can be “strict liability” for CSC 4th Degree where the alleged victim is between the ages of 13 and 16. The statute provides that a person is guilty of criminal sexual conduct in the fourth degree if the person engages in sexual contact with another person and if any of the following circumstances exist: (a) That other person is at least 13 years of age but less than 16 years of age, and the actor is 5 or more years older than that other person.</p>
+          </section>
+
+          <section id="main-7" class="source-section" data-ps="src/pages/practice-area/sex-crime-defense.astro:yd3vxg">
+            <h2 data-ps="src/pages/practice-area/sex-crime-defense.astro:f3ovno">Michigan's "Romeo and Juliet" Law</h2>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2el">Michigan recognizes that if someone is under 16 years old and engages in unforced sexual contact with someone four years older or less, it is not a crime. This 5 year gap in age aims to prevent prosecution of young people in consensual relationships with close-in-age partners.</p>
+            <h3 data-ps="src/pages/practice-area/sex-crime-defense.astro:ts3sys">Purpose and History</h3>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2ek">The law recognizes that consensual sexual activity between young people of similar ages should not result in criminal prosecution and lifetime sex offender registration. It provides limited protection for relationships that society generally views as normal teenage behavior while maintaining protections for younger children.</p>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2dy"><strong><em>Criminal Sexual Conduct charges involving young people require particularly sensitive handling. If your child or loved one faces such charges, immediate legal consultation is crucial. Contact Joseph A. Simon at 734-887-6200 to discuss your case confidentially. Mr. Simon's successful history in representing </em></strong><a href="/practice-area/college-crimes-defense" data-ps="src/pages/practice-area/sex-crime-defense.astro:hkx2pl"><strong><em>college students</em></strong></a><strong><em> and young adults have earned him his 5-star favorable reviews by parents and students at the University of Michigan and other campus organizations.</em></strong></p>
+          </section>
+
+          <section id="main-8" class="source-section" data-ps="src/pages/practice-area/sex-crime-defense.astro:yd3vxh">
+            <h2 data-ps="src/pages/practice-area/sex-crime-defense.astro:f3ovnn">Consent and Capacity in Criminal Sexual Conduct Cases</h2>
+            <h3 data-ps="src/pages/practice-area/sex-crime-defense.astro:ts3syr">Definition of Consent</h3>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2dx">Other than the strict liability age offenses and other relationship based allegations, consent is a defense to Criminal Sexual Conduct (CSC) charges. Consent is generally defined as a voluntary, informed, and freely given agreement by an individual to engage in sexual activity. Valid consent must be given without coercion, by someone who understands what they're agreeing to and has the legal capacity to provide consent.</p>
+            <h3 data-ps="src/pages/practice-area/sex-crime-defense.astro:ts3syq">Factors Affecting Capacity</h3>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2dw">Several factors can render someone legally incapable of consent, including age (under 16 in most cases), mental incapacity, physical helplessness, or being under the influence of substances.</p>
+            <h3 data-ps="src/pages/practice-area/sex-crime-defense.astro:ts3syp">Role of Intoxication or Mental Illness</h3>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2dv">Intoxication or mental illness can make someone incapable of consent. The law examines whether the person was so impaired that they could not understand the nature of the sexual act or could not communicate unwillingness. Voluntary intoxication of the accused, however, is not a defense to CSC charges.</p>
+            <h3 data-ps="src/pages/practice-area/sex-crime-defense.astro:ts3syo">"Gray Areas" and Controversies</h3>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2du">Consent is rarely, if ever, a black and white analysis. Questions about consent often involve complex factual scenarios where the parties have different perceptions of what occurred. These cases may involve issues of miscommunication, changing consent during an encounter, or disputes about the level of intoxication or capacity.</p>
+            <h3 data-ps="src/pages/practice-area/sex-crime-defense.astro:ts3syn">Impact on Cases</h3>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2dt">When a defendant produces sufficient evidence to give rise to an affirmative defense, the prosecutor must disprove the affirmative defense beyond a reasonable doubt. This means that while defendants may raise consent as a defense in appropriate cases, the burden ultimately remains on the prosecution.</p>
+          </section>
+
+          <section id="main-9" class="source-section" data-ps="src/pages/practice-area/sex-crime-defense.astro:yd3vxi">
+            <h2 data-ps="src/pages/practice-area/sex-crime-defense.astro:f3ovnm">Victim Rights and Protections</h2>
+            <h3 data-ps="src/pages/practice-area/sex-crime-defense.astro:ts3sym">Overview of Victim Rights</h3>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2ds">Michigan law provides extensive rights and protections for alleged victims of CSC, including the right to have a support person present during proceedings, protection from intimidating questioning, and limitations on the admissibility of past sexual history.</p>
+            <h3 data-ps="src/pages/practice-area/sex-crime-defense.astro:ts3syl">Types of Available Protections</h3>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2dr">Courts may issue personal protection orders, no-contact orders as bond conditions, sometimes anchored by GPS tethers. The Crime Victim's Rights Act also provides notification rights and the opportunity to provide input at various stages of the case.</p>
+            <h3 data-ps="src/pages/practice-area/sex-crime-defense.astro:ts3syk">Protection Order Process</h3>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2dq">Alleged victims may seek personal protection orders through civil proceedings separate from the criminal case. These orders can prohibit contact, require the defendant to stay away from certain locations, and provide other protections. Violation of such orders can give rise to separate criminal charges.</p>
+            <h3 data-ps="src/pages/practice-area/sex-crime-defense.astro:ts3sxy">Victim Impact Statements</h3>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2dp">At sentencing, victims have the right to provide statements about how the offense affected them. These statements can influence sentencing decisions and sometimes be what moves the needle for judges determining ranges in statutory sentencing guidelines. Impact on CSC Cases</p>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2d3">Victim rights provisions can significantly affect how cases proceed, from limiting defense access to certain information to affecting plea negotiations and sentencing. Defense attorneys must navigate these protections while still mounting an effective defense for their clients. In cases where CSC charges arise from domestic relationships, understanding both <a href="/practice-area/domestic-violence-defense" data-ps="src/pages/practice-area/sex-crime-defense.astro:hkx2pk">domestic violence defense</a> strategies and CSC laws is essential.</p>
+          </section>
+
+          <section id="main-10" class="source-section" data-ps="src/pages/practice-area/sex-crime-defense.astro:yd3vxj">
+            <h2 data-ps="src/pages/practice-area/sex-crime-defense.astro:f3ovnl">Defenses for Accused Individuals</h2>
+            <h3 data-ps="src/pages/practice-area/sex-crime-defense.astro:ts3sxx">Common Defense Strategies</h3>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2d2">Defending against CSC charges requires a well thought out legal strategy, which may include: a full review of all evidence, including medical evidence stemming from any sexual assault examination, witness interviews, collection and review of text messaging, social media posts, and any surveillance video.</p>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2d1">Best practices for CSC defense also include: intimate knowledge of the local courts and participants; a thorough confidential client interview; obtaining all case discovery including in-car and body-cam police video, audio dispatch recordings, 9-1-1 audio recordings, interviewing any witnesses, preparing a client for the courtroom, and the ability to present a case in court in pretrial motion hearings and at trial. Joseph A. Simon's recognition as a Top Ten Criminal Defense Attorney by Leading Lawyers Magazine and his <strong><em>five time</em></strong> recognition as <a href="https://www.bestlawyers.com/lawyers/joseph-a-simon/32940" data-ps="src/pages/practice-area/sex-crime-defense.astro:hkx2pj"><strong><em>Best Lawyers in America</em></strong></a>® Ann Arbor criminal defense <a href="https://www.bestlawyers.com/lawyers/joseph-a-simon/32940" data-ps="src/pages/practice-area/sex-crime-defense.astro:hkx2pi"><strong><em>Lawyer of the Year</em></strong></a> (2013, 2015, 2023, 2024, 2025 reflects his commitment to these best practices over 38 years of criminal defense and numerous <a href="https://www.simoncriminaldefense.com/courtroom-victories" data-ps="src/pages/practice-area/sex-crime-defense.astro:hkx2ph">courtroom victories</a>.</p>
+            <h3 data-ps="src/pages/practice-area/sex-crime-defense.astro:ts3sxw">DNA Evidence Controversies</h3>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2d0">While DNA evidence can be powerful, it's not infallible. Defense strategies may challenge collection procedures, chain of custody, laboratory protocols, or the interpretation of results. The presence of DNA doesn't always prove that a crime occurred, particularly in cases involving consent disputes. In an era where technology plays an increasing role in criminal cases, understanding both traditional evidence and forensic evidence <a href="/practice-area/computer-crimes" data-ps="src/pages/practice-area/sex-crime-defense.astro:hkx2pg">computer crimes</a> becomes increasingly important.</p>
+          </section>
+
+          <section id="main-11" class="source-section" data-ps="src/pages/practice-area/sex-crime-defense.astro:yd3vxk">
+            <h2 data-ps="src/pages/practice-area/sex-crime-defense.astro:f3ovnk">Important Considerations</h2>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2cz">The complexity of Michigan's CSC laws and the severe consequences of conviction make experienced legal representation essential. Every case presents unique facts and circumstances that require careful analysis and strategic planning. Early involvement of qualified counsel can be crucial in protecting rights and developing effective defense strategies.</p>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2cy">Those facing CSC allegations should understand that these cases often involve lengthy investigations and court proceedings. Patience, careful preparation, and adherence to legal advice are essential throughout the process. The outcome of any case depends on numerous factors and while past results never guarantee future outcomes, experience and a proven track record of results are the best guides in determining the right criminal defense attorney.</p>
+          </section>
+
+          <section id="main-12" class="source-section" data-ps="src/pages/practice-area/sex-crime-defense.astro:yd3vxl">
+            <h2 data-ps="src/pages/practice-area/sex-crime-defense.astro:f3ovmy">Who Do You Want To Answer The Call You Never Thought You'd Have To Make?</h2>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2cx"><strong><em>Imagine the unimaginable - you, a loved one, your son or daughter, is suddenly accused of engaging in unconsented sexual conduct. There's been an arrest, a suspension from work or school. You're hearing things about DNA tests, sex offender registration, a permanent criminal history, and the threat of prison. Don’t you want the voice on the other end of the phone call you never thought you'd have to make to be the voice of experience, compassion, and capability?</em></strong></p>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2cw">Criminal Sexual Conduct is one of the most nuanced and complicated charges in Michigan that a person can face and should be defended by only the most experienced defense attorneys. Joseph A. Simon has earned his reputation through over 38 years of successfully defending these charges, providing excellence in criminal defense when it matters most. Our <a href="https://www.simoncriminaldefense.com/reviews" data-ps="src/pages/practice-area/sex-crime-defense.astro:hkx2ou">client reviews</a> and peer-reviewed ratings reflect our commitment to protecting our clients' rights and futures.</p>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2cv">If you or a loved one are being investigated for or charged with Criminal Sexual Conduct in Washtenaw, Wayne, Jackson, Livingston, or Lenawee County, <a href="https://www.simoncriminaldefense.com/contact" data-ps="src/pages/practice-area/sex-crime-defense.astro:hkx2ot">contact our firm</a> at 734-887-6200 for a free consultation. The Law Offices of Joseph A. Simon are committed to protecting your freedom, reputation, and future goals.</p>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2cu"><em>This article provides general educational information about Michigan's Criminal Sexual Conduct laws and should not be considered legal advice. Every case is unique with different potential outcomes. Past results do not guarantee future results, and no attorney-client relationship is created by reading this content. Success depends on the evidence and applicable law in each individual case. While Joseph A. Simon has over 38 years of experience defending CSC charges, outcomes vary based on specific case circumstances. Anyone facing CSC charges should consult with a qualified criminal defense attorney to discuss their specific situation and available options. The effectiveness of any defense strategy depends entirely on the individual facts and circumstances of each case.</em><strong><em> For a confidential consultation about your specific situation, contact the Law Offices of Joseph A. Simon at 734-887-6200.</em></strong></p>
+          </section>
+
+          <section id="main-13" class="source-section" data-ps="src/pages/practice-area/sex-crime-defense.astro:yd3vxm">
+            <h2 data-ps="src/pages/practice-area/sex-crime-defense.astro:f3ovmx">25 Frequently Asked Questions About Criminal Sexual Conduct Laws in Michigan</h2>
+
+            <h3 data-ps="src/pages/practice-area/sex-crime-defense.astro:ts3sxv">1. What exactly is Criminal Sexual Conduct (CSC) in Michigan, and how is it different from rape or sexual assault?</h3>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2c8">Michigan law does not use terms like "rape" or "sexual assault" in its criminal statutes. Instead, all sex-related offenses fall under the umbrella term "Criminal Sexual Conduct" (CSC). The charges are divided into four degrees, with first-degree being the most severe and fourth-degree being the least severe. Each degree encompasses various forms of unwanted sexual contact or sexual penetration, as well as sexual conduct with individuals who cannot legally consent due to age, mental capacity, or other factors defined by Michigan law. Understanding these distinctions is crucial, as the degree of the charge significantly impacts potential penalties and defense strategies.</p>
+
+            <h3 data-ps="src/pages/practice-area/sex-crime-defense.astro:ts3sxu">2. Can I be convicted of CSC in Michigan based solely on someone's accusation without physical evidence?</h3>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2c7">MCL 750.520h provides that the testimony of an alleged victim does not need to be corroborated by other evidence for a conviction. This means that yes, you can be both charged and convicted based solely on an accuser's testimony without DNA evidence, witness testimony, or other physical evidence. However, the prosecution must still prove the case beyond a reasonable doubt, and that victim’s accusation must be believed on that standard. An experienced defense attorney can challenge the credibility of testimony, present contradictory evidence, and raise reasonable doubt through effective cross-examination. Effective cross-examination is not a skill that every defense attorney possesses. Joseph A. Simon's recognition as a Top Ten Criminal Defense Attorney by Leading Lawyers Magazine and his <strong><em>five time</em></strong> recognition as <a href="https://www.bestlawyers.com/lawyers/joseph-a-simon/32940" data-ps="src/pages/practice-area/sex-crime-defense.astro:hkx2os"><strong><em>Best Lawyers in America</em></strong></a>® Ann Arbor criminal defense <a href="https://www.bestlawyers.com/lawyers/joseph-a-simon/32940" data-ps="src/pages/practice-area/sex-crime-defense.astro:hkx2or"><strong><em>Lawyer of the Year</em></strong></a> (2013, 2015, 2023, 2024, 2025 reflects his abilities over 38 years of criminal defense and numerous <a href="https://www.simoncriminaldefense.com/courtroom-victories" data-ps="src/pages/practice-area/sex-crime-defense.astro:hkx2oq">courtroom victories</a>.</p>
+
+            <h3 data-ps="src/pages/practice-area/sex-crime-defense.astro:ts3sxt">3. What should I do immediately if I'm accused of Criminal Sexual Conduct in Michigan?</h3>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2c6">If you're accused of CSC, your immediate actions can significantly impact your case outcome. First and most importantly, it’s important to understand that any statements you make can be constitute admissions to be used against you. Admissions are different than confessions to wrongdoing. At the same time, admissions such as, “yes, we engaged in sexual conduct, but it was consensual,” can be offered to prove that sexual conduct did occur where proofs may otherwise be lacking. Contact a criminal defense attorney well-established in the community where the allegation took place right away. It is not recommended that you try to contact the accuser to try to suggest a course of action or "settlement." Do not post anything on social media about the situation. Again, you should contact an experienced criminal defense attorney immediately, even before charges are filed. Early legal intervention during the investigation phase can sometimes prevent charges from being filed or result in reduced charges. Remember, anything you say can and will be used against you, even statements you believe are helpful to your case.</p>
+
+            <h3 data-ps="src/pages/practice-area/sex-crime-defense.astro:ts3sxs">4. What are the four degrees of Criminal Sexual Conduct in Michigan, and what are the penalties?</h3>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2c5"><strong>First Degree CSC (MCL 750.520b):</strong> The most serious charge, involving sexual penetration accomplished through force or coercion resulting in personal injury or penetration involving aggravating circumstances such as victim under 13 or commission during another felony. Penalties include incarceration up to life in prison and, in some instances, mandatory minimum of 25 years.</p>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2c4"><strong>Second Degree CSC (MCL 750.520c):</strong> Involves sexual contact, the touching of an intimate body part or the clothing immediately covering, accomplished through force or coercion resulting in personal injury or contact accomplished through other aggravating circumstances. Penalties include up to 15 years in prison and possible lifetime electronic monitoring.</p>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2c3"><strong>Third Degree CSC (MCL 750.520d):</strong> Involves sexual penetration accomplished through force or coercion without the aggravating factors listed in first degree. CSC Third Degree also encompasses “statutory rape” for acts of sexual penetration, even consensual acts, with persons between the ages of 13 an 16. Penalties include incarceration up to 15 years in prison.</p>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2c2"><strong>Fourth Degree CSC (MCL 750.520e):</strong> A “high court” misdemeanor, involves sexual contact accomplished by force or coercion not resulting in personal injury or under specific circumstances. Despite being labeled a misdemeanor, penalties include incarceration in prison up to 2 years.</p>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2c1">Convictions for all degrees require sex offender registration.</p>
+
+            <h3 data-ps="src/pages/practice-area/sex-crime-defense.astro:ts3sxr">5. Will I have to register as a sex offender if convicted of CSC in Michigan?</h3>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2c0">Yes, conviction for any degree of Criminal Sexual Conduct in Michigan requires registration on the Michigan Sex Offender Registry (SORA). The tier level and duration depend on the specific offense and circumstances. Fourth-degree CSC typically results in Tier 1 registration (15 years), while more serious offenses can result in Tier 2 (25 years) or Tier 3 (lifetime) registration. Registration involves regular in-person reporting, restrictions on where you can live and work, and public disclosure of your information. Unlike some criminal convictions, CSC convictions are generally not eligible for expungement, making these consequences particularly long-lasting.</p>
+
+            <h3 data-ps="src/pages/practice-area/sex-crime-defense.astro:ts3sxq">6. What if my accuser has made false accusations against others before? Can this be used in my defense?</h3>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2bz">Michigan law does allow introduction of evidence showing that an accuser has made prior false allegations of sexual assault, but only in certain circumstances. This is separate from Michigan's "Rape Shield" law, which generally prohibits introducing evidence of an alleged victim's past sexual conduct. Sometimes upon motion, a court will hold an in-camera (private) hearing to determine if this evidence is admissible. An experienced CSC defense attorney familiar with these procedures is essential for properly presenting this type of evidence.</p>
+
+            <h3 data-ps="src/pages/practice-area/sex-crime-defense.astro:ts3sxp">7. Should I take a polygraph test if I'm innocent of the CSC charges?</h3>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2bd">Polygraph tests are not scientifically reliable enough to be admissible as evidence in Michigan courts, and even innocent people frequently fail them due to stress and anxiety. That said, they can be an important and influential tool for how a prosecutor views your case. In fact, in Michigan, a defendant accused of CSC has a statutory right to a police polygraph. Never agree to take a police administered polygraph without consulting an attorney first. Even if you pass, you can still be charged and convicted. If you fail, while the results cannot be used in court, it may influence the prosecutor's charging decision. In some cases, a defense attorney may suggest and arrange for a private polygraph to determine a person’s fitness for any police examination. This decision should only be made with experienced legal counsel.</p>
+
+            <h3 data-ps="src/pages/practice-area/sex-crime-defense.astro:ts3sx3">8. How long does the prosecutor have to file CSC charges against me in Michigan?</h3>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2bc">The statute of limitations varies by degree of CSC and the age of the alleged victim. For First Degree CSC, there is no statute of limitations - charges can be filed at any time. For Second, Third, and Fourth Degree CSC, the statute of limitations is either 10 years after the offense or by the alleged victim's 21st birthday, whichever is later. In cases involving DNA evidence that identifies a suspect, charges may be filed within 10 years of identification, regardless of when the alleged offense occurred. These extended time periods mean that allegations from many years ago can still result in current criminal charges.</p>
+
+            <h3 data-ps="src/pages/practice-area/sex-crime-defense.astro:ts3sx2">9. What is Michigan's "Romeo and Juliet" law, and how might it apply to my case?</h3>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2bb">Michigan's "Romeo and Juliet" law (MCL 28.722) doesn't prevent prosecution for consensual sexual activity between teenagers, but it may allow certain individuals to petition to avoid sex offender registration. To qualify, the person must be convicted of CSC involving consensual sexual conduct, the victim must have been at least 13 but under 16, and the convicted person must not have been more than 4 years older than the victim. The court considers various factors including maturity levels and the nature of the relationship. It's important to understand that this law does not provide a defense to the charge itself - it only potentially affects registration requirements after conviction.</p>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2ba">A person between the ages of 18-25 may also qualify, in very limited circumstances, for treatment of a CSC charge under the Holmes Youthful Trainee Act, MCL 762.11 and avoid registration requirements.</p>
+
+            <h3 data-ps="src/pages/practice-area/sex-crime-defense.astro:ts3sx1">10. Can text messages, social media, and electronic communications be used as evidence?</h3>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2b9">Yes, electronic communications are frequently used as evidence in CSC cases. Text messages, emails, social media posts, dating app conversations, photos, and videos can all be introduced as evidence by either the prosecution or defense. These communications can be particularly important in cases involving consent disputes or determining witness credibility. However, evidence must be properly authenticated and obtained legally. Your attorney should review all electronic communications to identify potentially helpful evidence.</p>
+
+            <h3 data-ps="src/pages/practice-area/sex-crime-defense.astro:ts3sx0">11. What constitutes "consent" under Michigan CSC laws?</h3>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2b8">Some persons cannot offer legal consent, regardless of apparent agreement. Individuals cannot legally consent if they are: under age 16, mentally incapable, mentally incapacitated, physically helpless, or in certain power-imbalanced relationships (such as student-teacher or patient-therapist). Force, coercion, or threats also negate consent. Importantly, Michigan law does not require proof that the alleged victim resisted (MCL 750.520i). Also consent, once offered, can be withdrawn at any time, and past consensual activity does not imply ongoing consent. Understanding these nuances is critical for mounting an effective defense.</p>
+
+            <h3 data-ps="src/pages/practice-area/sex-crime-defense.astro:ts3swz">12. I'm being investigated but haven't been charged yet. Do I need an attorney?</h3>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2b7">Yes, absolutely. The pre-charge investigation phase can be critical, and having an attorney during this stage can sometimes prevent charges from being filed or result in reduced charges. An experienced defense attorney can communicate with law enforcement on your behalf, ensure your rights are protected during any questioning, prevent you from making incriminating statements, and begin gathering and potentially offering exculpatory evidence while it's still fresh. Waiting until charges are filed means possibly missing crucial opportunities to influence the investigation's outcome. Many people mistakenly believe that cooperating without an attorney will infer innocence, but this can result in statements being taken out of context and being used against them.</p>
+
+            <h3 data-ps="src/pages/practice-area/sex-crime-defense.astro:ts3swy">13. Will I go to jail immediately if charged with CSC? What about bail?</h3>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2b6">Whether you're held in custody depends on several factors including the degree of CSC charged, your criminal history, ties to the community, and whether you're considered a flight risk or danger to the alleged victim or community. First and Second Degree CSC charges often result in high bail or detention pending trial. At arraignment, the court will set bail conditions which may include no contact with the alleged victim, travel restrictions, and possibly electronic monitoring. An experienced attorney can argue for reasonable bail and conditions that allow you to maintain employment and prepare your defense while the case is pending.</p>
+
+            <h3 data-ps="src/pages/practice-area/sex-crime-defense.astro:ts3swx">14. How will CSC charges affect my professional license in Michigan?</h3>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2b5">CSC charges and convictions can have devastating effects on professional licenses. Teachers, healthcare providers, attorneys, and other licensed professionals face potential suspension or revocation of their licenses, even before conviction. Many licensing boards initiate their own investigations upon learning of charges. Some professions have mandatory reporting requirements. The impact varies by profession and the specific circumstances of the charges. Early intervention by an attorney familiar with professional licensing issues is crucial to protect both your criminal case and your professional career.</p>
+
+            <h3 data-ps="src/pages/practice-area/sex-crime-defense.astro:ts3sww">15. What are the immigration consequences of a CSC conviction for non-citizens?</h3>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2b4">CSC convictions carry severe immigration consequences for non-citizens, including lawful permanent residents. These offenses are typically considered "aggravated felonies" and "crimes involving moral turpitude" under immigration law, leading to mandatory removal, ineligibility for most forms of relief from removal, permanent bars to re-entry, and denial of naturalization applications. Even some misdemeanor CSC convictions trigger these consequences. It's crucial that a criminal defense attorney recognize these collateral consequences and refer their clients to immigration counsel to understand and potentially minimize immigration consequences while simultaneously defending against the criminal charges.</p>
+
+            <h3 data-ps="src/pages/practice-area/sex-crime-defense.astro:ts3swv">16. Can my spouse be forced to testify against me in a CSC case?</h3>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2ai">Michigan does recognize spousal privilege, but it has limitations. Generally, spouses cannot be compelled to testify against each other regarding private marital communications. However, if the alleged victim is your spouse, they can choose to testify against you. Additionally, if the alleged victim is your child or a child residing in your household, the spousal privilege may not apply. The privilege also doesn't cover observations of criminal acts or communications made in the presence of third parties.</p>
+
+            <h3 data-ps="src/pages/practice-area/sex-crime-defense.astro:ts3swu">17. What if I was falsely accused during a custody dispute or divorce?</h3>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2ah">False accusations during custody disputes unfortunately do occur, and courts are increasingly aware of this possibility. These cases require careful handling as family court judges may issue protective orders affecting custody and parenting time based on allegations alone. Your criminal defense attorney should coordinate with your family law attorney to ensure consistency. Document all interactions, save all communications, and gather evidence of potential motives for false accusations.</p>
+
+            <h3 data-ps="src/pages/practice-area/sex-crime-defense.astro:ts3sw8">18. How does Michigan address CSC cases involving intoxicated persons?</h3>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2ag">In Michigan a person who is "mentally incapacitated" or rendered “physically helpless” cannot legally consent to sexual activity. This includes situations where someone is intoxicated by alcohol or drugs to the point where they cannot understand the nature of the sexual act. However, mere intoxication doesn't automatically negate consent - the recognition of the level of intoxication is also considered. These cases often involve factual disputes about the level of intoxication, if the intoxicants were voluntarily consumed, and whether the accused knew or should have known about the incapacitation.</p>
+
+            <h3 data-ps="src/pages/practice-area/sex-crime-defense.astro:ts3sw7">19. What happens if the alleged victim doesn't want to pursue charges?</h3>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2af">In Michigan, the prosecutor, not the alleged victim, decides whether to pursue criminal charges. Once a CSC allegation is reported to police and is thereafter charged by the prosecutor, the case proceeds based on the prosecutor's assessment of the evidence, not solely the alleged victim's wishes. Prosecutors may proceed even over the alleged victim's objection, using subpoenas to compel testimony if necessary. However, a reluctant or uncooperative alleged victim can affect the prosecutor's ability to prove the case beyond a reasonable doubt.</p>
+
+            <h3 data-ps="src/pages/practice-area/sex-crime-defense.astro:ts3sw6">20. Are there alternatives to trial for CSC cases in Michigan?</h3>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2ae">While CSC charges are serious, not every case goes to trial. Alternatives may include dismissal of charges due to insufficient evidence, plea negotiations to lesser charges that may not require sex offender registration, participation in diversion programs (extremely rare for CSC but possible in specific circumstances), or resolution through Holmes youthful trainee status for eligible young defendants. Each case is unique, and an experienced attorney can evaluate whether alternatives to trial might be available while always preparing for the possibility of trial. The decision to resolve a case through any negotiation must be made carefully, considering all consequences including registration requirements.</p>
+
+            <h3 data-ps="src/pages/practice-area/sex-crime-defense.astro:ts3sw5">21. How are CSC cases involving minors handled differently?</h3>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2ad">CSC cases involving minors include additional complexities such as mandatory reporting requirements for certain professionals, special interview procedures (forensic interviews), likely involvement of Children's Protective Services, potential for closed-circuit testimony to avoid courtroom confrontation, and enhanced penalties and registration requirements. The age of the alleged victim affects available defenses - for instance, consent is not a defense if the alleged victim is under 16. These cases often involve delayed disclosure, absence of physical evidence, and reliance on child testimony, creating both challenges and opportunities for the defense.</p>
+
+            <h3 data-ps="src/pages/practice-area/sex-crime-defense.astro:ts3sw4">22. What role does DNA evidence play in CSC cases?</h3>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2ac">DNA evidence can be powerful but is not conclusive proof of criminal conduct. The presence of DNA proves contact occurred but not necessarily that a crime was committed - consent cases particularly illustrate this distinction. Defense strategies regarding DNA include challenging collection procedures and chain of custody, questioning laboratory protocols and potential contamination, disputing the interpretation of mixed DNA samples, and explaining innocent presence of DNA. The absence of DNA where it would be expected can also be significant for the defense. Understanding the science and limitations of DNA evidence is crucial for effective representation.</p>
+
+            <h3 data-ps="src/pages/practice-area/sex-crime-defense.astro:ts3sw3">23. Can I be charged with multiple counts of CSC for one incident?</h3>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2ab">Yes, Michigan prosecutors often file multiple charges arising from a single incident. This might include charging different degrees of CSC for the same conduct, separate counts for each type of sexual contact or penetration, additional charges for related crimes (assault, unlawful imprisonment), or multiple counts if the conduct allegedly occurred over time. Multiple charges increase potential penalties and sentencing exposure and complicate plea negotiations.</p>
+
+            <h3 data-ps="src/pages/practice-area/sex-crime-defense.astro:ts3sw2">24. What happens at a CSC trial in Michigan?</h3>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2aa">CSC trials involve several key stages: jury selection (voir dire) with careful screening for bias, opening statements outlining each side's case, prosecution's case including witness testimony and evidence, defense case (if choosing to present one), closing arguments, jury instructions on the law, and deliberation and verdict. The prosecution must prove guilt beyond a reasonable doubt. CSC trials often involve sensitive testimony, possible expert witnesses, and careful handling of prejudicial evidence. Your attorney's experience with CSC trials is crucial for challenging evidence, employing effective cross-examination of witnesses, and presenting your defense.</p>
+
+            <h3 data-ps="src/pages/practice-area/sex-crime-defense.astro:ts3sw1">25. If convicted, can I appeal a CSC conviction in Michigan?</h3>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs2a9">Yes, you have the right to appeal a CSC conviction, but strict deadlines apply - typically 42 days from sentencing to file a claim of appeal. Grounds for appeal might include legal errors by the trial judge, ineffective assistance of counsel, insufficient evidence to support conviction, prosecutorial misconduct, or improper jury instructions. Appeals focus on legal issues, not re-trying facts. Success on appeal might result in a new trial, dismissal of charges, or resentencing. Some issues must be raised at trial to preserve them for appeal. Having trial counsel who understands appellate issues is important for protecting your rights throughout the process.</p>
+
+            <h4 class="mt-10 font-sans text-[17px] font-bold italic text-foreground" data-ps="src/pages/practice-area/sex-crime-defense.astro:smzclq">Important Notice</h4>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs29n"><em>This FAQ provides general educational information about Michigan's Criminal Sexual Conduct laws and should not be considered legal advice. Every case is unique with different facts, circumstances, and potential outcomes. Criminal Sexual Conduct charges are among the most serious and complex in Michigan's legal system, carrying life-altering consequences including potential life imprisonment and lifetime sex offender registration.</em></p>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs29m"><em>If you or a loved one faces CSC charges or is under investigation in Washtenaw, Wayne, Jackson, Livingston, or Lenawee County, contact the Law Offices of Joseph A. Simon at 734-887-6200 for a free consultation. With over 38 years of experience defending CSC charges, Joseph A. Simon has earned his reputation as one of Michigan's top criminal defense attorneys through his unwavering commitment to protecting clients' freedom, reputation, and future goals.</em></p>
+            <p data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs29l"><em>Past results do not guarantee future outcomes, and no attorney-client relationship is created by reading this content. The effectiveness of any defense strategy depends entirely on the individual facts and circumstances of each case. Time is critical in CSC cases - contact qualified counsel immediately to protect your rights.</em></p>
+          </section>
+        </article>
+      </div>
+
+      <aside class="lg:sticky lg:top-24 lg:self-start" aria-label="Page navigation" data-ps="src/pages/practice-area/sex-crime-defense.astro:tiba97">
+        <div class="on-this-page" data-ps="src/pages/practice-area/sex-crime-defense.astro:ky1cpm">
+          <p class="text-[12px] font-bold uppercase tracking-[1.8px] text-primary" data-ps="src/pages/practice-area/sex-crime-defense.astro:hv03ce">On this page</p>
+          <ul class="mt-6 border-t border-border">
+            {tocItems.map((item, __psIdx) => (
+              <li class="border-b border-border" data-ps={`src/pages/practice-area/sex-crime-defense.astro:irow0b-${__psIdx}`}>
+                <a href={`#${item.id}`} class="block py-3 text-[14.5px] leading-[1.5] text-foreground hover:text-primary hover:underline" data-ps={`src/pages/practice-area/sex-crime-defense.astro:hkx2op-${__psIdx}`}>{item.label}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div class="mt-10 rounded-[4px] border border-border bg-surface p-6" data-ps="src/pages/practice-area/sex-crime-defense.astro:ky1cpl">
+          <h2 class="font-sans text-[13px] font-extrabold uppercase tracking-[1.2px] text-primary" data-ps="src/pages/practice-area/sex-crime-defense.astro:f3ovmw">We Defend These Charges:</h2>
+          <ul class="mt-4 space-y-2.5">
+            {defendItems.map((item, __psIdx) => (
+              <li class="flex gap-2 text-[15px] leading-[1.6] text-muted-foreground" data-ps={`src/pages/practice-area/sex-crime-defense.astro:irow0a-${__psIdx}`}>
+                <span aria-hidden="true" class="text-primary" data-ps={`src/pages/practice-area/sex-crime-defense.astro:cfxd1o-${__psIdx}`}>—</span>
+                <span data-ps={`src/pages/practice-area/sex-crime-defense.astro:cfxd1p-${__psIdx}`}>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div class="mt-8 space-y-4" data-ps="src/pages/practice-area/sex-crime-defense.astro:ky1cpk">
+          <img class="block aspect-[5/3] w-full rounded-[4px] object-cover" src="https://pagesmith-cdn.com/ee60f2da/images/66aa4f5d078bef17fc3fa38d_criminal2-e740bd-1536.webp" width="300" height="180" alt="" loading="lazy" decoding="async" data-ps="src/pages/practice-area/sex-crime-defense.astro:cjekk7" />
+          <img class="block aspect-[5/3] w-full rounded-[4px] object-cover" src="https://pagesmith-cdn.com/ee60f2da/images/66aa4f5d078bef17fc3fa3b4_criminal7-080a22-1536.webp" width="300" height="180" alt="" loading="lazy" decoding="async" data-ps="src/pages/practice-area/sex-crime-defense.astro:cjekk6" />
+        </div>
+
+        <a href="/practice-areas" class="mt-6 inline-block text-[12.5px] font-bold uppercase tracking-[0.3px] text-primary hover:underline" data-ps="src/pages/practice-area/sex-crime-defense.astro:hkx2oo">Explore All Practice Areas →</a>
+      </aside>
+    </div>
+
+    <section id="practice-faqs" class="bg-background pb-24" data-ps="src/pages/practice-area/sex-crime-defense.astro:yd3vxn">
+      <div class="mx-auto max-w-[800px] px-6" data-ps="src/pages/practice-area/sex-crime-defense.astro:ky1cpj">
+        <p class="flex items-center gap-3 text-[12px] font-bold uppercase tracking-[1.8px] text-primary" data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs29k">
+          <span class="h-0.5 w-7 bg-primary" aria-hidden="true" data-ps="src/pages/practice-area/sex-crime-defense.astro:cfxd1q"></span>
+          Questions &amp; Answers
+        </p>
+        <h2 class="mt-5 font-serif text-[2.25rem] font-black leading-[1.15] text-foreground md:text-[2.5rem]" data-ps="src/pages/practice-area/sex-crime-defense.astro:f3ovmv">Frequently Asked Questions</h2>
+        <div class="mt-10 border-t border-border" data-ps="src/pages/practice-area/sex-crime-defense.astro:ky1cpi">
+          {faqItems.map((item, __psIdx) => (
+            <details class="group border-b border-border py-5">
+              <summary class="flex cursor-pointer list-none items-start justify-between gap-6 text-[17px] font-bold leading-[1.45] text-foreground [&::-webkit-details-marker]:hidden">
+                <span data-ps={`src/pages/practice-area/sex-crime-defense.astro:cfxd1r-${__psIdx}`}>{item.q}</span>
+                <span aria-hidden="true" class="mt-0.5 shrink-0 text-2xl leading-none text-primary transition-transform duration-200 group-open:rotate-45" data-ps={`src/pages/practice-area/sex-crime-defense.astro:cfxd1s-${__psIdx}`}>+</span>
+              </summary>
+              <p class="mt-4 text-[16.5px] leading-[1.8] text-muted-foreground" data-ps={`src/pages/practice-area/sex-crime-defense.astro:ovs29j-${__psIdx}`}>{item.a}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-dark-background py-24 text-white" data-ps="src/pages/practice-area/sex-crime-defense.astro:yd3vxo">
+      <div class="mx-auto max-w-[1200px] px-6" data-ps="src/pages/practice-area/sex-crime-defense.astro:ky1cph">
+        <p class="flex items-center gap-3 text-[12px] font-bold uppercase tracking-[1.8px] text-accent" data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs29i">
+          <span class="h-0.5 w-7 bg-accent" aria-hidden="true" data-ps="src/pages/practice-area/sex-crime-defense.astro:cfxd1t"></span>
+          Consultation
+        </p>
+        <h2 class="mt-5 max-w-[760px] font-serif text-[2.25rem] font-black leading-[1.15] tracking-[-0.5px] text-white md:text-[2.75rem]" data-ps="src/pages/practice-area/sex-crime-defense.astro:f3ovmu">Whatever the charge, talk to us first.</h2>
+        <p class="mt-5 max-w-[640px] text-[18px] leading-[1.7] text-dark-muted-foreground" data-ps="src/pages/practice-area/sex-crime-defense.astro:ovs29h">Your consultation is confidential and available 24/7. Tell us what you're facing and we'll explain how Michigan law applies to it.</p>
+        <div class="mt-9 flex flex-wrap gap-4" data-ps="src/pages/practice-area/sex-crime-defense.astro:ky1cpg">
+          <a href="/#contact" class="inline-flex items-center rounded-[3px] bg-primary px-7 py-4 text-base font-semibold text-primary-foreground transition-colors hover:bg-primary-hover" data-ps="src/pages/practice-area/sex-crime-defense.astro:hkx2on">Request a Confidential Consultation</a>
+          <a href="tel:+17348876200" class="inline-flex items-center rounded-[3px] border border-white/30 px-7 py-4 text-base font-semibold text-white transition-colors hover:border-white/60" data-ps="src/pages/practice-area/sex-crime-defense.astro:hkx2om">Call (734) 887-6200</a>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .practice-hero {
+    background-color: var(--color-dark-background);
+    background-image:
+      linear-gradient(100deg, rgba(4, 16, 38, 0.97), rgba(8, 26, 60, 0.85)),
+      url("https://jas-law-astro-review.netlify.app/hero-court-1.webp");
+    background-size: auto, cover;
+    background-position: 0% 0%, 50% 50%;
+    background-repeat: no-repeat;
+  }
+
+  [id^="main-"],
+  #practice-faqs {
+    scroll-margin-top: 96px;
+  }
+
+  .source-copy .source-section + .source-section {
+    margin-top: 3.5rem;
+    padding-top: 3rem;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .source-copy h2 {
+    font-family: var(--font-serif);
+    font-weight: 900;
+    font-size: clamp(1.75rem, 1.2rem + 1.5vw, 2.75rem);
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+    color: var(--color-foreground);
+    margin: 0 0 1.5rem;
+  }
+
+  .source-copy h3 {
+    font-family: var(--font-serif);
+    font-weight: 800;
+    font-size: 1.4rem;
+    line-height: 1.3;
+    color: var(--color-foreground);
+    margin: 2.25rem 0 0.75rem;
+  }
+
+  .source-copy p {
+    font-size: 1.0625rem;
+    line-height: 1.85;
+    color: var(--color-muted-foreground);
+    margin: 0 0 1.25rem;
+  }
+
+  .source-copy a {
+    color: var(--color-primary);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .source-copy a:hover {
+    color: var(--color-primary-hover);
+  }
+</style>

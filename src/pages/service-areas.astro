@@ -1,0 +1,131 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+const pageTitle = 'Service Areas — Washtenaw County Criminal Defense | Joseph A. Simon';
+const pageDescription =
+  'Ann Arbor attorney Joseph A. Simon defends clients across Washtenaw County and southeast Michigan — Ann Arbor, Ypsilanti, Saline, Chelsea, Dexter, and more. Confidential consultation, 24/7.';
+
+const cityLinks = [
+  { label: 'Ann Arbor', href: '/service-areas/ann-arbor' },
+  { label: 'Chelsea', href: '/service-areas/chelsea' },
+  { label: 'Dexter', href: '/service-areas/dexter' },
+  { label: 'Milan', href: '/service-areas/milan' },
+  { label: 'Saline', href: '/service-areas/saline' },
+  { label: 'Ypsilanti', href: '/service-areas/ypsilanti' },
+  { label: 'Ypsilanti Township', href: '/service-areas/ypsilanti-township' },
+  { label: 'Pittsfield Township', href: '/service-areas/pittsfield-township' },
+  { label: 'Washtenaw County', href: '/service-areas/washtenaw-county' },
+];
+
+const practiceLinks = [
+  { label: 'DUI / OWI', href: '/practice-area/dui-defense' },
+  { label: 'Drug Crimes', href: '/practice-area/drug-crimes' },
+  { label: 'Assault & Battery', href: '/practice-area/assault-defense' },
+  { label: 'Domestic Violence', href: '/practice-area/domestic-violence-defense' },
+  { label: 'Criminal Sexual Conduct', href: '/practice-area/sex-crime-defense' },
+  { label: 'Home Invasion', href: '/practice-area/home-invasion-defense' },
+  { label: 'Computer Crimes', href: '/practice-area/computer-crimes' },
+  { label: 'College & Campus', href: '/practice-area/college-crimes-defense' },
+  { label: 'Expungements', href: '/practice-area/expungements' },
+];
+
+const footerNavLinks = [
+  { label: 'Home', href: '/' },
+  { label: 'Practice Areas', href: '/practice-areas' },
+  { label: 'Results', href: '/#results' },
+  { label: 'About', href: '/#about' },
+  { label: 'Testimonials', href: '/#testimonials' },
+  { label: 'FAQs', href: '/#faq' },
+  { label: 'Contact', href: '/#contact' },
+];
+---
+
+<BaseLayout headerVariant="transparent" title={pageTitle} description={pageDescription}>
+  <section class="bg-[#061633] text-white relative overflow-hidden" data-ps="src/pages/service-areas.astro:wlmsia">
+    <div
+      class="absolute inset-0"
+      style="background-image: url('https://jas-law-astro-review.netlify.app/hero-court-1.webp'); background-size: cover; background-position: center;"
+     data-ps="src/pages/service-areas.astro:k1h7q9"></div>
+    <div
+      class="absolute inset-0"
+      style="background: linear-gradient(100deg, rgba(4, 16, 38, 0.97) 0%, rgba(5, 19, 45, 0.9) 46%, rgba(8, 26, 60, 0.62) 100%);"
+     data-ps="src/pages/service-areas.astro:k1h7q8"></div>
+    <div class="relative max-w-[1280px] mx-auto px-6 pt-[140px] pb-[60px]" data-ps="src/pages/service-areas.astro:k1h7q7">
+      <div class="mb-4" data-ps="src/pages/service-areas.astro:k1h7q6">
+        <span class="inline-flex items-center gap-2 border border-[#C9A840]/36 text-[#DDC582] text-[11.36px] font-bold uppercase tracking-[1.5px] px-3 py-1 rounded-[2px]" data-ps="src/pages/service-areas.astro:mxt6k">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-3.5 h-3.5" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          Service Areas
+        </span>
+      </div>
+      <h1 class="text-[50.4px] font-black leading-[1.05] tracking-[-0.6px] text-white mb-6 max-w-[900px]" data-ps="src/pages/service-areas.astro:ozoz25">Serving Washtenaw County &amp; Southeast Michigan.</h1>
+      <p class="text-[19.04px] leading-[31.6px] text-[#C3CCDA] max-w-[820px] mb-8" data-ps="src/pages/service-areas.astro:6jhf0d">Our office is in the heart of Ann Arbor, and we represent clients in every city and township across Washtenaw County — and throughout Southeast Michigan. Familiarity with local court practice and procedure helps us prepare a case for the court that will hear it.</p>
+      <div class="flex flex-wrap gap-4" data-ps="src/pages/service-areas.astro:k1h7q5">
+        <a href="/#contact" class="bg-[#732521] text-white font-semibold text-[16.16px] px-[30px] py-[16px] rounded-[3px] hover:bg-[#5a1c19] transition inline-flex items-center gap-2" data-ps="src/pages/service-areas.astro:dnfbon">
+          Request a Confidential Consultation
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-4 h-4" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+        </a>
+        <a href="tel:+17348876200" class="border border-white/30 text-white font-semibold text-[16.16px] px-[30px] py-[16px] rounded-[3px] hover:border-[#C9A840] hover:text-[#DDC582] transition inline-flex items-center gap-2" data-ps="src/pages/service-areas.astro:dnfboo">(734) 887-6200</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white py-20" data-ps="src/pages/service-areas.astro:wlmsho">
+    <div class="max-w-[1280px] mx-auto px-6" data-ps="src/pages/service-areas.astro:k1h7q4">
+      <div class="text-[#732521] text-[12px] font-bold uppercase tracking-widest mb-4" data-ps="src/pages/service-areas.astro:k1h7q3">Cities &amp; Communities</div>
+      <h2 class="text-[36px] sm:text-[44px] font-black text-[#061633] mb-5" data-ps="src/pages/service-areas.astro:aba1ui">Where we defend clients.</h2>
+      <p class="text-[18px] text-[#454F5E] leading-[1.8] mb-10" data-ps="src/pages/service-areas.astro:6jhf0e">Explore local legal services across Washtenaw County from our Ann Arbor office.</p>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5" data-ps="src/pages/service-areas.astro:ee75a5">
+        {cityLinks.map((city, __psIdx) => (
+          <a href={city.href} class="border border-[#E6E2D9] rounded-[4px] p-7 text-[#061633] font-bold text-[21px] hover:border-[#732521]" data-ps={`src/pages/service-areas.astro:dnfbpa-${__psIdx}`}>
+            {city.label} <span class="text-[#732521]" data-ps={`src/pages/service-areas.astro:mxt6l-${__psIdx}`}>→</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white py-[100px]" data-ps="src/pages/service-areas.astro:wlmshn">
+    <div class="max-w-[1280px] mx-auto px-6" data-ps="src/pages/service-areas.astro:ee75a4">
+      <div class="mb-4" data-ps="src/pages/service-areas.astro:ee75a3">
+        <span class="inline-flex items-center text-[12px] font-bold uppercase tracking-[1.8px] text-[#732521]" data-ps="src/pages/service-areas.astro:mxt6m">
+          <span class="w-[28px] h-[2px] bg-[#C9A840] inline-block mr-3" data-ps="src/pages/service-areas.astro:mxt6n"></span>What We Handle
+        </span>
+      </div>
+      <h2 class="text-[44px] font-black leading-[1.14] tracking-[-0.53px] text-[#061633] mb-10 max-w-[820px]" data-ps="src/pages/service-areas.astro:aba1uj">Criminal defense, anywhere in the county.</h2>
+      <div class="flex flex-wrap gap-3" data-ps="src/pages/service-areas.astro:ee75a2">
+        {practiceLinks.map((item, __psIdx) => (
+          <a href={item.href} class="border border-[#E6E2D9] bg-white px-5 py-2.5 rounded-[2px] text-[15.5px] font-semibold text-[#061633] hover:border-[#732521]/40 hover:text-[#732521] transition" data-ps={`src/pages/service-areas.astro:dnfbpb-${__psIdx}`}>{item.label}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-[#061633] py-[100px]" data-ps="src/pages/service-areas.astro:wlmshm">
+    <div class="max-w-[1280px] mx-auto px-6 text-center" data-ps="src/pages/service-areas.astro:ee75a1">
+      <div class="mb-4" data-ps="src/pages/service-areas.astro:ee75a0">
+        <span class="inline-flex items-center text-[12px] font-bold uppercase tracking-[1.8px] text-[#C9A840]" data-ps="src/pages/service-areas.astro:mxt79">
+          <span class="w-[28px] h-[2px] bg-[#C9A840] inline-block mr-3" data-ps="src/pages/service-areas.astro:mxt7a"></span>Consultation
+        </span>
+      </div>
+      <h2 class="text-[44px] font-black leading-[1.14] tracking-[-0.53px] text-white mb-6 max-w-[820px] mx-auto" data-ps="src/pages/service-areas.astro:aba1uk">Wherever your case is heard, we'll be there.</h2>
+      <p class="text-[18.08px] leading-[31px] text-[#C3CCDA] max-w-[680px] mx-auto mb-8" data-ps="src/pages/service-areas.astro:6jhf0f">Tell us where you were charged and what you're facing. Your consultation is confidential and available 24/7.</p>
+      <div class="flex flex-wrap justify-center gap-4 mb-12" data-ps="src/pages/service-areas.astro:ee759z">
+        <a href="/#contact" class="bg-[#732521] text-white font-semibold text-[16.16px] px-[30px] py-[16px] rounded-[3px] hover:bg-[#5a1c19] transition inline-flex items-center gap-2" data-ps="src/pages/service-areas.astro:dnfbpc">
+          Request a Confidential Consultation
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-4 h-4" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+        </a>
+        <a href="tel:+17348876200" class="border border-white/30 text-white font-semibold text-[16.16px] px-[30px] py-[16px] rounded-[3px] hover:border-[#C9A840] hover:text-[#DDC582] transition inline-flex items-center gap-2" data-ps="src/pages/service-areas.astro:dnfbpd">Call (734) 887-6200</a>
+      </div>
+      <div class="border-t border-white/10 pt-8 mt-8" data-ps="src/pages/service-areas.astro:ee759y">
+        <div class="flex flex-wrap justify-center gap-x-6 gap-y-3" data-ps="src/pages/service-areas.astro:ee759x">
+          {footerNavLinks.map((link, __psIdx) => (
+            <a href={link.href} class="text-[14px] text-[#C3CCDA] hover:text-white transition" data-ps={`src/pages/service-areas.astro:dnfbpe-${__psIdx}`}>{link.label}</a>
+          ))}
+        </div>
+        <div class="mt-6" data-ps="src/pages/service-areas.astro:ee759w">
+          <a href="tel:+17348876200" class="text-[#C9A840] font-bold text-[16px] hover:text-[#DDC582] transition" data-ps="src/pages/service-areas.astro:dnfbpf">Call (734) 887-6200</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

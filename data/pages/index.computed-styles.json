@@ -1,0 +1,4699 @@
+{
+  "viewportWidth": 1920,
+  "pageBackground": {
+    "type": "color",
+    "value": "rgb(255, 255, 255)"
+  },
+  "fontSmoothing": null,
+  "isElementor": false,
+  "sectionThemes": [
+    {
+      "background": "rgb(255, 255, 255)",
+      "textColor": "rgb(255, 255, 255)",
+      "headings": [
+        {
+          "tag": "h1",
+          "fontSize": "48px",
+          "fontWeight": "900",
+          "fontFamily": "Merriweather",
+          "color": "rgb(255, 255, 255)",
+          "text": "The Law Offices of Joseph A. Simon",
+          "textTransform": "none",
+          "letterSpacing": "-0.6px",
+          "textAlign": "start"
+        },
+        {
+          "tag": "h2",
+          "fontSize": "11.52px",
+          "fontWeight": "700",
+          "fontFamily": "Merriweather",
+          "color": "rgb(89, 99, 113)",
+          "text": "Recognized by third-party rating organizations",
+          "textTransform": "uppercase",
+          "letterSpacing": "2px",
+          "textAlign": "center"
+        },
+        {
+          "tag": "h2",
+          "fontSize": "44px",
+          "fontWeight": "900",
+          "fontFamily": "Merriweather",
+          "color": "rgb(6, 22, 51)",
+          "text": "Criminal defense in Southeast Michigan.",
+          "textTransform": "none",
+          "letterSpacing": "-0.53px",
+          "textAlign": "start"
+        },
+        {
+          "tag": "h3",
+          "fontSize": "19.84px",
+          "fontWeight": "900",
+          "fontFamily": "Merriweather",
+          "color": "rgb(6, 22, 51)",
+          "text": "Assault Charges",
+          "textTransform": "none",
+          "letterSpacing": "-0.24px",
+          "textAlign": "start"
+        },
+        {
+          "tag": "h3",
+          "fontSize": "19.84px",
+          "fontWeight": "900",
+          "fontFamily": "Merriweather",
+          "color": "rgb(6, 22, 51)",
+          "text": "College Crimes",
+          "textTransform": "none",
+          "letterSpacing": "-0.24px",
+          "textAlign": "start"
+        }
+      ],
+      "bodyStyle": {
+        "fontSize": "19.04px",
+        "color": "rgb(195, 204, 218)",
+        "lineHeight": "31.416px",
+        "textAlign": "start"
+      },
+      "buttons": [
+        {
+          "backgroundColor": "rgb(115, 37, 33)",
+          "color": "rgb(255, 255, 255)",
+          "borderRadius": "3px",
+          "border": "1px solid rgba(0, 0, 0, 0)",
+          "padding": "16px 30px 16px 30px",
+          "fontSize": "16.16px",
+          "fontWeight": "600",
+          "fontFamily": "Source Sans 3",
+          "fontStyle": "normal",
+          "textTransform": "none",
+          "text": "Request a Confidential Consultation"
+        },
+        {
+          "color": "rgb(255, 255, 255)",
+          "borderRadius": "3px",
+          "border": "1px solid oklab(0.999994 0.0000455678 0.0000200868 / 0.3)",
+          "padding": "16px 30px 16px 30px",
+          "fontSize": "16.16px",
+          "fontWeight": "600",
+          "fontFamily": "Source Sans 3",
+          "fontStyle": "normal",
+          "textTransform": "none",
+          "text": "(734) 887-6200"
+        },
+        {
+          "color": "rgb(115, 37, 33)",
+          "border": "0px 0px 1px solid rgb(115, 37, 33)",
+          "padding": "10px 4px 10px 4px",
+          "fontSize": "12px",
+          "fontWeight": "400",
+          "fontFamily": "Source Sans 3",
+          "fontStyle": "normal",
+          "textTransform": "none",
+          "text": "Pause scrolling"
+        }
+      ],
+      "links": [
+        {
+          "text": "LEARN MORE→",
+          "color": "rgb(115, 37, 33)",
+          "fontWeight": "700"
+        }
+      ],
+      "images": [
+        {
+          "displayWidth": 1905,
+          "displayHeight": 641,
+          "objectFit": "cover"
+        },
+        {
+          "displayWidth": 134,
+          "displayHeight": 94,
+          "objectFit": "contain"
+        },
+        {
+          "displayWidth": 134,
+          "displayHeight": 94,
+          "objectFit": "contain"
+        },
+        {
+          "displayWidth": 134,
+          "displayHeight": 94,
+          "objectFit": "contain"
+        },
+        {
+          "displayWidth": 134,
+          "displayHeight": 94,
+          "objectFit": "contain"
+        },
+        {
+          "displayWidth": 134,
+          "displayHeight": 94,
+          "objectFit": "contain"
+        },
+        {
+          "displayWidth": 134,
+          "displayHeight": 94,
+          "objectFit": "contain"
+        },
+        {
+          "displayWidth": 134,
+          "displayHeight": 94,
+          "objectFit": "contain"
+        }
+      ],
+      "layout": {
+        "containerMaxWidth": "1280px",
+        "display": "flex",
+        "flexDirection": "row",
+        "alignItems": "center",
+        "justifyContent": "space-between",
+        "childCount": 3
+      },
+      "interactionType": "carousel",
+      "contentAlignment": {
+        "container": "body > ",
+        "containerSize": {
+          "width": 1905,
+          "height": 9772
+        },
+        "offsets": {
+          "left": 345,
+          "top": 181,
+          "right": 860,
+          "bottom": 9490
+        },
+        "center": {
+          "x": 0.365,
+          "y": 0.024
+        },
+        "layout": {
+          "display": "block",
+          "direction": "row",
+          "justifyContent": "normal",
+          "alignItems": "normal",
+          "padding": "0px",
+          "gap": "normal"
+        },
+        "item": {
+          "alignSelf": "auto",
+          "margin": "0px 0px 24px",
+          "padding": "0px",
+          "position": "static"
+        }
+      }
+    },
+    {
+      "background": "rgb(6, 22, 51)",
+      "isBackgroundPhoto": true,
+      "textColor": "rgb(255, 255, 255)",
+      "headings": [
+        {
+          "tag": "h1",
+          "fontSize": "48px",
+          "fontWeight": "900",
+          "fontFamily": "Merriweather",
+          "color": "rgb(255, 255, 255)",
+          "text": "The Law Offices of Joseph A. Simon",
+          "textTransform": "none",
+          "letterSpacing": "-0.6px",
+          "textAlign": "start"
+        }
+      ],
+      "bodyStyle": {
+        "fontSize": "19.04px",
+        "color": "rgb(195, 204, 218)",
+        "lineHeight": "31.416px",
+        "textAlign": "start"
+      },
+      "buttons": [
+        {
+          "backgroundColor": "rgb(115, 37, 33)",
+          "color": "rgb(255, 255, 255)",
+          "borderRadius": "3px",
+          "border": "1px solid rgba(0, 0, 0, 0)",
+          "padding": "16px 30px 16px 30px",
+          "fontSize": "16.16px",
+          "fontWeight": "600",
+          "fontFamily": "Source Sans 3",
+          "fontStyle": "normal",
+          "textTransform": "none",
+          "text": "Request a Confidential Consultation"
+        },
+        {
+          "color": "rgb(255, 255, 255)",
+          "borderRadius": "3px",
+          "border": "1px solid oklab(0.999994 0.0000455678 0.0000200868 / 0.3)",
+          "padding": "16px 30px 16px 30px",
+          "fontSize": "16.16px",
+          "fontWeight": "600",
+          "fontFamily": "Source Sans 3",
+          "fontStyle": "normal",
+          "textTransform": "none",
+          "text": "(734) 887-6200"
+        }
+      ],
+      "images": [
+        {
+          "displayWidth": 1905,
+          "displayHeight": 641,
+          "objectFit": "cover"
+        }
+      ],
+      "layout": {
+        "containerMaxWidth": "1280px",
+        "paddingBlock": "130px 44px",
+        "display": "grid",
+        "gridTemplateColumns": "700.797px 467.203px",
+        "gap": "48px",
+        "childCount": 2
+      },
+      "interactionType": "carousel",
+      "contentAlignment": {
+        "container": "#home",
+        "containerSize": {
+          "width": 1905,
+          "height": 641
+        },
+        "offsets": {
+          "left": 345,
+          "top": 181,
+          "right": 860,
+          "bottom": 360
+        },
+        "center": {
+          "x": 0.365,
+          "y": 0.361
+        },
+        "layout": {
+          "display": "block",
+          "direction": "row",
+          "justifyContent": "normal",
+          "alignItems": "normal",
+          "padding": "130px 0px 44px",
+          "gap": "normal"
+        },
+        "item": {
+          "alignSelf": "auto",
+          "margin": "0px 0px 24px",
+          "padding": "0px",
+          "position": "static"
+        }
+      }
+    },
+    {
+      "background": "rgba(0, 0, 0, 0)",
+      "gradient": "linear-gradient(100deg, rgba(4, 16, 38, 0.97) 0%, rgba(5, 19, 45, 0.9) 46%, rgba(8, 26, 60, 0.62) 100%)",
+      "textColor": null,
+      "headings": [],
+      "bodyStyle": null,
+      "buttons": [],
+      "layout": {}
+    },
+    {
+      "background": "rgb(247, 245, 241)",
+      "textColor": "rgb(89, 99, 113)",
+      "headings": [
+        {
+          "tag": "h2",
+          "fontSize": "11.52px",
+          "fontWeight": "700",
+          "fontFamily": "Merriweather",
+          "color": "rgb(89, 99, 113)",
+          "text": "Recognized by third-party rating organizations",
+          "textTransform": "uppercase",
+          "letterSpacing": "2px",
+          "textAlign": "center"
+        }
+      ],
+      "bodyStyle": null,
+      "buttons": [
+        {
+          "color": "rgb(115, 37, 33)",
+          "border": "0px 0px 1px solid rgb(115, 37, 33)",
+          "padding": "10px 4px 10px 4px",
+          "fontSize": "12px",
+          "fontWeight": "400",
+          "fontFamily": "Source Sans 3",
+          "fontStyle": "normal",
+          "textTransform": "none",
+          "text": "Pause scrolling"
+        }
+      ],
+      "images": [
+        {
+          "displayWidth": 134,
+          "displayHeight": 94,
+          "objectFit": "contain"
+        },
+        {
+          "displayWidth": 134,
+          "displayHeight": 94,
+          "objectFit": "contain"
+        },
+        {
+          "displayWidth": 134,
+          "displayHeight": 94,
+          "objectFit": "contain"
+        },
+        {
+          "displayWidth": 134,
+          "displayHeight": 94,
+          "objectFit": "contain"
+        },
+        {
+          "displayWidth": 134,
+          "displayHeight": 94,
+          "objectFit": "contain"
+        },
+        {
+          "displayWidth": 134,
+          "displayHeight": 94,
+          "objectFit": "contain"
+        },
+        {
+          "displayWidth": 134,
+          "displayHeight": 94,
+          "objectFit": "contain"
+        },
+        {
+          "displayWidth": 134,
+          "displayHeight": 94,
+          "objectFit": "contain"
+        }
+      ],
+      "layout": {
+        "containerMaxWidth": "1280px",
+        "paddingBlock": "28px 34px"
+      },
+      "contentAlignment": {
+        "container": "#awards",
+        "containerSize": {
+          "width": 1905,
+          "height": 219
+        },
+        "offsets": {
+          "left": 686,
+          "top": 40,
+          "right": 793,
+          "bottom": 162
+        },
+        "center": {
+          "x": 0.472,
+          "y": 0.221
+        },
+        "layout": {
+          "display": "block",
+          "direction": "row",
+          "justifyContent": "normal",
+          "alignItems": "normal",
+          "padding": "28px 0px 34px",
+          "gap": "normal"
+        },
+        "item": {
+          "alignSelf": "auto",
+          "margin": "0px",
+          "padding": "0px",
+          "position": "static"
+        }
+      }
+    },
+    {
+      "background": "rgb(247, 245, 241)",
+      "textColor": "rgb(6, 22, 51)",
+      "headings": [
+        {
+          "tag": "h2",
+          "fontSize": "44px",
+          "fontWeight": "900",
+          "fontFamily": "Merriweather",
+          "color": "rgb(6, 22, 51)",
+          "text": "The Law Offices of Joseph A. Simon",
+          "textTransform": "none",
+          "textAlign": "start"
+        }
+      ],
+      "bodyStyle": {
+        "fontSize": "18px",
+        "color": "rgb(20, 28, 40)",
+        "lineHeight": "32.4px",
+        "textAlign": "start"
+      },
+      "buttons": [],
+      "links": [
+        {
+          "text": "career",
+          "color": "rgb(115, 37, 33)",
+          "textDecoration": "underline",
+          "fontWeight": "400"
+        }
+      ],
+      "images": [
+        {
+          "displayWidth": 431,
+          "displayHeight": 603,
+          "borderRadius": "4px"
+        }
+      ],
+      "layout": {
+        "containerMaxWidth": "1280px",
+        "paddingBlock": "90px 90px"
+      },
+      "contentAlignment": {
+        "container": "#about",
+        "containerSize": {
+          "width": 1905,
+          "height": 1033
+        },
+        "offsets": {
+          "left": 337,
+          "top": 125,
+          "right": 337,
+          "bottom": 842
+        },
+        "center": {
+          "x": 0.5,
+          "y": 0.153
+        },
+        "layout": {
+          "display": "block",
+          "direction": "row",
+          "justifyContent": "normal",
+          "alignItems": "normal",
+          "padding": "90px 0px",
+          "gap": "normal"
+        },
+        "item": {
+          "alignSelf": "auto",
+          "margin": "0px 0px 32px",
+          "padding": "0px",
+          "position": "static"
+        }
+      }
+    },
+    {
+      "background": "rgb(6, 22, 51)",
+      "textColor": "rgb(255, 255, 255)",
+      "headings": [
+        {
+          "tag": "h2",
+          "fontSize": "44px",
+          "fontWeight": "900",
+          "fontFamily": "Merriweather",
+          "color": "rgb(255, 255, 255)",
+          "text": "Representative case results.",
+          "textTransform": "none",
+          "textAlign": "start"
+        },
+        {
+          "tag": "h3",
+          "fontSize": "20px",
+          "fontWeight": "700",
+          "fontFamily": "Merriweather",
+          "color": "rgb(255, 255, 255)",
+          "text": "Cases Dismissed at Trial",
+          "textTransform": "none",
+          "textAlign": "start"
+        },
+        {
+          "tag": "h3",
+          "fontSize": "20px",
+          "fontWeight": "700",
+          "fontFamily": "Merriweather",
+          "color": "rgb(255, 255, 255)",
+          "text": "Charges Dismissed",
+          "textTransform": "none",
+          "textAlign": "start"
+        },
+        {
+          "tag": "h3",
+          "fontSize": "20px",
+          "fontWeight": "700",
+          "fontFamily": "Merriweather",
+          "color": "rgb(255, 255, 255)",
+          "text": "Not Guilty Verdict at Trial",
+          "textTransform": "none",
+          "textAlign": "start"
+        },
+        {
+          "tag": "h3",
+          "fontSize": "20px",
+          "fontWeight": "700",
+          "fontFamily": "Merriweather",
+          "color": "rgb(255, 255, 255)",
+          "text": "Charges Dismissed",
+          "textTransform": "none",
+          "textAlign": "start"
+        }
+      ],
+      "bodyStyle": {
+        "fontSize": "16px",
+        "color": "rgb(195, 204, 218)",
+        "lineHeight": "26.4px",
+        "textAlign": "start"
+      },
+      "buttons": [
+        {
+          "color": "rgb(221, 197, 130)",
+          "borderRadius": "3px",
+          "border": "1px solid oklab(0.74202 -0.00262323 0.126345 / 0.42)",
+          "padding": "12px 24px 12px 24px",
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "fontFamily": "Source Sans 3",
+          "fontStyle": "normal",
+          "textTransform": "none",
+          "text": "View all case results →"
+        }
+      ],
+      "layout": {
+        "containerMaxWidth": "1280px",
+        "paddingBlock": "90px 90px",
+        "display": "grid",
+        "gridTemplateColumns": "394.656px 394.672px 394.656px",
+        "gap": "24px",
+        "childCount": 5
+      },
+      "contentAlignment": {
+        "container": "#results",
+        "containerSize": {
+          "width": 1905,
+          "height": 961
+        },
+        "offsets": {
+          "left": 337,
+          "top": 125,
+          "right": 337,
+          "bottom": 770
+        },
+        "center": {
+          "x": 0.5,
+          "y": 0.164
+        },
+        "layout": {
+          "display": "block",
+          "direction": "row",
+          "justifyContent": "normal",
+          "alignItems": "normal",
+          "padding": "90px 0px",
+          "gap": "normal"
+        },
+        "item": {
+          "alignSelf": "auto",
+          "margin": "0px 0px 40px",
+          "padding": "0px",
+          "position": "static"
+        }
+      }
+    },
+    {
+      "background": "rgb(247, 245, 241)",
+      "textColor": "rgb(6, 22, 51)",
+      "headings": [
+        {
+          "tag": "h2",
+          "fontSize": "44px",
+          "fontWeight": "900",
+          "fontFamily": "Merriweather",
+          "color": "rgb(6, 22, 51)",
+          "text": "Client Reviews",
+          "textTransform": "none",
+          "textAlign": "center"
+        }
+      ],
+      "bodyStyle": null,
+      "buttons": [],
+      "links": [
+        {
+          "text": "Read all client reviews →",
+          "color": "rgb(115, 37, 33)",
+          "textDecoration": "underline",
+          "fontWeight": "700"
+        }
+      ],
+      "layout": {
+        "containerMaxWidth": "1280px",
+        "paddingBlock": "90px 90px",
+        "display": "grid",
+        "gridTemplateColumns": "394.656px 394.672px 394.656px",
+        "gap": "24px",
+        "childCount": 5
+      },
+      "contentAlignment": {
+        "container": "#testimonials",
+        "containerSize": {
+          "width": 1905,
+          "height": 733
+        },
+        "offsets": {
+          "left": 337,
+          "top": 121,
+          "right": 337,
+          "bottom": 546
+        },
+        "center": {
+          "x": 0.5,
+          "y": 0.21
+        },
+        "layout": {
+          "display": "block",
+          "direction": "row",
+          "justifyContent": "normal",
+          "alignItems": "normal",
+          "padding": "90px 0px",
+          "gap": "normal"
+        },
+        "item": {
+          "alignSelf": "auto",
+          "margin": "0px 0px 20px",
+          "padding": "0px",
+          "position": "static"
+        }
+      }
+    },
+    {
+      "background": "rgb(11, 31, 66)",
+      "textColor": "rgb(195, 204, 218)",
+      "headings": [],
+      "bodyStyle": {
+        "fontSize": "14px",
+        "color": "rgb(195, 204, 218)",
+        "lineHeight": "19.25px",
+        "textAlign": "center"
+      },
+      "buttons": [],
+      "layout": {
+        "containerMaxWidth": "1280px",
+        "paddingBlock": "40px 40px",
+        "display": "grid",
+        "gridTemplateColumns": "304px 304px 304px 304px",
+        "childCount": 4
+      }
+    },
+    {
+      "background": "rgb(6, 22, 51)",
+      "textColor": "rgb(255, 255, 255)",
+      "headings": [
+        {
+          "tag": "h2",
+          "fontSize": "44px",
+          "fontWeight": "900",
+          "fontFamily": "Merriweather",
+          "color": "rgb(255, 255, 255)",
+          "text": "Contact us for a Free Confidential Consultation",
+          "textTransform": "none",
+          "letterSpacing": "-0.53px",
+          "textAlign": "start"
+        },
+        {
+          "tag": "h3",
+          "fontSize": "24px",
+          "fontWeight": "900",
+          "fontFamily": "Merriweather",
+          "color": "rgb(255, 255, 255)",
+          "text": "Request a confidential consultation",
+          "textTransform": "none",
+          "textAlign": "start"
+        }
+      ],
+      "bodyStyle": {
+        "fontSize": "18.08px",
+        "color": "rgb(195, 204, 218)",
+        "lineHeight": "30.736px",
+        "textAlign": "start"
+      },
+      "buttons": [
+        {
+          "backgroundColor": "rgb(115, 37, 33)",
+          "color": "rgb(255, 255, 255)",
+          "borderRadius": "3px",
+          "padding": "14px 0px 14px 0px",
+          "fontSize": "15.52px",
+          "fontWeight": "600",
+          "fontFamily": "Source Sans 3",
+          "fontStyle": "normal",
+          "textTransform": "none",
+          "text": "Send My Case Details"
+        }
+      ],
+      "links": [
+        {
+          "text": "734-887-6200",
+          "color": "rgb(195, 204, 218)",
+          "textDecoration": "underline",
+          "fontWeight": "400"
+        },
+        {
+          "text": "(734) 887-6200",
+          "color": "rgb(255, 255, 255)",
+          "fontWeight": "700"
+        }
+      ],
+      "layout": {
+        "containerMaxWidth": "1280px",
+        "paddingBlock": "100px 100px",
+        "display": "grid",
+        "gridTemplateColumns": "535.812px 616.172px",
+        "gap": "64px",
+        "childCount": 2
+      },
+      "contentAlignment": {
+        "container": "#contact",
+        "containerSize": {
+          "width": 1905,
+          "height": 885
+        },
+        "offsets": {
+          "left": 345,
+          "top": 131,
+          "right": 1025,
+          "bottom": 604
+        },
+        "center": {
+          "x": 0.321,
+          "y": 0.233
+        },
+        "layout": {
+          "display": "block",
+          "direction": "row",
+          "justifyContent": "normal",
+          "alignItems": "normal",
+          "padding": "100px 0px",
+          "gap": "normal"
+        },
+        "item": {
+          "alignSelf": "auto",
+          "margin": "0px 0px 16px",
+          "padding": "0px",
+          "position": "static"
+        }
+      }
+    },
+    {
+      "background": "rgb(4, 16, 31)",
+      "textColor": "rgb(201, 168, 64)",
+      "headings": [
+        {
+          "tag": "h4",
+          "fontSize": "12px",
+          "fontWeight": "700",
+          "fontFamily": "Merriweather",
+          "color": "rgb(201, 168, 64)",
+          "text": "PRACTICE AREAS",
+          "textTransform": "uppercase",
+          "letterSpacing": "1.8px",
+          "textAlign": "start"
+        },
+        {
+          "tag": "h4",
+          "fontSize": "12px",
+          "fontWeight": "700",
+          "fontFamily": "Merriweather",
+          "color": "rgb(201, 168, 64)",
+          "text": "FIRM",
+          "textTransform": "uppercase",
+          "letterSpacing": "1.8px",
+          "textAlign": "start"
+        },
+        {
+          "tag": "h4",
+          "fontSize": "12px",
+          "fontWeight": "700",
+          "fontFamily": "Merriweather",
+          "color": "rgb(201, 168, 64)",
+          "text": "CONTACT & OFFICE",
+          "textTransform": "uppercase",
+          "letterSpacing": "1.8px",
+          "textAlign": "start"
+        }
+      ],
+      "bodyStyle": {
+        "fontSize": "14px",
+        "color": "rgb(152, 166, 187)",
+        "lineHeight": "22.75px",
+        "textAlign": "start"
+      },
+      "buttons": [
+        {
+          "backgroundColor": "rgb(115, 37, 33)",
+          "color": "rgb(255, 255, 255)",
+          "borderRadius": "3px",
+          "padding": "10px 20px 10px 20px",
+          "fontSize": "14px",
+          "fontWeight": "600",
+          "fontFamily": "Source Sans 3",
+          "fontStyle": "normal",
+          "textTransform": "none",
+          "text": "Confidential Consultation"
+        }
+      ],
+      "links": [
+        {
+          "text": "Drug Crimes",
+          "color": "rgb(152, 166, 187)",
+          "fontWeight": "400"
+        },
+        {
+          "text": "(734) 887-6200",
+          "color": "rgb(255, 255, 255)",
+          "fontWeight": "700"
+        },
+        {
+          "text": "twalkerco",
+          "color": "rgb(201, 168, 64)",
+          "fontWeight": "400"
+        }
+      ],
+      "layout": {
+        "containerMaxWidth": "1280px",
+        "paddingBlock": "64px 48px",
+        "display": "grid",
+        "gridTemplateColumns": "348.391px 214.406px 214.391px 294.812px",
+        "gap": "48px",
+        "childCount": 4
+      }
+    }
+  ],
+  "globalTypography": {
+    "headingFont": "Merriweather",
+    "bodyFont": "Source Sans 3",
+    "scale": {
+      "h1": {
+        "fontSize": "48px",
+        "fontWeight": "900",
+        "lineHeight": "50.4px",
+        "fontFamily": "Merriweather",
+        "fontStyle": "normal",
+        "textTransform": "none"
+      },
+      "h2": {
+        "fontSize": "44px",
+        "fontWeight": "900",
+        "lineHeight": "50.16px",
+        "fontFamily": "Merriweather",
+        "fontStyle": "normal",
+        "textTransform": "none"
+      },
+      "h3": {
+        "fontSize": "24px",
+        "fontWeight": "900",
+        "lineHeight": "36px",
+        "fontFamily": "Merriweather",
+        "fontStyle": "normal",
+        "textTransform": "none"
+      },
+      "h4": {
+        "fontSize": "12px",
+        "fontWeight": "700",
+        "lineHeight": "18px",
+        "fontFamily": "Merriweather",
+        "fontStyle": "normal",
+        "textTransform": "uppercase"
+      },
+      "body": {
+        "fontSize": "14px",
+        "fontWeight": "500",
+        "lineHeight": "19.25px",
+        "fontFamily": "Source Sans 3"
+      }
+    },
+    "paragraphMargin": "0px 18px"
+  },
+  "navigation": {
+    "isFullWidth": true,
+    "width": "1905px",
+    "position": "fixed",
+    "hasLogo": false,
+    "links": [
+      {
+        "text": "LAW OFFICES OFJoseph A. Simon—",
+        "fontSize": "16px",
+        "fontFamily": "Source Sans 3",
+        "fontWeight": "400",
+        "fontStyle": "normal",
+        "textTransform": "none",
+        "color": "rgb(6, 21, 50)"
+      },
+      {
+        "text": "LAW OFFICES OF",
+        "fontSize": "11px",
+        "fontFamily": "Source Sans 3",
+        "fontWeight": "600",
+        "fontStyle": "normal",
+        "textTransform": "uppercase",
+        "color": "rgb(201, 168, 64)",
+        "hasDropdown": true
+      },
+      {
+        "text": "Home",
+        "fontSize": "14.4px",
+        "fontFamily": "Source Sans 3",
+        "fontWeight": "600",
+        "fontStyle": "normal",
+        "textTransform": "none",
+        "color": "rgb(195, 204, 218)"
+      },
+      {
+        "text": "Practice Areas",
+        "fontSize": "14.4px",
+        "fontFamily": "Source Sans 3",
+        "fontWeight": "600",
+        "fontStyle": "normal",
+        "textTransform": "none",
+        "color": "rgb(195, 204, 218)"
+      },
+      {
+        "text": "Service Areas",
+        "fontSize": "14.4px",
+        "fontFamily": "Source Sans 3",
+        "fontWeight": "600",
+        "fontStyle": "normal",
+        "textTransform": "none",
+        "color": "rgb(195, 204, 218)"
+      },
+      {
+        "text": "Posts",
+        "fontSize": "14.4px",
+        "fontFamily": "Source Sans 3",
+        "fontWeight": "600",
+        "fontStyle": "normal",
+        "textTransform": "none",
+        "color": "rgb(195, 204, 218)"
+      },
+      {
+        "text": "Testimonials",
+        "fontSize": "14.4px",
+        "fontFamily": "Source Sans 3",
+        "fontWeight": "600",
+        "fontStyle": "normal",
+        "textTransform": "none",
+        "color": "rgb(195, 204, 218)"
+      },
+      {
+        "text": "FAQs",
+        "fontSize": "14.4px",
+        "fontFamily": "Source Sans 3",
+        "fontWeight": "600",
+        "fontStyle": "normal",
+        "textTransform": "none",
+        "color": "rgb(195, 204, 218)"
+      },
+      {
+        "text": "(734) 887-6200",
+        "fontSize": "14.4px",
+        "fontFamily": "Source Sans 3",
+        "fontWeight": "700",
+        "fontStyle": "normal",
+        "textTransform": "none",
+        "color": "rgb(255, 255, 255)",
+        "hasIcon": true
+      },
+      {
+        "text": "Confidential Consultation",
+        "fontSize": "14px",
+        "fontFamily": "Source Sans 3",
+        "fontWeight": "600",
+        "fontStyle": "normal",
+        "textTransform": "none",
+        "color": "rgb(255, 255, 255)",
+        "isButton": true,
+        "buttonStyle": {
+          "backgroundColor": "rgb(115, 37, 33)",
+          "borderRadius": "3px",
+          "border": "1px solid rgba(0, 0, 0, 0)"
+        }
+      }
+    ],
+    "linkLayout": {
+      "paddingX": "0px 0px",
+      "pitchPx": 82,
+      "distribution": "right",
+      "verticalAlign": "middle",
+      "containerAlignment": {
+        "container": "[id=\"navbar\"] > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1)",
+        "containerSize": {
+          "width": 827,
+          "height": 39
+        },
+        "offsets": {
+          "left": 0,
+          "top": 9,
+          "right": 790,
+          "bottom": 9
+        },
+        "center": {
+          "x": 0.022,
+          "y": 0.5
+        },
+        "layout": {
+          "display": "flex",
+          "direction": "row",
+          "justifyContent": "normal",
+          "alignItems": "center",
+          "padding": "0px",
+          "gap": "24px"
+        },
+        "item": {
+          "alignSelf": "auto",
+          "margin": "0px",
+          "padding": "0px",
+          "position": "static"
+        }
+      }
+    }
+  },
+  "sliders": [],
+  "buttons": [
+    {
+      "backgroundColor": "rgb(115, 37, 33)",
+      "color": "rgb(255, 255, 255)",
+      "borderRadius": "3px",
+      "border": "1px solid rgba(0, 0, 0, 0)",
+      "padding": "16px 30px 16px 30px",
+      "fontSize": "16.16px",
+      "fontWeight": "600",
+      "fontFamily": "Source Sans 3",
+      "fontStyle": "normal",
+      "textTransform": "none",
+      "text": "Request a Confidential Consultation"
+    },
+    {
+      "color": "rgb(255, 255, 255)",
+      "borderRadius": "3px",
+      "border": "1px solid oklab(0.999994 0.0000455678 0.0000200868 / 0.3)",
+      "padding": "16px 30px 16px 30px",
+      "fontSize": "16.16px",
+      "fontWeight": "600",
+      "fontFamily": "Source Sans 3",
+      "fontStyle": "normal",
+      "textTransform": "none",
+      "text": "(734) 887-6200"
+    },
+    {
+      "color": "rgb(115, 37, 33)",
+      "border": "0px 0px 1px solid rgb(115, 37, 33)",
+      "padding": "10px 4px 10px 4px",
+      "fontSize": "12px",
+      "fontWeight": "400",
+      "fontFamily": "Source Sans 3",
+      "fontStyle": "normal",
+      "textTransform": "none",
+      "text": "Pause scrolling"
+    },
+    {
+      "color": "rgb(221, 197, 130)",
+      "borderRadius": "3px",
+      "border": "1px solid oklab(0.74202 -0.00262323 0.126345 / 0.42)",
+      "padding": "12px 24px 12px 24px",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "fontFamily": "Source Sans 3",
+      "fontStyle": "normal",
+      "textTransform": "none",
+      "text": "View all case results →"
+    }
+  ],
+  "videos": [],
+  "footer": {
+    "background": "rgb(4, 16, 31)",
+    "textColor": "rgb(152, 166, 187)",
+    "columns": 4,
+    "textAlign": "start",
+    "linkGroups": [
+      {
+        "heading": "PRACTICE AREAS",
+        "links": [
+          {
+            "text": "Drug Crimes",
+            "href": "/practice-area/drug-crimes"
+          },
+          {
+            "text": "Assault & Battery",
+            "href": "/practice-area/assault-defense"
+          },
+          {
+            "text": "Domestic Violence",
+            "href": "/practice-area/domestic-violence-defense"
+          },
+          {
+            "text": "Criminal Sexual Conduct",
+            "href": "/practice-area/sex-crime-defense"
+          },
+          {
+            "text": "Expungements",
+            "href": "/practice-area/expungements"
+          },
+          {
+            "text": "College & Campus Crimes",
+            "href": "/practice-area/college-crimes-defense"
+          },
+          {
+            "text": "Theft Offenses",
+            "href": "/practice-area/theft-offenses"
+          },
+          {
+            "text": "Police Investigations",
+            "href": "/practice-area/police-investigations"
+          }
+        ]
+      },
+      {
+        "heading": "FIRM",
+        "links": [
+          {
+            "text": "Case Results",
+            "href": "/courtroom-victories"
+          },
+          {
+            "text": "Reviews",
+            "href": "/reviews"
+          },
+          {
+            "text": "Posts",
+            "href": "/recent-posts"
+          },
+          {
+            "text": "In the News",
+            "href": "/media"
+          },
+          {
+            "text": "FAQs",
+            "href": "/#faq"
+          },
+          {
+            "text": "Service Areas",
+            "href": "/service-areas"
+          },
+          {
+            "text": "Consultation",
+            "href": "/#contact"
+          }
+        ]
+      }
+    ]
+  },
+  "socialLinks": [
+    {
+      "platform": "linkedin",
+      "href": "https://www.linkedin.com/in/joseph-simon-64812448",
+      "location": "footer"
+    }
+  ],
+  "hoverStyles": {
+    "a[data-astro-cid-ntf4cub4]": {
+      "backgroundColor": "rgb(255, 255, 255)"
+    },
+    ".hover-lift": {
+      "transform": "translateY(-4px)",
+      "boxShadow": "rgba(0, 0, 0, 0.15) 0px 10px 30px"
+    },
+    ".hover-scale": {
+      "transform": "scale(1.05)"
+    },
+    ".hover-glow": {
+      "boxShadow": "0 0 20px color-mix(in srgb, var(--color-primary) 40%, transparent)"
+    }
+  },
+  "cssVariables": {
+    "--font-sans": "\"Source Sans 3\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif",
+    "--font-serif": "\"Merriweather\", Georgia, \"Times New Roman\", serif",
+    "--color-background": "#fff",
+    "--color-foreground": "#061532",
+    "--color-muted-foreground": "#454e5e",
+    "--color-border": "#e7e3d9",
+    "--color-surface": "#f7f6f2",
+    "--color-primary": "#732321",
+    "--color-primary-foreground": "#fff",
+    "--color-primary-hover": "#581b19",
+    "--color-secondary": "#061532",
+    "--color-secondary-foreground": "#fff",
+    "--color-secondary-hover": "#041025",
+    "--color-dark-background": "#061532",
+    "--color-dark-foreground": "#fff",
+    "--color-dark-muted-foreground": "#c1ccdc",
+    "--color-dark-border": "#192c4d",
+    "--color-accent": "#c7a643"
+  },
+  "externalFonts": [
+    "font-face: Source Sans 3",
+    "font-face: Source Sans 3",
+    "font-face: Source Sans 3",
+    "font-face: Merriweather",
+    "font-face: Merriweather",
+    "font-face: Merriweather"
+  ],
+  "portSectionStyles": [
+    {
+      "index": 0,
+      "heading": "Site header / navigation (port into Navigation.astro)",
+      "elements": [
+        {
+          "tag": "a",
+          "cls": "flex",
+          "text": "LAW OFFICES OFJoseph A. Simon— PLLC —",
+          "color": "rgb(6, 21, 50)",
+          "fontSize": "16px",
+          "ownText": false,
+          "leading": "24px",
+          "fontFamily": "Source Sans 3",
+          "textTransform": "none"
+        },
+        {
+          "tag": "span",
+          "cls": "w-[12px]",
+          "color": "rgb(201, 168, 64)",
+          "backgroundColor": "rgb(201, 168, 64)",
+          "fontSize": "11px",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "span",
+          "text": "LAW OFFICES OF",
+          "color": "rgb(201, 168, 64)",
+          "fontSize": "11px",
+          "fontWeight": "600",
+          "ownText": true,
+          "leading": "13.75px",
+          "tracking": "1.8px",
+          "fontFamily": "Source Sans 3",
+          "textTransform": "uppercase"
+        },
+        {
+          "tag": "span",
+          "cls": "font-heading",
+          "text": "Joseph A. Simon",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "20px",
+          "fontWeight": "700",
+          "ownText": true,
+          "leading": "25px",
+          "fontFamily": "Merriweather"
+        },
+        {
+          "tag": "a",
+          "cls": "text-[14.4px]",
+          "text": "Home",
+          "color": "rgb(195, 204, 218)",
+          "fontSize": "14.4px",
+          "fontWeight": "600",
+          "ownText": true,
+          "leading": "21.6px",
+          "fontFamily": "Source Sans 3",
+          "textTransform": "none"
+        },
+        {
+          "tag": "a",
+          "cls": "text-[14.4px]",
+          "text": "Practice Areas",
+          "color": "rgb(195, 204, 218)",
+          "fontSize": "14.4px",
+          "fontWeight": "600",
+          "ownText": true,
+          "leading": "21.6px",
+          "fontFamily": "Source Sans 3",
+          "textTransform": "none"
+        },
+        {
+          "tag": "a",
+          "cls": "text-[14.4px]",
+          "text": "Service Areas",
+          "color": "rgb(195, 204, 218)",
+          "fontSize": "14.4px",
+          "fontWeight": "600",
+          "ownText": true,
+          "leading": "21.6px",
+          "fontFamily": "Source Sans 3",
+          "textTransform": "none"
+        },
+        {
+          "tag": "a",
+          "cls": "text-[14.4px]",
+          "text": "Posts",
+          "color": "rgb(195, 204, 218)",
+          "fontSize": "14.4px",
+          "fontWeight": "600",
+          "ownText": true,
+          "leading": "21.6px",
+          "fontFamily": "Source Sans 3",
+          "textTransform": "none"
+        },
+        {
+          "tag": "a",
+          "cls": "text-[14.4px]",
+          "text": "Testimonials",
+          "color": "rgb(195, 204, 218)",
+          "fontSize": "14.4px",
+          "fontWeight": "600",
+          "ownText": true,
+          "leading": "21.6px",
+          "fontFamily": "Source Sans 3",
+          "textTransform": "none"
+        },
+        {
+          "tag": "a",
+          "cls": "text-[14.4px]",
+          "text": "FAQs",
+          "color": "rgb(195, 204, 218)",
+          "fontSize": "14.4px",
+          "fontWeight": "600",
+          "ownText": true,
+          "leading": "21.6px",
+          "fontFamily": "Source Sans 3",
+          "textTransform": "none"
+        },
+        {
+          "tag": "div",
+          "cls": "h-5",
+          "color": "rgb(6, 21, 50)",
+          "backgroundColor": "oklab(0.999994 0.0000455678 0.0000200868 / 0.2)",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "a",
+          "cls": "flex",
+          "text": "(734) 887-6200",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "14.4px",
+          "fontWeight": "700",
+          "ownText": false,
+          "leading": "21.6px",
+          "fontFamily": "Source Sans 3",
+          "textTransform": "none"
+        },
+        {
+          "tag": "svg",
+          "color": "rgb(201, 168, 64)",
+          "fill": "rgb(201, 168, 64)",
+          "width": 16,
+          "height": 16,
+          "viewBox": "0 0 24 24",
+          "fontSize": "14.4px",
+          "fontWeight": "700"
+        },
+        {
+          "tag": "span",
+          "text": "(734) 887-6200",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "14.4px",
+          "fontWeight": "700",
+          "ownText": true,
+          "leading": "21.6px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "a",
+          "cls": "bg-[#732521]",
+          "text": "Confidential Consultation",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(115, 37, 33)",
+          "border": "1px solid rgba(0, 0, 0, 0)",
+          "borderRadius": "3px",
+          "fontSize": "14px",
+          "fontWeight": "600",
+          "ownText": true,
+          "leading": "21px",
+          "fontFamily": "Source Sans 3",
+          "textTransform": "none"
+        },
+        {
+          "tag": "svg",
+          "color": "rgb(255, 255, 255)",
+          "viewBox": "0 0 24 24",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "a",
+          "cls": "text-[#C3CCDA]",
+          "text": "Home",
+          "color": "rgb(195, 204, 218)",
+          "fontSize": "15px",
+          "fontWeight": "600",
+          "ownText": true,
+          "leading": "22.5px",
+          "fontFamily": "Source Sans 3",
+          "textTransform": "none"
+        },
+        {
+          "tag": "a",
+          "cls": "text-[#C3CCDA]",
+          "text": "Practice Areas",
+          "color": "rgb(195, 204, 218)",
+          "fontSize": "15px",
+          "fontWeight": "600",
+          "ownText": true,
+          "leading": "22.5px",
+          "fontFamily": "Source Sans 3",
+          "textTransform": "none"
+        },
+        {
+          "tag": "a",
+          "cls": "text-[#C3CCDA]",
+          "text": "Service Areas",
+          "color": "rgb(195, 204, 218)",
+          "fontSize": "15px",
+          "fontWeight": "600",
+          "ownText": true,
+          "leading": "22.5px",
+          "fontFamily": "Source Sans 3",
+          "textTransform": "none"
+        },
+        {
+          "tag": "a",
+          "cls": "text-[#C3CCDA]",
+          "text": "Posts",
+          "color": "rgb(195, 204, 218)",
+          "fontSize": "15px",
+          "fontWeight": "600",
+          "ownText": true,
+          "leading": "22.5px",
+          "fontFamily": "Source Sans 3",
+          "textTransform": "none"
+        },
+        {
+          "tag": "a",
+          "cls": "text-[#C3CCDA]",
+          "text": "Testimonials",
+          "color": "rgb(195, 204, 218)",
+          "fontSize": "15px",
+          "fontWeight": "600",
+          "ownText": true,
+          "leading": "22.5px",
+          "fontFamily": "Source Sans 3",
+          "textTransform": "none"
+        },
+        {
+          "tag": "a",
+          "cls": "text-[#C3CCDA]",
+          "text": "FAQs",
+          "color": "rgb(195, 204, 218)",
+          "fontSize": "15px",
+          "fontWeight": "600",
+          "ownText": true,
+          "leading": "22.5px",
+          "fontFamily": "Source Sans 3",
+          "textTransform": "none"
+        },
+        {
+          "tag": "div",
+          "cls": "pt-3",
+          "text": "(734) 887-6200Confidential Consultation",
+          "color": "rgb(6, 21, 50)",
+          "border": "1px solid oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+          "fontSize": "16px",
+          "ownText": false,
+          "leading": "24px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "a",
+          "cls": "bg-[#732521]",
+          "text": "Confidential Consultation",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(115, 37, 33)",
+          "borderRadius": "3px",
+          "fontSize": "15px",
+          "fontWeight": "600",
+          "ownText": true,
+          "leading": "22.5px",
+          "fontFamily": "Source Sans 3",
+          "textTransform": "none"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "heading": "The Law Offices of Joseph A. Simon",
+      "background": "rgb(6, 22, 51)",
+      "elements": [
+        {
+          "tag": "img",
+          "cls": "w-full",
+          "color": "rgb(195, 204, 218)",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "div",
+          "cls": "inline-flex",
+          "text": "Criminal Defense Is All We Do",
+          "color": "rgb(221, 197, 130)",
+          "backgroundColor": "oklab(0.74202 -0.00262323 0.126345 / 0.1)",
+          "border": "1px solid oklab(0.74202 -0.00262323 0.126345 / 0.36)",
+          "borderRadius": "2px",
+          "fontSize": "11.36px",
+          "fontWeight": "700",
+          "ownText": false,
+          "leading": "17.04px",
+          "tracking": "1.5px",
+          "fontFamily": "Source Sans 3",
+          "textTransform": "uppercase"
+        },
+        {
+          "tag": "svg",
+          "color": "rgb(201, 168, 64)",
+          "fill": "rgb(201, 168, 64)",
+          "width": 14,
+          "height": 14,
+          "viewBox": "0 0 24 24",
+          "fontSize": "11.36px",
+          "fontWeight": "700"
+        },
+        {
+          "tag": "span",
+          "text": "Criminal Defense Is All We Do",
+          "color": "rgb(221, 197, 130)",
+          "fontSize": "11.36px",
+          "fontWeight": "700",
+          "ownText": true,
+          "leading": "17.04px",
+          "tracking": "1.5px",
+          "fontFamily": "Source Sans 3",
+          "textTransform": "uppercase"
+        },
+        {
+          "tag": "h1",
+          "cls": "font-heading",
+          "text": "The Law Offices of Joseph A. Simon",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "48px",
+          "fontWeight": "900",
+          "ownText": true,
+          "leading": "50.4px",
+          "tracking": "-0.6px",
+          "fontFamily": "Merriweather",
+          "textTransform": "none"
+        },
+        {
+          "tag": "p",
+          "cls": "text-[17px]",
+          "text": "The Law Offices of Joseph A. Simon is a full-service law firm handling only crim",
+          "color": "rgb(195, 204, 218)",
+          "fontSize": "19.04px",
+          "ownText": true,
+          "leading": "31.416px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "a",
+          "cls": "bg-[#732521]",
+          "text": "Request a Confidential Consultation",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(115, 37, 33)",
+          "border": "1px solid rgba(0, 0, 0, 0)",
+          "borderRadius": "3px",
+          "fontSize": "16.16px",
+          "fontWeight": "600",
+          "ownText": true,
+          "leading": "24.24px",
+          "fontFamily": "Source Sans 3",
+          "textTransform": "none"
+        },
+        {
+          "tag": "a",
+          "cls": "border",
+          "text": "(734) 887-6200",
+          "color": "rgb(255, 255, 255)",
+          "border": "1px solid oklab(0.999994 0.0000455678 0.0000200868 / 0.3)",
+          "borderRadius": "3px",
+          "fontSize": "16.16px",
+          "fontWeight": "600",
+          "ownText": false,
+          "leading": "24.24px",
+          "fontFamily": "Source Sans 3",
+          "textTransform": "none"
+        },
+        {
+          "tag": "span",
+          "text": "(734) 887-6200",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "16.16px",
+          "fontWeight": "600",
+          "ownText": true,
+          "leading": "24.24px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "div",
+          "cls": "bg-white/[0.07]",
+          "text": "★★★★★Joe went into the courtroom totally prepared which made me feel very fortun",
+          "color": "rgb(195, 204, 218)",
+          "backgroundColor": "oklab(0.999994 0.0000455678 0.0000200868 / 0.07)",
+          "border": "1px solid oklab(0.999994 0.0000455678 0.0000200868 / 0.16)",
+          "borderRadius": "12px",
+          "fontSize": "16px",
+          "ownText": false,
+          "leading": "24px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "span",
+          "text": "★",
+          "color": "rgb(201, 168, 64)",
+          "fontSize": "18px",
+          "ownText": true,
+          "leading": "27px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "span",
+          "cls": "font-bold",
+          "text": "Verified Client Review",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "13px",
+          "fontWeight": "700",
+          "ownText": true,
+          "leading": "19.5px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "span",
+          "cls": "flex",
+          "text": "Client review",
+          "color": "rgb(195, 204, 218)",
+          "fontSize": "13px",
+          "ownText": true,
+          "leading": "19.5px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "button",
+          "cls": "hero-dot",
+          "color": "rgb(195, 204, 218)",
+          "backgroundColor": "oklab(0.999994 0.0000455678 0.0000200868 / 0.3)",
+          "borderRadius": "3.35544e+07px",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "button",
+          "cls": "hero-dot",
+          "color": "rgb(195, 204, 218)",
+          "backgroundColor": "rgb(201, 168, 64)",
+          "borderRadius": "3.35544e+07px",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "div",
+          "cls": "border",
+          "text": "★★★★★5.0 Google Rating · 200 Client Reviews✓Michigan Super Lawyers Since 2007🕒A",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "oklab(0.999994 0.0000455678 0.0000200868 / 0.03)",
+          "border": "1px solid oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+          "borderRadius": "4px",
+          "fontSize": "14px",
+          "ownText": false,
+          "leading": "21px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "span",
+          "cls": "text-[#C9A840]",
+          "text": "★★★★★",
+          "color": "rgb(201, 168, 64)",
+          "fontSize": "14px",
+          "fontWeight": "500",
+          "ownText": true,
+          "leading": "21px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "span",
+          "text": "5.0 Google Rating · 200 Client Reviews",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "14px",
+          "fontWeight": "500",
+          "ownText": true,
+          "leading": "21px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "span",
+          "cls": "text-[#C9A840]",
+          "text": "✓",
+          "color": "rgb(201, 168, 64)",
+          "fontSize": "14px",
+          "fontWeight": "500",
+          "ownText": true,
+          "leading": "21px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "span",
+          "text": "Michigan Super Lawyers Since 2007",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "14px",
+          "fontWeight": "500",
+          "ownText": true,
+          "leading": "21px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "span",
+          "cls": "text-[#C9A840]",
+          "text": "🕒",
+          "color": "rgb(201, 168, 64)",
+          "fontSize": "14px",
+          "fontWeight": "500",
+          "ownText": true,
+          "leading": "21px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "span",
+          "text": "Available 24/7",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "14px",
+          "fontWeight": "500",
+          "ownText": true,
+          "leading": "21px",
+          "fontFamily": "Source Sans 3"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "heading": "Recognized by third-party rating organizations",
+      "background": "rgb(247, 245, 241)",
+      "elements": [
+        {
+          "tag": "h2",
+          "text": "Recognized by third-party rating organizations",
+          "color": "rgb(89, 99, 113)",
+          "fontSize": "11.52px",
+          "fontWeight": "700",
+          "ownText": true,
+          "leading": "17.28px",
+          "tracking": "2px",
+          "fontFamily": "Merriweather",
+          "textTransform": "uppercase"
+        },
+        {
+          "tag": "button",
+          "cls": "awards-pause",
+          "text": "Pause scrolling",
+          "color": "rgb(115, 37, 33)",
+          "border": "1px solid rgb(115, 37, 33)",
+          "fontSize": "12px",
+          "ownText": true,
+          "leading": "18px",
+          "fontFamily": "Source Sans 3",
+          "textTransform": "none"
+        },
+        {
+          "tag": "li",
+          "color": "rgb(6, 21, 50)",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "a",
+          "cls": "award-badge",
+          "color": "rgb(6, 21, 50)",
+          "borderRadius": "4px",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "img",
+          "color": "rgb(6, 21, 50)",
+          "fontSize": "16px"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "heading": "Criminal defense in Southeast Michigan.",
+      "background": "rgb(255, 255, 255)",
+      "elements": [
+        {
+          "tag": "span",
+          "cls": "inline-flex",
+          "text": "What We Defend",
+          "color": "rgb(115, 37, 33)",
+          "fontSize": "12px",
+          "fontWeight": "700",
+          "ownText": true,
+          "leading": "18px",
+          "tracking": "1.8px",
+          "fontFamily": "Source Sans 3",
+          "textTransform": "uppercase"
+        },
+        {
+          "tag": "span",
+          "cls": "w-[28px]",
+          "color": "rgb(115, 37, 33)",
+          "backgroundColor": "rgb(201, 168, 64)",
+          "fontSize": "12px",
+          "fontWeight": "700",
+          "lineWidth": 28,
+          "lineHeight": 2
+        },
+        {
+          "tag": "h2",
+          "cls": "text-[44px]",
+          "text": "Criminal defense in Southeast Michigan.",
+          "color": "rgb(6, 22, 51)",
+          "fontSize": "44px",
+          "fontWeight": "900",
+          "ownText": true,
+          "leading": "50.16px",
+          "tracking": "-0.53px",
+          "fontFamily": "Merriweather",
+          "textTransform": "none"
+        },
+        {
+          "tag": "p",
+          "cls": "text-[18.08px]",
+          "text": "From misdemeanors to serious felonies, we appear in the district and circuit cou",
+          "color": "rgb(69, 79, 94)",
+          "fontSize": "18.08px",
+          "ownText": true,
+          "leading": "31px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "div",
+          "cls": "border",
+          "text": "01Assault ChargesFacing assault charges in Michigan can be daunting. With over 3",
+          "color": "rgb(6, 21, 50)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "border": "1px solid rgb(230, 226, 217)",
+          "borderRadius": "4px",
+          "fontSize": "16px",
+          "ownText": false,
+          "leading": "24px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "span",
+          "cls": "text-[#C9A840]",
+          "text": "01",
+          "color": "rgb(201, 168, 64)",
+          "fontSize": "15px",
+          "fontWeight": "900",
+          "ownText": true,
+          "leading": "22.5px",
+          "tracking": "0.75px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "h3",
+          "cls": "text-[19.84px]",
+          "text": "Assault Charges",
+          "color": "rgb(6, 22, 51)",
+          "fontSize": "19.84px",
+          "fontWeight": "900",
+          "ownText": true,
+          "leading": "22.6176px",
+          "tracking": "-0.24px",
+          "fontFamily": "Merriweather",
+          "textTransform": "none"
+        },
+        {
+          "tag": "p",
+          "cls": "text-[15.5px]",
+          "text": "Facing assault charges in Michigan can be daunting. With over 38 years of experi",
+          "color": "rgb(69, 79, 94)",
+          "fontSize": "15.5px",
+          "ownText": true,
+          "leading": "25px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "a",
+          "cls": "text-[#732521]",
+          "text": "LEARN MORE→",
+          "color": "rgb(115, 37, 33)",
+          "fontSize": "12.16px",
+          "fontWeight": "700",
+          "ownText": true,
+          "leading": "18.24px",
+          "fontFamily": "Source Sans 3",
+          "textTransform": "none"
+        },
+        {
+          "tag": "span",
+          "text": "→",
+          "color": "rgb(115, 37, 33)",
+          "fontSize": "12.16px",
+          "fontWeight": "700",
+          "ownText": true,
+          "leading": "18.24px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "div",
+          "cls": "border",
+          "text": "02College CrimesFacing criminal allegations as a college student? Contact attorn",
+          "color": "rgb(6, 21, 50)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "border": "1px solid rgb(230, 226, 217)",
+          "borderRadius": "4px",
+          "fontSize": "16px",
+          "ownText": false,
+          "leading": "24px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "span",
+          "cls": "text-[#C9A840]",
+          "text": "02",
+          "color": "rgb(201, 168, 64)",
+          "fontSize": "15px",
+          "fontWeight": "900",
+          "ownText": true,
+          "leading": "22.5px",
+          "tracking": "0.75px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "h3",
+          "cls": "text-[19.84px]",
+          "text": "College Crimes",
+          "color": "rgb(6, 22, 51)",
+          "fontSize": "19.84px",
+          "fontWeight": "900",
+          "ownText": true,
+          "leading": "22.6176px",
+          "tracking": "-0.24px",
+          "fontFamily": "Merriweather",
+          "textTransform": "none"
+        },
+        {
+          "tag": "p",
+          "cls": "text-[15.5px]",
+          "text": "Facing criminal allegations as a college student? Contact attorney Joseph A. Sim",
+          "color": "rgb(69, 79, 94)",
+          "fontSize": "15.5px",
+          "ownText": true,
+          "leading": "25px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "div",
+          "cls": "border",
+          "text": "03Computer CrimesExplore how Joseph A. Simon's extensive experience in computer ",
+          "color": "rgb(6, 21, 50)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "border": "1px solid rgb(230, 226, 217)",
+          "borderRadius": "4px",
+          "fontSize": "16px",
+          "ownText": false,
+          "leading": "24px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "span",
+          "cls": "text-[#C9A840]",
+          "text": "03",
+          "color": "rgb(201, 168, 64)",
+          "fontSize": "15px",
+          "fontWeight": "900",
+          "ownText": true,
+          "leading": "22.5px",
+          "tracking": "0.75px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "h3",
+          "cls": "text-[19.84px]",
+          "text": "Computer Crimes",
+          "color": "rgb(6, 22, 51)",
+          "fontSize": "19.84px",
+          "fontWeight": "900",
+          "ownText": true,
+          "leading": "22.6176px",
+          "tracking": "-0.24px",
+          "fontFamily": "Merriweather",
+          "textTransform": "none"
+        },
+        {
+          "tag": "p",
+          "cls": "text-[15.5px]",
+          "text": "Explore how Joseph A. Simon's extensive experience in computer cases can protect",
+          "color": "rgb(69, 79, 94)",
+          "fontSize": "15.5px",
+          "ownText": true,
+          "leading": "25px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "div",
+          "cls": "border",
+          "text": "04Criminal Sexual ConductIf you or a loved one faces criminal sexual conduct cha",
+          "color": "rgb(6, 21, 50)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "border": "1px solid rgb(230, 226, 217)",
+          "borderRadius": "4px",
+          "fontSize": "16px",
+          "ownText": false,
+          "leading": "24px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "span",
+          "cls": "text-[#C9A840]",
+          "text": "04",
+          "color": "rgb(201, 168, 64)",
+          "fontSize": "15px",
+          "fontWeight": "900",
+          "ownText": true,
+          "leading": "22.5px",
+          "tracking": "0.75px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "h3",
+          "cls": "text-[19.84px]",
+          "text": "Criminal Sexual Conduct",
+          "color": "rgb(6, 22, 51)",
+          "fontSize": "19.84px",
+          "fontWeight": "900",
+          "ownText": true,
+          "leading": "22.6176px",
+          "tracking": "-0.24px",
+          "fontFamily": "Merriweather",
+          "textTransform": "none"
+        },
+        {
+          "tag": "p",
+          "cls": "text-[15.5px]",
+          "text": "If you or a loved one faces criminal sexual conduct charges, trust the experienc",
+          "color": "rgb(69, 79, 94)",
+          "fontSize": "15.5px",
+          "ownText": true,
+          "leading": "25px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "div",
+          "cls": "border",
+          "text": "05Domestic ViolenceFacing Domestic Violence charges can be overwhelming. Turn to",
+          "color": "rgb(6, 21, 50)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "border": "1px solid rgb(230, 226, 217)",
+          "borderRadius": "4px",
+          "fontSize": "16px",
+          "ownText": false,
+          "leading": "24px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "span",
+          "cls": "text-[#C9A840]",
+          "text": "05",
+          "color": "rgb(201, 168, 64)",
+          "fontSize": "15px",
+          "fontWeight": "900",
+          "ownText": true,
+          "leading": "22.5px",
+          "tracking": "0.75px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "h3",
+          "cls": "text-[19.84px]",
+          "text": "Domestic Violence",
+          "color": "rgb(6, 22, 51)",
+          "fontSize": "19.84px",
+          "fontWeight": "900",
+          "ownText": true,
+          "leading": "22.6176px",
+          "tracking": "-0.24px",
+          "fontFamily": "Merriweather",
+          "textTransform": "none"
+        },
+        {
+          "tag": "p",
+          "cls": "text-[15.5px]",
+          "text": "Facing Domestic Violence charges can be overwhelming. Turn to the experienced an",
+          "color": "rgb(69, 79, 94)",
+          "fontSize": "15.5px",
+          "ownText": true,
+          "leading": "25px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "div",
+          "cls": "border",
+          "text": "06Drug CrimesFacing drug charges in Michigan? With over 38 years of experience, ",
+          "color": "rgb(6, 21, 50)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "border": "1px solid rgb(230, 226, 217)",
+          "borderRadius": "4px",
+          "fontSize": "16px",
+          "ownText": false,
+          "leading": "24px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "span",
+          "cls": "text-[#C9A840]",
+          "text": "06",
+          "color": "rgb(201, 168, 64)",
+          "fontSize": "15px",
+          "fontWeight": "900",
+          "ownText": true,
+          "leading": "22.5px",
+          "tracking": "0.75px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "h3",
+          "cls": "text-[19.84px]",
+          "text": "Drug Crimes",
+          "color": "rgb(6, 22, 51)",
+          "fontSize": "19.84px",
+          "fontWeight": "900",
+          "ownText": true,
+          "leading": "22.6176px",
+          "tracking": "-0.24px",
+          "fontFamily": "Merriweather",
+          "textTransform": "none"
+        },
+        {
+          "tag": "p",
+          "cls": "text-[15.5px]",
+          "text": "Facing drug charges in Michigan? With over 38 years of experience, Joseph A. Sim",
+          "color": "rgb(69, 79, 94)",
+          "fontSize": "15.5px",
+          "ownText": true,
+          "leading": "25px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "div",
+          "cls": "border",
+          "text": "07Drunk Driving DUI/OWIFacing a DUI/OWI charge in Southeast Michigan? With over ",
+          "color": "rgb(6, 21, 50)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "border": "1px solid rgb(230, 226, 217)",
+          "borderRadius": "4px",
+          "fontSize": "16px",
+          "ownText": false,
+          "leading": "24px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "span",
+          "cls": "text-[#C9A840]",
+          "text": "07",
+          "color": "rgb(201, 168, 64)",
+          "fontSize": "15px",
+          "fontWeight": "900",
+          "ownText": true,
+          "leading": "22.5px",
+          "tracking": "0.75px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "h3",
+          "cls": "text-[19.84px]",
+          "text": "Drunk Driving DUI/OWI",
+          "color": "rgb(6, 22, 51)",
+          "fontSize": "19.84px",
+          "fontWeight": "900",
+          "ownText": true,
+          "leading": "22.6176px",
+          "tracking": "-0.24px",
+          "fontFamily": "Merriweather",
+          "textTransform": "none"
+        },
+        {
+          "tag": "p",
+          "cls": "text-[15.5px]",
+          "text": "Facing a DUI/OWI charge in Southeast Michigan? With over 38 years of experience,",
+          "color": "rgb(69, 79, 94)",
+          "fontSize": "15.5px",
+          "ownText": true,
+          "leading": "25px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "div",
+          "cls": "border",
+          "text": "08ExpungementsFor over 38 years, Joseph A. Simon has helped individuals expunge ",
+          "color": "rgb(6, 21, 50)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "border": "1px solid rgb(230, 226, 217)",
+          "borderRadius": "4px",
+          "fontSize": "16px",
+          "ownText": false,
+          "leading": "24px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "span",
+          "cls": "text-[#C9A840]",
+          "text": "08",
+          "color": "rgb(201, 168, 64)",
+          "fontSize": "15px",
+          "fontWeight": "900",
+          "ownText": true,
+          "leading": "22.5px",
+          "tracking": "0.75px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "h3",
+          "cls": "text-[19.84px]",
+          "text": "Expungements",
+          "color": "rgb(6, 22, 51)",
+          "fontSize": "19.84px",
+          "fontWeight": "900",
+          "ownText": true,
+          "leading": "22.6176px",
+          "tracking": "-0.24px",
+          "fontFamily": "Merriweather",
+          "textTransform": "none"
+        },
+        {
+          "tag": "p",
+          "cls": "text-[15.5px]",
+          "text": "For over 38 years, Joseph A. Simon has helped individuals expunge criminal convi",
+          "color": "rgb(69, 79, 94)",
+          "fontSize": "15.5px",
+          "ownText": true,
+          "leading": "25px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "div",
+          "cls": "border",
+          "text": "09Home InvasionFacing serious charges like Home Invasion in Southeast Michigan? ",
+          "color": "rgb(6, 21, 50)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "border": "1px solid rgb(230, 226, 217)",
+          "borderRadius": "4px",
+          "fontSize": "16px",
+          "ownText": false,
+          "leading": "24px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "span",
+          "cls": "text-[#C9A840]",
+          "text": "09",
+          "color": "rgb(201, 168, 64)",
+          "fontSize": "15px",
+          "fontWeight": "900",
+          "ownText": true,
+          "leading": "22.5px",
+          "tracking": "0.75px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "h3",
+          "cls": "text-[19.84px]",
+          "text": "Home Invasion",
+          "color": "rgb(6, 22, 51)",
+          "fontSize": "19.84px",
+          "fontWeight": "900",
+          "ownText": true,
+          "leading": "22.6176px",
+          "tracking": "-0.24px",
+          "fontFamily": "Merriweather",
+          "textTransform": "none"
+        },
+        {
+          "tag": "p",
+          "cls": "text-[15.5px]",
+          "text": "Facing serious charges like Home Invasion in Southeast Michigan? Trust the exper",
+          "color": "rgb(69, 79, 94)",
+          "fontSize": "15.5px",
+          "ownText": true,
+          "leading": "25px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "div",
+          "cls": "border",
+          "text": "10HomicideEntrust your defense to one of Ann Arbor's most experienced and acclai",
+          "color": "rgb(6, 21, 50)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "border": "1px solid rgb(230, 226, 217)",
+          "borderRadius": "4px",
+          "fontSize": "16px",
+          "ownText": false,
+          "leading": "24px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "span",
+          "cls": "text-[#C9A840]",
+          "text": "10",
+          "color": "rgb(201, 168, 64)",
+          "fontSize": "15px",
+          "fontWeight": "900",
+          "ownText": true,
+          "leading": "22.5px",
+          "tracking": "0.75px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "h3",
+          "cls": "text-[19.84px]",
+          "text": "Homicide",
+          "color": "rgb(6, 22, 51)",
+          "fontSize": "19.84px",
+          "fontWeight": "900",
+          "ownText": true,
+          "leading": "22.6176px",
+          "tracking": "-0.24px",
+          "fontFamily": "Merriweather",
+          "textTransform": "none"
+        },
+        {
+          "tag": "p",
+          "cls": "text-[15.5px]",
+          "text": "Entrust your defense to one of Ann Arbor's most experienced and acclaimed attorn",
+          "color": "rgb(69, 79, 94)",
+          "fontSize": "15.5px",
+          "ownText": true,
+          "leading": "25px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "div",
+          "cls": "border",
+          "text": "11Malicious Destruction of PropertyIf you're facing MDOP charges in Washtenaw Co",
+          "color": "rgb(6, 21, 50)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "border": "1px solid rgb(230, 226, 217)",
+          "borderRadius": "4px",
+          "fontSize": "16px",
+          "ownText": false,
+          "leading": "24px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "span",
+          "cls": "text-[#C9A840]",
+          "text": "11",
+          "color": "rgb(201, 168, 64)",
+          "fontSize": "15px",
+          "fontWeight": "900",
+          "ownText": true,
+          "leading": "22.5px",
+          "tracking": "0.75px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "h3",
+          "cls": "text-[19.84px]",
+          "text": "Malicious Destruction of Property",
+          "color": "rgb(6, 22, 51)",
+          "fontSize": "19.84px",
+          "fontWeight": "900",
+          "ownText": true,
+          "leading": "22.6176px",
+          "tracking": "-0.24px",
+          "fontFamily": "Merriweather",
+          "textTransform": "none"
+        },
+        {
+          "tag": "p",
+          "cls": "text-[15.5px]",
+          "text": "If you're facing MDOP charges in Washtenaw County, turn to Ann Arbor's Five-Time",
+          "color": "rgb(69, 79, 94)",
+          "fontSize": "15.5px",
+          "ownText": true,
+          "leading": "25px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "div",
+          "cls": "border",
+          "text": "12OWI - DUI ExpungementsFor over 35 years, Joseph A. Simon has helped clients su",
+          "color": "rgb(6, 21, 50)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "border": "1px solid rgb(230, 226, 217)",
+          "borderRadius": "4px",
+          "fontSize": "16px",
+          "ownText": false,
+          "leading": "24px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "span",
+          "cls": "text-[#C9A840]",
+          "text": "12",
+          "color": "rgb(201, 168, 64)",
+          "fontSize": "15px",
+          "fontWeight": "900",
+          "ownText": true,
+          "leading": "22.5px",
+          "tracking": "0.75px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "h3",
+          "cls": "text-[19.84px]",
+          "text": "OWI - DUI Expungements",
+          "color": "rgb(6, 22, 51)",
+          "fontSize": "19.84px",
+          "fontWeight": "900",
+          "ownText": true,
+          "leading": "22.6176px",
+          "tracking": "-0.24px",
+          "fontFamily": "Merriweather",
+          "textTransform": "none"
+        },
+        {
+          "tag": "p",
+          "cls": "text-[15.5px]",
+          "text": "For over 35 years, Joseph A. Simon has helped clients successfully expunge convi",
+          "color": "rgb(69, 79, 94)",
+          "fontSize": "15.5px",
+          "ownText": true,
+          "leading": "25px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "div",
+          "cls": "border",
+          "text": "13Police InvestigationsFacing a criminal investigation? Contact Joseph A. Simon,",
+          "color": "rgb(6, 21, 50)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "border": "1px solid rgb(230, 226, 217)",
+          "borderRadius": "4px",
+          "fontSize": "16px",
+          "ownText": false,
+          "leading": "24px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "span",
+          "cls": "text-[#C9A840]",
+          "text": "13",
+          "color": "rgb(201, 168, 64)",
+          "fontSize": "15px",
+          "fontWeight": "900",
+          "ownText": true,
+          "leading": "22.5px",
+          "tracking": "0.75px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "h3",
+          "cls": "text-[19.84px]",
+          "text": "Police Investigations",
+          "color": "rgb(6, 22, 51)",
+          "fontSize": "19.84px",
+          "fontWeight": "900",
+          "ownText": true,
+          "leading": "22.6176px",
+          "tracking": "-0.24px",
+          "fontFamily": "Merriweather",
+          "textTransform": "none"
+        },
+        {
+          "tag": "p",
+          "cls": "text-[15.5px]",
+          "text": "Facing a criminal investigation? Contact Joseph A. Simon, an experienced attorne",
+          "color": "rgb(69, 79, 94)",
+          "fontSize": "15.5px",
+          "ownText": true,
+          "leading": "25px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "div",
+          "cls": "border",
+          "text": "14Theft OffensesFacing a theft or property crimes charge in Southeast Michigan? ",
+          "color": "rgb(6, 21, 50)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "border": "1px solid rgb(230, 226, 217)",
+          "borderRadius": "4px",
+          "fontSize": "16px",
+          "ownText": false,
+          "leading": "24px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "span",
+          "cls": "text-[#C9A840]",
+          "text": "14",
+          "color": "rgb(201, 168, 64)",
+          "fontSize": "15px",
+          "fontWeight": "900",
+          "ownText": true,
+          "leading": "22.5px",
+          "tracking": "0.75px",
+          "fontFamily": "Source Sans 3"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "heading": "The Law Offices of Joseph A. Simon",
+      "background": "rgb(247, 245, 241)",
+      "elements": [
+        {
+          "tag": "h2",
+          "cls": "text-[34px]",
+          "text": "The Law Offices of Joseph A. Simon",
+          "color": "rgb(6, 22, 51)",
+          "fontSize": "44px",
+          "fontWeight": "900",
+          "ownText": true,
+          "leading": "66px",
+          "fontFamily": "Merriweather",
+          "textTransform": "none"
+        },
+        {
+          "tag": "img",
+          "cls": "image-13",
+          "color": "rgb(20, 28, 40)",
+          "borderRadius": "4px",
+          "fontSize": "18px"
+        },
+        {
+          "tag": "p",
+          "text": "The Law Offices of Joseph A. Simon is a full-service law firm handling only crim",
+          "color": "rgb(20, 28, 40)",
+          "fontSize": "18px",
+          "ownText": true,
+          "leading": "32.4px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "a",
+          "text": "career",
+          "color": "rgb(115, 37, 33)",
+          "fontSize": "18px",
+          "ownText": false,
+          "leading": "32.4px",
+          "fontFamily": "Source Sans 3",
+          "textTransform": "none"
+        },
+        {
+          "tag": "p",
+          "text": "Mr. Simon’s concentrated experience and intimate knowledge of the criminal law h",
+          "color": "rgb(20, 28, 40)",
+          "fontSize": "18px",
+          "ownText": true,
+          "leading": "32.4px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "a",
+          "text": "The Best Lawyers in America",
+          "color": "rgb(115, 37, 33)",
+          "fontSize": "18px",
+          "ownText": false,
+          "leading": "32.4px",
+          "fontFamily": "Source Sans 3",
+          "textTransform": "none"
+        },
+        {
+          "tag": "a",
+          "text": "Lawyer of the Year",
+          "color": "rgb(115, 37, 33)",
+          "fontSize": "18px",
+          "ownText": false,
+          "leading": "32.4px",
+          "fontFamily": "Source Sans 3",
+          "textTransform": "none"
+        },
+        {
+          "tag": "a",
+          "text": "Achieving AVVO's highest “10.0” rating",
+          "color": "rgb(115, 37, 33)",
+          "fontSize": "18px",
+          "ownText": false,
+          "leading": "32.4px",
+          "fontFamily": "Source Sans 3",
+          "textTransform": "none"
+        },
+        {
+          "tag": "a",
+          "text": "Super Lawyer",
+          "color": "rgb(115, 37, 33)",
+          "fontSize": "18px",
+          "ownText": false,
+          "leading": "32.4px",
+          "fontFamily": "Source Sans 3",
+          "textTransform": "none"
+        },
+        {
+          "tag": "a",
+          "text": "Leading Lawyer",
+          "color": "rgb(115, 37, 33)",
+          "fontSize": "18px",
+          "ownText": false,
+          "leading": "32.4px",
+          "fontFamily": "Source Sans 3",
+          "textTransform": "none"
+        },
+        {
+          "tag": "a",
+          "text": "America’s Top 100 Criminal Defense Attorneys",
+          "color": "rgb(115, 37, 33)",
+          "fontSize": "18px",
+          "ownText": false,
+          "leading": "32.4px",
+          "fontFamily": "Source Sans 3",
+          "textTransform": "none"
+        },
+        {
+          "tag": "p",
+          "text": "Our clients can rest assured that the attorneys at the Law Offices of Joseph A. ",
+          "color": "rgb(20, 28, 40)",
+          "fontSize": "18px",
+          "ownText": true,
+          "leading": "32.4px",
+          "fontFamily": "Source Sans 3"
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "heading": "Proudly serving Washtenaw County.",
+      "background": "rgb(255, 255, 255)",
+      "elements": [
+        {
+          "tag": "span",
+          "cls": "w-[28px]",
+          "color": "rgb(115, 37, 33)",
+          "backgroundColor": "rgb(201, 168, 64)",
+          "fontSize": "12px",
+          "fontWeight": "700",
+          "lineWidth": 28,
+          "lineHeight": 2
+        },
+        {
+          "tag": "span",
+          "text": "LOCAL REPRESENTATION",
+          "color": "rgb(115, 37, 33)",
+          "fontSize": "12px",
+          "fontWeight": "700",
+          "ownText": true,
+          "leading": "18px",
+          "tracking": "1.8px",
+          "fontFamily": "Source Sans 3",
+          "textTransform": "uppercase"
+        },
+        {
+          "tag": "h2",
+          "cls": "font-heading",
+          "text": "Proudly serving Washtenaw County.",
+          "color": "rgb(6, 22, 51)",
+          "fontSize": "44px",
+          "fontWeight": "900",
+          "ownText": true,
+          "leading": "50.16px",
+          "tracking": "-0.53px",
+          "fontFamily": "Merriweather",
+          "textTransform": "none"
+        },
+        {
+          "tag": "p",
+          "cls": "text-[17px]",
+          "text": "Our office sits on South Main Street in the heart of Ann Arbor. We represent cli",
+          "color": "rgb(69, 79, 94)",
+          "fontSize": "18.08px",
+          "ownText": true,
+          "leading": "30.736px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "span",
+          "cls": "bg-[#F7F5F1]",
+          "text": "Ann Arbor",
+          "color": "rgb(69, 79, 94)",
+          "backgroundColor": "rgb(247, 245, 241)",
+          "border": "1px solid rgb(230, 226, 217)",
+          "borderRadius": "2px",
+          "fontSize": "14px",
+          "fontWeight": "600",
+          "ownText": true,
+          "leading": "21px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "span",
+          "cls": "bg-[#F7F5F1]",
+          "text": "Ypsilanti",
+          "color": "rgb(69, 79, 94)",
+          "backgroundColor": "rgb(247, 245, 241)",
+          "border": "1px solid rgb(230, 226, 217)",
+          "borderRadius": "2px",
+          "fontSize": "14px",
+          "fontWeight": "600",
+          "ownText": true,
+          "leading": "21px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "span",
+          "cls": "bg-[#F7F5F1]",
+          "text": "Saline",
+          "color": "rgb(69, 79, 94)",
+          "backgroundColor": "rgb(247, 245, 241)",
+          "border": "1px solid rgb(230, 226, 217)",
+          "borderRadius": "2px",
+          "fontSize": "14px",
+          "fontWeight": "600",
+          "ownText": true,
+          "leading": "21px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "span",
+          "cls": "bg-[#F7F5F1]",
+          "text": "Chelsea",
+          "color": "rgb(69, 79, 94)",
+          "backgroundColor": "rgb(247, 245, 241)",
+          "border": "1px solid rgb(230, 226, 217)",
+          "borderRadius": "2px",
+          "fontSize": "14px",
+          "fontWeight": "600",
+          "ownText": true,
+          "leading": "21px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "span",
+          "cls": "bg-[#F7F5F1]",
+          "text": "Milan",
+          "color": "rgb(69, 79, 94)",
+          "backgroundColor": "rgb(247, 245, 241)",
+          "border": "1px solid rgb(230, 226, 217)",
+          "borderRadius": "2px",
+          "fontSize": "14px",
+          "fontWeight": "600",
+          "ownText": true,
+          "leading": "21px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "span",
+          "cls": "bg-[#F7F5F1]",
+          "text": "Dexter",
+          "color": "rgb(69, 79, 94)",
+          "backgroundColor": "rgb(247, 245, 241)",
+          "border": "1px solid rgb(230, 226, 217)",
+          "borderRadius": "2px",
+          "fontSize": "14px",
+          "fontWeight": "600",
+          "ownText": true,
+          "leading": "21px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "span",
+          "cls": "bg-[#F7F5F1]",
+          "text": "Manchester",
+          "color": "rgb(69, 79, 94)",
+          "backgroundColor": "rgb(247, 245, 241)",
+          "border": "1px solid rgb(230, 226, 217)",
+          "borderRadius": "2px",
+          "fontSize": "14px",
+          "fontWeight": "600",
+          "ownText": true,
+          "leading": "21px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "span",
+          "cls": "bg-[#F7F5F1]",
+          "text": "Whitmore Lake",
+          "color": "rgb(69, 79, 94)",
+          "backgroundColor": "rgb(247, 245, 241)",
+          "border": "1px solid rgb(230, 226, 217)",
+          "borderRadius": "2px",
+          "fontSize": "14px",
+          "fontWeight": "600",
+          "ownText": true,
+          "leading": "21px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "span",
+          "cls": "bg-[#F7F5F1]",
+          "text": "Pittsfield Twp.",
+          "color": "rgb(69, 79, 94)",
+          "backgroundColor": "rgb(247, 245, 241)",
+          "border": "1px solid rgb(230, 226, 217)",
+          "borderRadius": "2px",
+          "fontSize": "14px",
+          "fontWeight": "600",
+          "ownText": true,
+          "leading": "21px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "a",
+          "cls": "text-[#732521]",
+          "text": "View all service areas→",
+          "color": "rgb(115, 37, 33)",
+          "border": "1px solid oklab(0.383385 0.0990555 0.0495816 / 0.3)",
+          "fontSize": "15.2px",
+          "fontWeight": "700",
+          "ownText": false,
+          "leading": "22.8px",
+          "fontFamily": "Source Sans 3",
+          "textTransform": "none"
+        },
+        {
+          "tag": "span",
+          "text": "View all service areas",
+          "color": "rgb(115, 37, 33)",
+          "fontSize": "15.2px",
+          "fontWeight": "700",
+          "ownText": true,
+          "leading": "22.8px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "span",
+          "text": "→",
+          "color": "rgb(115, 37, 33)",
+          "fontSize": "15.2px",
+          "fontWeight": "700",
+          "ownText": true,
+          "leading": "22.8px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "div",
+          "cls": "bg-[#061633]",
+          "text": "24/7Available for urgent criminal matters and arrests.Law Offices of Joseph A. S",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(6, 22, 51)",
+          "border": "1px solid oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+          "borderRadius": "6px",
+          "fontSize": "16px",
+          "ownText": false,
+          "leading": "24px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "p",
+          "cls": "text-[16px]",
+          "text": "Available for urgent criminal matters and arrests.",
+          "color": "rgb(195, 204, 218)",
+          "fontSize": "16px",
+          "ownText": true,
+          "leading": "26px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "div",
+          "cls": "h-[1px]",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+          "fontSize": "16px",
+          "lineWidth": 385,
+          "lineHeight": 1
+        },
+        {
+          "tag": "h3",
+          "cls": "font-bold",
+          "text": "Law Offices of Joseph A. Simon",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "17px",
+          "fontWeight": "700",
+          "ownText": true,
+          "leading": "25.5px",
+          "fontFamily": "Merriweather",
+          "textTransform": "none"
+        },
+        {
+          "tag": "p",
+          "cls": "text-[15px]",
+          "text": "1310 South Main Street, Suite 11Ann Arbor, MI 48104",
+          "color": "rgb(195, 204, 218)",
+          "fontSize": "15px",
+          "ownText": true,
+          "leading": "24.375px",
+          "fontFamily": "Source Sans 3"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "heading": "Representative case results.",
+      "background": "rgb(6, 22, 51)",
+      "elements": [
+        {
+          "tag": "h2",
+          "cls": "text-[36px]",
+          "text": "Representative case results.",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "44px",
+          "fontWeight": "900",
+          "ownText": true,
+          "leading": "66px",
+          "fontFamily": "Merriweather",
+          "textTransform": "none"
+        },
+        {
+          "tag": "article",
+          "cls": "border",
+          "text": "Assault & Reckless DrivingCases Dismissed at Trial14-B District CourtCase 19-FB-",
+          "color": "rgb(255, 255, 255)",
+          "border": "1px solid oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+          "borderRadius": "4px",
+          "fontSize": "16px",
+          "ownText": false,
+          "leading": "24px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "h3",
+          "cls": "text-[20px]",
+          "text": "Cases Dismissed at Trial",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "20px",
+          "fontWeight": "700",
+          "ownText": true,
+          "leading": "30px",
+          "fontFamily": "Merriweather",
+          "textTransform": "none"
+        },
+        {
+          "tag": "p",
+          "cls": "text-[#C3CCDA]",
+          "text": "14-B District Court",
+          "color": "rgb(195, 204, 218)",
+          "fontSize": "16px",
+          "ownText": true,
+          "leading": "26.4px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "span",
+          "cls": "border",
+          "text": "Case 19-FB-1405-FY",
+          "color": "rgb(221, 197, 130)",
+          "border": "1px solid oklab(0.74202 -0.00262323 0.126345 / 0.4)",
+          "borderRadius": "2px",
+          "fontSize": "12px",
+          "ownText": true,
+          "leading": "18px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "article",
+          "cls": "border",
+          "text": "Assault & BatteryCharges Dismissed14-B District CourtCase 19S-00414-SM",
+          "color": "rgb(255, 255, 255)",
+          "border": "1px solid oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+          "borderRadius": "4px",
+          "fontSize": "16px",
+          "ownText": false,
+          "leading": "24px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "h3",
+          "cls": "text-[20px]",
+          "text": "Charges Dismissed",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "20px",
+          "fontWeight": "700",
+          "ownText": true,
+          "leading": "30px",
+          "fontFamily": "Merriweather",
+          "textTransform": "none"
+        },
+        {
+          "tag": "span",
+          "cls": "border",
+          "text": "Case 19S-00414-SM",
+          "color": "rgb(221, 197, 130)",
+          "border": "1px solid oklab(0.74202 -0.00262323 0.126345 / 0.4)",
+          "borderRadius": "2px",
+          "fontSize": "12px",
+          "ownText": true,
+          "leading": "18px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "article",
+          "cls": "border",
+          "text": "Child AbuseNot Guilty Verdict at Trial14-B District CourtCase 19S-0042SM",
+          "color": "rgb(255, 255, 255)",
+          "border": "1px solid oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+          "borderRadius": "4px",
+          "fontSize": "16px",
+          "ownText": false,
+          "leading": "24px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "h3",
+          "cls": "text-[20px]",
+          "text": "Not Guilty Verdict at Trial",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "20px",
+          "fontWeight": "700",
+          "ownText": true,
+          "leading": "30px",
+          "fontFamily": "Merriweather",
+          "textTransform": "none"
+        },
+        {
+          "tag": "span",
+          "cls": "border",
+          "text": "Case 19S-0042SM",
+          "color": "rgb(221, 197, 130)",
+          "border": "1px solid oklab(0.74202 -0.00262323 0.126345 / 0.4)",
+          "borderRadius": "2px",
+          "fontSize": "12px",
+          "ownText": true,
+          "leading": "18px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "article",
+          "cls": "border",
+          "text": "Assault with a Dangerous Weapon (Felonious Assault), Aggravated Domestic Violenc",
+          "color": "rgb(255, 255, 255)",
+          "border": "1px solid oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+          "borderRadius": "4px",
+          "fontSize": "16px",
+          "ownText": false,
+          "leading": "24px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "p",
+          "cls": "text-[#C3CCDA]",
+          "text": "22nd Circuit Court and 15th District Court",
+          "color": "rgb(195, 204, 218)",
+          "fontSize": "16px",
+          "ownText": true,
+          "leading": "26.4px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "span",
+          "cls": "border",
+          "text": "Case 20F5-5103-FY",
+          "color": "rgb(221, 197, 130)",
+          "border": "1px solid oklab(0.74202 -0.00262323 0.126345 / 0.4)",
+          "borderRadius": "2px",
+          "fontSize": "12px",
+          "ownText": true,
+          "leading": "18px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "article",
+          "cls": "border",
+          "text": "Criminal Sexual Conduct, Third Degree, Assault with Intent to Do Great Bodily Ha",
+          "color": "rgb(255, 255, 255)",
+          "border": "1px solid oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+          "borderRadius": "4px",
+          "fontSize": "16px",
+          "ownText": false,
+          "leading": "24px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "h3",
+          "cls": "text-[20px]",
+          "text": "All Charges Dismissed at Preliminary Examination",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "20px",
+          "fontWeight": "700",
+          "ownText": true,
+          "leading": "30px",
+          "fontFamily": "Merriweather",
+          "textTransform": "none"
+        },
+        {
+          "tag": "p",
+          "cls": "text-[#C3CCDA]",
+          "text": "22nd Circuit Court",
+          "color": "rgb(195, 204, 218)",
+          "fontSize": "16px",
+          "ownText": true,
+          "leading": "26.4px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "span",
+          "cls": "border",
+          "text": "Case 21F5-5123-FY",
+          "color": "rgb(221, 197, 130)",
+          "border": "1px solid oklab(0.74202 -0.00262323 0.126345 / 0.4)",
+          "borderRadius": "2px",
+          "fontSize": "12px",
+          "ownText": true,
+          "leading": "18px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "a",
+          "cls": "border",
+          "text": "View all case results →",
+          "color": "rgb(221, 197, 130)",
+          "border": "1px solid oklab(0.74202 -0.00262323 0.126345 / 0.42)",
+          "borderRadius": "3px",
+          "fontSize": "16px",
+          "ownText": true,
+          "leading": "24px",
+          "fontFamily": "Source Sans 3",
+          "textTransform": "none"
+        },
+        {
+          "tag": "p",
+          "cls": "text-[13px]",
+          "text": "Prior results do not guarantee a similar outcome. Each case depends on its own f",
+          "color": "rgb(195, 204, 218)",
+          "fontSize": "13px",
+          "ownText": true,
+          "leading": "19.5px",
+          "fontFamily": "Source Sans 3"
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "heading": "Client Reviews",
+      "background": "rgb(247, 245, 241)",
+      "elements": [
+        {
+          "tag": "h2",
+          "cls": "text-[#061633]",
+          "text": "Client Reviews",
+          "color": "rgb(6, 22, 51)",
+          "fontSize": "44px",
+          "fontWeight": "900",
+          "ownText": true,
+          "leading": "66px",
+          "fontFamily": "Merriweather",
+          "textTransform": "none"
+        },
+        {
+          "tag": "a",
+          "cls": "text-[#732521]",
+          "text": "Read all client reviews →",
+          "color": "rgb(115, 37, 33)",
+          "fontSize": "16px",
+          "fontWeight": "700",
+          "ownText": true,
+          "leading": "24px",
+          "fontFamily": "Source Sans 3",
+          "textTransform": "none"
+        },
+        {
+          "tag": "article",
+          "cls": "testimonial-card",
+          "text": "Rating: 5.0 starsJoe went into the courtroom totally prepared which made me feel",
+          "color": "rgb(6, 21, 50)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "border": "1px solid rgb(230, 226, 217)",
+          "borderRadius": "10px",
+          "fontSize": "16px",
+          "ownText": false,
+          "leading": "24px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "div",
+          "cls": "border-t",
+          "text": "Verified Client Review",
+          "color": "rgb(6, 21, 50)",
+          "border": "1px solid rgb(230, 226, 217)",
+          "fontSize": "13px",
+          "ownText": false,
+          "leading": "19.5px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "article",
+          "cls": "testimonial-card",
+          "text": "Rating: Five StarsI would highly recommend him to anyone who has the misfortune ",
+          "color": "rgb(6, 21, 50)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "border": "1px solid rgb(230, 226, 217)",
+          "borderRadius": "10px",
+          "fontSize": "16px",
+          "ownText": false,
+          "leading": "24px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "article",
+          "cls": "testimonial-card",
+          "text": "Rating: 5Joe is an amazing individual and lawyer...Verified Client Review",
+          "color": "rgb(6, 21, 50)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "border": "1px solid rgb(230, 226, 217)",
+          "borderRadius": "10px",
+          "fontSize": "16px",
+          "ownText": false,
+          "leading": "24px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "button",
+          "cls": "w-11",
+          "text": "‹",
+          "color": "rgb(6, 22, 51)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "border": "1px solid rgb(6, 22, 51)",
+          "borderRadius": "3.35544e+07px",
+          "fontSize": "24px",
+          "ownText": true,
+          "leading": "36px",
+          "fontFamily": "Source Sans 3",
+          "textTransform": "none"
+        },
+        {
+          "tag": "span",
+          "cls": "text-[#596371]",
+          "text": "1 / 2",
+          "color": "rgb(89, 99, 113)",
+          "fontSize": "14px",
+          "ownText": true,
+          "leading": "21px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "button",
+          "cls": "w-11",
+          "text": "›",
+          "color": "rgb(6, 22, 51)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "border": "1px solid rgb(6, 22, 51)",
+          "borderRadius": "3.35544e+07px",
+          "fontSize": "24px",
+          "ownText": true,
+          "leading": "36px",
+          "fontFamily": "Source Sans 3",
+          "textTransform": "none"
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "heading": "Frequently Asked Questions",
+      "background": "rgb(255, 255, 255)",
+      "elements": [
+        {
+          "tag": "div",
+          "cls": "bg-[#061633]",
+          "text": "Questions & AnswersFrequently Asked QuestionsConfidential Consultation",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(6, 22, 51)",
+          "borderRadius": "8px",
+          "fontSize": "16px",
+          "ownText": false,
+          "leading": "24px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "h2",
+          "cls": "text-[32px]",
+          "text": "Frequently Asked Questions",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "32px",
+          "fontWeight": "900",
+          "ownText": true,
+          "leading": "48px",
+          "fontFamily": "Merriweather",
+          "textTransform": "none"
+        },
+        {
+          "tag": "a",
+          "cls": "block",
+          "text": "Confidential Consultation",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(115, 37, 33)",
+          "borderRadius": "3px",
+          "fontSize": "16px",
+          "fontWeight": "600",
+          "ownText": true,
+          "leading": "24px",
+          "fontFamily": "Source Sans 3",
+          "textTransform": "none"
+        },
+        {
+          "tag": "details",
+          "cls": "border-b",
+          "text": "What constitutes \"consent\" under Michigan CSC laws?Some persons cannot offer leg",
+          "color": "rgb(6, 21, 50)",
+          "border": "1px solid rgb(230, 226, 217)",
+          "fontSize": "16px",
+          "ownText": false,
+          "leading": "24px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "p",
+          "text": "Some persons cannot offer legal consent, regardless of apparent agreement. Indiv",
+          "color": "rgb(69, 79, 94)",
+          "fontSize": "17px",
+          "ownText": true,
+          "leading": "30.6px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "details",
+          "cls": "border-b",
+          "text": "What are the immigration consequences of a CSC conviction for non-citizens?CSC c",
+          "color": "rgb(6, 21, 50)",
+          "border": "1px solid rgb(230, 226, 217)",
+          "fontSize": "16px",
+          "ownText": false,
+          "leading": "24px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "p",
+          "text": "CSC convictions carry severe immigration consequences for non-citizens, includin",
+          "color": "rgb(69, 79, 94)",
+          "fontSize": "17px",
+          "ownText": true,
+          "leading": "30.6px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "details",
+          "cls": "border-b",
+          "text": "What if my accuser has made false accusations against others before? Can this be",
+          "color": "rgb(6, 21, 50)",
+          "border": "1px solid rgb(230, 226, 217)",
+          "fontSize": "16px",
+          "ownText": false,
+          "leading": "24px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "p",
+          "text": "Michigan law does allow introduction of evidence showing that an accuser has mad",
+          "color": "rgb(69, 79, 94)",
+          "fontSize": "17px",
+          "ownText": true,
+          "leading": "30.6px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "details",
+          "cls": "border-b",
+          "text": "What is Criminal Sexual Conduct (CSC) in Michigan?vMichigan law does not use ter",
+          "color": "rgb(6, 21, 50)",
+          "border": "1px solid rgb(230, 226, 217)",
+          "fontSize": "16px",
+          "ownText": false,
+          "leading": "24px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "p",
+          "text": "Michigan law does not use terms like \"rape\" or \"sexual assault\" in its criminal ",
+          "color": "rgb(69, 79, 94)",
+          "fontSize": "17px",
+          "ownText": true,
+          "leading": "30.6px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "details",
+          "cls": "border-b",
+          "text": "Should I take a polygraph (lie detector) test if I'm accused of CSC?Polygraph te",
+          "color": "rgb(6, 21, 50)",
+          "border": "1px solid rgb(230, 226, 217)",
+          "fontSize": "16px",
+          "ownText": false,
+          "leading": "24px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "p",
+          "text": "Polygraph tests are not scientifically reliable enough to be admissible as evide",
+          "color": "rgb(69, 79, 94)",
+          "fontSize": "17px",
+          "ownText": true,
+          "leading": "30.6px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "details",
+          "cls": "border-b",
+          "text": "What is Michigan's \"Romeo and Juliet\" law?Michigan's \"Romeo and Juliet\" law (MCL",
+          "color": "rgb(6, 21, 50)",
+          "border": "1px solid rgb(230, 226, 217)",
+          "fontSize": "16px",
+          "ownText": false,
+          "leading": "24px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "p",
+          "text": "Michigan's \"Romeo and Juliet\" law (MCL 28.722) doesn't prevent prosecution for c",
+          "color": "rgb(69, 79, 94)",
+          "fontSize": "17px",
+          "ownText": true,
+          "leading": "30.6px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "details",
+          "cls": "border-b",
+          "text": "How long does the prosecutor have to file CSC charges against me in Michigan?The",
+          "color": "rgb(6, 21, 50)",
+          "border": "1px solid rgb(230, 226, 217)",
+          "fontSize": "16px",
+          "ownText": false,
+          "leading": "24px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "p",
+          "text": "The statute of limitations varies by degree of CSC and the age of the alleged vi",
+          "color": "rgb(69, 79, 94)",
+          "fontSize": "17px",
+          "ownText": true,
+          "leading": "30.6px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "details",
+          "cls": "border-b",
+          "text": "ill I go to jail immediately if charged with CSC? What about bail?Whether you're",
+          "color": "rgb(6, 21, 50)",
+          "border": "1px solid rgb(230, 226, 217)",
+          "fontSize": "16px",
+          "ownText": false,
+          "leading": "24px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "p",
+          "text": "Whether you're held in custody depends on several factors including the degree o",
+          "color": "rgb(69, 79, 94)",
+          "fontSize": "17px",
+          "ownText": true,
+          "leading": "30.6px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "details",
+          "cls": "border-b",
+          "text": "Can I be convicted of CSC in Michigan based solely on someone's accusation witho",
+          "color": "rgb(6, 21, 50)",
+          "border": "1px solid rgb(230, 226, 217)",
+          "fontSize": "16px",
+          "ownText": false,
+          "leading": "24px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "p",
+          "text": "MCL 750.520h provides that the testimony of an alleged victim does not need to b",
+          "color": "rgb(69, 79, 94)",
+          "fontSize": "17px",
+          "ownText": true,
+          "leading": "30.6px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "details",
+          "cls": "border-b",
+          "text": "If I'm being investigated but haven't yet been charged, do I need an attorney?Ye",
+          "color": "rgb(6, 21, 50)",
+          "border": "1px solid rgb(230, 226, 217)",
+          "fontSize": "16px",
+          "ownText": false,
+          "leading": "24px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "p",
+          "text": "Yes, absolutely. The pre-charge investigation phase can be critical, and having ",
+          "color": "rgb(69, 79, 94)",
+          "fontSize": "17px",
+          "ownText": true,
+          "leading": "30.6px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "details",
+          "cls": "border-b",
+          "text": "Can my spouse be forced to testify against me in a CSC case?Michigan does recogn",
+          "color": "rgb(6, 21, 50)",
+          "border": "1px solid rgb(230, 226, 217)",
+          "fontSize": "16px",
+          "ownText": false,
+          "leading": "24px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "p",
+          "text": "Michigan does recognize spousal privilege, but it has limitations. Generally, sp",
+          "color": "rgb(69, 79, 94)",
+          "fontSize": "17px",
+          "ownText": true,
+          "leading": "30.6px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "details",
+          "cls": "border-b",
+          "text": "How will CSC charges affect my professional license?CSC charges and convictions ",
+          "color": "rgb(6, 21, 50)",
+          "border": "1px solid rgb(230, 226, 217)",
+          "fontSize": "16px",
+          "ownText": false,
+          "leading": "24px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "p",
+          "text": "CSC charges and convictions can have devastating effects on professional license",
+          "color": "rgb(69, 79, 94)",
+          "fontSize": "17px",
+          "ownText": true,
+          "leading": "30.6px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "details",
+          "cls": "border-b",
+          "text": "What should I do if I'm accused of Criminal Sexual Conduct?If you're accused of ",
+          "color": "rgb(6, 21, 50)",
+          "border": "1px solid rgb(230, 226, 217)",
+          "fontSize": "16px",
+          "ownText": false,
+          "leading": "24px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "p",
+          "text": "If you're accused of CSC, your immediate actions can significantly impact your c",
+          "color": "rgb(69, 79, 94)",
+          "fontSize": "17px",
+          "ownText": true,
+          "leading": "30.6px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "details",
+          "cls": "border-b",
+          "text": "Will I have to register as a sex offender if convicted of CSC in Michigan?Yes, c",
+          "color": "rgb(6, 21, 50)",
+          "border": "1px solid rgb(230, 226, 217)",
+          "fontSize": "16px",
+          "ownText": false,
+          "leading": "24px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "p",
+          "text": "Yes, conviction for any degree of Criminal Sexual Conduct in Michigan requires r",
+          "color": "rgb(69, 79, 94)",
+          "fontSize": "17px",
+          "ownText": true,
+          "leading": "30.6px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "details",
+          "cls": "border-b",
+          "text": "How does Michigan address CSC cases involving intoxicated persons?In Michigan a ",
+          "color": "rgb(6, 21, 50)",
+          "border": "1px solid rgb(230, 226, 217)",
+          "fontSize": "16px",
+          "ownText": false,
+          "leading": "24px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "p",
+          "text": "In Michigan a person who is \"mentally incapacitated\" or rendered “physically hel",
+          "color": "rgb(69, 79, 94)",
+          "fontSize": "17px",
+          "ownText": true,
+          "leading": "30.6px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "details",
+          "cls": "border-b",
+          "text": "What happens if the alleged victim doesn't want to pursue charges?In Michigan, t",
+          "color": "rgb(6, 21, 50)",
+          "border": "1px solid rgb(230, 226, 217)",
+          "fontSize": "16px",
+          "ownText": false,
+          "leading": "24px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "p",
+          "text": "In Michigan, the prosecutor, not the alleged victim, decides whether to pursue c",
+          "color": "rgb(69, 79, 94)",
+          "fontSize": "17px",
+          "ownText": true,
+          "leading": "30.6px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "details",
+          "cls": "border-b",
+          "text": "What are the degrees of Criminal Sexual Conduct in Michigan, and what are the pe",
+          "color": "rgb(6, 21, 50)",
+          "border": "1px solid rgb(230, 226, 217)",
+          "fontSize": "16px",
+          "ownText": false,
+          "leading": "24px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "p",
+          "text": "First Degree CSC (MCL 750.520b): The most serious charge, involving sexual penet",
+          "color": "rgb(69, 79, 94)",
+          "fontSize": "17px",
+          "ownText": true,
+          "leading": "30.6px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "details",
+          "cls": "border-b",
+          "text": "Can text messages, social media, and electronic communications be used as eviden",
+          "color": "rgb(6, 21, 50)",
+          "border": "1px solid rgb(230, 226, 217)",
+          "fontSize": "16px",
+          "ownText": false,
+          "leading": "24px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "p",
+          "text": "Yes, electronic communications are frequently used as evidence in CSC cases. Tex",
+          "color": "rgb(69, 79, 94)",
+          "fontSize": "17px",
+          "ownText": true,
+          "leading": "30.6px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "details",
+          "cls": "border-b",
+          "text": "What role does DNA evidence play in CSC cases?DNA evidence can be powerful but i",
+          "color": "rgb(6, 21, 50)",
+          "border": "1px solid rgb(230, 226, 217)",
+          "fontSize": "16px",
+          "ownText": false,
+          "leading": "24px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "p",
+          "text": "DNA evidence can be powerful but is not conclusive proof of criminal conduct. Th",
+          "color": "rgb(69, 79, 94)",
+          "fontSize": "17px",
+          "ownText": true,
+          "leading": "30.6px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "details",
+          "cls": "border-b",
+          "text": "Are CSC cases involving minors handled differently?CSC cases involving minors in",
+          "color": "rgb(6, 21, 50)",
+          "border": "1px solid rgb(230, 226, 217)",
+          "fontSize": "16px",
+          "ownText": false,
+          "leading": "24px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "p",
+          "text": "CSC cases involving minors include additional complexities such as mandatory rep",
+          "color": "rgb(69, 79, 94)",
+          "fontSize": "17px",
+          "ownText": true,
+          "leading": "30.6px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "details",
+          "cls": "border-b",
+          "text": "Are there alternatives to trial for CSC cases?While CSC charges are serious, not",
+          "color": "rgb(6, 21, 50)",
+          "border": "1px solid rgb(230, 226, 217)",
+          "fontSize": "16px",
+          "ownText": false,
+          "leading": "24px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "p",
+          "text": "While CSC charges are serious, not every case goes to trial. Alternatives may in",
+          "color": "rgb(69, 79, 94)",
+          "fontSize": "17px",
+          "ownText": true,
+          "leading": "30.6px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "details",
+          "cls": "border-b",
+          "text": "What is the sex offender registry?A public database where those convicted of qua",
+          "color": "rgb(6, 21, 50)",
+          "border": "1px solid rgb(230, 226, 217)",
+          "fontSize": "16px",
+          "ownText": false,
+          "leading": "24px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "p",
+          "text": "A public database where those convicted of qualifying offenses must register for",
+          "color": "rgb(69, 79, 94)",
+          "fontSize": "17px",
+          "ownText": true,
+          "leading": "30.6px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "details",
+          "cls": "border-b",
+          "text": "Is criminal sexual conduct 4th degree a felony?Fourth Degree CSC (MCL 750.520e) ",
+          "color": "rgb(6, 21, 50)",
+          "border": "1px solid rgb(230, 226, 217)",
+          "fontSize": "16px",
+          "ownText": false,
+          "leading": "24px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "p",
+          "text": "Fourth Degree CSC (MCL 750.520e) is a “high court” misdemeanor, meaning it carri",
+          "color": "rgb(69, 79, 94)",
+          "fontSize": "17px",
+          "ownText": true,
+          "leading": "30.6px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "details",
+          "cls": "border-b",
+          "text": "Can I be charged with multiple counts of CSC for one incident?Yes, Michigan pros",
+          "color": "rgb(6, 21, 50)",
+          "border": "1px solid rgb(230, 226, 217)",
+          "fontSize": "16px",
+          "ownText": false,
+          "leading": "24px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "p",
+          "text": "Yes, Michigan prosecutors often file multiple charges arising from a single inci",
+          "color": "rgb(69, 79, 94)",
+          "fontSize": "17px",
+          "ownText": true,
+          "leading": "30.6px",
+          "fontFamily": "Source Sans 3"
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "background": "rgb(11, 31, 66)",
+      "elements": [
+        {
+          "tag": "p",
+          "cls": "text-[13.5px]",
+          "text": "Years defending clients in Southeast Michigan",
+          "color": "rgb(195, 204, 218)",
+          "fontSize": "14px",
+          "fontWeight": "500",
+          "ownText": true,
+          "leading": "19.25px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "div",
+          "cls": "text-center",
+          "text": "24/7Available for urgent criminal matters",
+          "color": "rgb(255, 255, 255)",
+          "border": "1px solid oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+          "fontSize": "16px",
+          "ownText": false,
+          "leading": "24px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "p",
+          "cls": "text-[13.5px]",
+          "text": "Available for urgent criminal matters",
+          "color": "rgb(195, 204, 218)",
+          "fontSize": "14px",
+          "fontWeight": "500",
+          "ownText": true,
+          "leading": "19.25px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "div",
+          "cls": "text-center",
+          "text": "2001Listed in Best Lawyers in America® since",
+          "color": "rgb(255, 255, 255)",
+          "border": "1px solid oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+          "fontSize": "16px",
+          "ownText": false,
+          "leading": "24px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "p",
+          "cls": "text-[13.5px]",
+          "text": "Listed in Best Lawyers in America® since",
+          "color": "rgb(195, 204, 218)",
+          "fontSize": "14px",
+          "fontWeight": "500",
+          "ownText": true,
+          "leading": "19.25px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "div",
+          "cls": "text-center",
+          "text": "5.0Google rating across 200 client reviews",
+          "color": "rgb(255, 255, 255)",
+          "border": "1px solid oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+          "fontSize": "16px",
+          "ownText": false,
+          "leading": "24px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "p",
+          "cls": "text-[13.5px]",
+          "text": "Google rating across 200 client reviews",
+          "color": "rgb(195, 204, 218)",
+          "fontSize": "14px",
+          "fontWeight": "500",
+          "ownText": true,
+          "leading": "19.25px",
+          "fontFamily": "Source Sans 3"
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "heading": "Contact us for a Free Confidential Consultation",
+      "background": "rgb(6, 22, 51)",
+      "elements": [
+        {
+          "tag": "span",
+          "cls": "w-[28px]",
+          "color": "rgb(201, 168, 64)",
+          "backgroundColor": "rgb(201, 168, 64)",
+          "fontSize": "12px",
+          "fontWeight": "700",
+          "lineWidth": 28,
+          "lineHeight": 2
+        },
+        {
+          "tag": "span",
+          "text": "CONFIDENTIAL CONSULTATION",
+          "color": "rgb(201, 168, 64)",
+          "fontSize": "12px",
+          "fontWeight": "700",
+          "ownText": true,
+          "leading": "18px",
+          "tracking": "1.8px",
+          "fontFamily": "Source Sans 3",
+          "textTransform": "uppercase"
+        },
+        {
+          "tag": "h2",
+          "cls": "font-heading",
+          "text": "Contact us for a Free Confidential Consultation",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "44px",
+          "fontWeight": "900",
+          "ownText": true,
+          "leading": "50.16px",
+          "tracking": "-0.53px",
+          "fontFamily": "Merriweather",
+          "textTransform": "none"
+        },
+        {
+          "tag": "p",
+          "cls": "text-[17px]",
+          "text": "Located in Ann Arbor, Michigan, the Law Offices of Joseph A. Simon handles all c",
+          "color": "rgb(195, 204, 218)",
+          "fontSize": "18.08px",
+          "ownText": true,
+          "leading": "30.736px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "a",
+          "cls": "underline",
+          "text": "734-887-6200",
+          "color": "rgb(195, 204, 218)",
+          "fontSize": "18.08px",
+          "ownText": true,
+          "leading": "30.736px",
+          "fontFamily": "Source Sans 3",
+          "textTransform": "none"
+        },
+        {
+          "tag": "a",
+          "cls": "underline",
+          "text": "joe@simoncriminaldefense.com",
+          "color": "rgb(195, 204, 218)",
+          "fontSize": "18.08px",
+          "ownText": true,
+          "leading": "30.736px",
+          "fontFamily": "Source Sans 3",
+          "textTransform": "none"
+        },
+        {
+          "tag": "div",
+          "cls": "w-10",
+          "color": "rgb(201, 168, 64)",
+          "backgroundColor": "oklab(0.999994 0.0000455678 0.0000200868 / 0.05)",
+          "border": "1px solid oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+          "borderRadius": "4px",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "svg",
+          "color": "rgb(201, 168, 64)",
+          "fill": "rgb(201, 168, 64)",
+          "width": 20,
+          "height": 20,
+          "viewBox": "0 0 24 24",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "a",
+          "cls": "text-[18px]",
+          "text": "(734) 887-6200",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "18px",
+          "fontWeight": "700",
+          "ownText": true,
+          "leading": "27px",
+          "fontFamily": "Source Sans 3",
+          "textTransform": "none"
+        },
+        {
+          "tag": "p",
+          "cls": "text-[15.5px]",
+          "text": "1310 South Main Street, Suite 11Ann Arbor, MI 48104",
+          "color": "rgb(195, 204, 218)",
+          "fontSize": "15.5px",
+          "ownText": true,
+          "leading": "21.3125px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "p",
+          "cls": "text-[15.5px]",
+          "text": "Open 24/7/365",
+          "color": "rgb(195, 204, 218)",
+          "fontSize": "15.5px",
+          "ownText": true,
+          "leading": "21.3125px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "div",
+          "cls": "flex",
+          "text": "Free Confidential Consultation",
+          "color": "rgb(152, 166, 187)",
+          "border": "1px solid oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+          "fontSize": "14px",
+          "ownText": false,
+          "leading": "21px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "span",
+          "text": "Free Confidential Consultation",
+          "color": "rgb(152, 166, 187)",
+          "fontSize": "14px",
+          "ownText": true,
+          "leading": "21px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "div",
+          "cls": "bg-[#0B1F42]",
+          "text": "Request a confidential consultationContact us to request a free, confidential co",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(11, 31, 66)",
+          "border": "1px solid oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+          "borderRadius": "10px",
+          "fontSize": "16px",
+          "ownText": false,
+          "leading": "24px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "h3",
+          "cls": "font-heading",
+          "text": "Request a confidential consultation",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "24px",
+          "fontWeight": "900",
+          "ownText": true,
+          "leading": "36px",
+          "fontFamily": "Merriweather",
+          "textTransform": "none"
+        },
+        {
+          "tag": "p",
+          "cls": "text-[14px]",
+          "text": "Contact us to request a free, confidential consultation.",
+          "color": "rgb(195, 204, 218)",
+          "fontSize": "14px",
+          "ownText": true,
+          "leading": "21px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "input",
+          "cls": "w-full",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "oklab(0.999994 0.0000455678 0.0000200868 / 0.043)",
+          "border": "1px solid oklab(0.999994 0.0000455678 0.0000200868 / 0.16)",
+          "borderRadius": "4px",
+          "fontSize": "15.36px"
+        },
+        {
+          "tag": "select",
+          "cls": "w-full",
+          "text": "Select a charge typeDUI / OWIDrug CrimeAssault / BatteryDomestic ViolenceSex Cri",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(11, 31, 66)",
+          "border": "1px solid oklab(0.999994 0.0000455678 0.0000200868 / 0.16)",
+          "borderRadius": "4px",
+          "fontSize": "15.36px",
+          "ownText": false,
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "textarea",
+          "cls": "w-full",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "oklab(0.999994 0.0000455678 0.0000200868 / 0.043)",
+          "border": "1px solid oklab(0.999994 0.0000455678 0.0000200868 / 0.16)",
+          "borderRadius": "4px",
+          "fontSize": "15.36px"
+        },
+        {
+          "tag": "button",
+          "cls": "w-full",
+          "text": "Send My Case Details",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(115, 37, 33)",
+          "borderRadius": "3px",
+          "fontSize": "15.52px",
+          "fontWeight": "600",
+          "ownText": true,
+          "leading": "23.28px",
+          "fontFamily": "Source Sans 3",
+          "textTransform": "none"
+        },
+        {
+          "tag": "p",
+          "cls": "text-[12px]",
+          "text": "Free Confidential Consultation",
+          "color": "rgb(152, 166, 187)",
+          "fontSize": "12px",
+          "ownText": false,
+          "leading": "18px",
+          "fontFamily": "Source Sans 3"
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "heading": "Site footer (port into Footer.astro)",
+      "background": "rgb(4, 16, 31)",
+      "elements": [
+        {
+          "tag": "span",
+          "cls": "w-[12px]",
+          "color": "rgb(201, 168, 64)",
+          "backgroundColor": "rgb(201, 168, 64)",
+          "fontSize": "10px",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "span",
+          "text": "LAW OFFICES OF",
+          "color": "rgb(201, 168, 64)",
+          "fontSize": "10px",
+          "fontWeight": "600",
+          "ownText": true,
+          "leading": "12.5px",
+          "tracking": "1.8px",
+          "fontFamily": "Source Sans 3",
+          "textTransform": "uppercase"
+        },
+        {
+          "tag": "span",
+          "cls": "font-heading",
+          "text": "Joseph A. Simon",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "20px",
+          "fontWeight": "700",
+          "ownText": true,
+          "leading": "25px",
+          "fontFamily": "Merriweather"
+        },
+        {
+          "tag": "p",
+          "cls": "text-[14px]",
+          "text": "Criminal defense is all we do. Defending clients across Washtenaw County and thr",
+          "color": "rgb(152, 166, 187)",
+          "fontSize": "14px",
+          "ownText": true,
+          "leading": "22.75px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "a",
+          "cls": "w-9",
+          "color": "rgb(195, 204, 218)",
+          "backgroundColor": "oklab(0.999994 0.0000455678 0.0000200868 / 0.04)",
+          "border": "1px solid oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+          "borderRadius": "4px",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "svg",
+          "color": "rgb(195, 204, 218)",
+          "fill": "rgb(195, 204, 218)",
+          "width": 16,
+          "height": 16,
+          "viewBox": "0 0 24 24",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "h4",
+          "cls": "font-bold",
+          "text": "PRACTICE AREAS",
+          "color": "rgb(201, 168, 64)",
+          "fontSize": "12px",
+          "fontWeight": "700",
+          "ownText": true,
+          "leading": "18px",
+          "tracking": "1.8px",
+          "fontFamily": "Merriweather",
+          "textTransform": "uppercase"
+        },
+        {
+          "tag": "li",
+          "text": "Drug Crimes",
+          "color": "rgb(152, 166, 187)",
+          "fontSize": "14.5px",
+          "ownText": false,
+          "leading": "21.75px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "a",
+          "cls": "text-[#98A6BB]",
+          "text": "Drug Crimes",
+          "color": "rgb(152, 166, 187)",
+          "fontSize": "14.5px",
+          "ownText": true,
+          "leading": "21.75px",
+          "fontFamily": "Source Sans 3",
+          "textTransform": "none"
+        },
+        {
+          "tag": "li",
+          "text": "Assault & Battery",
+          "color": "rgb(152, 166, 187)",
+          "fontSize": "14.5px",
+          "ownText": false,
+          "leading": "21.75px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "a",
+          "cls": "text-[#98A6BB]",
+          "text": "Assault & Battery",
+          "color": "rgb(152, 166, 187)",
+          "fontSize": "14.5px",
+          "ownText": true,
+          "leading": "21.75px",
+          "fontFamily": "Source Sans 3",
+          "textTransform": "none"
+        },
+        {
+          "tag": "li",
+          "text": "Domestic Violence",
+          "color": "rgb(152, 166, 187)",
+          "fontSize": "14.5px",
+          "ownText": false,
+          "leading": "21.75px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "a",
+          "cls": "text-[#98A6BB]",
+          "text": "Domestic Violence",
+          "color": "rgb(152, 166, 187)",
+          "fontSize": "14.5px",
+          "ownText": true,
+          "leading": "21.75px",
+          "fontFamily": "Source Sans 3",
+          "textTransform": "none"
+        },
+        {
+          "tag": "li",
+          "text": "Criminal Sexual Conduct",
+          "color": "rgb(152, 166, 187)",
+          "fontSize": "14.5px",
+          "ownText": false,
+          "leading": "21.75px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "a",
+          "cls": "text-[#98A6BB]",
+          "text": "Criminal Sexual Conduct",
+          "color": "rgb(152, 166, 187)",
+          "fontSize": "14.5px",
+          "ownText": true,
+          "leading": "21.75px",
+          "fontFamily": "Source Sans 3",
+          "textTransform": "none"
+        },
+        {
+          "tag": "li",
+          "text": "Expungements",
+          "color": "rgb(152, 166, 187)",
+          "fontSize": "14.5px",
+          "ownText": false,
+          "leading": "21.75px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "a",
+          "cls": "text-[#98A6BB]",
+          "text": "Expungements",
+          "color": "rgb(152, 166, 187)",
+          "fontSize": "14.5px",
+          "ownText": true,
+          "leading": "21.75px",
+          "fontFamily": "Source Sans 3",
+          "textTransform": "none"
+        },
+        {
+          "tag": "li",
+          "text": "College & Campus Crimes",
+          "color": "rgb(152, 166, 187)",
+          "fontSize": "14.5px",
+          "ownText": false,
+          "leading": "21.75px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "a",
+          "cls": "text-[#98A6BB]",
+          "text": "College & Campus Crimes",
+          "color": "rgb(152, 166, 187)",
+          "fontSize": "14.5px",
+          "ownText": true,
+          "leading": "21.75px",
+          "fontFamily": "Source Sans 3",
+          "textTransform": "none"
+        },
+        {
+          "tag": "li",
+          "text": "Theft Offenses",
+          "color": "rgb(152, 166, 187)",
+          "fontSize": "14.5px",
+          "ownText": false,
+          "leading": "21.75px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "a",
+          "cls": "text-[#98A6BB]",
+          "text": "Theft Offenses",
+          "color": "rgb(152, 166, 187)",
+          "fontSize": "14.5px",
+          "ownText": true,
+          "leading": "21.75px",
+          "fontFamily": "Source Sans 3",
+          "textTransform": "none"
+        },
+        {
+          "tag": "li",
+          "text": "Police Investigations",
+          "color": "rgb(152, 166, 187)",
+          "fontSize": "14.5px",
+          "ownText": false,
+          "leading": "21.75px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "a",
+          "cls": "text-[#98A6BB]",
+          "text": "Police Investigations",
+          "color": "rgb(152, 166, 187)",
+          "fontSize": "14.5px",
+          "ownText": true,
+          "leading": "21.75px",
+          "fontFamily": "Source Sans 3",
+          "textTransform": "none"
+        },
+        {
+          "tag": "h4",
+          "cls": "font-bold",
+          "text": "FIRM",
+          "color": "rgb(201, 168, 64)",
+          "fontSize": "12px",
+          "fontWeight": "700",
+          "ownText": true,
+          "leading": "18px",
+          "tracking": "1.8px",
+          "fontFamily": "Merriweather",
+          "textTransform": "uppercase"
+        },
+        {
+          "tag": "li",
+          "text": "Case Results",
+          "color": "rgb(152, 166, 187)",
+          "fontSize": "14.5px",
+          "ownText": false,
+          "leading": "21.75px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "a",
+          "cls": "text-[#98A6BB]",
+          "text": "Case Results",
+          "color": "rgb(152, 166, 187)",
+          "fontSize": "14.5px",
+          "ownText": true,
+          "leading": "21.75px",
+          "fontFamily": "Source Sans 3",
+          "textTransform": "none"
+        },
+        {
+          "tag": "li",
+          "text": "Reviews",
+          "color": "rgb(152, 166, 187)",
+          "fontSize": "14.5px",
+          "ownText": false,
+          "leading": "21.75px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "a",
+          "cls": "text-[#98A6BB]",
+          "text": "Reviews",
+          "color": "rgb(152, 166, 187)",
+          "fontSize": "14.5px",
+          "ownText": true,
+          "leading": "21.75px",
+          "fontFamily": "Source Sans 3",
+          "textTransform": "none"
+        },
+        {
+          "tag": "li",
+          "text": "Posts",
+          "color": "rgb(152, 166, 187)",
+          "fontSize": "14.5px",
+          "ownText": false,
+          "leading": "21.75px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "a",
+          "cls": "text-[#98A6BB]",
+          "text": "Posts",
+          "color": "rgb(152, 166, 187)",
+          "fontSize": "14.5px",
+          "ownText": true,
+          "leading": "21.75px",
+          "fontFamily": "Source Sans 3",
+          "textTransform": "none"
+        },
+        {
+          "tag": "li",
+          "text": "In the News",
+          "color": "rgb(152, 166, 187)",
+          "fontSize": "14.5px",
+          "ownText": false,
+          "leading": "21.75px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "a",
+          "cls": "text-[#98A6BB]",
+          "text": "In the News",
+          "color": "rgb(152, 166, 187)",
+          "fontSize": "14.5px",
+          "ownText": true,
+          "leading": "21.75px",
+          "fontFamily": "Source Sans 3",
+          "textTransform": "none"
+        },
+        {
+          "tag": "li",
+          "text": "FAQs",
+          "color": "rgb(152, 166, 187)",
+          "fontSize": "14.5px",
+          "ownText": false,
+          "leading": "21.75px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "a",
+          "cls": "text-[#98A6BB]",
+          "text": "FAQs",
+          "color": "rgb(152, 166, 187)",
+          "fontSize": "14.5px",
+          "ownText": true,
+          "leading": "21.75px",
+          "fontFamily": "Source Sans 3",
+          "textTransform": "none"
+        },
+        {
+          "tag": "li",
+          "text": "Service Areas",
+          "color": "rgb(152, 166, 187)",
+          "fontSize": "14.5px",
+          "ownText": false,
+          "leading": "21.75px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "a",
+          "cls": "text-[#98A6BB]",
+          "text": "Service Areas",
+          "color": "rgb(152, 166, 187)",
+          "fontSize": "14.5px",
+          "ownText": true,
+          "leading": "21.75px",
+          "fontFamily": "Source Sans 3",
+          "textTransform": "none"
+        },
+        {
+          "tag": "li",
+          "text": "Consultation",
+          "color": "rgb(152, 166, 187)",
+          "fontSize": "14.5px",
+          "ownText": false,
+          "leading": "21.75px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "a",
+          "cls": "text-[#98A6BB]",
+          "text": "Consultation",
+          "color": "rgb(152, 166, 187)",
+          "fontSize": "14.5px",
+          "ownText": true,
+          "leading": "21.75px",
+          "fontFamily": "Source Sans 3",
+          "textTransform": "none"
+        },
+        {
+          "tag": "h4",
+          "cls": "font-bold",
+          "text": "CONTACT & OFFICE",
+          "color": "rgb(201, 168, 64)",
+          "fontSize": "12px",
+          "fontWeight": "700",
+          "ownText": true,
+          "leading": "18px",
+          "tracking": "1.8px",
+          "fontFamily": "Merriweather",
+          "textTransform": "uppercase"
+        },
+        {
+          "tag": "p",
+          "cls": "text-[14.5px]",
+          "text": "1310 South Main Street, Suite 11Ann Arbor, MI 48104",
+          "color": "rgb(152, 166, 187)",
+          "fontSize": "14.5px",
+          "ownText": true,
+          "leading": "19.9375px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "p",
+          "cls": "mb-2",
+          "text": "(734) 887-6200",
+          "color": "rgb(152, 166, 187)",
+          "fontSize": "16px",
+          "ownText": false,
+          "leading": "24px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "a",
+          "cls": "text-[16px]",
+          "text": "(734) 887-6200",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "16px",
+          "fontWeight": "700",
+          "ownText": true,
+          "leading": "24px",
+          "fontFamily": "Source Sans 3",
+          "textTransform": "none"
+        },
+        {
+          "tag": "p",
+          "cls": "text-[13.5px]",
+          "text": "Available 24/7 for urgent matters",
+          "color": "rgb(152, 166, 187)",
+          "fontSize": "13.5px",
+          "ownText": true,
+          "leading": "20.25px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "a",
+          "cls": "inline-block",
+          "text": "Confidential Consultation",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(115, 37, 33)",
+          "borderRadius": "3px",
+          "fontSize": "14px",
+          "fontWeight": "600",
+          "ownText": true,
+          "leading": "21px",
+          "fontFamily": "Source Sans 3",
+          "textTransform": "none"
+        },
+        {
+          "tag": "div",
+          "cls": "border-t",
+          "text": "© 2026 Law Offices of Joseph A. Simon, PLLC. All Rights Reserved.Attorney advert",
+          "color": "rgb(152, 166, 187)",
+          "border": "1px solid oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+          "fontSize": "16px",
+          "ownText": false,
+          "leading": "24px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "p",
+          "cls": "text-[13.12px]",
+          "text": "© 2026 Law Offices of Joseph A. Simon, PLLC. All Rights Reserved.",
+          "color": "rgb(152, 166, 187)",
+          "fontSize": "13.12px",
+          "ownText": true,
+          "leading": "19.68px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "p",
+          "cls": "text-[12px]",
+          "text": "Attorney advertising. Prior results do not guarantee similar outcomes. AV Preemi",
+          "color": "rgb(114, 124, 139)",
+          "fontSize": "12px",
+          "ownText": true,
+          "leading": "19.2px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "p",
+          "cls": "text-[12px]",
+          "text": "Web Design and SEO bytwalkerco",
+          "color": "rgb(152, 166, 187)",
+          "fontSize": "12px",
+          "ownText": false,
+          "leading": "18px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "span",
+          "text": "Web Design and SEO by",
+          "color": "rgb(152, 166, 187)",
+          "fontSize": "12px",
+          "ownText": true,
+          "leading": "18px",
+          "fontFamily": "Source Sans 3"
+        },
+        {
+          "tag": "a",
+          "cls": "text-[#C9A840]",
+          "text": "twalkerco",
+          "color": "rgb(201, 168, 64)",
+          "fontSize": "12px",
+          "ownText": true,
+          "leading": "18px",
+          "fontFamily": "Source Sans 3",
+          "textTransform": "none"
+        }
+      ]
+    }
+  ],
+  "imageTreatments": [],
+  "renderedSurfaces": [
+    {
+      "selector": "[id=\"home\"] > div:nth-of-type(1) > img:nth-of-type(1)",
+      "mediaKind": "img",
+      "image": "https://pagesmith-cdn.com/e19d25ad/images/hero-court-1-1536.webp",
+      "baseColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "backgroundSize": "auto",
+      "backgroundPosition": "0% 0%",
+      "layers": [
+        {
+          "target": "[id=\"home\"] > div:nth-of-type(1) > div:nth-of-type(1)",
+          "relation": "positioned-child",
+          "bounds": {
+            "left": 0,
+            "top": 0,
+            "width": 1,
+            "height": 1
+          },
+          "paint": {
+            "color": "rgba(0, 0, 0, 0)",
+            "image": "linear-gradient(100deg, rgba(4, 16, 38, 0.97) 0%, rgba(5, 19, 45, 0.9) 46%, rgba(8, 26, 60, 0.62) 100%)",
+            "opacity": 1,
+            "blendMode": "normal",
+            "zIndex": "auto",
+            "box": {
+              "width": "1905px",
+              "height": "641.312px",
+              "top": "0px",
+              "right": "0px",
+              "bottom": "0px",
+              "left": "0px",
+              "position": "absolute",
+              "transform": "none"
+            }
+          }
+        }
+      ],
+      "observation": "paint-layers-observed"
+    }
+  ],
+  "floatingOverlays": [],
+  "positionedOverlays": [],
+  "captureViewport": 1920,
+  "hiddenImages": [],
+  "elementorStylesheets": []
+}

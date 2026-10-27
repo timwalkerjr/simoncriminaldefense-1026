@@ -1,0 +1,234 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import 'altcha';
+
+const pageTitle = "Career of Joseph A. Simon, Criminal Defense Attorney";
+const pageDescription = "Joe has over 30 years of of excellence in criminal defense in Washtenaw and surrounding counties. He was named a top 10 criminal defense attorney in Michigan.";
+
+const clippings = [
+  {
+    src: "https://pagesmith-cdn.com/ee60f2da/images/1-41291c-1536.webp",
+    alt: "best domestic violence attorney",
+    caption: "\"Defense attorney Joseph A. Simon gestures during his opening statement\"",
+  },
+  {
+    src: "https://pagesmith-cdn.com/ee60f2da/images/2-ed19b6-906.webp",
+    alt: "best felony assault attorney washtenaw",
+    caption: "\"Simon was the first washtenaw attorney to demand dismissal...\"",
+  },
+  {
+    src: "https://pagesmith-cdn.com/ee60f2da/images/3-cf28ea-1536.webp",
+    alt: "ann arbor domestic violence attorney",
+    caption: "",
+  },
+  {
+    src: "https://pagesmith-cdn.com/ee60f2da/images/4-f505f1-1536.webp",
+    alt: "ann arbor murder defense attorney",
+    caption: "\"Simon argues there is not enough evidence to convict...\"",
+  },
+  {
+    src: "https://pagesmith-cdn.com/ee60f2da/images/5-3598fa-1536.webp",
+    alt: "ann arbor murder defense attorney",
+    caption: "\"These public defenders relish renegade label\"",
+  },
+  {
+    src: "https://pagesmith-cdn.com/ee60f2da/images/6-41254f-1536.webp",
+    alt: "ann arbor theft defense attorney",
+    caption: "\"We'll be looking at all defenses available to us\"",
+  },
+  {
+    src: "https://pagesmith-cdn.com/ee60f2da/images/7-998b69-1536.webp",
+    alt: "ann arbor murder defense attorney",
+    caption: "\"Young, irreverent, and a little too pushy\"",
+  },
+];
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} headerVariant="transparent">
+  <main data-ps="src/pages/career.astro:a2yz6e">
+    <section class="bg-[#061633] text-white pt-[140px] pb-16" data-ps="src/pages/career.astro:a0dr9j">
+      <div class="max-w-[1280px] mx-auto px-6" data-ps="src/pages/career.astro:wy4kj">
+        <h1 class="text-[36px] sm:text-[52px] font-black font-heading" data-ps="src/pages/career.astro:pj3s0k">Joseph A. Simon's Career</h1>
+      </div>
+    </section>
+
+    <section class="bg-[#F7F5F1] py-16" data-ps="src/pages/career.astro:a0dr9k">
+      <div class="max-w-[1280px] mx-auto px-6" data-ps="src/pages/career.astro:wy4l5">
+        <div class="prose prose-lg max-w-[1000px] prose-a:text-[#732521]" data-ps="src/pages/career.astro:wy4l6">
+          <p data-ps="src/pages/career.astro:bxpubo">Through a career spanning more than 30 years, <strong><em>few lawyers can match Mr. Simon's experience, reputation and results.</em></strong> He has <a href="/courtroom-victories" data-ps="src/pages/career.astro:4trxmo">tried hundreds of criminal cases</a> throughout the state of Michigan establishing a reputation for excellence and providing vigorous and successful defenses to individuals throughout Washtenaw, Wayne, Jackson, Lenawee and Livingston counties in a wide range of criminal defense cases, including those involving OWI and DUI charges, domestic assault, assault &amp; battery, theft offenses, traffic offenses, homicide allegations and alleged drug crimes. <a href="#feature-section" data-ps="src/pages/career.astro:4trxmn"><strong><em>Scroll down</em></strong></a><strong> </strong>to view some of Mr. Simon's career in the media.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="feature-section" class="py-16 bg-white" data-ps="src/pages/career.astro:a0dr9l">
+      <div class="max-w-[1280px] mx-auto px-6" data-ps="src/pages/career.astro:wy4l7">
+        <h2 class="text-[#061633] text-[34px] font-black font-heading mb-10" data-ps="src/pages/career.astro:auousy">A More Than 30-Year Career in Criminal Defense</h2>
+        <div class="grid md:grid-cols-2 gap-8" data-ps="src/pages/career.astro:wy4l8">
+          {clippings.map((item, __psIdx) => (
+            <figure class="border border-[#E6E2D9] p-5 rounded-[4px]">
+              <a href={item.src} target="_blank" rel="noopener" data-ps={`src/pages/career.astro:4trxmm-${__psIdx}`}>
+                <img src={item.src} alt={item.alt} loading="lazy" class="w-full h-[350px] object-contain" data-ps={`src/pages/career.astro:1lazr3-${__psIdx}`} />
+              </a>
+              {item.caption && (
+                <figcaption class="text-[#454F5E] text-[16px] mt-4">{item.caption}</figcaption>
+              )}
+            </figure>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="bg-[#061633] text-white py-[90px] lg:py-[100px] border-t border-white/10" data-ps="src/pages/career.astro:a0dr9m">
+      <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8" data-ps="src/pages/career.astro:wy4l9">
+        <div class="grid grid-cols-1 lg:grid-cols-[1fr_1.15fr] gap-12 lg:gap-16 items-start" data-ps="src/pages/career.astro:wy4la">
+          <div data-ps="src/pages/career.astro:wy4lb">
+            <div class="flex items-center gap-3 text-[12px] font-bold uppercase tracking-[1.8px] text-[#C9A840] mb-3" data-ps="src/pages/career.astro:wy4lc">
+              <span class="w-[28px] h-[2px] bg-[#C9A840] inline-block" data-ps="src/pages/career.astro:x5halp"></span>
+              <span data-ps="src/pages/career.astro:x5halo">CONFIDENTIAL CONSULTATION</span>
+            </div>
+            <h2 class="font-heading font-black text-white leading-[1.14] tracking-[-0.53px] mb-4 text-[34px] sm:text-[44px]" data-ps="src/pages/career.astro:auousz">Contact us for a Free Confidential Consultation</h2>
+            <p class="text-[17px] sm:text-[18.08px] text-[#C3CCDA] leading-[1.7] mb-8" data-ps="src/pages/career.astro:bxpubn">Located in Ann Arbor, Michigan, the Law Offices of Joseph A. Simon handles all criminal defense matters primarily in Washtenaw County but also service all surrounding counties. Contact us to receive a free, confidential consultation with one of our attorneys at <a href="tel:+17348876200" class="underline" data-ps="src/pages/career.astro:4trxml">734-887-6200</a> or email Mr. Simon at <a href="mailto:joe@simoncriminaldefense.com" class="underline break-words" data-ps="src/pages/career.astro:4trxmk">joe@simoncriminaldefense.com</a>.</p>
+
+            <div class="space-y-6 mb-8" data-ps="src/pages/career.astro:wy4ld">
+              <div class="flex items-start gap-4" data-ps="src/pages/career.astro:wy4le">
+                <div class="w-10 h-10 rounded-[4px] bg-white/[0.05] border border-white/10 flex items-center justify-center text-[#C9A840] shrink-0 mt-1" data-ps="src/pages/career.astro:wy4m0">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"></path></svg>
+                </div>
+                <div data-ps="src/pages/career.astro:wy4m1">
+                  <div class="text-[11px] uppercase tracking-wider text-[#C9A840] font-bold" data-ps="src/pages/career.astro:wy4m2">CALL ANYTIME</div>
+                  <a href="tel:+17348876200" class="text-[18px] font-bold text-white hover:text-[#DDC582] transition-colors no-underline" data-ps="src/pages/career.astro:4trxmj">(734) 887-6200</a>
+                </div>
+              </div>
+              <div class="flex items-start gap-4" data-ps="src/pages/career.astro:wy4m3">
+                <div class="w-10 h-10 rounded-[4px] bg-white/[0.05] border border-white/10 flex items-center justify-center text-[#C9A840] shrink-0 mt-1" data-ps="src/pages/career.astro:wy4m4">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></svg>
+                </div>
+                <div data-ps="src/pages/career.astro:wy4m5">
+                  <div class="text-[11px] uppercase tracking-wider text-[#C9A840] font-bold" data-ps="src/pages/career.astro:wy4m6">OFFICE</div>
+                  <p class="text-[15.5px] text-[#C3CCDA] leading-snug" data-ps="src/pages/career.astro:bxpubm">1310 South Main Street, Suite 11<br>Ann Arbor, MI 48104</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4" data-ps="src/pages/career.astro:wy4m7">
+                <div class="w-10 h-10 rounded-[4px] bg-white/[0.05] border border-white/10 flex items-center justify-center text-[#C9A840] shrink-0 mt-1" data-ps="src/pages/career.astro:wy4m8">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"></path></svg>
+                </div>
+                <div data-ps="src/pages/career.astro:wy4m9">
+                  <div class="text-[11px] uppercase tracking-wider text-[#C9A840] font-bold" data-ps="src/pages/career.astro:2bjt8n">HOURS</div>
+                  <p class="text-[15.5px] text-[#C3CCDA] leading-snug" data-ps="src/pages/career.astro:bxpubl">Open 24/7/365</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-2 text-[14px] text-[#98A6BB] border-t border-white/10 pt-6" data-ps="src/pages/career.astro:2bjt8o">
+              <svg class="w-4 h-4 text-[#C9A840]" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"></path></svg>
+              <span data-ps="src/pages/career.astro:x5haln">Free Confidential Consultation</span>
+            </div>
+          </div>
+
+          <div class="bg-[#0B1F42] border border-white/10 p-7 sm:p-9 rounded-[10px] shadow-2xl" data-ps="src/pages/career.astro:2bjt8p">
+            <h3 class="font-heading font-black text-[22px] sm:text-[24px] text-white mb-2" data-ps="src/pages/career.astro:3tq2f8">Request a confidential consultation</h3>
+            <p class="text-[14px] text-[#C3CCDA] mb-6" data-ps="src/pages/career.astro:bxpubk">Contact us to request a free, confidential consultation.</p>
+
+            <form id="consultation-form" class="space-y-4">
+              <input type="hidden" name="_formId" value="consultation" />
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4" data-ps="src/pages/career.astro:2bjt8q">
+                <div data-ps="src/pages/career.astro:2bjt8r">
+                  <label for="fullName" class="block text-[13px] font-semibold text-[#C3CCDA] mb-1.5" data-ps="src/pages/career.astro:405oxh">Full Name</label>
+                  <input type="text" id="fullName" name="name" autocomplete="name" required placeholder="John Doe" class="w-full bg-white/[0.043] border border-white/16 rounded-[4px] text-white px-4 py-3 text-[15.36px] placeholder:text-[#98A6BB]/60 focus:outline-none focus:border-[#C9A840] transition" />
+                </div>
+                <div data-ps="src/pages/career.astro:2bjt8s">
+                  <label for="phone" class="block text-[13px] font-semibold text-[#C3CCDA] mb-1.5" data-ps="src/pages/career.astro:405oxg">Phone</label>
+                  <input type="tel" id="phone" name="phone" autocomplete="tel" required placeholder="(734) 000-0000" class="w-full bg-white/[0.043] border border-white/16 rounded-[4px] text-white px-4 py-3 text-[15.36px] placeholder:text-[#98A6BB]/60 focus:outline-none focus:border-[#C9A840] transition" />
+                </div>
+              </div>
+              <div data-ps="src/pages/career.astro:2bjt8t">
+                <label for="email" class="block text-[13px] font-semibold text-[#C3CCDA] mb-1.5" data-ps="src/pages/career.astro:405owu">Email</label>
+                <input type="email" id="email" name="email" autocomplete="email" required placeholder="you@example.com" class="w-full bg-white/[0.043] border border-white/16 rounded-[4px] text-white px-4 py-3 text-[15.36px] placeholder:text-[#98A6BB]/60 focus:outline-none focus:border-[#C9A840] transition" />
+              </div>
+              <div data-ps="src/pages/career.astro:2bjt8u">
+                <label for="chargeType" class="block text-[13px] font-semibold text-[#C3CCDA] mb-1.5" data-ps="src/pages/career.astro:405owt">Type of Charge / Matter</label>
+                <select id="chargeType" name="chargeType" class="w-full bg-[#0B1F42] border border-white/16 rounded-[4px] text-white px-4 py-3 text-[15.36px] focus:outline-none focus:border-[#C9A840] transition">
+                  <option value="">Select a charge type</option>
+                  <option value="DUI / OWI">DUI / OWI</option>
+                  <option value="Drug Crimes">Drug Crime</option>
+                  <option value="Assault / Battery">Assault / Battery</option>
+                  <option value="Domestic Violence">Domestic Violence</option>
+                  <option value="Criminal Sexual Conduct">Sex Crime / CSC</option>
+                  <option value="Home Invasion">Home Invasion</option>
+                  <option value="Computer Crimes">Computer Crime</option>
+                  <option value="College / Campus Crimes">College / Campus Crime</option>
+                  <option value="Expungements">Expungement</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              <div data-ps="src/pages/career.astro:2bjt8v">
+                <label for="situation" class="block text-[13px] font-semibold text-[#C3CCDA] mb-1.5" data-ps="src/pages/career.astro:405ows">Describe Your Situation</label>
+                <textarea id="situation" name="message" rows="3" placeholder="Briefly describe your situation." class="w-full bg-white/[0.043] border border-white/16 rounded-[4px] text-white px-4 py-3 text-[15.36px] placeholder:text-[#98A6BB]/60 focus:outline-none focus:border-[#C9A840] transition resize-none"></textarea>
+              </div>
+
+              <altcha-widget challenge="/psapi-internal-v1/altcha/challenge" display="invisible" auto="onfocus"></altcha-widget>
+
+              <button type="submit" id="submit-btn" class="w-full bg-[#732521] text-white font-semibold text-[15.52px] py-3.5 rounded-[3px] hover:bg-[#5a1c19] transition mt-2 cursor-pointer shadow-lg disabled:opacity-70" data-ps="src/pages/career.astro:xtgo21">Send My Case Details</button>
+              <div id="form-feedback" role="status" aria-live="polite" class="text-center text-[14px] mt-2 hidden" data-ps="src/pages/career.astro:2bjt8w"></div>
+              <p class="text-[12px] text-[#98A6BB] text-center mt-3 flex items-center justify-center gap-1.5" data-ps="src/pages/career.astro:bxpubj">
+                <svg class="w-3.5 h-3.5 text-[#C9A840]" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"></path></svg>
+                <span data-ps="src/pages/career.astro:5syo8o">Free Confidential Consultation</span>
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<script>
+  const form = document.getElementById('consultation-form') as HTMLFormElement | null;
+  const feedback = document.getElementById('form-feedback') as HTMLDivElement | null;
+  const submitBtn = document.getElementById('submit-btn') as HTMLButtonElement | null;
+
+  function showFeedback(message: string, ok: boolean) {
+    if (!feedback) return;
+    feedback.textContent = message;
+    feedback.className = ok
+      ? 'text-center text-[14px] mt-2 text-green-300'
+      : 'text-center text-[14px] mt-2 text-red-300';
+  }
+
+  form?.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    if (!submitBtn) return;
+    const data = new FormData(form);
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+    try {
+      const response = await fetch('/psapi-internal-v1/forms/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          _formId: data.get('_formId'),
+          subject: 'JAS Law website consultation request',
+          name: data.get('name'),
+          phone: data.get('phone'),
+          email: data.get('email'),
+          chargeType: data.get('chargeType'),
+          message: data.get('message'),
+          altcha: data.get('altcha'),
+        }),
+      });
+      const result = await response.json().catch(() => ({}));
+      if (response.ok && result.success) {
+        form.reset();
+        showFeedback('Thank you! Your request has been sent. We will contact you shortly.', true);
+      } else {
+        showFeedback(result.error || 'Your request could not be sent. Please call (734) 887-6200.', false);
+      }
+    } catch {
+      showFeedback('Your request could not be sent. Please call (734) 887-6200.', false);
+    } finally {
+      if (feedback) feedback.classList.remove('hidden');
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Send My Case Details';
+    }
+  });
+</script>

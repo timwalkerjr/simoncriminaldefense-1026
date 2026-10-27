@@ -1,0 +1,107 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+const cases = [
+  { id: '23-0147-sm', charges: 'Domestic Violence', result: 'Charges Dismissed', court: '15th District Court', name: '23-0147-SM' },
+  { id: '22-0510-sm', charges: 'Domestic Violence', result: 'Not Guilty Verdict at Trial', court: '15th District Court', name: '22-0510-SM' },
+  { id: '23f4-0108-fy', charges: 'Carrying a Concealed Weapon', result: 'Charges Dismissed at Probable Cause Conference', court: '22nd Circuit Court', name: '23F4-0108-FY' },
+  { id: '22f5-5118-fy', charges: 'Criminal Sexual Conduct Third Degree', result: 'Charges Dismissed at Preliminary Examination', court: '22nd Circuit Court', name: '22F5-5118-FY' },
+  { id: '23-f1-0063-fy', charges: 'Child Abuse 3rd Degree', result: 'Charges Dismissed at Preliminary Examination', court: '22nd Circuit Court', name: '23-F1-0063-FY' },
+  { id: '22-00802-sm', charges: 'Domestic Violence', result: 'Charges Dismissed', court: '14B District Court', name: '22-00802-SM' },
+  { id: '22-0475-sm', charges: 'Domestic Violence', result: 'Charges Dismissed', court: '15th District Court', name: '22-0475-SM' },
+  { id: '221-1368-sm', charges: 'Domestic Violence', result: 'Charges Dismissed', court: '14A-1 District Court', name: '221-1368-SM' },
+  { id: '221-1124-sm', charges: 'Domestic Violence', result: 'Charges Dismissed', court: '14A-1 District Court', name: '221-1124-SM' },
+  { id: '224-0211-sm', charges: 'Domestic Violence', result: 'Charges Dismissed', court: '14A-4 District Court', name: '224-0211-SM' },
+  { id: '224-0433-sm', charges: 'Domestic Violence', result: 'Charges Dismissed', court: '14A-4 District Court', name: '224-0433-SM' },
+  { id: '224-0261-sm', charges: 'Domestic Violence', result: 'Charges Dismissed', court: '14A-4 District Court', name: '224-0261-SM' },
+  { id: '22-0268-sm', charges: 'Domestic Violence', result: 'Charges Dismissed', court: '15th District Court', name: '22-0268-SM' },
+  { id: '221-0940-sm', charges: 'Domestic Violence', result: 'Charges Dismissed', court: '14A-1 District Court', name: '221-0940-SM' },
+  { id: '22-0412-sm', charges: 'Domestic Violence', result: 'Charges Dismissed', court: '15th District Court', name: '22-0412-SM' },
+  { id: '22-0450-sm', charges: 'Assault and Battery', result: 'Charges Dismissed', court: '15th District Court', name: '22-0450-SM' },
+  { id: '22-2329-sm', charges: 'Domestic Violence', result: 'Charges Dismissed', court: '2A District Court', name: '22-2329-SM' },
+  { id: '224-0410-od', charges: 'Operating While Intoxicated (OWI)', result: 'Charge Reduced to Civil Infraction', court: '14A-4', name: '224-0410-OD' },
+  { id: '22-0099-od', charges: 'Operating While Intoxicated (OWI)', result: 'Charge Reduced to Civil Infraction', court: '15th District Court', name: '22-0099-OD' },
+  { id: '22-0249-sd', charges: 'Operating While Intoxicated (OWI); Possession of Firearm While Intoxicated', result: 'Charges Dismissed Following Defense Motion', court: '15th District Court', name: '22-0249-SD' },
+  { id: '22f4-1007-fy', charges: 'Assault With Intent To Do Great Bodily Harm/Strangulation', result: 'Charges Dismissed at Preliminary Examination', court: '22nd Circuit Court/14A District Court', name: '22F4-1007-FY' },
+  { id: '20-2513-fy', charges: 'Carrying a Concealed Weapon', result: 'Charges Dismissed at Preliminary Examination', court: '2A District Court', name: '20-2513-FY' },
+  { id: '224-0016-sm', charges: 'Domestic Violence', result: 'Not Guilty Verdict at Trial', court: '14A-4 District Court', name: '224-0016-SM' },
+  { id: '213-0337-ot-2', charges: 'Fail to Provide or Render Aide Following Accident', result: 'Charge Dismissed Following Defense Investigation', court: '', name: '213-0337-OT' },
+];
+
+const pages = [
+  { label: '1', href: '/courtroom-victories' },
+  { label: '3', href: '/courtroom-victories/3' },
+  { label: '4', href: '/courtroom-victories/4', current: true },
+  { label: '5', href: '/courtroom-victories/5' },
+  { label: '15', href: '/courtroom-victories/15' },
+];
+
+const pageLinkClass = 'page-link inline-flex items-center justify-center min-w-[40px] h-[40px] px-3 border border-[#E6E2D9] bg-white text-[#061633] text-[14px] font-bold rounded-[3px] hover:border-[#C9A840] transition';
+const pageLinkCurrentClass = 'page-link inline-flex items-center justify-center min-w-[40px] h-[40px] px-3 border border-[#732521] bg-[#732521] text-white text-[14px] font-bold rounded-[3px]';
+---
+
+<style is:global>
+  /* Source header is solid navy on this page; the shared header is transparent by default. */
+  #navbar {
+    background-color: #061633;
+  }
+</style>
+
+<BaseLayout
+  title="Case Results — Page 4 | Law Offices of Joseph A. Simon"
+  description="Real outcomes from cases handled by the Law Offices of Joseph A. Simon. Every case is different, and past results do not guarantee a similar outcome."
+>
+  <main data-ps="src/pages/courtroom-victories/4.astro:vp2jmj">
+    <section id="results" class="bg-[#F7F5F1] text-[#061633] pt-[150px] pb-[90px] lg:pb-[100px] border-t border-[#E6E2D9]" data-ps="src/pages/courtroom-victories/4.astro:rwyisb">
+      <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8" data-ps="src/pages/courtroom-victories/4.astro:t0l3d0">
+        <div class="mb-12" data-ps="src/pages/courtroom-victories/4.astro:t0l3d1">
+          <div class="flex items-center gap-3 text-[12px] font-bold uppercase tracking-[1.8px] text-[#732521] mb-3" data-ps="src/pages/courtroom-victories/4.astro:t0l3d2">
+            <span class="w-[28px] h-[2px] bg-[#C9A840] inline-block" data-ps="src/pages/courtroom-victories/4.astro:bjdq5i"></span>
+            <span data-ps="src/pages/courtroom-victories/4.astro:bjdq5h">COURTROOM RESULTS</span>
+          </div>
+          <h1 class="font-heading font-black leading-[1.14] tracking-[-0.53px] mb-4 text-[36px] sm:text-[44px]" data-ps="src/pages/courtroom-victories/4.astro:o3m9qy">Representative case results.</h1>
+          <p class="text-[17px] sm:text-[18.08px] text-[#454F5E] leading-[1.65] max-w-[840px]" data-ps="src/pages/courtroom-victories/4.astro:o7h8bq">Real outcomes from cases handled by the firm. Every case is different, and past results do not guarantee a similar outcome.</p>
+        </div>
+
+        <div class="flex flex-wrap justify-between items-center gap-3 mb-6 text-[14px] text-[#454F5E]" data-ps="src/pages/courtroom-victories/4.astro:t0l3d3">
+          <p data-ps="src/pages/courtroom-victories/4.astro:o7h8bp">Showing 73–96 of 358 case results</p>
+          <p data-ps="src/pages/courtroom-victories/4.astro:o7h8bo">Page 4 of 15</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" data-ps="src/pages/courtroom-victories/4.astro:t0l3d4">
+          {cases.map((c, __psIdx) => (
+            <article id={c.id} class="bg-white border border-[#E6E2D9] p-7 rounded-[4px] flex flex-col justify-between hover:border-[#C9A840] transition min-w-0 break-words" data-ps={`src/pages/courtroom-victories/4.astro:f2ainj-${__psIdx}`}>
+              <div data-ps={`src/pages/courtroom-victories/4.astro:t0l3d5-${__psIdx}`}>
+                <div data-field="charges" class="text-[12px] font-bold uppercase text-[#732521] tracking-wider mb-2" data-ps={`src/pages/courtroom-victories/4.astro:t0l3d6-${__psIdx}`}>{c.charges}</div>
+                <h2 data-field="result" class="font-heading font-bold text-[#061633] leading-snug mb-3 text-[18.88px] whitespace-pre-line" data-ps={`src/pages/courtroom-victories/4.astro:9f7cjd-${__psIdx}`}>{c.result}</h2>
+                <p data-field="court" class="text-[15px] text-[#454F5E] leading-[1.6] mb-6" data-ps={`src/pages/courtroom-victories/4.astro:o7h8bn-${__psIdx}`}>{c.court}</p>
+              </div>
+              <div class="border border-[#C9A840]/50 bg-[#F7F5F1] text-[#655018] text-[11.68px] font-bold px-3 py-1 rounded-[2px] tracking-wide self-start" data-ps={`src/pages/courtroom-victories/4.astro:t0l3d7-${__psIdx}`}>
+                Case <span data-field="name" data-ps={`src/pages/courtroom-victories/4.astro:bjdq5g-${__psIdx}`}>{c.name}</span>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        <nav aria-label="Case results pagination" class="flex flex-wrap items-center justify-center gap-2 mt-10" data-ps="src/pages/courtroom-victories/4.astro:m1x114">
+          <a rel="prev" class={pageLinkClass + ' px-4'} href="/courtroom-victories/3" data-ps="src/pages/courtroom-victories/4.astro:h3jbnf">← Previous</a>
+          {pages.slice(0, 1).map((p, __psIdx) => (
+            <a class={pageLinkClass} href={p.href} aria-label={`Page ${p.label}`} data-ps={`src/pages/courtroom-victories/4.astro:h3jbne-${__psIdx}`}>{p.label}</a>
+          ))}
+          <span class="px-1 text-[#454F5E]" aria-hidden="true" data-ps="src/pages/courtroom-victories/4.astro:bjdq5f">…</span>
+          <a class={pageLinkClass} href="/courtroom-victories/3" aria-label="Page 3" data-ps="src/pages/courtroom-victories/4.astro:h3jbnd">3</a>
+          <a class={pageLinkCurrentClass} href="/courtroom-victories/4" aria-label="Page 4" aria-current="page" data-ps="src/pages/courtroom-victories/4.astro:h3jbmr">4</a>
+          <a class={pageLinkClass} href="/courtroom-victories/5" aria-label="Page 5" data-ps="src/pages/courtroom-victories/4.astro:h3jbmq">5</a>
+          <span class="px-1 text-[#454F5E]" aria-hidden="true" data-ps="src/pages/courtroom-victories/4.astro:bjdq5e">…</span>
+          <a class={pageLinkClass} href="/courtroom-victories/15" aria-label="Page 15" data-ps="src/pages/courtroom-victories/4.astro:h3jbmp">15</a>
+          <a rel="next" class={pageLinkClass + ' px-4'} href="/courtroom-victories/5" data-ps="src/pages/courtroom-victories/4.astro:h3jbmo">Next →</a>
+        </nav>
+
+        <p class="text-center text-[13px] text-[#454F5E] mt-8" data-ps="src/pages/courtroom-victories/4.astro:o7h8bm">Prior results do not guarantee a similar outcome. Each case depends on its own facts and circumstances.</p>
+        <div class="text-center mt-6" data-ps="src/pages/courtroom-victories/4.astro:t0l3d8">
+          <a href="/#contact" class="text-[#732521] font-bold underline underline-offset-4" data-ps="src/pages/courtroom-victories/4.astro:h3jbmn">Request a confidential consultation →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

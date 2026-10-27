@@ -1,0 +1,960 @@
+{
+  "success": true,
+  "url": "https://jas-law-astro-review.netlify.app/",
+  "structured": {
+    "title": "Law Offices of Joseph A. Simon | Ann Arbor Criminal Defense Attorney",
+    "description": "For 40+ years, Ann Arbor attorney Joseph A. Simon has defended clients throughout Southeast Michigan against OWI, drug, assault, domestic violence, and criminal sexual conduct charges. Confidential consultation, available 24/7.",
+    "url": "https://jas-law-astro-review.netlify.app/",
+    "imageCount": 25,
+    "branding": {
+      "colors": {
+        "primary": "#732521",
+        "secondary": "#061633",
+        "accent": "#C9A840",
+        "background": "#FFFFFF",
+        "textPrimary": "#061633",
+        "link": "#C9A840"
+      },
+      "typography": {
+        "fontFamilies": {
+          "primary": "Source Sans 3",
+          "heading": "Merriweather"
+        },
+        "fontStacks": {
+          "heading": [
+            "Merriweather",
+            "Georgia",
+            "Times New Roman",
+            "serif"
+          ],
+          "body": [
+            "Source Sans 3",
+            "-apple-system",
+            "BlinkMacSystemFont",
+            "Segoe UI",
+            "Roboto",
+            "Helvetica",
+            "Arial",
+            "sans-serif"
+          ],
+          "paragraph": [
+            "Source Sans 3",
+            "-apple-system",
+            "BlinkMacSystemFont",
+            "Segoe UI",
+            "Roboto",
+            "Helvetica",
+            "Arial",
+            "sans-serif"
+          ]
+        },
+        "fontSizes": {
+          "h1": "48px",
+          "h2": "11.52px",
+          "body": "19.04px"
+        }
+      },
+      "spacing": {
+        "baseUnit": 4,
+        "borderRadius": "3px"
+      },
+      "logo": "https://pagesmith-cdn.com/e19d25ad/favicons/apple-touch-icon-291b553b.png",
+      "favicon": "https://pagesmith-cdn.com/e19d25ad/favicons/favicon-291b553b.png"
+    },
+    "pages": [
+      {
+        "slug": "index",
+        "path": "/",
+        "title": "Law Offices of Joseph A. Simon | Ann Arbor Criminal Defense Attorney",
+        "file": "data/pages/index.md"
+      }
+    ],
+    "availablePages": [
+      {
+        "path": "/practice-areas/",
+        "label": "Practice Areas",
+        "slug": "practice-areas",
+        "scraped": false,
+        "group": "main"
+      },
+      {
+        "path": "/service-areas/",
+        "label": "Service Areas",
+        "slug": "service-areas",
+        "scraped": false,
+        "group": "main"
+      },
+      {
+        "path": "/recent-posts/",
+        "label": "Recent Posts",
+        "slug": "recent-posts",
+        "scraped": false,
+        "group": "main"
+      },
+      {
+        "path": "/attorneys/joseph-a-simon/",
+        "label": "Joseph A Simon",
+        "slug": "attorneys-joseph-a-simon",
+        "scraped": false,
+        "group": "other"
+      },
+      {
+        "path": "/attorneys/stephen-adams/",
+        "label": "Stephen Adams",
+        "slug": "attorneys-stephen-adams",
+        "scraped": false,
+        "group": "other"
+      },
+      {
+        "path": "/career/",
+        "label": "Career",
+        "slug": "career",
+        "scraped": false,
+        "group": "other"
+      },
+      {
+        "path": "/contact/",
+        "label": "Contact",
+        "slug": "contact",
+        "scraped": false,
+        "group": "other"
+      },
+      {
+        "path": "/courtroom-victories/",
+        "label": "Courtroom Victories",
+        "slug": "courtroom-victories",
+        "scraped": false,
+        "group": "other"
+      },
+      {
+        "path": "/media/",
+        "label": "Media",
+        "slug": "media",
+        "scraped": false,
+        "group": "other"
+      },
+      {
+        "path": "/reviews/",
+        "label": "Reviews",
+        "slug": "reviews",
+        "scraped": false,
+        "group": "other"
+      },
+      {
+        "path": "/courtroom-victories/2/",
+        "label": "2",
+        "slug": "courtroom-victories-2",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/courtroom-victories/"
+      },
+      {
+        "path": "/courtroom-victories/3/",
+        "label": "3",
+        "slug": "courtroom-victories-3",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/courtroom-victories/"
+      },
+      {
+        "path": "/courtroom-victories/4/",
+        "label": "4",
+        "slug": "courtroom-victories-4",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/courtroom-victories/"
+      },
+      {
+        "path": "/courtroom-victories/5/",
+        "label": "5",
+        "slug": "courtroom-victories-5",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/courtroom-victories/"
+      },
+      {
+        "path": "/courtroom-victories/6/",
+        "label": "6",
+        "slug": "courtroom-victories-6",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/courtroom-victories/"
+      },
+      {
+        "path": "/courtroom-victories/7/",
+        "label": "7",
+        "slug": "courtroom-victories-7",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/courtroom-victories/"
+      },
+      {
+        "path": "/courtroom-victories/8/",
+        "label": "8",
+        "slug": "courtroom-victories-8",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/courtroom-victories/"
+      },
+      {
+        "path": "/courtroom-victories/9/",
+        "label": "9",
+        "slug": "courtroom-victories-9",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/courtroom-victories/"
+      },
+      {
+        "path": "/courtroom-victories/10/",
+        "label": "10",
+        "slug": "courtroom-victories-10",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/courtroom-victories/"
+      },
+      {
+        "path": "/courtroom-victories/11/",
+        "label": "11",
+        "slug": "courtroom-victories-11",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/courtroom-victories/"
+      },
+      {
+        "path": "/courtroom-victories/12/",
+        "label": "12",
+        "slug": "courtroom-victories-12",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/courtroom-victories/"
+      },
+      {
+        "path": "/courtroom-victories/13/",
+        "label": "13",
+        "slug": "courtroom-victories-13",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/courtroom-victories/"
+      },
+      {
+        "path": "/courtroom-victories/14/",
+        "label": "14",
+        "slug": "courtroom-victories-14",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/courtroom-victories/"
+      },
+      {
+        "path": "/courtroom-victories/15/",
+        "label": "15",
+        "slug": "courtroom-victories-15",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/courtroom-victories/"
+      },
+      {
+        "path": "/media-articles/ag-drops-charges-against-northfield-police-lieutenant/",
+        "label": "Ag Drops Charges Against Northfield Police Lieutenant",
+        "slug": "media-articles-ag-drops-charges-against-northfield-police-lieutenant",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/media-articles/"
+      },
+      {
+        "path": "/media-articles/ann-arbor-man-to-spend-up-to-15-years-in-prison-for-restaurant-armed-robberies/",
+        "label": "Ann Arbor Man To Spend Up To 15 Years In Prison For Restaurant Armed Robberies",
+        "slug": "media-articles-ann-arbor-man-to-spend-up-to-15-years-in-prison-for-restaurant-armed-robberies",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/media-articles/"
+      },
+      {
+        "path": "/media-articles/butler-innocent/",
+        "label": "Butler Innocent",
+        "slug": "media-articles-butler-innocent",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/media-articles/"
+      },
+      {
+        "path": "/media-articles/competency-hearing-delayed-for-son-charged-in-ann-arbor-fathers-slaying/",
+        "label": "Competency Hearing Delayed For Son Charged In Ann Arbor Fathers Slaying",
+        "slug": "media-articles-competency-hearing-delayed-for-son-charged-in-ann-arbor-fathers-slaying",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/media-articles/"
+      },
+      {
+        "path": "/media-articles/court-hearing-for-climate-activists/",
+        "label": "Court Hearing For Climate Activists",
+        "slug": "media-articles-court-hearing-for-climate-activists",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/media-articles/"
+      },
+      {
+        "path": "/media-articles/criminal-charges-dismissed-against-ex-ann-arbor-priest-accused-of-molesting-altar-boy/",
+        "label": "Criminal Charges Dismissed Against Ex Ann Arbor Priest Accused Of Molesting Altar Boy",
+        "slug": "media-articles-criminal-charges-dismissed-against-ex-ann-arbor-priest-accused-of-molesting-altar-boy",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/media-articles/"
+      },
+      {
+        "path": "/media-articles/driver-sentenced-to-probation-in-death-of-bicyclist-in-pittsfield-township/",
+        "label": "Driver Sentenced To Probation In Death Of Bicyclist In Pittsfield Township",
+        "slug": "media-articles-driver-sentenced-to-probation-in-death-of-bicyclist-in-pittsfield-township",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/media-articles/"
+      },
+      {
+        "path": "/media-articles/ex-ann-arbor-priest-accused-of-molesting-altar-boy-has-case-delayed-for-review-of-large-amount-of-evidence/",
+        "label": "Ex Ann Arbor Priest Accused Of Molesting Altar Boy Has Case Delayed For Review Of Large Amount Of Evidence",
+        "slug": "media-articles-ex-ann-arbor-priest-accused-of-molesting-altar-boy-has-case-delayed-for-review-of-large-amount-of-evidence",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/media-articles/"
+      },
+      {
+        "path": "/media-articles/ex-michigan-football-staffer-accused-of-super-drunk-driving-offered-plea-deal/",
+        "label": "Ex Michigan Football Staffer Accused Of Super Drunk Driving Offered Plea Deal",
+        "slug": "media-articles-ex-michigan-football-staffer-accused-of-super-drunk-driving-offered-plea-deal",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/media-articles/"
+      },
+      {
+        "path": "/media-articles/ex-um-athletics-staffer-gets-probation-for-driving-super-drunk-fighting-police/",
+        "label": "Ex Um Athletics Staffer Gets Probation For Driving Super Drunk Fighting Police",
+        "slug": "media-articles-ex-um-athletics-staffer-gets-probation-for-driving-super-drunk-fighting-police",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/media-articles/"
+      },
+      {
+        "path": "/media-articles/hes-a-predator-probation-cant-help-says-mother-of-child-abused-by-ann-arbor-man/",
+        "label": "Hes A Predator Probation Cant Help Says Mother Of Child Abused By Ann Arbor Man",
+        "slug": "media-articles-hes-a-predator-probation-cant-help-says-mother-of-child-abused-by-ann-arbor-man",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/media-articles/"
+      },
+      {
+        "path": "/media-articles/man-accused-of-drunk-driving-in-saline-19-year-olds-death-appears-in-court/",
+        "label": "Man Accused Of Drunk Driving In Saline 19 Year Olds Death Appears In Court",
+        "slug": "media-articles-man-accused-of-drunk-driving-in-saline-19-year-olds-death-appears-in-court",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/media-articles/"
+      },
+      {
+        "path": "/media-articles/man-pleads-no-contest-to-embezzling-from-ann-arbor-high-school-girls-soccer-program/",
+        "label": "Man Pleads No Contest To Embezzling From Ann Arbor High School Girls Soccer Program",
+        "slug": "media-articles-man-pleads-no-contest-to-embezzling-from-ann-arbor-high-school-girls-soccer-program",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/media-articles/"
+      },
+      {
+        "path": "/media-articles/mother-in-court-in-death-of-disabled-son-who-drank-windshield-fluid/",
+        "label": "Mother In Court In Death Of Disabled Son Who Drank Windshield Fluid",
+        "slug": "media-articles-mother-in-court-in-death-of-disabled-son-who-drank-windshield-fluid",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/media-articles/"
+      },
+      {
+        "path": "/media-articles/nessel-set-to-appeal-dismissed-charges-against-former-ann-arbor-priest/",
+        "label": "Nessel Set To Appeal Dismissed Charges Against Former Ann Arbor Priest",
+        "slug": "media-articles-nessel-set-to-appeal-dismissed-charges-against-former-ann-arbor-priest",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/media-articles/"
+      },
+      {
+        "path": "/media-articles/parent-charged-with-consuming-alcohol-on-school-grounds-in-saline-party-bus-incident/",
+        "label": "Parent Charged With Consuming Alcohol On School Grounds In Saline Party Bus Incident",
+        "slug": "media-articles-parent-charged-with-consuming-alcohol-on-school-grounds-in-saline-party-bus-incident",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/media-articles/"
+      },
+      {
+        "path": "/media-articles/pet-shop-owner-charged-with-animal-cruelty-sentenced-on-violation/",
+        "label": "Pet Shop Owner Charged With Animal Cruelty Sentenced On Violation",
+        "slug": "media-articles-pet-shop-owner-charged-with-animal-cruelty-sentenced-on-violation",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/media-articles/"
+      },
+      {
+        "path": "/media-articles/probation-apology-letter-ordered-from-man-who-stole-from-girls-soccer-team/",
+        "label": "Probation Apology Letter Ordered From Man Who Stole From Girls Soccer Team",
+        "slug": "media-articles-probation-apology-letter-ordered-from-man-who-stole-from-girls-soccer-team",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/media-articles/"
+      },
+      {
+        "path": "/media-articles/state-drops-felony-charges-against-officers-with-downriver-ties-in-auto-inspections-case/",
+        "label": "State Drops Felony Charges Against Officers With Downriver Ties In Auto Inspections Case",
+        "slug": "media-articles-state-drops-felony-charges-against-officers-with-downriver-ties-in-auto-inspections-case",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/media-articles/"
+      },
+      {
+        "path": "/media-articles/suspended-ann-arbor-teacher-steve-goffee-wont-face-criminal-charges/",
+        "label": "Suspended Ann Arbor Teacher Steve Goffee Wont Face Criminal Charges",
+        "slug": "media-articles-suspended-ann-arbor-teacher-steve-goffee-wont-face-criminal-charges",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/media-articles/"
+      },
+      {
+        "path": "/media-articles/u-m-resident-physician-had-child-porn-at-hospital-and-home-police-say/",
+        "label": "U M Resident Physician Had Child Porn At Hospital And Home Police Say",
+        "slug": "media-articles-u-m-resident-physician-had-child-porn-at-hospital-and-home-police-say",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/media-articles/"
+      },
+      {
+        "path": "/post/ann-arbors-best-dui-attorney/",
+        "label": "Ann Arbors Best Dui Attorney",
+        "slug": "post-ann-arbors-best-dui-attorney",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/post/"
+      },
+      {
+        "path": "/post/best-dui-attorney-in-saline-mi/",
+        "label": "Best Dui Attorney In Saline Mi",
+        "slug": "post-best-dui-attorney-in-saline-mi",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/post/"
+      },
+      {
+        "path": "/post/charged-with-owi-in-michigan/",
+        "label": "Charged With Owi In Michigan",
+        "slug": "post-charged-with-owi-in-michigan",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/post/"
+      },
+      {
+        "path": "/post/defending-domestic-violence-charges-in-michigan/",
+        "label": "Defending Domestic Violence Charges In Michigan",
+        "slug": "post-defending-domestic-violence-charges-in-michigan",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/post/"
+      },
+      {
+        "path": "/post/defending-your-future-what-to-expect-when-facing-domestic-violence-charges/",
+        "label": "Defending Your Future What To Expect When Facing Domestic Violence Charges",
+        "slug": "post-defending-your-future-what-to-expect-when-facing-domestic-violence-charges",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/post/"
+      },
+      {
+        "path": "/post/determining-washtenaw-countys-best-dui-attorney/",
+        "label": "Determining Washtenaw Countys Best Dui Attorney",
+        "slug": "post-determining-washtenaw-countys-best-dui-attorney",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/post/"
+      },
+      {
+        "path": "/post/michigan-dui-defense-strategies-understanding-your-legal-options/",
+        "label": "Michigan Dui Defense Strategies Understanding Your Legal Options",
+        "slug": "post-michigan-dui-defense-strategies-understanding-your-legal-options",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/post/"
+      },
+      {
+        "path": "/post/understanding-michigan-assault-and-battery-laws-a-comprehensive-guide/",
+        "label": "Understanding Michigan Assault And Battery Laws A Comprehensive Guide",
+        "slug": "post-understanding-michigan-assault-and-battery-laws-a-comprehensive-guide",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/post/"
+      },
+      {
+        "path": "/practice-area/ann-arbor-assault-crimes/",
+        "label": "Ann Arbor Assault Crimes",
+        "slug": "practice-area-ann-arbor-assault-crimes",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/practice-area/"
+      },
+      {
+        "path": "/practice-area/ann-arbor-domestic-violence/",
+        "label": "Ann Arbor Domestic Violence",
+        "slug": "practice-area-ann-arbor-domestic-violence",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/practice-area/"
+      },
+      {
+        "path": "/practice-area/ann-arbor-dui-defense/",
+        "label": "Ann Arbor Dui Defense",
+        "slug": "practice-area-ann-arbor-dui-defense",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/practice-area/"
+      },
+      {
+        "path": "/practice-area/assault-defense/",
+        "label": "Assault Defense",
+        "slug": "practice-area-assault-defense",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/practice-area/"
+      },
+      {
+        "path": "/practice-area/best-criminal-defense-attorney-washtenaw-county/",
+        "label": "Best Criminal Defense Attorney Washtenaw County",
+        "slug": "practice-area-best-criminal-defense-attorney-washtenaw-county",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/practice-area/"
+      },
+      {
+        "path": "/practice-area/chelsea-assault-charges/",
+        "label": "Chelsea Assault Charges",
+        "slug": "practice-area-chelsea-assault-charges",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/practice-area/"
+      },
+      {
+        "path": "/practice-area/chelsea-domestic-violence/",
+        "label": "Chelsea Domestic Violence",
+        "slug": "practice-area-chelsea-domestic-violence",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/practice-area/"
+      },
+      {
+        "path": "/practice-area/chelsea-drunk-driving-dui-owi/",
+        "label": "Chelsea Drunk Driving Dui Owi",
+        "slug": "practice-area-chelsea-drunk-driving-dui-owi",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/practice-area/"
+      },
+      {
+        "path": "/practice-area/college-crimes-defense/",
+        "label": "College Crimes Defense",
+        "slug": "practice-area-college-crimes-defense",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/practice-area/"
+      },
+      {
+        "path": "/practice-area/computer-crimes/",
+        "label": "Computer Crimes",
+        "slug": "practice-area-computer-crimes",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/practice-area/"
+      },
+      {
+        "path": "/practice-area/dexter-assault-charges/",
+        "label": "Dexter Assault Charges",
+        "slug": "practice-area-dexter-assault-charges",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/practice-area/"
+      },
+      {
+        "path": "/practice-area/dexter-drunk-driving-dui-owi/",
+        "label": "Dexter Drunk Driving Dui Owi",
+        "slug": "practice-area-dexter-drunk-driving-dui-owi",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/practice-area/"
+      },
+      {
+        "path": "/practice-area/dexter-mi-domestic-violence/",
+        "label": "Dexter Mi Domestic Violence",
+        "slug": "practice-area-dexter-mi-domestic-violence",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/practice-area/"
+      },
+      {
+        "path": "/practice-area/domestic-violence-defense/",
+        "label": "Domestic Violence Defense",
+        "slug": "practice-area-domestic-violence-defense",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/practice-area/"
+      },
+      {
+        "path": "/practice-area/drug-crimes/",
+        "label": "Drug Crimes",
+        "slug": "practice-area-drug-crimes",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/practice-area/"
+      },
+      {
+        "path": "/practice-area/dui-defense/",
+        "label": "Dui Defense",
+        "slug": "practice-area-dui-defense",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/practice-area/"
+      },
+      {
+        "path": "/practice-area/expungements/",
+        "label": "Expungements",
+        "slug": "practice-area-expungements",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/practice-area/"
+      },
+      {
+        "path": "/practice-area/home-invasion-defense/",
+        "label": "Home Invasion Defense",
+        "slug": "practice-area-home-invasion-defense",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/practice-area/"
+      },
+      {
+        "path": "/practice-area/homicide-defense/",
+        "label": "Homicide Defense",
+        "slug": "practice-area-homicide-defense",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/practice-area/"
+      },
+      {
+        "path": "/practice-area/malicious-destruction-of-property/",
+        "label": "Malicious Destruction Of Property",
+        "slug": "practice-area-malicious-destruction-of-property",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/practice-area/"
+      },
+      {
+        "path": "/practice-area/milan-drunk-driving-dui-owi/",
+        "label": "Milan Drunk Driving Dui Owi",
+        "slug": "practice-area-milan-drunk-driving-dui-owi",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/practice-area/"
+      },
+      {
+        "path": "/practice-area/owi-dui-expungements/",
+        "label": "Owi Dui Expungements",
+        "slug": "practice-area-owi-dui-expungements",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/practice-area/"
+      },
+      {
+        "path": "/practice-area/owi-dui-expungements-in-ann-arbor-mi/",
+        "label": "Owi Dui Expungements In Ann Arbor Mi",
+        "slug": "practice-area-owi-dui-expungements-in-ann-arbor-mi",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/practice-area/"
+      },
+      {
+        "path": "/practice-area/owi-dui-expungements-in-chelsea-mi/",
+        "label": "Owi Dui Expungements In Chelsea Mi",
+        "slug": "practice-area-owi-dui-expungements-in-chelsea-mi",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/practice-area/"
+      },
+      {
+        "path": "/practice-area/owi-dui-expungements-in-dexter-mi/",
+        "label": "Owi Dui Expungements In Dexter Mi",
+        "slug": "practice-area-owi-dui-expungements-in-dexter-mi",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/practice-area/"
+      },
+      {
+        "path": "/practice-area/owi-dui-expungements-in-milan-mi/",
+        "label": "Owi Dui Expungements In Milan Mi",
+        "slug": "practice-area-owi-dui-expungements-in-milan-mi",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/practice-area/"
+      },
+      {
+        "path": "/practice-area/owi-dui-expungements-in-pittsfield-township-mi/",
+        "label": "Owi Dui Expungements In Pittsfield Township Mi",
+        "slug": "practice-area-owi-dui-expungements-in-pittsfield-township-mi",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/practice-area/"
+      },
+      {
+        "path": "/practice-area/owi-dui-expungements-in-ypsilanti-mi/",
+        "label": "Owi Dui Expungements In Ypsilanti Mi",
+        "slug": "practice-area-owi-dui-expungements-in-ypsilanti-mi",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/practice-area/"
+      },
+      {
+        "path": "/practice-area/owi-dui-expungements-in-ypsilanti-township-mi/",
+        "label": "Owi Dui Expungements In Ypsilanti Township Mi",
+        "slug": "practice-area-owi-dui-expungements-in-ypsilanti-township-mi",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/practice-area/"
+      },
+      {
+        "path": "/practice-area/owi-dui-expungements-lawyer-saline-mi/",
+        "label": "Owi Dui Expungements Lawyer Saline Mi",
+        "slug": "practice-area-owi-dui-expungements-lawyer-saline-mi",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/practice-area/"
+      },
+      {
+        "path": "/practice-area/pittsfield-township-assault-charges/",
+        "label": "Pittsfield Township Assault Charges",
+        "slug": "practice-area-pittsfield-township-assault-charges",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/practice-area/"
+      },
+      {
+        "path": "/practice-area/pittsfield-township-domestic-violence/",
+        "label": "Pittsfield Township Domestic Violence",
+        "slug": "practice-area-pittsfield-township-domestic-violence",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/practice-area/"
+      },
+      {
+        "path": "/practice-area/pittsfield-township-drunk-driving-dui-owi/",
+        "label": "Pittsfield Township Drunk Driving Dui Owi",
+        "slug": "practice-area-pittsfield-township-drunk-driving-dui-owi",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/practice-area/"
+      },
+      {
+        "path": "/practice-area/police-investigations/",
+        "label": "Police Investigations",
+        "slug": "practice-area-police-investigations",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/practice-area/"
+      },
+      {
+        "path": "/practice-area/saline-assault-charges/",
+        "label": "Saline Assault Charges",
+        "slug": "practice-area-saline-assault-charges",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/practice-area/"
+      },
+      {
+        "path": "/practice-area/saline-domestic-violence/",
+        "label": "Saline Domestic Violence",
+        "slug": "practice-area-saline-domestic-violence",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/practice-area/"
+      },
+      {
+        "path": "/practice-area/saline-drunk-driving-dui-owi/",
+        "label": "Saline Drunk Driving Dui Owi",
+        "slug": "practice-area-saline-drunk-driving-dui-owi",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/practice-area/"
+      },
+      {
+        "path": "/practice-area/sex-crime-defense/",
+        "label": "Sex Crime Defense",
+        "slug": "practice-area-sex-crime-defense",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/practice-area/"
+      },
+      {
+        "path": "/practice-area/theft-offenses/",
+        "label": "Theft Offenses",
+        "slug": "practice-area-theft-offenses",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/practice-area/"
+      },
+      {
+        "path": "/practice-area/ypsilanti-assault-crimes/",
+        "label": "Ypsilanti Assault Crimes",
+        "slug": "practice-area-ypsilanti-assault-crimes",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/practice-area/"
+      },
+      {
+        "path": "/practice-area/ypsilanti-domestic-violence/",
+        "label": "Ypsilanti Domestic Violence",
+        "slug": "practice-area-ypsilanti-domestic-violence",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/practice-area/"
+      },
+      {
+        "path": "/practice-area/ypsilanti-drunk-driving-dui-owi/",
+        "label": "Ypsilanti Drunk Driving Dui Owi",
+        "slug": "practice-area-ypsilanti-drunk-driving-dui-owi",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/practice-area/"
+      },
+      {
+        "path": "/practice-area/ypsilanti-township-assault-charges/",
+        "label": "Ypsilanti Township Assault Charges",
+        "slug": "practice-area-ypsilanti-township-assault-charges",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/practice-area/"
+      },
+      {
+        "path": "/practice-area/ypsilanti-township-domestic-violence/",
+        "label": "Ypsilanti Township Domestic Violence",
+        "slug": "practice-area-ypsilanti-township-domestic-violence",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/practice-area/"
+      },
+      {
+        "path": "/practice-area/ypsilanti-township-drunk-driving-dui-owi/",
+        "label": "Ypsilanti Township Drunk Driving Dui Owi",
+        "slug": "practice-area-ypsilanti-township-drunk-driving-dui-owi",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/practice-area/"
+      },
+      {
+        "path": "/service-areas/ann-arbor/",
+        "label": "Ann Arbor",
+        "slug": "service-areas-ann-arbor",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/service-areas/"
+      },
+      {
+        "path": "/service-areas/chelsea/",
+        "label": "Chelsea",
+        "slug": "service-areas-chelsea",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/service-areas/"
+      },
+      {
+        "path": "/service-areas/dexter/",
+        "label": "Dexter",
+        "slug": "service-areas-dexter",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/service-areas/"
+      },
+      {
+        "path": "/service-areas/milan/",
+        "label": "Milan",
+        "slug": "service-areas-milan",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/service-areas/"
+      },
+      {
+        "path": "/service-areas/pittsfield-township/",
+        "label": "Pittsfield Township",
+        "slug": "service-areas-pittsfield-township",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/service-areas/"
+      },
+      {
+        "path": "/service-areas/saline/",
+        "label": "Saline",
+        "slug": "service-areas-saline",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/service-areas/"
+      },
+      {
+        "path": "/service-areas/washtenaw-county/",
+        "label": "Washtenaw County",
+        "slug": "service-areas-washtenaw-county",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/service-areas/"
+      },
+      {
+        "path": "/service-areas/ypsilanti/",
+        "label": "Ypsilanti",
+        "slug": "service-areas-ypsilanti",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/service-areas/"
+      },
+      {
+        "path": "/service-areas/ypsilanti-township/",
+        "label": "Ypsilanti Township",
+        "slug": "service-areas-ypsilanti-township",
+        "scraped": false,
+        "group": "collection",
+        "collection": "/service-areas/"
+      }
+    ],
+    "siteStructure": {
+      "mainNavPaths": [
+        "/practice-areas/",
+        "/service-areas/",
+        "/recent-posts/"
+      ],
+      "footerPaths": [
+        "/reviews/",
+        "/practice-area/drug-crimes/",
+        "/practice-area/assault-defense/",
+        "/practice-area/domestic-violence-defense/",
+        "/practice-area/sex-crime-defense/",
+        "/practice-area/expungements/",
+        "/practice-area/college-crimes-defense/",
+        "/practice-area/theft-offenses/",
+        "/practice-area/police-investigations/",
+        "/courtroom-victories/",
+        "/media/"
+      ],
+      "otherLanguageRoots": []
+    },
+    "pageInventory": "3 main navigation pages; 7 other pages; practice area (45 pages); media articles (21 pages); Courtroom Victories (14 pages); Service Areas (9 pages); post (8 pages)"
+  },
+  "metadata": {
+    "scraper": "firecrawl-crawl-endpoint",
+    "timestamp": "2026-10-27T13:51:19.809Z",
+    "homepageContentLength": 34561,
+    "imageCount": 25,
+    "hasBranding": true,
+    "hasElementorEnrichment": false,
+    "hasVisibleIr": false,
+    "pagesDiscovered": 107,
+    "pagesScraped": 1,
+    "screenshotUrl": "https://storage.googleapis.com/firecrawl-scrape-media/screenshot-65a8b729-65b4-4856-b4bb-a99ad3666cc2.png?GoogleAccessId=scrape-bucket-accessor%40firecrawl.iam.gserviceaccount.com&Expires=1793713870&Signature=wZaMdT%2FCv8Ip80PMoVPoS2UM%2BGb0zRB4p6H5S88jMLRhcyYiChrfRnaiADamxM4CExYmeoWPf%2Bnpn3l6eDFRnrL8wTt%2FVVZlT53u0jWARRV%2FrhuhOQnbwL%2BE6%2B9%2BgEZbqz0Yq8AYcdgjMdD5BwxpfHvqC5ngTvqNP%2F6NGYfq4Mr1gW2wDoTK6NAZ8pO%2F5FwzPH9p51RSop6PwmIHgKlk%2B48U%2Fsx8Zd5ua%2ByApTOS75ZuLSUIYbpCT3f7Bc0nd6dZIj8619e9FApmVHLPSPQkt6y5wlvZgmU1fIz85w2ZYPm%2Bw25Op3Zojaqm5Gnsmqx6czbXmmWY3Ji2G80RVuKHTQ%3D%3D",
+    "viewportScreenshots": [
+      "https://storage.googleapis.com/firecrawl-scrape-media/screenshot-23b50b35-55fd-4614-8054-0f709c7c6c28.png?GoogleAccessId=scrape-bucket-accessor%40firecrawl.iam.gserviceaccount.com&Expires=1793713871&Signature=vpKqoq8p7ykUgOq%2FCr86adwXWNZGyJ4GhQrNLFG0auuQUL%2FGr1834ZacpWJ%2FyxkZFbfYC%2FyM5y%2BCbbcNzC%2BT5Ad%2BjiVHNsI4shv7GXn%2FKifxU%2BGE84KVhIBtxQrJi3UHSPil1kV7iFHxYMgXsh5A6jwDdPNIoRmWu9CNZnO6dJ3D0k%2FptNGkvUltDrIIBGpSQz7SrWdJI32rZboROE%2BNHI08sk2Y08wYdqEwYrCsQGcrhpPM3JUkmKnlEyiCPLxZFfJJ8jxFfmxPcgZmGKIbr3MhcPbwO7onRj50HOEYXC34O5Rdt%2B2JwQQVnyIMj2Vmj4Q60S8gB5Yc8ZIPxFMMnA%3D%3D",
+      "https://storage.googleapis.com/firecrawl-scrape-media/screenshot-6e389744-2167-4ae9-b652-a95c7b0145f6.png?GoogleAccessId=scrape-bucket-accessor%40firecrawl.iam.gserviceaccount.com&Expires=1793713874&Signature=LaB6Rc7HcvkCwGEVG1o8naAtf%2F1zT7UBXozbgchwM0jy4pgo4dJvy8WHSrQsWIo%2Bsn6bi07crfmmMULemFv8SnmjUeABEDfjUm0A6%2F7MCOHqJqTVEabo8KnfA%2BXWNluwdbQIRLQeZryt8jrP1O1x%2B96zwgWXqvNEJO64PsMzw%2FRApraNnxnCNDKsHHDoLa%2FTlusVyVnnBfvcsgBWkGD99VRKFu5iY%2BUAB8dAruiFChrMsAnySVj7%2FQ6%2BZJHoZsocqCSzkLOtlISbI%2BCWe%2FGVDyqoeiTKq7pnTkhdGOlHEkjB978ezZlYY9mRMtgSAk9oxmcI6BcRhyicnVmImEuAqQ%3D%3D",
+      "https://storage.googleapis.com/firecrawl-scrape-media/screenshot-60e09459-6b69-458f-8969-2f0c9faf0926.png?GoogleAccessId=scrape-bucket-accessor%40firecrawl.iam.gserviceaccount.com&Expires=1793713877&Signature=nghdwxK6sWCpeNJjhYwBU4BWe6A%2F3J1B7Mhvg9K1nZZc3E6Kb%2FQIDPRXn6kU6oXfBbAtMGw0UDMyU3ehyaqo5yMnHoFz%2FXgbpq1ifdD8mAF5o3SNXDlen0MqYI4F5dlP05SWD8w0Sgwu%2FZhYg8HtRaNumiAB2Zwy5J8towGgDQIUmw2WCNeXES9s5alJ4lxpehAnQSKMGo7ic9D2ThtDuWIACRq6Dmx4oXhz%2BaJRGia5%2BN2M3U%2FxjaCL%2BL2WWLNMKPJ9KYQcmo8J%2BP6HelAyNPQFHvhaOfvryLkYPD2T%2B5HvE8ihSe3hJdDnmf7YH6R3J4lnCjLmQvO4w55FeS38Nw%3D%3D"
+    ]
+  }
+}

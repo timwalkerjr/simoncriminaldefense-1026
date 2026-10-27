@@ -1,0 +1,98 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+const pageTitle = 'Criminal Defense Practice Areas | Law Offices of Joseph A. Simon — Ann Arbor';
+const pageDescription = 'From OWI and drug charges to assault, domestic violence, and criminal sexual conduct — the full range of Michigan criminal defense handled by Ann Arbor attorney Joseph A. Simon.';
+
+const heroImage = 'https://jas-law-astro-review.netlify.app/hero-court-1.webp';
+
+const practiceAreas = [
+  { n: '01', title: 'Assault Charges', href: '/practice-area/assault-defense', text: 'Facing assault charges in Michigan can be daunting. With over 38 years of experience, Joseph A. Simon has a proven record of successfully defending assault cases. Contact us to learn more.' },
+  { n: '02', title: 'College Crimes', href: '/practice-area/college-crimes-defense', text: 'Facing criminal allegations as a college student? Contact attorney Joseph A. Simon, a trusted advocate for students in Ann Arbor and surrounding areas. Contact us for a consultation.' },
+  { n: '03', title: 'Computer Crimes', href: '/practice-area/computer-crimes', text: "Explore how Joseph A. Simon's extensive experience in computer cases can protect you and ensure your rights. Contact us for more information." },
+  { n: '04', title: 'Criminal Sexual Conduct', href: '/practice-area/sex-crime-defense', text: 'If you or a loved one faces criminal sexual conduct charges, trust the experienced and aggressive defense attorney Joseph A. Simon had been providing for over 38 years. Contact us for a confidential consultation.' },
+  { n: '05', title: 'Domestic Violence', href: '/practice-area/domestic-violence-defense', text: 'Facing Domestic Violence charges can be overwhelming. Turn to the experienced and established practice of attorney Joseph A. Simon to protect your rights. Contact us for a consultation.' },
+  { n: '06', title: 'Drug Crimes', href: '/practice-area/drug-crimes', text: 'Facing drug charges in Michigan? With over 38 years of experience, Joseph A. Simon has a proven record of successfully defending drug cases. Contact us to learn more.' },
+  { n: '07', title: 'Drunk Driving DUI/OWI', href: '/practice-area/dui-defense', text: 'Facing a DUI/OWI charge in Southeast Michigan? With over 38 years of experience, Joseph A. Simon has a proven record of successfully defending OWI cases. Contact us to learn more.' },
+  { n: '08', title: 'Expungements', href: '/practice-area/expungements', text: 'For over 38 years, Joseph A. Simon has helped individuals expunge criminal convictions in Michigan and clear criminal records. Contact us to see if you qualify for a fresh start.' },
+  { n: '09', title: 'Home Invasion', href: '/practice-area/home-invasion-defense', text: 'Facing serious charges like Home Invasion in Southeast Michigan? Trust the experienced attorneys at Joseph A. Simon to protect your rights. Contact us for a free consultation today.' },
+  { n: '10', title: 'Homicide', href: '/practice-area/homicide-defense', text: "Entrust your defense to one of Ann Arbor's most experienced and acclaimed attorneys. Contact Joseph A. Simon, defending homicide cases for over 38 years." },
+  { n: '11', title: 'Malicious Destruction of Property', href: '/practice-area/malicious-destruction-of-property', text: "If you're facing MDOP charges in Washtenaw County, turn to Ann Arbor's Five-Time Criminal Defense Lawyer of the Year, Joseph A. Simon, a local attoreny with over 38 years of successful criminal defense." },
+  { n: '12', title: 'OWI - DUI Expungements', href: '/practice-area/owi-dui-expungements', text: "For over 35 years, Joseph A. Simon has helped clients successfully expunge convictions and clear their criminal records. Contact us today to see if you qualify for Michigan's new OWI expungement opportunities." },
+  { n: '13', title: 'Police Investigations', href: '/practice-area/police-investigations', text: 'Facing a criminal investigation? Contact Joseph A. Simon, an experienced attorney providing over 38 years of successful criminal defense. Contact us today for a consultation.' },
+  { n: '14', title: 'Theft Offenses', href: '/practice-area/theft-offenses', text: "Facing a theft or property crimes charge in Southeast Michigan? Joseph A. Simon has over 38 years' experience successfully defending these charges. Contact us today for a free consultation." },
+];
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} headerVariant="transparent">
+  <main data-ps="src/pages/practice-areas.astro:t3nb0w">
+    <section class="bg-[#061633] text-white relative overflow-hidden" data-ps="src/pages/practice-areas.astro:6isuk6">
+      <div class="absolute inset-0" style={`background-image: url('${heroImage}'); background-size: cover; background-position: center;`} data-ps="src/pages/practice-areas.astro:yr2fhr"></div>
+      <div class="absolute inset-0" style="background: linear-gradient(100deg, rgba(4, 16, 38, 0.97) 0%, rgba(5, 19, 45, 0.9) 46%, rgba(8, 26, 60, 0.62) 100%);" data-ps="src/pages/practice-areas.astro:yr2fhq"></div>
+      <div class="relative max-w-[1280px] mx-auto px-6 pt-[140px] pb-[60px]" data-ps="src/pages/practice-areas.astro:yr2fhp">
+        <div class="mb-4" data-ps="src/pages/practice-areas.astro:yr2fho">
+          <span class="inline-flex items-center gap-2 border border-[#C9A840]/36 text-[#DDC582] text-[11.36px] font-bold uppercase tracking-[1.5px] px-3 py-1 rounded-[2px]" data-ps="src/pages/practice-areas.astro:1azitx"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-3.5 h-3.5" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>Practice Areas</span>
+        </div>
+        <h1 class="text-[50.4px] font-black leading-[1.05] tracking-[-0.6px] text-white mb-6 max-w-[900px]" data-ps="src/pages/practice-areas.astro:lvdvfz">Criminal Defense in Southeast Michigan.</h1>
+        <p class="text-[19.04px] leading-[31.6px] text-[#C3CCDA] max-w-[820px] mb-8" data-ps="src/pages/practice-areas.astro:jh0srx">From a first OWI to the most serious felony, we defend the full range of Michigan criminal charges — vigorously, and with more than 40 years of criminal defense experience in the courts of Southeast Michigan. Choose a practice area to learn how the defense is built.</p>
+        <div class="flex flex-wrap gap-4" data-ps="src/pages/practice-areas.astro:yr2fhn">
+          <a href="/#contact" class="bg-[#732521] text-white font-semibold text-[16.16px] px-[30px] py-[16px] rounded-[3px] hover:bg-[#5a1c19] transition inline-flex items-center gap-2" data-ps="src/pages/practice-areas.astro:qkypff">Request a Confidential Consultation<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-4 h-4" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></a>
+          <a href="tel:+17348876200" class="border border-white/30 text-white font-semibold text-[16.16px] px-[30px] py-[16px] rounded-[3px] hover:border-[#C9A840] hover:text-[#DDC582] transition inline-flex items-center gap-2" data-ps="src/pages/practice-areas.astro:qkypg1">(734) 887-6200</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white py-[100px]" data-ps="src/pages/practice-areas.astro:6isuk7">
+      <div class="max-w-[1280px] mx-auto px-6" data-ps="src/pages/practice-areas.astro:yr2fhm">
+        <div class="mb-4" data-ps="src/pages/practice-areas.astro:yr2fhl">
+          <span class="inline-flex items-center text-[12px] font-bold uppercase tracking-[1.8px] text-[#732521]" data-ps="src/pages/practice-areas.astro:1azitw"><span class="w-[28px] h-[2px] bg-[#C9A840] inline-block mr-3" data-ps="src/pages/practice-areas.astro:1azitv"></span>What We Defend</span>
+        </div>
+        <h2 class="text-[44px] font-black leading-[1.14] tracking-[-0.53px] text-[#061633] mb-4 max-w-[820px]" data-ps="src/pages/practice-areas.astro:76yy8d">Criminal defense in Southeast Michigan.</h2>
+        <p class="text-[18.08px] leading-[31px] text-[#454F5E] max-w-[820px] mb-12" data-ps="src/pages/practice-areas.astro:jh0sry">From misdemeanors to serious felonies, we appear in the district and circuit courts of Southeast Michigan and examine every element of the prosecution's case.</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" data-ps="src/pages/practice-areas.astro:uygukx">
+          {practiceAreas.map((area, __psIdx) => (
+            <div class="border border-[#E6E2D9] p-7 rounded-[4px] bg-white hover:border-[#732521]/40 hover:shadow-md transition flex flex-col justify-between" data-ps={`src/pages/practice-areas.astro:uyguky-${__psIdx}`}>
+              <div data-ps={`src/pages/practice-areas.astro:uygukz-${__psIdx}`}>
+                <span class="text-[#C9A840] font-black text-[15px] tracking-wider block mb-3" data-ps={`src/pages/practice-areas.astro:1azitu-${__psIdx}`}>{area.n}</span>
+                <h3 class="text-[19.84px] font-black text-[#061633] mb-3 leading-[1.14] tracking-[-0.24px]" data-ps={`src/pages/practice-areas.astro:7hfyz8-${__psIdx}`}>{area.title}</h3>
+                <p class="text-[15.5px] leading-[25px] text-[#454F5E] mb-5" data-ps={`src/pages/practice-areas.astro:jh0srz-${__psIdx}`}>{area.text}</p>
+              </div>
+              <a href={area.href} class="text-[#732521] font-bold text-[12.16px] inline-flex items-center gap-1 hover:gap-2 transition-all" data-ps={`src/pages/practice-areas.astro:qkypg2-${__psIdx}`}>LEARN MORE<span aria-hidden="true" data-ps={`src/pages/practice-areas.astro:1azitt-${__psIdx}`}>→</span></a>
+            </div>
+          ))}
+        </div>
+        <div class="mt-12 text-center max-w-[680px] mx-auto" data-ps="src/pages/practice-areas.astro:uygul0">
+          <p class="text-[16.5px] text-[#454F5E] leading-[26px]" data-ps="src/pages/practice-areas.astro:jh0ss0">Not sure if your charge is listed? We defend the full range of Michigan criminal offenses.<a href="/#contact" class="text-[#732521] font-bold border-b border-[#732521]/28 pb-0.5 hover:border-[#732521] ml-1" data-ps="src/pages/practice-areas.astro:qkypg3">Discuss your case →</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-[#061633] py-[100px]" data-ps="src/pages/practice-areas.astro:6isuk8">
+      <div class="max-w-[1280px] mx-auto px-6 text-center" data-ps="src/pages/practice-areas.astro:uygul1">
+        <div class="mb-4" data-ps="src/pages/practice-areas.astro:uygul2">
+          <span class="inline-flex items-center text-[12px] font-bold uppercase tracking-[1.8px] text-[#C9A840]" data-ps="src/pages/practice-areas.astro:1azits"><span class="w-[28px] h-[2px] bg-[#C9A840] inline-block mr-3" data-ps="src/pages/practice-areas.astro:1azitr"></span>Consultation</span>
+        </div>
+        <h2 class="text-[44px] font-black leading-[1.14] tracking-[-0.53px] text-white mb-6 max-w-[820px] mx-auto" data-ps="src/pages/practice-areas.astro:76yy8e">Whatever the charge, talk to us first.</h2>
+        <p class="text-[18.08px] leading-[31px] text-[#C3CCDA] max-w-[680px] mx-auto mb-8" data-ps="src/pages/practice-areas.astro:jh0ss1">Your consultation is confidential and available 24/7. Tell us what you're facing and we'll explain how Michigan law applies to it.</p>
+        <div class="flex flex-wrap justify-center gap-4 mb-12" data-ps="src/pages/practice-areas.astro:uygul3">
+          <a href="/#contact" class="bg-[#732521] text-white font-semibold text-[16.16px] px-[30px] py-[16px] rounded-[3px] hover:bg-[#5a1c19] transition inline-flex items-center gap-2" data-ps="src/pages/practice-areas.astro:qkypg4">Request a Confidential Consultation<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-4 h-4" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></a>
+          <a href="tel:+17348876200" class="border border-white/30 text-white font-semibold text-[16.16px] px-[30px] py-[16px] rounded-[3px] hover:border-[#C9A840] hover:text-[#DDC582] transition inline-flex items-center gap-2" data-ps="src/pages/practice-areas.astro:qkypg5">Call (734) 887-6200</a>
+        </div>
+        <div class="border-t border-white/10 pt-8 mt-8" data-ps="src/pages/practice-areas.astro:uygul4">
+          <div class="flex flex-wrap justify-center gap-x-6 gap-y-3" data-ps="src/pages/practice-areas.astro:uygul5">
+            <a href="/" class="text-[14px] text-[#C3CCDA] hover:text-white transition" data-ps="src/pages/practice-areas.astro:qkypg6">Home</a>
+            <a href="/practice-areas" class="text-[14px] text-[#C3CCDA] hover:text-white transition" data-ps="src/pages/practice-areas.astro:qkypg7">Practice Areas</a>
+            <a href="/courtroom-victories" class="text-[14px] text-[#C3CCDA] hover:text-white transition" data-ps="src/pages/practice-areas.astro:qkypg8">Results</a>
+            <a href="/#about" class="text-[14px] text-[#C3CCDA] hover:text-white transition" data-ps="src/pages/practice-areas.astro:qkypg9">About</a>
+            <a href="/#testimonials" class="text-[14px] text-[#C3CCDA] hover:text-white transition" data-ps="src/pages/practice-areas.astro:qkypga">Testimonials</a>
+            <a href="/#faq" class="text-[14px] text-[#C3CCDA] hover:text-white transition" data-ps="src/pages/practice-areas.astro:qkypgw">FAQs</a>
+            <a href="/#contact" class="text-[14px] text-[#C3CCDA] hover:text-white transition" data-ps="src/pages/practice-areas.astro:qkypgx">Contact</a>
+          </div>
+          <div class="mt-6" data-ps="src/pages/practice-areas.astro:uygul6">
+            <a href="tel:+17348876200" class="text-[#C9A840] font-bold text-[16px] hover:text-[#DDC582] transition" data-ps="src/pages/practice-areas.astro:qkypgy">Call (734) 887-6200</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

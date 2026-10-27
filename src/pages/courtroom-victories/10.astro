@@ -1,0 +1,118 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+const cases = [
+  { id: '14-0996-od', charges: 'Operating While Intoxicated', result: 'OWI reduced to Civil Infraction on eve of trial.', court: '15th District Court', caseNo: '14-0996 OD' },
+  { id: '14-0356-od', charges: 'Operating While Intoxicated', result: 'Reduced to Careless Driving', court: '15th District Court', caseNo: '14-0356 OD' },
+  { id: '13we63373', charges: 'Operating While Intoxicated', result: 'Reduced to Careless Driving', court: '18th District Court', caseNo: '13WE63373' },
+  { id: '13w242941-om', charges: 'Urinating in Public', result: 'Dismissed Prior to Trial', court: '15th', caseNo: '13W242941 OM' },
+  { id: '13t-00569-ot', charges: 'Leaving the Scene of a Property Damage Accident', result: 'Found Not Guilty at Non-Jury Trial', court: '14B District Court', caseNo: '13T-00569 OT' },
+  { id: '13c03489a-om', charges: 'Discharge of a Firearm Without Malice', result: 'Dismissed at Pre-Trial Conference', court: '35th District Court', caseNo: '13C03489A OM' },
+  { id: '134-642-om', charges: 'Assault and Battery', result: 'Dismissed at Trial', court: '14A4 District Court', caseNo: '134-642 OM' },
+  { id: '134-0583-sd', charges: 'Operating While Intoxicated with a High Blood Alcohol Content', result: 'Reduced to Operating While Intoxicated at trial', court: '14A-4 District Court', caseNo: '134-0583 SD' },
+  { id: '133-952-sm', charges: 'Operating While Intoxicated', result: 'Not Guilty Verdict at Jury Trial', court: '14(a)3 District Court', caseNo: '133-952-SM' },
+  { id: '133-0643-sm', charges: 'Domestic Violence', result: 'Dismissed at Trial', court: '14A3 District Court', caseNo: '133-0643 SM' },
+  { id: '133-0299-sm', charges: 'Domestic Violence', result: 'Dismissed at Jury Trial', court: '14A3 District Court', caseNo: '133-0299 SM' },
+  { id: '133-0274-st', charges: 'Moving Violation Resulting in Impairment', result: 'Dismissed at Non-Jury Trial', court: '14A3 District Court', caseNo: '133-0274 ST' },
+  { id: '13-2103sm', charges: 'Domestic Violence', result: 'Dismissed at Final Settlement Conference', court: '2A', caseNo: '13-2103SM' },
+  { id: '132-0512-sd', charges: 'Operating While Intoxicated with a High Blood Alcohol Level', result: 'Reduced to Operating While Intoxicated at Jury Trial', court: '14A2 District Court', caseNo: '132-0512 SD' },
+  { id: '13-1879-fh', charges: 'Weapons - Carry Concealed', result: 'Dismissed at Preliminary Examiantion after filing a Motion to Supress Evidence', court: '22nd Circuit Court', caseNo: '13-1879 FH' },
+  { id: '13-1811-fh', charges: 'Home Invasion 3rd Degree; Malicious Destruction of a Building Less Than $200', result: 'Dismissed\u00a0at Preliminary Examination', court: '22nd Circuit Court', caseNo: '13-1811 FH' },
+  { id: '131-1667-od', charges: 'Operating While Intoxicated', result: 'Reduced to Careless Driving', court: '14A1 District Court', caseNo: '131-1667 OD' },
+  { id: '130764-sm', charges: 'Domestic Violence', result: 'Dismissed at Pretrial', court: '12th', caseNo: '130764 SM' },
+  { id: '13-0592-sm', charges: 'Domestic Violence', result: 'Not Guilty Verdict at Jury Trial', court: '15th District Court', caseNo: '13-0592 SM' },
+  { id: '13-0405-sd', charges: 'Operating While Visibly Impaired', result: 'Aquitted at Bench Trial', court: '15th District Court', caseNo: '13-0405 SD' },
+  { id: '13-0231-od', charges: 'Operating While Intoxicated', result: 'Reduced to Careless Driving', court: '15th District Court', caseNo: '13-0231 OD' },
+  { id: '13-0171-sd', charges: 'Operating While Intoxicated', result: 'Reduced to Careless Driving on Date of Trial', court: '15th District Court', caseNo: '13-0171 SD' },
+  { id: '13000206-dl', charges: 'Assault with a Dangerous Weapon', result: 'Dismissed', court: '39th Circuit Court — Family Division', caseNo: '13000206 DL' },
+  { id: '12u30227-st', charges: 'Failure to Comply with the Direction of a Police Officer', result: 'Dismissed at Non-Jury Trial', court: '15th District Court', caseNo: '12U30227 ST' },
+];
+
+const pageTitle = 'Case Results — Page 10 | Law Offices of Joseph A. Simon';
+const pageDescription = 'Real outcomes from cases handled by the Law Offices of Joseph A. Simon. Every case is different, and past results do not guarantee a similar outcome.';
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <section id="results" class="bg-[#F7F5F1] text-[#061633] pt-[150px] pb-[90px] lg:pb-[100px] border-t border-[#E6E2D9]" data-ps="src/pages/courtroom-victories/10.astro:dre6yg">
+    <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8" data-ps="src/pages/courtroom-victories/10.astro:55o02p">
+      <div class="mb-12" data-ps="src/pages/courtroom-victories/10.astro:55o02q">
+        <div class="flex items-center gap-3 text-[12px] font-bold uppercase tracking-[1.8px] text-[#732521] mb-3" data-ps="src/pages/courtroom-victories/10.astro:55o02r">
+          <span class="w-[28px] h-[2px] bg-[#C9A840] inline-block" data-ps="src/pages/courtroom-victories/10.astro:f8svmm"></span>
+          <span data-ps="src/pages/courtroom-victories/10.astro:f8svmn">COURTROOM RESULTS</span>
+        </div>
+        <h1 class="font-heading font-black leading-[1.14] tracking-[-0.53px] mb-4 text-[36px] sm:text-[44px]" data-ps="src/pages/courtroom-victories/10.astro:2piv4u">Representative case results.</h1>
+        <p class="text-[17px] sm:text-[18.08px] text-[#454F5E] leading-[1.65] max-w-[840px]" data-ps="src/pages/courtroom-victories/10.astro:omke5a">Real outcomes from cases handled by the firm. Every case is different, and past results do not guarantee a similar outcome.</p>
+      </div>
+
+      <div class="flex flex-wrap justify-between items-center gap-3 mb-6 text-[14px] text-[#454F5E]" data-ps="src/pages/courtroom-victories/10.astro:55o02s">
+        <p data-ps="src/pages/courtroom-victories/10.astro:omke5b">Showing 217–240 of 358 case results</p>
+        <p data-ps="src/pages/courtroom-victories/10.astro:omke5c">Page 10 of 15</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" data-ps="src/pages/courtroom-victories/10.astro:55o02t">
+        {cases.map((c, __psIdx) => (
+          <article id={c.id} class="bg-white border border-[#E6E2D9] p-7 rounded-[4px] flex flex-col justify-between hover:border-[#C9A840] transition min-w-0 break-words" data-ps={`src/pages/courtroom-victories/10.astro:2ggnsi-${__psIdx}`}>
+            <div data-ps={`src/pages/courtroom-victories/10.astro:55o02u-${__psIdx}`}>
+              <div class="text-[12px] font-bold uppercase text-[#732521] tracking-wider mb-2" data-ps={`src/pages/courtroom-victories/10.astro:55o02v-${__psIdx}`}>{c.charges}</div>
+              <h2 class="font-heading font-bold text-[#061633] leading-snug mb-3 text-[18.88px] whitespace-pre-line" data-ps={`src/pages/courtroom-victories/10.astro:byw22r-${__psIdx}`}>{c.result}</h2>
+              <p class="text-[15px] text-[#454F5E] leading-[1.6] mb-6" data-ps={`src/pages/courtroom-victories/10.astro:omke5d-${__psIdx}`}>{c.court}</p>
+            </div>
+            <div class="border border-[#C9A840]/50 bg-[#F7F5F1] text-[#655018] text-[11.68px] font-bold px-3 py-1 rounded-[2px] tracking-wide self-start" data-ps={`src/pages/courtroom-victories/10.astro:55o02w-${__psIdx}`}>
+              Case <span data-ps={`src/pages/courtroom-victories/10.astro:f8svmo-${__psIdx}`}>{c.caseNo}</span>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <nav aria-label="Case results pagination" class="flex flex-wrap items-center justify-center gap-2 mt-10" data-ps="src/pages/courtroom-victories/10.astro:jntqtn">
+        <a rel="prev" class="page-link" href="/courtroom-victories/9" data-ps="src/pages/courtroom-victories/10.astro:vqiau8">← Previous</a>
+        <a class="page-link" href="/courtroom-victories" aria-label="Page 1" data-ps="src/pages/courtroom-victories/10.astro:vqiau9">1</a>
+        <span class="px-1 text-[#454F5E]" aria-hidden="true" data-ps="src/pages/courtroom-victories/10.astro:f8svmp">…</span>
+        <a class="page-link" href="/courtroom-victories/9" aria-label="Page 9" data-ps="src/pages/courtroom-victories/10.astro:vqiaua">9</a>
+        <a class="page-link" href="/courtroom-victories/10" aria-label="Page 10" aria-current="page" data-ps="src/pages/courtroom-victories/10.astro:vqiaub">10</a>
+        <a class="page-link" href="/courtroom-victories/11" aria-label="Page 11" data-ps="src/pages/courtroom-victories/10.astro:vqiauc">11</a>
+        <span class="px-1 text-[#454F5E]" aria-hidden="true" data-ps="src/pages/courtroom-victories/10.astro:f8svnb">…</span>
+        <a class="page-link" href="/courtroom-victories/15" aria-label="Page 15" data-ps="src/pages/courtroom-victories/10.astro:cq2im0">15</a>
+        <a rel="next" class="page-link" href="/courtroom-victories/11" data-ps="src/pages/courtroom-victories/10.astro:cq2ilz">Next →</a>
+      </nav>
+
+      <p class="text-center text-[13px] text-[#454F5E] mt-8" data-ps="src/pages/courtroom-victories/10.astro:omke5e">Prior results do not guarantee a similar outcome. Each case depends on its own facts and circumstances.</p>
+      <div class="text-center mt-6" data-ps="src/pages/courtroom-victories/10.astro:55o02x">
+        <a href="/#contact" class="text-[#732521] font-bold underline underline-offset-4" data-ps="src/pages/courtroom-victories/10.astro:vqiaud">Request a confidential consultation →</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style is:global>
+  /* Source captured the header as a solid navy bar at the top of this page. */
+  #navbar {
+    background-color: rgb(6, 22, 51);
+  }
+</style>
+
+<style>
+  .page-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    height: 40px;
+    padding: 0 14px;
+    border: 1px solid #e6e2d9;
+    border-radius: 3px;
+    background: #ffffff;
+    color: #732521;
+    font-size: 15px;
+    font-weight: 700;
+    transition: border-color 0.2s, background-color 0.2s;
+  }
+  .page-link:hover {
+    border-color: #c9a840;
+  }
+  .page-link[aria-current='page'] {
+    background: #732521;
+    border-color: #732521;
+    color: #ffffff;
+  }
+</style>

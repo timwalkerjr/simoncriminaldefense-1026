@@ -1,0 +1,329 @@
+---
+import '@/styles/global.css';
+import Navigation from '@/components/Navigation.astro';
+import Footer from '@/components/Footer.astro';
+import SEOHead from '@/components/SEOHead.astro';
+import { SITE } from '@/config/site';
+
+const { frontmatter, mdxFilePath = '', headings = [] } = Astro.props as {
+  frontmatter: any;
+  mdxFilePath?: string;
+  headings?: { depth: number; slug: string; text: string }[];
+};
+const htmlLang = frontmatter.lang ?? Astro.currentLocale ?? SITE.lang;
+
+// Use ogImage if set, otherwise fall back to featured image
+const socialImage = frontmatter.ogImage || frontmatter.image;
+
+// Structured data.
+//
+// The universal fields are built here because only a build knows them: the
+// post's absolute URL and the absolute form of its image. Everything
+// type-specific comes from the `jsonLd` frontmatter key, which the editor
+// writes from the schema form and the AI writes directly for any schema.org
+// type.
+//
+// An array means the author is composing several schemas and takes over
+// entirely. An object of an article family type is merged over the BlogPosting
+// node, its `@type` winning. Any other type (FAQPage, Recipe, Product, ...) is
+// emitted as a `@graph` of the BlogPosting node plus the typed node, so article
+// metadata never lands on a type that is not a CreativeWork. The typed node
+// gets the url and image here because the editor strips them at write time.
+const ARTICLE_TYPES = [
+  'Article',
+  'BlogPosting',
+  'NewsArticle',
+  'TechArticle',
+  'ScholarlyArticle',
+  'Report',
+  'SocialMediaPosting',
+];
+
+const absoluteUrl = new URL(Astro.url.pathname, SITE.url).toString();
+const absoluteImage = !socialImage
+  ? undefined
+  : socialImage.startsWith('http')
+    ? socialImage
+    : new URL(socialImage, SITE.url).toString();
+
+const articleNode = {
+  '@type': 'BlogPosting',
+  name: frontmatter.title,
+  headline: frontmatter.title,
+  description: frontmatter.description,
+  datePublished: frontmatter.pubDate?.toISOString?.(),
+  ...(frontmatter.updatedDate
+    ? { dateModified: frontmatter.updatedDate.toISOString() }
+    : {}),
+  author: {
+    '@type': 'Person',
+    name: frontmatter.author || SITE.name,
+  },
+  url: absoluteUrl,
+  ...(absoluteImage ? { image: absoluteImage } : {}),
+  mainEntityOfPage: { '@type': 'WebPage', '@id': absoluteUrl },
+};
+
+const authoredJsonLd = frontmatter.jsonLd ?? null;
+const authoredObject = Array.isArray(authoredJsonLd) ? null : authoredJsonLd;
+const authoredType = authoredObject?.['@type'];
+
+const jsonLd = Array.isArray(authoredJsonLd)
+  ? authoredJsonLd
+  : !authoredType || ARTICLE_TYPES.includes(authoredType)
+    ? {
+        '@context': 'https://schema.org',
+        ...articleNode,
+        ...(authoredObject ?? {}),
+      }
+    : {
+        '@context': 'https://schema.org',
+        '@graph': [
+          articleNode,
+          {
+            url: absoluteUrl,
+            ...(absoluteImage ? { image: absoluteImage } : {}),
+            ...authoredObject,
+          },
+        ],
+      };
+
+const onThisPage = headings.filter((h) => h.depth === 2);
+const relatedPractice: { label: string; href: string }[] = frontmatter.relatedPractice ?? [];
+---
+
+<!doctype html>
+<html lang={htmlLang}>
+  <head>
+    <SEOHead
+      title={`${frontmatter.title} – ${SITE.name}`}
+      description={frontmatter.description}
+      image={socialImage}
+      type="article"
+      publishedTime={frontmatter.pubDate?.toISOString?.()}
+      modifiedTime={frontmatter.updatedDate?.toISOString?.()}
+      canonicalUrl={frontmatter.canonicalUrl}
+      jsonLd={jsonLd}
+    />
+  </head>
+  <body class="min-h-screen bg-background text-foreground" data-ps="src/layouts/BlogLayout.astro:rqzn4e">
+    <Navigation />
+
+    <article
+      class="bg-background text-foreground"
+      data-mdx-file={mdxFilePath}
+      data-mdx-type="blog"
+     data-ps="src/layouts/BlogLayout.astro:otdivl">
+      <section class="relative overflow-hidden bg-[#0B1F42] text-white" data-ps="src/layouts/BlogLayout.astro:qvaipe">
+        <div
+          class="absolute inset-0 bg-cover bg-[position:70%_center]"
+          style="background-image: url('https://jas-law-astro-review.netlify.app/hero-court-1.webp');"
+          aria-hidden="true" data-ps="src/layouts/BlogLayout.astro:ynx9go"></div>
+        <div
+          class="absolute inset-0"
+          style="background: linear-gradient(100deg, rgba(4,16,38,0.97) 0%, rgba(5,19,45,0.9) 46%, rgba(8,26,60,0.62) 100%);"
+          aria-hidden="true" data-ps="src/layouts/BlogLayout.astro:ynx9gp"></div>
+        <div class="relative mx-auto max-w-[1280px] px-4 pb-16 pt-[130px] sm:px-6 lg:px-8" data-ps="src/layouts/BlogLayout.astro:ynx9gq">
+          <nav aria-label="Breadcrumb" class="mb-8 text-[12px] text-[#DDC582]" data-ps="src/layouts/BlogLayout.astro:yit06x">
+            <ol class="flex flex-wrap items-center gap-2">
+              <li data-ps="src/layouts/BlogLayout.astro:hmgf37"><a href="/" class="text-[#DDC582] no-underline hover:text-white" data-ps="src/layouts/BlogLayout.astro:th3nc7">Home</a></li>
+              <li aria-hidden="true" class="text-[#98A6BB]" data-ps="src/layouts/BlogLayout.astro:hmgf38">/</li>
+              <li data-ps="src/layouts/BlogLayout.astro:hmgf39"><a href="/recent-posts" class="text-[#DDC582] no-underline hover:text-white" data-ps="src/layouts/BlogLayout.astro:th3nc8">Posts</a></li>
+              <li aria-hidden="true" class="text-[#98A6BB]" data-ps="src/layouts/BlogLayout.astro:hmgf3a">/</li>
+              <li class="text-[#C5D0E0]" aria-current="page" data-ps="src/layouts/BlogLayout.astro:hmgf3w">{frontmatter.title}</li>
+            </ol>
+          </nav>
+          <p class="mb-6 flex items-center gap-3 text-[11.5px] font-bold uppercase tracking-[1.8px] text-[#DDC582]" data-ps="src/layouts/BlogLayout.astro:md5qo0">
+            <span class="inline-block h-[2px] w-7 bg-[#C9A840]" aria-hidden="true" data-ps="src/layouts/BlogLayout.astro:9v224i"></span>
+            Posts &amp; Defense Insights
+          </p>
+          <h1 class="font-heading max-w-[560px] text-[48px] font-black leading-[50.4px] tracking-[-0.6px] text-white" data-ps="src/layouts/BlogLayout.astro:vjwfur">{frontmatter.title}</h1>
+          <p class="mt-6 max-w-[800px] text-[19px] leading-[31.4px] text-[#C5D0E0]" data-ps="src/layouts/BlogLayout.astro:md5qo1">{frontmatter.description}</p>
+          <div class="mt-8 flex flex-wrap items-center gap-6" data-ps="src/layouts/BlogLayout.astro:o33ule">
+            <a href="/#contact" class="rounded-[3px] border border-transparent bg-[#732521] px-[30px] py-4 text-[16px] font-semibold text-white no-underline transition-colors hover:bg-[#5a1c19]" data-ps="src/layouts/BlogLayout.astro:th3nc9">Request a Confidential Consultation</a>
+            <a href="tel:+17348876200" class="border-b border-[#DDC582]/60 pb-1 text-[16px] font-semibold text-white no-underline transition-colors hover:text-[#DDC582]" data-ps="src/layouts/BlogLayout.astro:th3nca">(734) 887-6200</a>
+          </div>
+        </div>
+      </section>
+
+      <div class="mx-auto grid max-w-[1280px] grid-cols-1 gap-12 px-4 py-[90px] sm:px-6 lg:grid-cols-[minmax(0,800px)_1fr] lg:gap-[72px] lg:px-8" data-ps="src/layouts/BlogLayout.astro:o33uld">
+        <div class="min-w-0" data-ps="src/layouts/BlogLayout.astro:o33ulc">
+          {frontmatter.image && (
+            <figure class="mb-10">
+              <img
+                src={frontmatter.image}
+                alt={frontmatter.imageAlt || frontmatter.title}
+                width="1536"
+                height="1024"
+                class="block h-auto w-full" data-ps="src/layouts/BlogLayout.astro:w5o551" />
+            </figure>
+          )}
+
+          <div class="post-body" data-ps="src/layouts/BlogLayout.astro:o33ulb">
+            <slot />
+          </div>
+
+          {frontmatter.tags && frontmatter.tags.length > 0 && (
+            <div class="mt-12 flex flex-wrap gap-2 border-t border-[#E6E2D9] pt-8" data-ps="src/layouts/BlogLayout.astro:o33ula">
+              {frontmatter.tags.map((tag: string, __psIdx) => (
+                <span class="rounded-md bg-[#F7F5F1] px-3 py-1 text-sm text-[#596371]" data-ps={`src/layouts/BlogLayout.astro:9v224j-${__psIdx}`}>#{tag}</span>
+              ))}
+            </div>
+          )}
+
+          <p class="mt-16" data-ps="src/layouts/BlogLayout.astro:md5qo2">
+            <a href="/recent-posts" class="text-[14px] font-bold text-[#732521] no-underline hover:underline" data-ps="src/layouts/BlogLayout.astro:th3ncb">← Back to all posts</a>
+          </p>
+        </div>
+
+        <aside aria-label="Article navigation" class="lg:pt-3" data-ps="src/layouts/BlogLayout.astro:t4h66o">
+          {onThisPage.length > 0 && (
+            <div data-ps="src/layouts/BlogLayout.astro:o33ul9">
+              <p class="font-heading text-[13px] font-bold uppercase tracking-[1.5px] text-[#732521]" data-ps="src/layouts/BlogLayout.astro:md5qo3">On this page</p>
+              <ul class="mt-6 space-y-4">
+                {onThisPage.map((h, __psIdx) => (
+                  <li data-ps={`src/layouts/BlogLayout.astro:hmgf3x-${__psIdx}`}>
+                    <a href={`#${h.slug}`} class="text-[15px] leading-snug text-[#141C28] no-underline hover:underline" data-ps={`src/layouts/BlogLayout.astro:th3ncc-${__psIdx}`}>{h.text}</a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {relatedPractice.length > 0 && (
+            <div class="mt-12" data-ps="src/layouts/BlogLayout.astro:o33ul8">
+              <p class="font-heading text-[13px] font-bold uppercase tracking-[1.5px] text-[#732521]" data-ps="src/layouts/BlogLayout.astro:md5qo4">Related Practice Areas</p>
+              <ul class="mt-6 border-t border-[#E6E2D9]">
+                {relatedPractice.map((item, __psIdx) => (
+                  <li class="border-b border-[#E6E2D9]" data-ps={`src/layouts/BlogLayout.astro:hmgf3y-${__psIdx}`}>
+                    <a href={item.href} class="block py-3 text-[15px] text-[#141C28] no-underline hover:underline" data-ps={`src/layouts/BlogLayout.astro:th3ncd-${__psIdx}`}>{item.label}</a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          <a href="/recent-posts" class="mt-8 inline-block text-[15px] font-bold text-[#732521] no-underline hover:underline" data-ps="src/layouts/BlogLayout.astro:th3ncz">Explore All Posts →</a>
+        </aside>
+      </div>
+    </article>
+
+    <section class="bg-[#0B1F42] px-4 py-[100px] text-center text-white sm:px-6 lg:px-8" data-ps="src/layouts/BlogLayout.astro:qvaipd">
+      <div class="mx-auto max-w-[1280px]" data-ps="src/layouts/BlogLayout.astro:o33ul7">
+        <p class="mb-6 flex items-center justify-center gap-3 text-[11.5px] font-bold uppercase tracking-[1.8px] text-[#DDC582]" data-ps="src/layouts/BlogLayout.astro:md5qo5">
+          <span class="inline-block h-[2px] w-7 bg-[#C9A840]" aria-hidden="true" data-ps="src/layouts/BlogLayout.astro:9v224k"></span>
+          Consultation
+        </p>
+        <h2 class="font-heading text-[44px] font-black leading-[50.16px] tracking-[-0.53px] text-white" data-ps="src/layouts/BlogLayout.astro:gvhin6">Whatever the charge, talk to us first.</h2>
+        <p class="mx-auto mt-6 max-w-[560px] text-[18px] leading-[31px] text-[#C5D0E0]" data-ps="src/layouts/BlogLayout.astro:md5qo6">Your consultation is confidential and available 24/7. Tell us what you're facing and we'll explain how Michigan law applies to it.</p>
+        <div class="mt-10 flex flex-wrap items-center justify-center gap-4" data-ps="src/layouts/BlogLayout.astro:o33ul6">
+          <a href="/#contact" class="rounded-[3px] bg-[#732521] px-[30px] py-4 font-semibold text-white no-underline transition-colors hover:bg-[#5a1c19]" data-ps="src/layouts/BlogLayout.astro:th3nd0">Request a Confidential Consultation →</a>
+          <a href="tel:+17348876200" class="rounded-[3px] border border-white/30 px-[30px] py-4 font-semibold text-white no-underline transition-colors hover:border-white/60" data-ps="src/layouts/BlogLayout.astro:th3nd1">Call (734) 887-6200</a>
+        </div>
+        <div class="mt-16 border-t border-white/10 pt-8" data-ps="src/layouts/BlogLayout.astro:o33ul5">
+          <nav aria-label="Site sections" data-ps="src/layouts/BlogLayout.astro:yit06w">
+            <ul class="flex flex-wrap justify-center gap-x-6 gap-y-3 text-[14px] text-[#C3CCDA]">
+              <li><a href="/" class="no-underline hover:text-white" data-ps="src/layouts/BlogLayout.astro:th3nd2">Home</a></li>
+              <li><a href="/practice-areas" class="no-underline hover:text-white" data-ps="src/layouts/BlogLayout.astro:th3nd3">Practice Areas</a></li>
+              <li><a href="/#results" class="no-underline hover:text-white" data-ps="src/layouts/BlogLayout.astro:th3nd4">Results</a></li>
+              <li><a href="/#about" class="no-underline hover:text-white" data-ps="src/layouts/BlogLayout.astro:th3nd5">About</a></li>
+              <li><a href="/#testimonials" class="no-underline hover:text-white">Testimonials</a></li>
+              <li><a href="/#faq" class="no-underline hover:text-white">FAQs</a></li>
+              <li><a href="/#contact" class="no-underline hover:text-white">Contact</a></li>
+            </ul>
+          </nav>
+          <p class="mt-6 text-[16px] font-bold text-[#DDC582]" data-ps="src/layouts/BlogLayout.astro:md5qo7">
+            <a href="tel:+17348876200" class="no-underline hover:text-white">Call (734) 887-6200</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <Footer />
+
+    <style>
+      .post-body {
+        color: #141c28;
+        font-size: 18px;
+        line-height: 32.4px;
+      }
+      .post-body :global(p) {
+        margin: 0 0 24px;
+      }
+      .post-body :global(a) {
+        color: #732521;
+        font-weight: 700;
+        font-style: italic;
+        text-decoration: underline;
+      }
+      .post-body :global(h2) {
+        margin: 56px 0 24px;
+        padding-top: 40px;
+        border-top: 1px solid #e6e2d9;
+        font-family: var(--font-serif);
+        font-size: 40px;
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: -0.5px;
+        color: #0b1f42;
+        scroll-margin-top: 100px;
+      }
+      .post-body :global(h3) {
+        margin: 40px 0 16px;
+        font-family: var(--font-serif);
+        font-size: 26px;
+        font-weight: 700;
+        line-height: 1.3;
+        color: #0b1f42;
+      }
+      .post-body :global(h4) {
+        margin: 56px 0 16px;
+        font-family: var(--font-serif);
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 1.3;
+        color: #0b1f42;
+      }
+      .post-body :global(h5) {
+        margin: 24px 0 0;
+        font-family: var(--font-serif);
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 1.5;
+        color: #0b1f42;
+      }
+      .post-body :global(blockquote) {
+        margin: 32px 0;
+        padding: 24px 32px;
+        background: #f7f5f1;
+        border-left: 3px solid #c9a840;
+        font-style: normal;
+        color: #141c28;
+        quotes: none;
+      }
+      .post-body :global(blockquote p) {
+        margin: 0;
+      }
+      .post-body :global(ul) {
+        margin: 0 0 24px;
+        padding-left: 0;
+        list-style: none;
+      }
+      .post-body :global(li) {
+        position: relative;
+        margin: 0 0 14px;
+        padding-left: 28px;
+      }
+      .post-body :global(li::before) {
+        content: '';
+        position: absolute;
+        left: 6px;
+        top: 13px;
+        width: 6px;
+        height: 6px;
+        border-radius: 9999px;
+        background: #b89c4a;
+      }
+    </style>
+  </body>
+</html>

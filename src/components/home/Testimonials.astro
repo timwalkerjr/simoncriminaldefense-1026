@@ -1,0 +1,55 @@
+---
+const reviews = [
+  { rating: 'Rating: 5.0 stars', body: 'Joe went into the courtroom totally prepared which made me feel very fortunate and confident. It was fascinating to watch him be so creative. Joe is an amazing attorney.', hidden: false },
+  { rating: 'Rating: Five Stars', body: 'I would highly recommend him to anyone who has the misfortune of having a criminal matter befall them. I clearly understand why he is billed as one of the top criminal defense attorneys in the State of Michigan.', hidden: false },
+  { rating: 'Rating: 5', body: 'Joe is an amazing individual and lawyer...', hidden: false },
+  { rating: 'Rating: 5.0 stars', body: 'Miracle worker… Satisfied is an understatement…', hidden: true },
+  { rating: 'Rating: 5.0 stars', body: 'Joe worked tirelessly going over every bit of information relating to the case and submerged himself into understanding every little detail...', hidden: true },
+];
+---
+<section id="testimonials" class="bg-[#F7F5F1] py-[90px] border-t border-[#E6E2D9]" data-ps="src/components/home/Testimonials.astro:m12r5v">
+  <div class="max-w-[1280px] mx-auto px-6" data-ps="src/components/home/Testimonials.astro:jqcpy2">
+    <div class="text-center mb-10" data-ps="src/components/home/Testimonials.astro:jqcpy1">
+      <div class="text-[#732521] text-[12px] font-bold uppercase tracking-widest mb-3" data-ps="src/components/home/Testimonials.astro:jqcpy0">Client Testimonials</div>
+      <h2 class="text-[#061633] text-[36px] sm:text-[44px] font-black mb-5" data-ps="src/components/home/Testimonials.astro:o88ciu">Client Reviews</h2>
+      <a href="/reviews" class="text-[#732521] font-bold underline" data-ps="src/components/home/Testimonials.astro:v3pdpc">Read all client reviews →</a>
+    </div>
+    <div id="testimonials-track" class="grid lg:grid-cols-3 gap-6" data-ps="src/components/home/Testimonials.astro:jqcpxz">
+      {reviews.map((r, __psIdx) => (
+        <article data-featured-review class="testimonial-card bg-white border border-[#E6E2D9] rounded-[10px] p-7 flex flex-col justify-between" hidden={r.hidden} data-ps={`src/components/home/Testimonials.astro:tfo5ot-${__psIdx}`}>
+          <div data-ps={`src/components/home/Testimonials.astro:jqcpxy-${__psIdx}`}>
+            <div class="text-[#987b29] text-[14px] mb-4" data-ps={`src/components/home/Testimonials.astro:jqcpxx-${__psIdx}`}>{r.rating}</div>
+            <div class="review-copy text-[#141C28] text-[16px] leading-[1.75]" data-ps={`src/components/home/Testimonials.astro:jqcpxw-${__psIdx}`}>{r.body}</div>
+          </div>
+          <div class="border-t border-[#E6E2D9] mt-6 pt-4 text-[13px]" data-ps={`src/components/home/Testimonials.astro:jqcpxv-${__psIdx}`}><strong class="text-[#061633]">Verified Client Review</strong></div>
+        </article>
+      ))}
+    </div>
+    <div class="flex items-center justify-center gap-5 mt-8" data-ps="src/components/home/Testimonials.astro:jqcpxu">
+      <button id="reviews-prev" type="button" class="w-11 h-11 bg-white border border-[#061633] rounded-full text-[#061633] text-[24px]" aria-label="Previous reviews" data-ps="src/components/home/Testimonials.astro:ii0b1m">‹</button>
+      <span id="reviews-position" class="text-[#596371] text-[14px]" aria-live="polite" data-ps="src/components/home/Testimonials.astro:pdgp95">1 / 2</span>
+      <button id="reviews-next" type="button" class="w-11 h-11 bg-white border border-[#061633] rounded-full text-[#061633] text-[24px]" aria-label="Next reviews" data-ps="src/components/home/Testimonials.astro:ii0b1l">›</button>
+    </div>
+  </div>
+</section>
+
+<script>
+  const reviewCards = Array.from(document.querySelectorAll<HTMLElement>('[data-featured-review]'));
+  const reviewPrev = document.getElementById('reviews-prev');
+  const reviewNext = document.getElementById('reviews-next');
+  const reviewPosition = document.getElementById('reviews-position');
+  let reviewPage = 0;
+  function renderReviews(target: number) {
+    const perPage = window.matchMedia('(min-width:1024px)').matches ? 3 : 1;
+    const pages = Math.ceil(reviewCards.length / perPage);
+    reviewPage = (target + pages) % pages;
+    reviewCards.forEach((card, i) => {
+      card.hidden = i < reviewPage * perPage || i >= (reviewPage + 1) * perPage;
+    });
+    if (reviewPosition) reviewPosition.textContent = `${reviewPage + 1} / ${pages}`;
+  }
+  reviewPrev?.addEventListener('click', () => renderReviews(reviewPage - 1));
+  reviewNext?.addEventListener('click', () => renderReviews(reviewPage + 1));
+  window.addEventListener('resize', () => renderReviews(0));
+  renderReviews(0);
+</script>

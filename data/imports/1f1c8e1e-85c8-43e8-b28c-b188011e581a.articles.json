@@ -1,0 +1,95 @@
+{
+  "sharedInstructions": "Source: https://jas-law-astro-review.netlify.app/ (preserve mode). Inspected: src/content.config.ts defines blog, docs and media collections (media is the press-coverage collection, sourcePath/sourceUrl fields). Article routes exist at src/pages/post/[slug].astro (blog) and src/pages/media-articles/[...slug].astro (media). The source sitemap (sitemap-index.xml -> sitemap-0.xml) lists individual articles only under /post/ and /media-articles/. None of the requested paths in this batch fall under those prefixes, so no entry in this batch is a post and no collection entry or article layout work is needed here. Classification: every requested path is a practice-area or service-area landing page (Service/WebPage structured data, breadcrumb under Practice Areas or Service Areas, no article type, no publication date or byline). Per the instructions these are type page, and the page worker imports them under src/pages/practice-area/<slug>.astro or src/pages/service-areas/<slug>.astro, replacing the existing 'This page hasn't been imported yet' placeholder files at those routes. No targetPath is needed for page entries. Shared article layouts (BlogLayout, MediaArticleLayout, PostArticleLayout) were not changed in this preparation step. No new content collection entries were created. Requested existing destinations were empty, so no existing page was replaced by this preparation step.",
+  "entries": [
+    {
+      "path": "/practice-area/pittsfield-township-assault-charges/",
+      "type": "page",
+      "reason": "Practice-area landing page with Service and WebPage structured data, breadcrumb Home > Pittsfield Township > page, no article type or byline. Listed in sitemap under practice-area, not under /post/ or /media-articles/."
+    },
+    {
+      "path": "/practice-area/pittsfield-township-domestic-violence/",
+      "type": "page",
+      "reason": "Practice-area landing page (Service/WebPage schema, breadcrumb under Pittsfield Township), no article type or publication date. Sitemap practice-area membership."
+    },
+    {
+      "path": "/practice-area/pittsfield-township-drunk-driving-dui-owi/",
+      "type": "page",
+      "reason": "Practice-area landing page (Service/WebPage schema, breadcrumb under Pittsfield Township), no article type or publication date. Sitemap practice-area membership."
+    },
+    {
+      "path": "/practice-area/police-investigations/",
+      "type": "page",
+      "reason": "Practice-area landing page (Service/WebPage schema, breadcrumb Home > Practice Areas > page), no article type or byline. Sitemap practice-area membership."
+    },
+    {
+      "path": "/practice-area/saline-assault-charges/",
+      "type": "page",
+      "reason": "Practice-area landing page (Service/WebPage schema, breadcrumb under Saline), no article type or publication date. Sitemap practice-area membership."
+    },
+    {
+      "path": "/practice-area/saline-domestic-violence/",
+      "type": "page",
+      "reason": "Practice-area landing page (Service/WebPage schema, breadcrumb under Saline), no article type or publication date. Sitemap practice-area membership."
+    },
+    {
+      "path": "/practice-area/saline-drunk-driving-dui-owi/",
+      "type": "page",
+      "reason": "Practice-area landing page (Service/WebPage schema, breadcrumb under Saline), no article type or publication date. Sitemap practice-area membership."
+    },
+    {
+      "path": "/practice-area/sex-crime-defense/",
+      "type": "page",
+      "reason": "Practice-area landing page despite long editorial copy: Service/WebPage schema, breadcrumb Home > Practice Areas > page, no article type, byline or publication date. Sitemap practice-area membership, not /post/ or /media-articles/."
+    },
+    {
+      "path": "/practice-area/theft-offenses/",
+      "type": "page",
+      "reason": "Practice-area landing page (Service/WebPage schema, breadcrumb Home > Practice Areas > page), no article type or byline. Sitemap practice-area membership."
+    },
+    {
+      "path": "/practice-area/ypsilanti-assault-crimes/",
+      "type": "page",
+      "reason": "Practice-area landing page (Service/WebPage schema, breadcrumb under Ypsilanti), no article type or publication date. Sitemap practice-area membership."
+    },
+    {
+      "path": "/practice-area/ypsilanti-domestic-violence/",
+      "type": "page",
+      "reason": "Practice-area landing page (Service/WebPage schema, breadcrumb under Ypsilanti), no article type or publication date. Sitemap practice-area membership."
+    },
+    {
+      "path": "/practice-area/ypsilanti-drunk-driving-dui-owi/",
+      "type": "page",
+      "reason": "Practice-area landing page (Service/WebPage schema, breadcrumb under Ypsilanti), no article type or publication date. Sitemap practice-area membership."
+    },
+    {
+      "path": "/practice-area/ypsilanti-township-assault-charges/",
+      "type": "page",
+      "reason": "Practice-area landing page (Service/WebPage schema, breadcrumb under Ypsilanti Township), no article type or publication date. Sitemap practice-area membership."
+    },
+    {
+      "path": "/practice-area/ypsilanti-township-domestic-violence/",
+      "type": "page",
+      "reason": "Practice-area landing page (Service/WebPage schema, breadcrumb under Ypsilanti Township), no article type or publication date. Sitemap practice-area membership."
+    },
+    {
+      "path": "/practice-area/ypsilanti-township-drunk-driving-dui-owi/",
+      "type": "page",
+      "reason": "Practice-area landing page (Service/WebPage schema, breadcrumb under Ypsilanti Township), no article type or publication date. Sitemap practice-area membership."
+    },
+    {
+      "path": "/service-areas/ann-arbor/",
+      "type": "page",
+      "reason": "Service-area landing page (Service/WebPage schema, breadcrumb Home > Service Areas > page), no article type or byline. Sitemap service-areas membership."
+    },
+    {
+      "path": "/service-areas/chelsea/",
+      "type": "page",
+      "reason": "Service-area landing page (Service/WebPage schema, breadcrumb Home > Service Areas > page), no article type or byline. Sitemap service-areas membership."
+    },
+    {
+      "path": "/service-areas/dexter/",
+      "type": "page",
+      "reason": "Service-area landing page (Service/WebPage schema, breadcrumb Home > Service Areas > page), no article type or byline. Sitemap service-areas membership."
+    }
+  ]
+}

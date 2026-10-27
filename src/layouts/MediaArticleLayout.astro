@@ -1,0 +1,141 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+interface Props {
+  frontmatter: any;
+  mdxFilePath?: string;
+  currentId?: string;
+}
+
+const { frontmatter, mdxFilePath = '', currentId = '' } = Astro.props;
+
+const others = (await getCollection('media', ({ data }) => !data.draft))
+  .filter((entry) => entry.id !== currentId)
+  .slice(0, 5);
+
+const practiceAreas = [
+  ['Drug Crimes Defense', '/practice-area/drug-crimes'],
+  ['Assault & Battery', '/practice-area/assault-defense'],
+  ['Domestic Violence', '/practice-area/domestic-violence-defense'],
+  ['Criminal Sexual Conduct', '/practice-area/sex-crime-defense'],
+  ['Expungements (Clean Slate)', '/practice-area/expungements'],
+  ['College Crimes Defense', '/practice-area/college-crimes-defense'],
+  ['Police Investigations', '/practice-area/police-investigations'],
+];
+
+const sourceLine = [frontmatter.sourceAuthor, frontmatter.sourceName].filter(Boolean).join(' | ');
+---
+
+<BaseLayout
+  title={`${frontmatter.title} | Law Offices of Joseph A. Simon`}
+  description={frontmatter.description}
+  image={frontmatter.image}
+  type="article"
+>
+  <article data-mdx-file={mdxFilePath} data-mdx-type="media" data-ps="src/layouts/MediaArticleLayout.astro:udsgle">
+    <section class="relative overflow-hidden bg-[#061633] pt-[140px] pb-[60px] text-white" data-ps="src/layouts/MediaArticleLayout.astro:wfpgf7">
+      <img src="https://jas-law-astro-review.netlify.app/hero-court-1.webp" alt="" loading="eager" class="absolute inset-0 h-full w-full object-cover object-center" data-ps="src/layouts/MediaArticleLayout.astro:w8rl0y" />
+      <div class="absolute inset-0" style="background: linear-gradient(100deg, rgba(4, 16, 38, 0.97) 0%, rgba(5, 19, 45, 0.9) 46%, rgba(8, 26, 60, 0.62) 100%);" data-ps="src/layouts/MediaArticleLayout.astro:8x3iax"></div>
+      <div class="relative mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8" data-ps="src/layouts/MediaArticleLayout.astro:7mfgfs">
+        <nav aria-label="Breadcrumb" class="mb-8 text-[13px] text-[#C3CCDA]" data-ps="src/layouts/MediaArticleLayout.astro:9gt8rb">
+          <a href="/" class="hover:text-white" data-ps="src/layouts/MediaArticleLayout.astro:qwvo83">Home</a>
+          <span class="mx-2" data-ps="src/layouts/MediaArticleLayout.astro:k9yccs">/</span>
+          <a href="/media" class="hover:text-white" data-ps="src/layouts/MediaArticleLayout.astro:qwvo82">In the News</a>
+          <span class="mx-2" data-ps="src/layouts/MediaArticleLayout.astro:k9ycct">/</span>
+          <span class="text-[#DDC582]" data-ps="src/layouts/MediaArticleLayout.astro:k9yccu">{frontmatter.title}</span>
+        </nav>
+        {(frontmatter.sourceName || frontmatter.sourceAuthor) && (
+          <p class="mb-4 flex items-center gap-3 text-[12px] font-bold uppercase tracking-[1.8px] text-[#C9A840]" data-ps="src/layouts/MediaArticleLayout.astro:y0tkw6">
+            <span class="inline-block h-[2px] w-[28px] bg-[#C9A840]" data-ps="src/layouts/MediaArticleLayout.astro:k9yccv"></span>
+            {frontmatter.sourceName || frontmatter.sourceAuthor}
+          </p>
+        )}
+        <h1 class="font-heading mb-6 max-w-[940px] hyphens-none text-[38px] sm:text-[48px] font-black leading-[1.05] tracking-[-0.6px] text-white" data-ps="src/layouts/MediaArticleLayout.astro:w44vzh">{frontmatter.title}</h1>
+
+        <div class="mt-10 flex flex-wrap gap-4" data-ps="src/layouts/MediaArticleLayout.astro:7mfgft">
+          {frontmatter.sourceUrl && (
+            <a href={frontmatter.sourceUrl} target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-[3px] bg-[#732521] px-[30px] py-[16px] text-[16px] font-semibold text-white no-underline transition hover:bg-[#5a1c19]" data-ps="src/layouts/MediaArticleLayout.astro:qwvo7g">Read the full article here... <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+          )}
+          <a href="tel:+17348876200" class="inline-flex items-center gap-2 rounded-[3px] border border-white/30 px-[30px] py-[16px] text-[16px] font-semibold text-white no-underline transition hover:border-[#C9A840]" data-ps="src/layouts/MediaArticleLayout.astro:qwvo7f"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9A840" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(734) 887-6200</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="border-t border-white/10 bg-[#0B1F42] py-4 text-center text-[14px] text-white/90" data-ps="src/layouts/MediaArticleLayout.astro:7mfgfu">
+      40+ Years Defending Michigan <span class="mx-3 text-[#C9A840]" data-ps="src/layouts/MediaArticleLayout.astro:k9yccw">|</span> Available 24/7 for Urgent Matters <span class="mx-3 text-[#C9A840]" data-ps="src/layouts/MediaArticleLayout.astro:k9yccx">|</span> ★★★★★ 5.0 Google Rating
+    </div>
+
+    <section class="bg-[#F7F5F1] py-[80px]" data-ps="src/layouts/MediaArticleLayout.astro:wfpgf6">
+      <div class="mx-auto grid max-w-[1280px] items-start gap-8 px-4 sm:px-6 lg:grid-cols-[minmax(0,1fr)_360px] lg:px-8" data-ps="src/layouts/MediaArticleLayout.astro:8x3ib6">
+        <div class="rounded-[8px] border border-[#E6E2D9] bg-white p-6 shadow-sm sm:p-12" data-ps="src/layouts/MediaArticleLayout.astro:8x3ib5">
+          <div class="mb-8 flex flex-wrap items-center justify-between gap-3 border-b border-[#E6E2D9] pb-5" data-ps="src/layouts/MediaArticleLayout.astro:8x3ib4">
+            {sourceLine && <p class="text-[14px] font-bold text-[#061633]" data-ps="src/layouts/MediaArticleLayout.astro:y0tkvk">Source: {sourceLine}</p>}
+            <span class="rounded-[2px] border border-[#E6E2D9] bg-[#F7F5F1] px-3 py-1 text-[12px] font-semibold text-[#061633]" data-ps="src/layouts/MediaArticleLayout.astro:k9yccy">Press Coverage</span>
+          </div>
+          {frontmatter.image && (
+            <img src={frontmatter.image} alt={frontmatter.imageAlt || frontmatter.title} loading="lazy" class="mb-8 block h-auto w-auto max-w-[430px] rounded-[3px]" data-ps="src/layouts/MediaArticleLayout.astro:546c45" />
+          )}
+          <div class="media-body space-y-5 text-[17px] leading-[1.75] text-[#454F5E]" data-ps="src/layouts/MediaArticleLayout.astro:8x3ib3">
+            <slot />
+          </div>
+          <div class="mt-10 border-t border-[#E6E2D9] pt-8" data-ps="src/layouts/MediaArticleLayout.astro:8x3ib2">
+            {frontmatter.sourceUrl && (
+              <a href={frontmatter.sourceUrl} target="_blank" rel="noopener" class="inline-block rounded-[3px] bg-[#732521] px-[30px] py-[16px] text-[16px] font-semibold text-white no-underline transition hover:bg-[#5a1c19]" data-ps="src/layouts/MediaArticleLayout.astro:qwvo7e">Read the full article here...</a>
+            )}
+            <a href="/media" class="mt-5 block font-semibold text-[#732521] underline" data-ps="src/layouts/MediaArticleLayout.astro:qwvo7d">← Back to all press coverage</a>
+          </div>
+        </div>
+
+        <aside class="space-y-6" data-ps="src/layouts/MediaArticleLayout.astro:y7kcow">
+          <div class="rounded-[8px] border border-white/10 bg-[#0B1F42] p-8 text-white" data-ps="src/layouts/MediaArticleLayout.astro:8x3ib1">
+            <p class="mb-3 text-[12px] font-bold uppercase tracking-[1.8px] text-[#C9A840]" data-ps="src/layouts/MediaArticleLayout.astro:y0tkvj">Confidential Defense</p>
+            <h3 class="font-heading mb-4 text-[22px] font-bold leading-[1.25]" data-ps="src/layouts/MediaArticleLayout.astro:9k5bkh">Facing Charges in Michigan?</h3>
+            <p class="mb-6 text-[15px] leading-[1.7] text-[#C3CCDA]" data-ps="src/layouts/MediaArticleLayout.astro:y0tkvi">Do not speak to law enforcement without counsel. Early legal intervention protects your constitutional rights and preserves key evidence.</p>
+            <a href="/#contact" class="block rounded-[3px] bg-[#732521] py-[14px] text-center font-semibold text-white no-underline transition hover:bg-[#5a1c19]" data-ps="src/layouts/MediaArticleLayout.astro:qwvo7c">Confidential Consultation</a>
+            <a href="tel:+17348876200" class="mt-3 block rounded-[3px] border border-white/30 py-[14px] text-center font-semibold text-white no-underline transition hover:border-[#C9A840]" data-ps="src/layouts/MediaArticleLayout.astro:qwvo7b">(734) 887-6200</a>
+            <p class="mt-4 text-center text-[12px] text-[#C3CCDA]" data-ps="src/layouts/MediaArticleLayout.astro:ltd4m1">Available 24/7 for urgent matters</p>
+          </div>
+
+          <div class="rounded-[8px] border border-[#E6E2D9] bg-white p-7" data-ps="src/layouts/MediaArticleLayout.astro:8x3ib0">
+            <p class="mb-5 flex items-center gap-3 text-[12px] font-bold uppercase tracking-[1.8px] text-[#732521]" data-ps="src/layouts/MediaArticleLayout.astro:y0tkvh"><span class="inline-block h-[2px] w-[28px] bg-[#C9A840]" data-ps="src/layouts/MediaArticleLayout.astro:njosc"></span>More Media Coverage</p>
+            <ul class="space-y-4">
+              {others.map((entry, __psIdx) => (
+                <li class="border-b border-[#E6E2D9] pb-4 last:border-0 last:pb-0" data-ps={`src/layouts/MediaArticleLayout.astro:ozj583-${__psIdx}`}>
+                  <p class="text-[11px] font-bold uppercase tracking-wider text-[#C9A840]" data-ps={`src/layouts/MediaArticleLayout.astro:y0tkvg-${__psIdx}`}>{entry.data.sourceName}</p>
+                  <a href={`/media-articles/${entry.id}`} class="text-[14px] font-bold leading-snug text-[#061633] hover:text-[#732521]" data-ps={`src/layouts/MediaArticleLayout.astro:qwvo7a-${__psIdx}`}>{entry.data.title}</a>
+                </li>
+              ))}
+            </ul>
+            <a href="/media" class="mt-5 inline-block text-[13px] font-bold text-[#732521]" data-ps="src/layouts/MediaArticleLayout.astro:qwvo79">View all press articles →</a>
+          </div>
+
+          <div class="rounded-[8px] border border-[#E6E2D9] bg-white p-7" data-ps="src/layouts/MediaArticleLayout.astro:8x3iaz">
+            <p class="mb-5 flex items-center gap-3 text-[12px] font-bold uppercase tracking-[1.8px] text-[#732521]" data-ps="src/layouts/MediaArticleLayout.astro:y0tkvf"><span class="inline-block h-[2px] w-[28px] bg-[#C9A840]" data-ps="src/layouts/MediaArticleLayout.astro:njosd"></span>Practice Areas</p>
+            <ul class="space-y-3">
+              {practiceAreas.map(([label, href], __psIdx) => (
+                <li data-ps={`src/layouts/MediaArticleLayout.astro:ozj584-${__psIdx}`}><a href={href} class="flex items-center justify-between text-[15px] text-[#454F5E] hover:text-[#732521]" data-ps={`src/layouts/MediaArticleLayout.astro:qwvo78-${__psIdx}`}>{label}<span class="text-[#C9A840]" data-ps={`src/layouts/MediaArticleLayout.astro:k9yccz-${__psIdx}`}>→</span></a></li>
+              ))}
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="bg-[#061633] py-[100px] text-center text-white" data-ps="src/layouts/MediaArticleLayout.astro:wfpgf5">
+      <div class="mx-auto max-w-[1280px] px-4" data-ps="src/layouts/MediaArticleLayout.astro:8x3iay">
+        <p class="mb-6 flex items-center justify-center gap-4 text-[12px] font-bold uppercase tracking-[1.8px] text-[#C9A840]" data-ps="src/layouts/MediaArticleLayout.astro:ltd4m1">
+          <span class="inline-block h-[2px] w-[28px] bg-[#C9A840]" aria-hidden="true" data-ps="src/layouts/MediaArticleLayout.astro:njosd"></span>
+          Confidential Legal Consultation
+          <span class="inline-block h-[2px] w-[28px] bg-[#C9A840]" aria-hidden="true" data-ps="src/layouts/MediaArticleLayout.astro:njose"></span>
+        </p>
+        <h2 class="font-heading mb-6 text-[36px] sm:text-[44px] font-black leading-[1.15]" data-ps="src/layouts/MediaArticleLayout.astro:o8k8s2">Speak with an experienced Ann Arbor criminal defense lawyer.</h2>
+        <p class="mx-auto mb-10 max-w-[680px] text-[19px] leading-[1.7] text-[#C3CCDA]" data-ps="src/layouts/MediaArticleLayout.astro:y0tkve">Early involvement allows us to evaluate the stop, search, and evidence while every legal and procedural option is still open.</p>
+        <div class="flex flex-wrap justify-center gap-4" data-ps="src/layouts/MediaArticleLayout.astro:8x3iax">
+          <a href="/#contact" class="rounded-[3px] bg-[#732521] px-[30px] py-[16px] font-semibold text-white no-underline transition hover:bg-[#5a1c19]" data-ps="src/layouts/MediaArticleLayout.astro:qwvo77">Request a Confidential Consultation</a>
+          <a href="tel:+17348876200" class="rounded-[3px] border border-white/30 px-[30px] py-[16px] font-semibold text-white no-underline transition hover:border-[#C9A840]" data-ps="src/layouts/MediaArticleLayout.astro:qwvo6l">Call (734) 887-6200</a>
+        </div>
+      </div>
+    </section>
+  </article>
+</BaseLayout>

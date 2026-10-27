@@ -1,0 +1,105 @@
+{
+  "sharedInstructions": "Article preparation for source https://jas-law-astro-review.netlify.app/ (preserve mode). Shared config: src/content.config.ts defines the blog and docs collections (glob loaders over src/content/blog and src/content/docs; schemas include title, description, pubDate, draft, jsonLd, imageAlt, schemaType, schemaData, featured, toc). src/content/ currently contains no entries. Layouts: src/layouts/BlogLayout.astro (default article type blog), src/layouts/DocsLayout.astro and BaseLayout.astro. Requested paths were classified from source evidence (JSON-LD @type, og:type, page title and content): ProfilePage/Person (attorney profiles), AboutPage (career), ContactPage (contact), CollectionPage listings (reviews, media, case-result pages). None is an individual editorial article, so no MDX entries, targetPath values or collection/layout changes are required for this run. Pages are to be built by the page worker as src/pages routes at the original paths (trailing slash). Existing src/pages files for career, courtroom-victories, media and reviews may be import placeholders; the page worker owns them. Attorney profile paths (/attorneys/joseph-a-simon/ and /attorneys/stephen-adams/) and the paginated case-result paths (/courtroom-victories/2/ through /courtroom-victories/14/) have no matching route in src/pages yet. Source media-article items linked from /media/ (under /media-articles/) are not part of this request and were not classified here. Unresolved: no representative rendered article exists, so article presentation was not judged in this preparation.",
+  "entries": [
+    {
+      "path": "/attorneys/joseph-a-simon/",
+      "type": "page",
+      "reason": "Source evidence: ProfilePage JSON-LD with Person 'Joseph A. Simon' (jobTitle Criminal Defense Attorney), a bio and portrait. Individual attorney profile, not an article. Page worker should build it as a page."
+    },
+    {
+      "path": "/attorneys/stephen-adams/",
+      "type": "page",
+      "reason": "Source evidence: ProfilePage JSON-LD with Person 'Stephen Adams' (of counsel, effective March 1, 2024), bio and portrait. Individual attorney profile, not an article."
+    },
+    {
+      "path": "/career/",
+      "type": "page",
+      "reason": "Source evidence: AboutPage JSON-LD 'Career of Joseph A. Simon, Criminal Defense Attorney', with an introductory section and an ItemList gallery of 7 career photographs. Ordinary page."
+    },
+    {
+      "path": "/contact/",
+      "type": "page",
+      "reason": "Source evidence: ContactPage JSON-LD 'Contact | Joseph A. Simon', office, hours and a request-a-consultation form. Ordinary page."
+    },
+    {
+      "path": "/reviews/",
+      "type": "page",
+      "reason": "Source evidence: CollectionPage JSON-LD 'Client Reviews' with an ItemList of Quotation reviews and aggregate ratings. Listing page of testimonials, not an individual article."
+    },
+    {
+      "path": "/media/",
+      "type": "page",
+      "reason": "Source evidence: CollectionPage JSON-LD 'In the News & Press Coverage' with an ItemList of 21 press items that link to /media-articles/ pages and to external mLive articles. Listing page, not an article; the linked press items are outside this request."
+    },
+    {
+      "path": "/courtroom-victories/",
+      "type": "page",
+      "reason": "Source evidence: CollectionPage JSON-LD 'Case Results' with an ItemList of representative case results (24 per page, 358 total, page 1 of 15). Listing page with CreativeWork items, not an individual article."
+    },
+    {
+      "path": "/courtroom-victories/2/",
+      "type": "page",
+      "reason": "Source evidence: CollectionPage JSON-LD 'Case Results — Page 2' (items 25-48 of 358). Paginated listing page, not an article."
+    },
+    {
+      "path": "/courtroom-victories/3/",
+      "type": "page",
+      "reason": "Source evidence: CollectionPage JSON-LD 'Case Results — Page 3' (items 49-72 of 358). Paginated listing page, not an article."
+    },
+    {
+      "path": "/courtroom-victories/4/",
+      "type": "page",
+      "reason": "Source evidence: CollectionPage JSON-LD 'Case Results — Page 4' (items 73-96 of 358). Paginated listing page, not an article."
+    },
+    {
+      "path": "/courtroom-victories/5/",
+      "type": "page",
+      "reason": "Source evidence: CollectionPage JSON-LD 'Case Results — Page 5' (items 97-120 of 358). Paginated listing page, not an article."
+    },
+    {
+      "path": "/courtroom-victories/6/",
+      "type": "page",
+      "reason": "Source evidence: CollectionPage JSON-LD 'Case Results — Page 6' (items 121-144 of 358). Paginated listing page, not an article."
+    },
+    {
+      "path": "/courtroom-victories/7/",
+      "type": "page",
+      "reason": "Source evidence: CollectionPage JSON-LD 'Case Results — Page 7' (items 145-168 of 358). Paginated listing page, not an article."
+    },
+    {
+      "path": "/courtroom-victories/8/",
+      "type": "page",
+      "reason": "Source evidence: CollectionPage JSON-LD 'Case Results — Page 8' (items 169-192 of 358). Paginated listing page, not an article."
+    },
+    {
+      "path": "/courtroom-victories/9/",
+      "type": "page",
+      "reason": "Source evidence: CollectionPage JSON-LD 'Case Results — Page 9' (items 193-216 of 358). Paginated listing page, not an article."
+    },
+    {
+      "path": "/courtroom-victories/10/",
+      "type": "page",
+      "reason": "Source evidence: CollectionPage JSON-LD 'Case Results — Page 10' (items 217-240 of 358). Paginated listing page, not an article."
+    },
+    {
+      "path": "/courtroom-victories/11/",
+      "type": "page",
+      "reason": "Source evidence: CollectionPage JSON-LD 'Case Results — Page 11' (items 241-264 of 358). Paginated listing page, not an article."
+    },
+    {
+      "path": "/courtroom-victories/12/",
+      "type": "page",
+      "reason": "Source evidence: CollectionPage JSON-LD 'Case Results — Page 12' (items 265-288 of 358). Paginated listing page, not an article."
+    },
+    {
+      "path": "/courtroom-victories/13/",
+      "type": "page",
+      "reason": "Source evidence: CollectionPage JSON-LD 'Case Results — Page 13' (items 289-312 of 358). Paginated listing page, not an article."
+    },
+    {
+      "path": "/courtroom-victories/14/",
+      "type": "page",
+      "reason": "Source evidence: CollectionPage JSON-LD 'Case Results — Page 14' (items 313-336 of 358). Paginated listing page, not an article."
+    }
+  ]
+}

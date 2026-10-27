@@ -1,0 +1,41 @@
+{
+  "sharedInstructions": "Article preparation for source https://jas-law-astro-review.netlify.app/ (preserve mode). The six requested paths are all service-area pages under /service-areas/<slug>/. None is an editorial article: the source evidence shows WebPage and Service schema with a Home > Service Areas > city breadcrumb, a 'Criminal Defense in <place>' H1 and no Article/BlogPosting/NewsArticle type, byline or publication date. They are therefore typed as page, not post. No content collection, schema or article layout was changed for this import. Existing content config is src/content.config.ts with blog, media and docs collections (blog and media use BlogLayout and MediaArticleLayout respectively); none of these entries should go into them. The local route files already exist under src/pages/service-areas/ (milan.astro, pittsfield-township.astro, saline.astro, washtenaw-county.astro, ypsilanti.astro, ypsilanti-township.astro) and the parent listing is src/pages/service-areas.astro. The page worker should treat these route files as the owners of their paths and not overwrite the service-areas listing. Source paths in the handoff use the trailing-slash form; the local routes use the same paths without a trailing slash, which is the site's existing convention. Source pages carry robots noindex, nofollow in their metadata; the page worker should decide whether that metadata applies to the imported local route and should not add or remove it silently. Unresolved: the page worker must compare each rendered page against its source capture for layout and content, since this preparation step did not render any of the six pages.",
+  "entries": [
+    {
+      "path": "/service-areas/milan/",
+      "type": "page",
+      "reason": "Source title 'Milan Criminal Defense | Law Offices of Joseph A. Simon', og:type website, WebPage/Service JSON-LD and a Home > Service Areas > Milan breadcrumb. Body heading 'Criminal Defense in Milan' with a service intro, plus a recognized-by-rating-organizations strip and linked practice-area pages. No article markup or byline. Local route already exists at src/pages/service-areas/milan.astro.",
+      "instructions": "Page worker: compare src/pages/service-areas/milan.astro against the source capture (heading, intro, awards strip, case results, reviews, contact). Keep the existing local route; do not create a content entry."
+    },
+    {
+      "path": "/service-areas/pittsfield-township/",
+      "type": "page",
+      "reason": "Source title 'Pittsfield Township Criminal Defense | Law Offices of Joseph A. Simon', WebPage/Service JSON-LD and a Home > Service Areas > Pittsfield Township breadcrumb. Body H1 'Criminal Defense in Pittsfield Township' with a service intro and linked local services. No article type. Local route already exists at src/pages/service-areas/pittsfield-township.astro.",
+      "instructions": "Page worker: compare src/pages/service-areas/pittsfield-township.astro against the source capture. Keep the existing local route; do not create a content entry."
+    },
+    {
+      "path": "/service-areas/saline/",
+      "type": "page",
+      "reason": "Source title 'Saline Criminal Defense | Law Offices of Joseph A. Simon', WebPage/Service JSON-LD and a Home > Service Areas > Saline breadcrumb. Body H1 'Criminal Defense in Saline' with a service intro and linked local services. No article type. Local route already exists at src/pages/service-areas/saline.astro.",
+      "instructions": "Page worker: compare src/pages/service-areas/saline.astro against the source capture. Keep the existing local route; do not create a content entry."
+    },
+    {
+      "path": "/service-areas/washtenaw-county/",
+      "type": "page",
+      "reason": "Source title 'Washtenaw County Criminal Defense | Law Offices of Joseph A. Simon', WebPage/Service JSON-LD and a Home > Service Areas > Washtenaw County breadcrumb. Body H1 'Criminal Defense in Washtenaw County' with a claims-style intro paragraph. No article type. Local route already exists at src/pages/service-areas/washtenaw-county.astro.",
+      "instructions": "Page worker: compare src/pages/service-areas/washtenaw-county.astro against the source capture, including the intro text as written in the source. Keep the existing local route; do not create a content entry."
+    },
+    {
+      "path": "/service-areas/ypsilanti/",
+      "type": "page",
+      "reason": "Source title 'Ypsilanti Criminal Defense | Law Offices of Joseph A. Simon', WebPage/Service JSON-LD and a Home > Service Areas > Ypsilanti breadcrumb. Body H1 'Criminal Defense in Ypsilanti' with a service intro and linked local services. No article type. Local route already exists at src/pages/service-areas/ypsilanti.astro.",
+      "instructions": "Page worker: compare src/pages/service-areas/ypsilanti.astro against the source capture. Keep the existing local route; do not create a content entry."
+    },
+    {
+      "path": "/service-areas/ypsilanti-township/",
+      "type": "page",
+      "reason": "Source title 'Ypsilanti Township Criminal Defense | Law Offices of Joseph A. Simon', WebPage/Service JSON-LD and a Home > Service Areas > Ypsilanti Township breadcrumb. Body H1 'Criminal Defense in Ypsilanti Township' with a service intro and linked local services. No article type. Local route already exists at src/pages/service-areas/ypsilanti-township.astro.",
+      "instructions": "Page worker: compare src/pages/service-areas/ypsilanti-township.astro against the source capture. Keep the existing local route; do not create a content entry."
+    }
+  ]
+}

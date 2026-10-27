@@ -1,0 +1,281 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+interface Heading {
+  depth: number;
+  slug: string;
+  text: string;
+}
+
+interface Props {
+  frontmatter: any;
+  mdxFilePath?: string;
+  headings?: Heading[];
+  currentPath?: string;
+}
+
+const { frontmatter, mdxFilePath = '', headings = [], currentPath = '' } = Astro.props;
+
+const tocItems = headings.filter((heading) => heading.depth === 2);
+
+const practiceAreaMap: Record<string, [string, string][]> = {
+  '/post/defending-domestic-violence-charges-in-michigan/': [
+    ['Domestic Violence', '/practice-area/domestic-violence-defense/'],
+    ['Police Investigations', '/practice-area/police-investigations/'],
+  ],
+};
+const practiceAreas: [string, string][] = practiceAreaMap[currentPath] ?? [['Drunk Driving DUI/OWI', '/practice-area/dui-defense/']];
+const practiceLinks: [string, string][] = frontmatter.relatedPractice
+  ? frontmatter.relatedPractice.map((item: { label: string; href: string }) => [item.label, item.href])
+  : practiceAreas;
+
+const relatedPosts: [string, string][] = [
+  ['Charged with OWI in Southeast Michigan?', '/post/charged-with-owi-in-michigan/'],
+  ['Defending Domestic Violence Charges in Southeast Michigan', '/post/defending-domestic-violence-charges-in-michigan/'],
+  ['Understanding Michigan Assault and Battery Laws: A Guide', '/post/understanding-michigan-assault-and-battery-laws-a-comprehensive-guide/'],
+  ['Defending Your Future: What to Expect When Facing Domestic Violence Charges', '/post/defending-your-future-what-to-expect-when-facing-domestic-violence-charges/'],
+  ['Michigan DUI Defense Strategies: Understanding Your Legal Options', '/post/michigan-dui-defense-strategies-understanding-your-legal-options/'],
+  ["Determining Washtenaw County's Best DUI Attorney", '/post/determining-washtenaw-countys-best-dui-attorney/'],
+  ['Best DUI Attorney in Saline, MI?', '/post/best-dui-attorney-in-saline-mi/'],
+  ["Ann Arbor's Best DUI Attorney?", '/post/ann-arbors-best-dui-attorney/'],
+];
+const visibleRelatedPosts = relatedPosts.filter(([, href]) => href !== currentPath);
+
+const consultationLinks: [string, string][] = [
+  ['Home', '/'],
+  ['Practice Areas', '/practice-areas'],
+  ['Results', '/courtroom-victories'],
+  ['About', '/#about'],
+  ['Testimonials', '/#testimonials'],
+  ['FAQs', '/#faq'],
+  ['Contact', '/#contact'],
+];
+---
+
+<BaseLayout
+  title={`${frontmatter.title} | Law Offices of Joseph A. Simon`}
+  description={frontmatter.description}
+  image={frontmatter.image}
+  type="article"
+>
+  <article data-mdx-file={mdxFilePath} data-mdx-type="blog" class="bg-white" data-ps="src/layouts/PostArticleLayout.astro:rbwbct">
+    <section class="relative overflow-hidden bg-[#061633] pt-[140px] pb-[64px] text-white" data-ps="src/layouts/PostArticleLayout.astro:tdtb6m">
+      <img src="https://jas-law-astro-review.netlify.app/hero-court-1.webp" alt="" loading="eager" class="absolute inset-0 h-full w-full object-cover object-center" data-ps="src/layouts/PostArticleLayout.astro:jw0kh4" />
+      <div class="absolute inset-0" style="background: linear-gradient(100deg, rgba(4, 16, 38, 0.97) 0%, rgba(5, 19, 45, 0.9) 46%, rgba(8, 26, 60, 0.62) 100%);" data-ps="src/layouts/PostArticleLayout.astro:c0mfxw"></div>
+      <div class="relative mx-auto max-w-[1280px] px-4 sm:px-8" data-ps="src/layouts/PostArticleLayout.astro:c0mfxv">
+        <nav aria-label="Breadcrumb" class="mb-8 text-[13px] text-[#C3CCDA]" data-ps="src/layouts/PostArticleLayout.astro:fjdntx">
+          <a href="/" class="hover:text-white" data-ps="src/layouts/PostArticleLayout.astro:gjdhrw">Home</a>
+          <span class="mx-2" data-ps="src/layouts/PostArticleLayout.astro:1eb3zh">/</span>
+          <a href="/recent-posts" class="hover:text-white" data-ps="src/layouts/PostArticleLayout.astro:gjdhrx">Posts</a>
+          <span class="mx-2" data-ps="src/layouts/PostArticleLayout.astro:1eb3zg">/</span>
+          <span class="text-[#DDC582]" data-ps="src/layouts/PostArticleLayout.astro:1eb3zf">{frontmatter.title}</span>
+        </nav>
+        <p class="mb-4 flex items-center gap-3 text-[12px] font-bold uppercase tracking-[1.8px] text-[#C9A840]" data-ps="src/layouts/PostArticleLayout.astro:9ffl3o">
+          <span class="inline-block h-[2px] w-[28px] bg-[#C9A840]" aria-hidden="true" data-ps="src/layouts/PostArticleLayout.astro:1eb3ze"></span>
+          Posts &amp; Defense Insights
+        </p>
+        <h1 class="font-heading mb-6 max-w-[900px] hyphens-none text-[38px] sm:text-[52px] font-black leading-[1.1] tracking-[-0.6px] text-white" data-ps="src/layouts/PostArticleLayout.astro:tnfga3">{frontmatter.title}</h1>
+        {(frontmatter.lead ?? frontmatter.description) && (
+          <p class="max-w-[820px] text-[17px] leading-[1.7] text-[#C3CCDA]" data-ps="src/layouts/PostArticleLayout.astro:9ffl3p">{frontmatter.lead ?? frontmatter.description}</p>
+        )}
+        <div class="mt-9 flex flex-wrap items-center gap-6" data-ps="src/layouts/PostArticleLayout.astro:c0mfxu">
+          <a href="/#contact" class="rounded-[3px] bg-[#732521] px-[30px] py-[16px] text-[16px] font-semibold text-white no-underline transition hover:bg-[#5a1c19]" data-ps="src/layouts/PostArticleLayout.astro:gjdhry">Request a Confidential Consultation</a>
+          <a href="tel:+17348876200" class="border-b border-[#C9A840] pb-1 text-[16px] font-bold text-white no-underline hover:text-[#DDC582]" data-ps="src/layouts/PostArticleLayout.astro:gjdhrz">(734) 887-6200</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-[72px]" data-ps="src/layouts/PostArticleLayout.astro:tdtb6l">
+      <div class="mx-auto grid max-w-[1280px] items-start gap-[72px] px-4 sm:px-8 lg:grid-cols-[minmax(0,800px)_1fr]" data-ps="src/layouts/PostArticleLayout.astro:c0mfxt">
+        <div class="min-w-0" data-ps="src/layouts/PostArticleLayout.astro:c0mfxs">
+          {frontmatter.image && (
+            <figure class="mb-0">
+              <img src={frontmatter.image} alt={frontmatter.imageAlt || frontmatter.title} width="800" height="533" loading="lazy" class="block h-auto w-full rounded-[4px]" data-ps="src/layouts/PostArticleLayout.astro:jw0kh3" />
+            </figure>
+          )}
+          <div class="post-body mt-2" data-ps="src/layouts/PostArticleLayout.astro:c0mfxr">
+            <slot />
+          </div>
+          <a href="/recent-posts" class="mt-12 inline-block text-[15px] font-bold text-[#732521] underline underline-offset-4" data-ps="src/layouts/PostArticleLayout.astro:gjdhsl">← Back to all posts</a>
+        </div>
+
+        <aside class="space-y-12" data-ps="src/layouts/PostArticleLayout.astro:hl74qs">
+          {tocItems.length > 0 && (
+            <nav aria-label="On this page" data-ps="src/layouts/PostArticleLayout.astro:fjdntw">
+              <p class="font-heading mb-4 text-[12px] font-bold uppercase tracking-[1.8px] text-[#732521]" data-ps="src/layouts/PostArticleLayout.astro:9ffl3q">On this page</p>
+              <ul>
+                {tocItems.map((heading, __psIdx) => (
+                  <li class="border-b border-[#E6E2D9] py-3 first:pt-0" data-ps={`src/layouts/PostArticleLayout.astro:fpzfip-${__psIdx}`}>
+                    <a href={`#${heading.slug}`} class="text-[14px] leading-[1.55] text-[#3D4655] hover:text-[#732521]" data-ps={`src/layouts/PostArticleLayout.astro:gjdhsm-${__psIdx}`}>{heading.text}</a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          )}
+
+          {practiceLinks.length > 0 && (
+          <div data-ps="src/layouts/PostArticleLayout.astro:c0mfxq">
+            <p class="font-heading mb-4 text-[12px] font-bold uppercase tracking-[1.8px] text-[#732521]" data-ps="src/layouts/PostArticleLayout.astro:9ffl3r">Related Practice Areas</p>
+            <ul>
+              {practiceLinks.map(([label, href], __psIdx) => (
+                <li class="py-2" data-ps={`src/layouts/PostArticleLayout.astro:fpzfiq-${__psIdx}`}><a href={href} class="text-[14px] leading-[1.55] text-[#3D4655] hover:text-[#732521]" data-ps={`src/layouts/PostArticleLayout.astro:gjdhsn-${__psIdx}`}>{label}</a></li>
+              ))}
+            </ul>
+          </div>
+          )}
+
+          {frontmatter.showRelatedPosts !== false && (
+          <div data-ps="src/layouts/PostArticleLayout.astro:c0mfxp">
+            <p class="font-heading mb-4 text-[12px] font-bold uppercase tracking-[1.8px] text-[#732521]" data-ps="src/layouts/PostArticleLayout.astro:9ffl3s">Related Posts</p>
+            <ul>
+              {visibleRelatedPosts.map(([label, href], __psIdx) => (
+                <li class="border-b border-[#E6E2D9] py-3" data-ps={`src/layouts/PostArticleLayout.astro:fpzfir-${__psIdx}`}><a href={href} class="text-[14px] leading-[1.55] text-[#3D4655] hover:text-[#732521]" data-ps={`src/layouts/PostArticleLayout.astro:gjdhso-${__psIdx}`}>{label}</a></li>
+              ))}
+            </ul>
+            <a href="/recent-posts" class="mt-5 inline-block text-[14px] font-bold text-[#732521]" data-ps="src/layouts/PostArticleLayout.astro:gjdhsp">Explore All Posts →</a>
+          </div>
+          )}
+          {frontmatter.showRelatedPosts === false && (
+            <a href="/recent-posts" class="inline-block text-[15px] font-bold text-[#732521] no-underline hover:underline" data-ps="src/layouts/PostArticleLayout.astro:1ra5aj">Explore All Posts →</a>
+          )}
+        </aside>
+      </div>
+    </section>
+
+    <section class="bg-[#061633] py-[96px] text-center text-white" data-ps="src/layouts/PostArticleLayout.astro:tdtb6k">
+      <div class="mx-auto max-w-[1000px] px-4" data-ps="src/layouts/PostArticleLayout.astro:c0mfxo">
+        <p class="mb-5 flex items-center justify-center gap-4 text-[12px] font-bold uppercase tracking-[1.8px] text-[#C9A840]" data-ps="src/layouts/PostArticleLayout.astro:9ffl3t">
+          <span class="inline-block h-[2px] w-[28px] bg-[#C9A840]" aria-hidden="true" data-ps="src/layouts/PostArticleLayout.astro:1eb3ys"></span>
+          Consultation
+          <span class="inline-block h-[2px] w-[28px] bg-[#C9A840]" aria-hidden="true" data-ps="src/layouts/PostArticleLayout.astro:1eb3yr"></span>
+        </p>
+        <h2 class="font-heading mb-6 text-[36px] sm:text-[44px] font-black leading-[1.15]" data-ps="src/layouts/PostArticleLayout.astro:ez0j1x">Whatever the charge, talk to us first.</h2>
+        <p class="mx-auto mb-10 max-w-[640px] text-[18px] leading-[1.7] text-[#C3CCDA]" data-ps="src/layouts/PostArticleLayout.astro:9ffl3u">Your consultation is confidential and available 24/7. Tell us what you're facing and we'll explain how Michigan law applies to it.</p>
+        <div class="flex flex-wrap justify-center gap-4" data-ps="src/layouts/PostArticleLayout.astro:c0mfxn">
+          <a href="/#contact" class="rounded-[3px] bg-[#732521] px-[30px] py-[16px] font-semibold text-white no-underline transition hover:bg-[#5a1c19]" data-ps="src/layouts/PostArticleLayout.astro:gjdhsq">Request a Confidential Consultation →</a>
+          <a href="tel:+17348876200" class="rounded-[3px] border border-white/30 px-[30px] py-[16px] font-semibold text-white no-underline transition hover:border-[#C9A840]" data-ps="src/layouts/PostArticleLayout.astro:1ra5am">Call (734) 887-6200</a>
+        </div>
+        <nav aria-label="Site" class="mt-14 flex flex-wrap justify-center gap-x-7 gap-y-3 border-t border-white/10 pt-8 text-[14px] text-[#C3CCDA]" data-ps="src/layouts/PostArticleLayout.astro:k4cckx">
+          {consultationLinks.map(([label, href], __psIdx) => (
+            <a href={href} class="no-underline hover:text-white" data-ps={`src/layouts/PostArticleLayout.astro:1ra5al-${__psIdx}`}>{label}</a>
+          ))}
+        </nav>
+        <a href="tel:+17348876200" class="mt-6 inline-block font-bold text-[#C9A840] no-underline hover:text-[#DDC582]" data-ps="src/layouts/PostArticleLayout.astro:1ra5ak">Call (734) 887-6200</a>
+      </div>
+    </section>
+  </article>
+</BaseLayout>
+
+<style is:global>
+  .post-body {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #454f5e;
+  }
+  .post-body > * + * {
+    margin-top: 1.1em;
+  }
+  .post-body h2 {
+    font-family: var(--font-serif);
+    font-size: 34px;
+    line-height: 1.3;
+    font-weight: 900;
+    letter-spacing: -0.4px;
+    color: #061633;
+    margin-top: 2.6em;
+    padding-top: 1.4em;
+    border-top: 1px solid #e6e2d9;
+    scroll-margin-top: 110px;
+  }
+  .post-body > h2:first-child {
+    margin-top: 2.2em;
+  }
+  .post-body strong {
+    color: #061633;
+  }
+  .post-body img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin: 2em 0;
+  }
+  .post-body a {
+    color: #732521;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .post-body a:hover {
+    color: #5a1c19;
+  }
+  .post-body > h3 {
+    margin-top: 2em;
+    font-family: var(--font-serif);
+    font-size: 23px;
+    font-weight: 800;
+    line-height: 1.3;
+    color: #061633;
+  }
+  .post-body > h4 {
+    margin-top: 2.4em;
+    font-family: var(--font-serif);
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #061633;
+  }
+  .post-body > h5 {
+    margin-top: 1.2em;
+    font-family: var(--font-serif);
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #061633;
+  }
+  .post-body > blockquote {
+    margin-top: 1.8em;
+    margin-bottom: 1.8em;
+    padding: 24px 32px;
+    background: #f7f5f1;
+    border-left: 3px solid #c9a840;
+    color: #141c28;
+    font-style: normal;
+    quotes: none;
+  }
+  .post-body blockquote p {
+    margin: 0;
+  }
+  .post-body > ul {
+    padding-left: 0;
+    list-style: none;
+  }
+  .post-body > ol {
+    padding-left: 1.6em;
+    list-style: decimal;
+  }
+  .post-body > ol > li {
+    padding-left: 0;
+  }
+  .post-body > ol > li::before {
+    display: none;
+  }
+  .post-body > ol > li::marker {
+    color: #c9a840;
+    font-weight: 700;
+  }
+  .post-body li {
+    position: relative;
+    margin-top: 0.8em;
+    padding-left: 28px;
+  }
+  .post-body li::before {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 0.75em;
+    width: 6px;
+    height: 6px;
+    border-radius: 9999px;
+    background: #b89c4a;
+  }
+</style>
